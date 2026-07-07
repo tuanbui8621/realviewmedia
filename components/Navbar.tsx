@@ -2,16 +2,26 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Define the display name AND the exact URL path
+  const navLinks = [
+    { name: 'Experience', path: '/services' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
 
   return (
     <motion.header
@@ -30,16 +40,26 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 items-center">
-          {['Services', 'Portfolio', 'About', 'Contact'].map((item) => (
-            <Link key={item} href={`/${item.toLowerCase()}`} className="text-sm font-medium text-rv-white/70 hover:text-rv-white transition-colors">
-              {item}
-            </Link>
-          ))}
+          {navLinks.map((item) => {
+            const isActive = pathname === item.path;
+            
+            return (
+              <Link 
+                key={item.name} 
+                href={item.path} 
+                className={`text-base font-medium transition-colors ${
+                  isActive ? 'text-rv-white' : 'text-rv-white/50 hover:text-rv-white'
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Call to Action */}
         <div className="hidden md:block">
-          <Link href="/contact" className="px-6 py-3 rounded-full bg-rv-white text-rv-black font-semibold text-sm hover:scale-105 transition-transform duration-300 inline-block">
+          <Link href="/contact" className="px-6 py-3 rounded-full bg-rv-white text-rv-black font-semibold text-base hover:scale-105 transition-transform duration-300 inline-block">
             Book Consultation
           </Link>
         </div>

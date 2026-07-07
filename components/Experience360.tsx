@@ -1,103 +1,62 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Maximize, Navigation, Crosshair, View } from 'lucide-react';
+import { Eye, Award } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const Pannellum = dynamic(() => import('pannellum-react').then(mod => mod.Pannellum), { ssr: false });
 
 export default function Experience360() {
   return (
-    <section className="py-32 bg-[#0a0a0a] relative overflow-hidden border-t border-rv-white/5">
-      {/* Subtle Tech Grid Background Pattern */}
-      <div 
-        className="absolute inset-0 z-0 opacity-[0.03]" 
-        style={{ 
-          backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)', 
-          backgroundSize: '50px 50px' 
-        }}
-      />
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div>
-            <span className="text-rv-blue font-mono text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
-              <Crosshair className="w-4 h-4" /> Spatial Engine
-            </span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-rv-white">
-              Interactive Spatial <br /> Mapping.
-            </h2>
+    <section className="py-24 bg-rv-black px-6">
+      <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row gap-6">
+        
+        {/* LEFT SIDE: The 360 Panorama */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative w-full lg:w-2/3 aspect-[4/3] rounded-[2rem] overflow-hidden border border-rv-white/10 shadow-2xl"
+        >
+          <Pannellum
+            width="100%"
+            height="100%"
+            image="/images/oakwood.png"
+            pitch={0}
+            yaw={0}
+            hfov={100}
+            autoLoad={true}
+            showZoomCtrl={false}
+            showFullscreenCtrl={false}
+            compass={false}
+            mouseZoom={false}
+            autoRotate={-2}
+          />
+          {/* Overlay badges from your screenshot */}
+          <div className="absolute top-6 left-6 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-medium flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" /> LIVE PREVIEW
           </div>
-          <p className="text-rv-white/50 text-lg max-w-md font-light pb-2">
-            We don't just take photos. We digitize physical spaces into immersive, explorable 3D environments hosted on Google's global infrastructure.
-          </p>
-        </div>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs flex items-center gap-2">
+             Simulate 360° Drag
+          </div>
+        </motion.div>
 
-        {/* Tech Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:grid-rows-[400px_200px]">
+        {/* RIGHT SIDE: Proof Cards Stacked */}
+        <div className="w-full lg:w-1/3 flex flex-col gap-6">
+          <div className="flex-1 p-8 rounded-[2rem] bg-rv-white/[0.03] border border-rv-white/10 flex flex-col justify-center">
+            <Eye className="w-8 h-8 text-rv-white/20 mb-6" />
+            <p className="text-5xl font-bold tracking-tighter">5M+</p>
+            <p className="text-rv-white/50 uppercase tracking-widest text-xs font-mono mt-2">GOOGLE VIEWS GENERATED</p>
+          </div>
           
-          {/* Main 360 Viewer Simulator (Spans 2 rows & 2 columns) */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group border border-rv-white/10 bg-rv-charcoal/20 cursor-none"
-          >
-            {/* Simulated 360 View Background Image */}
-            <div 
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] group-hover:scale-110 ease-linear opacity-60"
-              style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669&auto=format&fit=crop)' }}
-            />
-            
-            {/* Dark gradient for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-rv-black/90 via-transparent to-transparent" />
-            
-            {/* Tech UI Overlay */}
-            <div className="absolute inset-0 p-6 flex flex-col justify-between">
-              <div className="flex justify-between items-center">
-                <div className="bg-rv-black/50 backdrop-blur-md border border-rv-white/10 rounded-full px-4 py-2 flex items-center gap-2 text-xs font-mono text-rv-white">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" /> LIVE PREVIEW
-                </div>
-                <button className="bg-rv-white/10 backdrop-blur-md border border-rv-white/20 p-3 rounded-full text-rv-white hover:bg-rv-white hover:text-rv-black transition-colors">
-                  <Maximize className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div className="flex justify-center mb-4">
-                <div className="bg-rv-black/60 backdrop-blur-md border border-rv-white/10 rounded-full px-6 py-3 flex items-center gap-4 hover:bg-rv-white/10 transition-colors pointer-events-none">
-                  <Navigation className="w-5 h-5 text-rv-blue animate-bounce" />
-                  <span className="text-sm font-medium tracking-wide">Simulate 360° Drag</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Stat Card 1 */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="rounded-3xl border border-rv-white/10 bg-gradient-to-br from-rv-charcoal/30 to-rv-black p-8 flex flex-col justify-center relative overflow-hidden"
-          >
-            <View className="w-12 h-12 text-rv-white/5 absolute top-8 right-8" />
-            <h3 className="text-5xl md:text-6xl font-mono font-bold text-rv-white mb-2">5M<span className="text-rv-blue">+</span></h3>
-            <p className="text-rv-white/50 text-xs tracking-widest uppercase font-medium">Google Views Generated</p>
-          </motion.div>
-
-          {/* Stat Card 2 */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="rounded-3xl border border-rv-white/10 bg-gradient-to-br from-rv-blue/10 to-rv-black p-8 flex flex-col justify-center relative overflow-hidden"
-          >
-            {/* Tech Glow Effect */}
-            <div className="w-32 h-32 bg-rv-blue/20 rounded-full blur-3xl absolute -bottom-10 -right-10" />
-            
-            <h3 className="text-5xl md:text-6xl font-mono font-bold text-rv-white mb-2">360<span className="text-rv-blue">°</span></h3>
-            <p className="text-rv-white/50 text-xs tracking-widest uppercase font-medium relative z-10">Google Street View Trusted</p>
-          </motion.div>
-
+          <div className="flex-1 p-8 rounded-[2rem] bg-rv-blue/5 border border-rv-blue/20 flex flex-col justify-center">
+            <Award className="w-8 h-8 text-rv-blue mb-6" />
+            <p className="text-5xl font-bold tracking-tighter text-rv-blue">360°</p>
+            <p className="text-rv-white/50 uppercase tracking-widest text-xs font-mono mt-2">GOOGLE STREET VIEW TRUSTED</p>
+          </div>
         </div>
+
       </div>
     </section>
   );

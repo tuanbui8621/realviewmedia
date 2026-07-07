@@ -15,11 +15,11 @@ export default function Hero() {
       
       {/* Text Layer */}
       <div className="z-10 text-center px-6 mb-12">
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter text-white mb-6">
-          Spatial Reality.
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tighter text-white mb-6">
+          Be the business they choose.
         </h1>
-        <p className="text-rv-white/50 text-xl font-light">
-          Your location, indexed for the digital world.
+        <p className="text-rv-white/50 text-3xl font-light">
+          Before they ever walk through your door.
         </p>
       </div>
 
