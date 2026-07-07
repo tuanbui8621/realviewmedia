@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Eye, Award } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
-const Pannellum = dynamic(() => import('pannellum-react').then(mod => mod.Pannellum), { ssr: false });
+const Pannellum = dynamic(() => import('pannellum-react').then(mod => mod.Pannellum), { ssr: false }) as any;
 
 export default function Experience360() {
   return (
