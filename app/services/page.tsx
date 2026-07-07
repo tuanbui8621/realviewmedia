@@ -9,17 +9,24 @@ import { ArrowRight, Eye, MousePointerClick } from 'lucide-react';
 
 export default function ExperiencePage() {  // Shared animation settings for consistent pacing
   const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-  };
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.8, 
+      ease: [0.16, 1, 0.3, 1] as any // Add 'as any' here
+    } 
+  }
+};
 
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 }
+  }
+};
 
   return (
     <main className="relative bg-rv-black min-h-screen text-rv-white selection:bg-rv-blue selection:text-white overflow-hidden">
