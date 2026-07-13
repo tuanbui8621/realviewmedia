@@ -16,63 +16,46 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Experience', path: '/experience' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-  ];
-
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      // Use fixed heights (h-24 / h-20) instead of padding changes to stop the jump
+      className={`fixed top-0 w-full z-50 transition-all duration-500 flex items-center ${
         scrolled
-          ? 'py-4 bg-rv-black/80 backdrop-blur-md border-b border-rv-white/10'
-          : 'py-6 bg-transparent'
+          ? 'h-20 bg-rv-black/80 backdrop-blur-md border-b border-rv-white/10'
+          : 'h-24 bg-transparent'
       }`}
     >
-      {/* Changed to grid-cols-3 to lock the nav in the center */}
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-3 items-center">
         
-        {/* Logo (Col 1) */}
+        {/* Logo - Added specific mobile sizing */}
         <Link href="/" className="flex items-center justify-start">
           <Image 
             src="/images/logowhite.png" 
             alt="RealView Media Logo" 
-            width={300} 
-            height={100} 
-            className="h-28 w-auto drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] brightness-110 contrast-125" 
+            width={200} 
+            height={80} 
+            className="h-16 md:h-20 w-auto brightness-110" 
             priority 
           />
         </Link>
 
-        {/* Desktop Navigation (Col 2 - Centered) */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 justify-center items-center">
-          {navLinks.map((item) => {
-            const isActive = pathname === item.path;
-
+          {['Experience', 'Portfolio', 'About', 'Contact'].map((item) => {
+            const path = `/${item.toLowerCase() === 'experience' ? 'experience' : item.toLowerCase()}`;
+            const isActive = pathname === path;
             return (
-              <Link
-                key={item.name}
-                href={item.path}
-                className={`text-base font-medium transition-colors duration-300 ${
-                  isActive
-                    ? 'text-rv-white'
-                    : 'text-rv-white/50 hover:text-rv-white'
-                }`}
-              >
-                {item.name}
+              <Link key={item} href={path} className={`text-sm font-medium transition-colors ${isActive ? 'text-rv-white' : 'text-rv-white/50 hover:text-rv-white'}`}>
+                {item}
               </Link>
             );
           })}
         </nav>
 
-        {/* Empty Spacer (Col 3) to maintain balance */}
         <div className="hidden md:block" />
-        
       </div>
     </motion.header>
   );
