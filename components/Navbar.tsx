@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
@@ -15,12 +16,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Define the display name AND the exact URL path
   const navLinks = [
-    { name: 'Experience', path: '/services' },
+    { name: 'Experience', path: '/experience' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -29,26 +29,39 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'py-4 bg-rv-black/80 backdrop-blur-md border-b border-rv-white/10' : 'py-6 bg-transparent'
+        scrolled
+          ? 'py-4 bg-rv-black/80 backdrop-blur-md border-b border-rv-white/10'
+          : 'py-6 bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        {/* Logo Placement */}
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-rv-white">
-          RealView<span className="text-rv-blue">.</span>
+      {/* Changed to grid-cols-3 to lock the nav in the center */}
+      <div className="container mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-3 items-center">
+        
+        {/* Logo (Col 1) */}
+        <Link href="/" className="flex items-center justify-start">
+          <Image 
+            src="/images/logowhite.png" 
+            alt="RealView Media Logo" 
+            width={300} 
+            height={100} 
+            className="h-28 w-auto drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] brightness-110 contrast-125" 
+            priority 
+          />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8 items-center">
+        {/* Desktop Navigation (Col 2 - Centered) */}
+        <nav className="hidden md:flex gap-8 justify-center items-center">
           {navLinks.map((item) => {
             const isActive = pathname === item.path;
-            
+
             return (
-              <Link 
-                key={item.name} 
-                href={item.path} 
-                className={`text-base font-medium transition-colors ${
-                  isActive ? 'text-rv-white' : 'text-rv-white/50 hover:text-rv-white'
+              <Link
+                key={item.name}
+                href={item.path}
+                className={`text-base font-medium transition-colors duration-300 ${
+                  isActive
+                    ? 'text-rv-white'
+                    : 'text-rv-white/50 hover:text-rv-white'
                 }`}
               >
                 {item.name}
@@ -57,12 +70,9 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Call to Action */}
-        <div className="hidden md:block">
-          <Link href="/contact" className="px-6 py-3 rounded-full bg-rv-white text-rv-black font-semibold text-base hover:scale-105 transition-transform duration-300 inline-block">
-            Book Consultation
-          </Link>
-        </div>
+        {/* Empty Spacer (Col 3) to maintain balance */}
+        <div className="hidden md:block" />
+        
       </div>
     </motion.header>
   );

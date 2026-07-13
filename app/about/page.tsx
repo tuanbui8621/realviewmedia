@@ -3,75 +3,179 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Eye, Map, BarChart3, Aperture, Globe2 } from 'lucide-react';
 
 export default function AboutPage() {
+  // Shared animation settings
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.8, 
+        ease: [0.16, 1, 0.3, 1] as any
+      } 
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   return (
-    <main className="relative bg-rv-black min-h-screen text-rv-white">
+    <main className="relative bg-[#050505] min-h-screen text-white selection:bg-blue-600 selection:text-white overflow-hidden">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-48 pb-20 px-6">
-        <div className="container mx-auto max-w-5xl">
+      {/* ====================================================
+          CHAPTER 1: The Hero (The Core Belief)
+          ==================================================== */}
+      <section className="relative pt-48 pb-32 px-6 flex flex-col items-center justify-center">
+        {/* Background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div className="container mx-auto max-w-5xl relative z-10">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="text-center space-y-8"
           >
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8">
-              We bridge the gap between <br />
-              <span className="text-rv-white/40">physical and digital.</span>
-            </h1>
-            <p className="text-lg md:text-2xl text-rv-white/60 font-light max-w-3xl mx-auto">
-              RealView Media was founded on a simple belief: that every space, no matter the size, deserves to be experienced in its full, three-dimensional glory.
-            </p>
+            <motion.p variants={fadeUp} className="text-blue-500 font-mono text-sm tracking-[0.3em] uppercase font-bold">
+              Who We Are
+            </motion.p>
+            
+            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1]">
+              We make the digital <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                feel undeniably real.
+              </span>
+            </motion.h1>
+            
+            <motion.p variants={fadeUp} className="text-lg md:text-2xl text-white/60 font-light max-w-3xl mx-auto leading-relaxed">
+              RealView Media was founded on a simple truth: if a picture is worth a thousand words, a fully immersive experience is worth a thousand visits.
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* The Story Section */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
-        <div className="container mx-auto max-w-4xl">
+      {/* ====================================================
+          CHAPTER 2: The Story (The Problem & Solution)
+          ==================================================== */}
+      <section className="py-24 px-6 border-y border-white/10 bg-[#0a0a0c] relative">
+        {/* Subtle Grid Background */}
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-overlay"></div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-4xl font-bold tracking-tighter">Our Obsession with Detail.</h2>
-              <p className="text-rv-white/60 leading-relaxed">
-                In a world saturated with flat imagery, we saw a disconnect. Businesses were struggling to convey the atmosphere of their physical locations through simple JPEGs. We decided to change that by mastering the intersection of high-end photography and immersive virtual reality.
-              </p>
-              <p className="text-rv-white/60 leading-relaxed">
-                Today, we operate at the cutting edge of visual tech, ensuring that when your customers see you online, they are already halfway through your front door.
-              </p>
-            </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-10%" }}
+              variants={staggerContainer}
+              className="space-y-8"
+            >
+              <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tighter">
+                The internet is flat. <br/>
+                <span className="text-white/40">We fix that.</span>
+              </motion.h2>
+              
+              <motion.div variants={fadeUp} className="space-y-6 text-white/70 text-lg leading-relaxed font-light">
+                <p>
+                  In a world saturated with heavily edited, static photos, consumers have lost trust. When your customers are deciding where to stay, eat, or shop, a standard 2D photo gallery leaves them guessing what lies just outside the frame.
+                </p>
+                <p>
+                  We saw this disconnect and decided to bridge the gap. By combining architectural-grade photography with immersive virtual reality technology, we eliminate the guesswork. 
+                </p>
+                <p className="text-white font-medium border-l-2 border-blue-500 pl-4">
+                  We don't just take photos of your business. We engineer digital twins that put your customers halfway through your front door before they ever leave their house.
+                </p>
+              </motion.div>
+            </motion.div>
+            
+            {/* Visual Element: Panning 360 Simulation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="aspect-square rounded-3xl bg-rv-blue/10 border border-rv-white/10 flex items-center justify-center relative"
+              transition={{ duration: 1 }}
+              className="relative aspect-square rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.1)] group"
             >
-              <div className="text-center p-8">
-                <span className="text-6xl font-bold text-rv-blue">360°</span>
-                <p className="text-sm uppercase tracking-widest mt-2">Spatial Expertise</p>
+              {/* Slowly Panning Panorama Image */}
+              <motion.div 
+                className="absolute inset-y-0 left-0 h-full w-[200%] bg-[url('/images/mai.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                animate={{ x: ["0%", "-50%", "0%"] }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              />
+              
+              {/* Premium Vignette Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90"></div>
+              <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-700"></div>
+              
+              {/* Content Badge Embedded at the Bottom */}
+              <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between z-10">
+                <div>
+                  <div className="w-12 h-12 bg-black/60 backdrop-blur-xl rounded-xl border border-white/20 flex items-center justify-center mb-4 shadow-2xl group-hover:-translate-y-2 transition-transform duration-500">
+                    <Globe2 className="w-6 h-6 text-blue-400" />
+                  </div>
+                  {/* Replaced Jargon with clear, searchable terminology */}
+                  <h3 className="text-3xl font-bold text-white tracking-tight leading-tight">Interactive<br/>Tours</h3>
+                </div>
+                <div className="text-right flex flex-col items-end">
+                  <span className="relative flex h-3 w-3 mb-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                  </span>
+                  <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">360°</span>
+                </div>
               </div>
             </motion.div>
+            
           </div>
         </div>
       </section>
 
-      {/* The Pillars */}
-      <section className="py-24 px-6">
+      {/* ====================================================
+          CHAPTER 3: The Pillars (Bento Box Layout)
+          ==================================================== */}
+      <section className="py-32 px-6 relative">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold tracking-tighter mb-16 text-center">Why We Do It.</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl font-black tracking-tighter mb-4 text-white">Our Core Philosophy.</h2>
+            <p className="text-white/50 text-lg">We don't just capture spaces. We build trust, drive engagement, and deliver measurable growth.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Trust', desc: 'Transparency is our currency. We show, we don’t tell.' },
-              { title: 'Innovation', desc: 'We stay ahead of the curve so you don\'t have to.' },
-              { title: 'Impact', desc: 'Every pixel we capture is designed to drive results.' }
+              { 
+                icon: Eye, 
+                title: 'Absolute Transparency', 
+                desc: 'Trust is our currency. By letting your customers explore freely, you prove you have nothing to hide and everything to show off.',
+                color: 'text-blue-400',
+                bg: 'bg-blue-500/10',
+                border: 'group-hover:border-blue-500/30'
+              },
+              { 
+                icon: Map, 
+                title: 'Frictionless Discovery', 
+                desc: 'We go where your audience is. By injecting your space directly into Google Maps, we capture local search traffic at the exact moment of decision.',
+                color: 'text-orange-400',
+                bg: 'bg-orange-500/10',
+                border: 'group-hover:border-orange-500/30'
+              },
+              { 
+                icon: BarChart3, 
+                title: 'Measurable ROI', 
+                desc: 'Every pixel is designed to convert. Our virtual tours are proven assets that increase booking velocity and drive physical walk-ins.',
+                color: 'text-emerald-400',
+                bg: 'bg-emerald-500/10',
+                border: 'group-hover:border-emerald-500/30'
+              }
             ].map((pillar, i) => (
               <motion.div 
                 key={i}
@@ -79,10 +183,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="p-8 rounded-3xl bg-rv-white/5 border border-rv-white/5 hover:border-rv-blue/30 transition-colors"
+                className={`p-10 rounded-[2.5rem] bg-[#0a0a0c] border border-white/5 ${pillar.border} transition-all duration-500 group flex flex-col`}
               >
-                <h3 className="text-xl font-bold mb-4">{pillar.title}</h3>
-                <p className="text-rv-white/60 text-sm leading-relaxed">{pillar.desc}</p>
+                <div className={`w-14 h-14 rounded-2xl ${pillar.bg} border border-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500`}>
+                  <pillar.icon className={`w-6 h-6 ${pillar.color}`} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 tracking-tight text-white">{pillar.title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed">{pillar.desc}</p>
               </motion.div>
             ))}
           </div>

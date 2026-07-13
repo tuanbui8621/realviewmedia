@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import CustomCursor from "@/components/ui/CustomCursor";
+import FloatingContact from "@/components/FloatingContact"; // <--- ADDED IMPORT
 
 // Import Premium Fonts
 const inter = Inter({ 
@@ -27,9 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      {/* Note the cursor-none class here to hide the default Windows mouse */}
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-rv-black text-rv-white overflow-x-hidden cursor-none`}>
         <CustomCursor />
+        
+        {/* ADDED COMPONENT HERE */}
+        <FloatingContact /> 
+        
         <LenisProvider>
           {children}
         </LenisProvider>

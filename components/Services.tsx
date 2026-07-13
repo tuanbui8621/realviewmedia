@@ -1,83 +1,115 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, LayoutGrid, Camera, Box, BarChart3 } from 'lucide-react';
+import { Aperture, Map, BarChart3, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-
-const services = [
-  {
-    title: 'Google 360 Tours',
-    description: 'Immersive digital twins integrated directly into Google Maps and Search.',
-    icon: LayoutGrid,
-    href: '/services/google-360',
-  },
-  {
-    title: 'Commercial Photography',
-    description: 'High-fidelity imagery that elevates your brand perception.',
-    icon: Camera,
-    href: '/services/commercial-photography',
-  },
-  {
-    title: 'Virtual Staging',
-    description: 'Transform empty spaces into inviting, furnished environments.',
-    icon: Box,
-    href: '/services/virtual-staging',
-  },
-  {
-    title: 'Profile Optimization',
-    description: 'Data-driven management to ensure you get found and chosen.',
-    icon: BarChart3,
-    href: '/services/profile-optimization',
-  },
-];
 
 export default function Services() {
   return (
-    <section className="py-32 px-6 bg-[#050505] text-rv-white">
-      <div className="container mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="mb-20 text-center">
+    <section className="py-32 bg-[#050505] px-6 relative overflow-hidden">
+      {/* Background glow for tech feel */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div className="container mx-auto max-w-7xl relative z-10">
+        
+        {/* The Hook (Header) */}
+        <div className="max-w-2xl mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold tracking-tighter mb-6"
+            className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-6"
           >
-            Our Expertise
+            Don't just show your space.<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+              Prove it.
+            </span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-rv-white/50 max-w-xl mx-auto text-lg font-light"
+            className="text-white/70 text-lg font-medium leading-relaxed"
           >
-            We bridge the gap between physical spaces and digital engagement with precision-engineered visual assets.
+            We create professional 360° virtual tours that help customers find your business, explore your space, and visit in person.
           </motion.p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-3xl bg-rv-white/5 border border-rv-white/10 hover:border-rv-blue/50 transition-all duration-500 hover:-translate-y-2 hover:bg-rv-white/10 flex flex-col"
-            >
-              <div className="w-12 h-12 rounded-full bg-rv-blue/10 flex items-center justify-center mb-6 border border-rv-blue/20 group-hover:scale-110 transition-transform duration-500">
-                <service.icon className="w-5 h-5 text-rv-blue" />
+        {/* The Interactive Bento Box Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Box 1: Cinematic Capture */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-2 group relative p-8 rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden flex flex-col"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Aperture className="w-10 h-10 text-blue-400 mb-6 shrink-0" />
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">8K Cinematic Capture</h3>
+            <p className="text-white/70 text-sm leading-relaxed mb-8">
+              No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore.
+            </p>
+            <Link href="/portfolio" className="mt-auto inline-flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-wider group-hover:gap-4 transition-all w-fit">
+            </Link>
+          </motion.div>
+
+          {/* Box 2: Native Maps */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            whileHover={{ y: -5 }}
+            className="group relative p-8 rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden flex flex-col"
+          >
+             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 via-orange-500/0 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Map className="w-10 h-10 text-orange-400 mb-6 shrink-0" />
+            <h3 className="text-xl font-bold text-white mb-3 tracking-tight">Street View Injection</h3>
+            <p className="text-white/70 text-sm leading-relaxed mb-8">
+              We deploy your 360° tour directly into Google Maps—the exact navigation engine your customers are already using to find you.
+            </p>
+            <div className="mt-auto flex items-center gap-2 text-white/30 text-xs font-mono uppercase">
+              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+              API Ready
+            </div>
+          </motion.div>
+
+          {/* Box 3: ROI */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-3 group relative p-8 rounded-[3rem] bg-gradient-to-r from-[#0a0a0c] to-[#0d1424] border border-emerald-500/20 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
+          >
+            <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div className="max-w-2xl relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-emerald-500/20 rounded-xl text-emerald-400">
+                  <BarChart3 size={20} />
+                </div>
+                <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">The Bottom Line</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{service.title}</h3>
-              <p className="text-rv-white/50 text-sm leading-relaxed mb-6 flex-grow">{service.description}</p>
-              
-              <Link href={service.href} className="inline-flex items-center gap-2 text-rv-blue font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                Explore <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-          ))}
+              <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">Measurable Conversion Spikes</h3>
+              <p className="text-white/70 text-sm leading-relaxed md:text-base">
+                Listings upgraded with a premium virtual tour are twice as likely to generate interest. We don't just get you views; we turn your digital traffic into actual revenue and real-world bookings.
+              </p>
+            </div>
+
+            <div className="relative z-10 shrink-0">
+               <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black rounded-full font-bold text-sm hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                 See Case Studies
+               </Link>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>
