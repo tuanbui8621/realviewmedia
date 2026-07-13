@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MagneticButton from '@/components/ui/MagneticButton';
 import Link from 'next/link';
-import { ArrowRight, ImageIcon, Maximize, MapPin, X, Navigation } from 'lucide-react';
+import { ArrowRight, MapPin, X, Navigation, Images, Orbit, Menu, Mic, Bookmark, Share2, PhoneCall } from 'lucide-react';
 
 export default function ExperiencePage() {
   // Shared animation settings for consistent pacing
@@ -80,8 +80,9 @@ export default function ExperiencePage() {
             <motion.div variants={fadeUp} className="group p-8 md:p-10 rounded-[2.5rem] border border-white/5 bg-[#0a0a0c] flex flex-col h-full relative overflow-hidden transition-all duration-500 hover:border-white/10">
               <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 via-red-500/0 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 relative z-10 transition-transform duration-500 group-hover:scale-110">
-                <ImageIcon className="w-6 h-6 text-white/40" />
+              {/* Premium Icon Badge: Flat Images */}
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center mb-8 relative z-10 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-transform duration-500 group-hover:scale-110">
+                <Images className="w-7 h-7 text-white/50" strokeWidth={1.5} />
               </div>
               
               <div className="relative z-10 mb-10">
@@ -91,54 +92,74 @@ export default function ExperiencePage() {
                 </p>
               </div>
 
-              {/* Vertical Mobile Phone Mockup (STATIC / NO 360) */}
-              <div className="mx-auto w-[210px] h-[410px] rounded-[2rem] border-[4px] border-[#1a1b1e] bg-black relative overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-all duration-500 shrink-0 opacity-90 group-hover:opacity-100 grayscale-[20%]">
+              {/* Vertical Mobile Phone Mockup (Authentic Google Maps - Static) */}
+              <div className="mx-auto w-[230px] h-[430px] rounded-[2.5rem] border-[6px] border-[#1a1b1e] bg-[#f0f2f5] relative overflow-hidden shadow-2xl transition-all duration-500 shrink-0 opacity-90 group-hover:opacity-100 grayscale-[20%]">
                 
                 {/* Dynamic Island / Hardware Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-[#1a1b1e] rounded-b-xl z-50"></div>
 
-                {/* Satellite Map Background */}
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000')] bg-cover bg-center opacity-40 mix-blend-luminosity"></div>
+                {/* Vector Map Background */}
+                <div className="absolute inset-0">
+                  <div className="absolute top-10 right-0 w-32 h-64 bg-[#aadaff] rounded-l-full blur-md opacity-60" /> {/* Fake River */}
+                  <div className="absolute -top-10 bottom-0 left-1/2 w-3 bg-[#ffffff] shadow-sm transform -rotate-12" /> {/* Main Road */}
+                  <div className="absolute top-1/2 left-0 right-0 h-3 bg-[#ffffff] shadow-sm transform rotate-6" /> {/* Cross Road */}
+                </div>
                 
-                {/* Fake Search Bar */}
-                <div className="absolute top-6 left-3 right-3 bg-white text-black text-[10px] font-medium px-3 py-2 rounded-full shadow-md flex justify-between items-center z-40">
-                  <span className="truncate mr-2">Victory Hotel Saigon</span>
-                  <X size={12} className="text-gray-400 shrink-0" />
+                {/* Authentic Search Bar */}
+                <div className="absolute top-8 left-3 right-3 bg-white rounded-full h-10 shadow-md flex items-center px-3 z-40 gap-2">
+                  <Menu size={16} className="text-gray-600 shrink-0" />
+                  <span className="flex-1 text-[11px] font-medium text-gray-800 truncate">Victory Hotel Saigon</span>
+                  <Mic size={14} className="text-gray-600 shrink-0" />
                 </div>
 
-                {/* Map Pin (Centered, NO bounce animation to look static) */}
-                <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-red-500 drop-shadow-lg">
-                  <MapPin size={28} fill="currentColor" />
+                {/* Map Pin */}
+                <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-[#EA4335] drop-shadow-md">
+                  <MapPin size={32} fill="currentColor" strokeWidth={1} />
                 </div>
 
-                {/* NOTE: No 360 Thumbnail Here to show the contrast */}
-
-                {/* Fake Bottom Sheet (Property Details) */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl p-3.5 z-40 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+                {/* Authentic Bottom Sheet */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-[1.5rem] pt-2 pb-6 px-4 z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
                   {/* Pull Handle */}
-                  <div className="w-6 h-1 bg-gray-300 rounded-full mx-auto mb-2.5"></div>
+                  <div className="w-8 h-1 bg-gray-300 rounded-full mx-auto mb-3"></div>
                   
-                  <h4 className="text-black font-bold text-[13px] leading-tight truncate">Victory Hotel Saigon</h4>
-                  <p className="text-gray-500 text-[9px] mt-0.5">Khách sạn Victory</p>
+                  <h4 className="text-gray-900 font-medium text-[15px] leading-tight truncate">Victory Hotel Saigon</h4>
+                  <p className="text-gray-500 text-[11px] mt-0.5">Khách sạn Victory</p>
                   
                   {/* Reviews */}
-                  <div className="flex items-center text-yellow-500 text-[10px] mt-1 mb-2.5">
+                  <div className="flex items-center text-[11px] mt-1 mb-3">
                     <span className="text-gray-800 font-medium mr-1">4.1</span>
-                    ★★★★☆ 
-                    <span className="text-gray-500 ml-1 font-medium">(1,204)</span>
+                    <div className="flex text-[#FBBC04] text-[10px]">★★★★☆</div>
+                    <span className="text-gray-500 ml-1">(1,204)</span>
                   </div>
                   
-                  {/* Action Buttons */}
-                  <div className="flex gap-1.5 mt-2">
-                    <div className="flex-1 bg-[#0b57d0] text-white rounded-full py-1.5 flex items-center justify-center text-[10px] font-bold gap-1 shadow-md">
-                      <Navigation size={10} fill="currentColor"/> Directions
+                  {/* Action Buttons Row */}
+                  <div className="flex justify-between items-start gap-1">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full bg-[#0b57d0] flex items-center justify-center text-white">
+                        <Navigation size={16} fill="currentColor"/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Directions</span>
                     </div>
-                    <div className="flex-1 bg-blue-50 text-[#0b57d0] rounded-full py-1.5 flex items-center justify-center text-[10px] font-bold">
-                      Start
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
+                        <Bookmark size={14}/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Save</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
+                        <PhoneCall size={14}/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Call</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
+                        <Share2 size={14}/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Share</span>
                     </div>
                   </div>
                 </div>
-
               </div>
             </motion.div>
 
@@ -147,8 +168,14 @@ export default function ExperiencePage() {
               {/* Glowing Orb Background */}
               <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none group-hover:bg-blue-500/20 transition-colors duration-700"></div>
               
-              <div className="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center mb-8 relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:scale-110 transition-transform duration-500">
-                <Maximize className="w-6 h-6 text-blue-400" />
+              {/* Premium Icon Badge: Orbit/360 */}
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-[1px] shadow-[0_0_30px_rgba(59,130,246,0.3)] mb-8 relative z-10 transition-transform duration-500 group-hover:scale-110">
+                <div className="w-full h-full bg-[#0a0a0c] rounded-[15px] flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-blue-500/20" />
+                  <Orbit className="w-8 h-8 text-blue-400 relative z-10" />
+                  {/* Subtle sweep animation on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                </div>
               </div>
 
               <div className="relative z-10 mb-10">
@@ -158,75 +185,92 @@ export default function ExperiencePage() {
                 </p>
               </div>
 
-              {/* Sleeker Vertical Mobile Phone Mockup */}
-              <div className="mx-auto w-[210px] h-[410px] rounded-[2rem] border-[4px] border-[#1a1b1e] bg-black relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group-hover:-translate-y-2 group-hover:scale-105 transition-all duration-500 shrink-0">
+              {/* Vertical Mobile Phone Mockup (Authentic Google Maps - 360 View) */}
+              <div className="mx-auto w-[230px] h-[430px] rounded-[2.5rem] border-[6px] border-[#1a1b1e] bg-[#f0f2f5] relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] group-hover:-translate-y-2 group-hover:scale-105 transition-all duration-500 shrink-0">
                 
-                {/* Dynamic Island / Hardware Notch */}
+                {/* Dynamic Island */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-[#1a1b1e] rounded-b-xl z-50"></div>
 
-                {/* Satellite Map Background */}
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000')] bg-cover bg-center opacity-60 mix-blend-luminosity"></div>
+                {/* Vector Map Background */}
+                <div className="absolute inset-0">
+                  <div className="absolute top-10 right-0 w-32 h-64 bg-[#aadaff] rounded-l-full blur-md opacity-60" />
+                  {/* Street View Path (The Blue Line indicator) */}
+                  <div className="absolute -top-10 bottom-0 left-1/2 w-3 bg-[#ffffff] shadow-sm transform -rotate-12">
+                    <div className="absolute inset-0 mx-auto w-1.5 bg-[#1a73e8]/80 shadow-[0_0_5px_rgba(26,115,232,0.8)]" />
+                  </div>
+                  <div className="absolute top-1/2 left-0 right-0 h-3 bg-[#ffffff] shadow-sm transform rotate-6" />
+                </div>
                 
-                {/* Fake Search Bar */}
-                <div className="absolute top-6 left-3 right-3 bg-white text-black text-[10px] font-medium px-3 py-2 rounded-full shadow-lg flex justify-between items-center z-40">
-                  <span className="truncate mr-2">Mai House Saigon Hotel</span>
-                  <X size={12} className="text-gray-400 shrink-0" />
+                {/* Authentic Search Bar */}
+                <div className="absolute top-8 left-3 right-3 bg-white rounded-full h-10 shadow-md flex items-center px-3 z-40 gap-2">
+                  <Menu size={16} className="text-gray-600 shrink-0" />
+                  <span className="flex-1 text-[11px] font-medium text-gray-800 truncate">Mai House Saigon</span>
+                  <Mic size={14} className="text-gray-600 shrink-0" />
                 </div>
 
-                {/* Map Pin (Centered & Bouncing) */}
-                <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-red-500 drop-shadow-2xl animate-bounce">
-                  <MapPin size={28} fill="currentColor" />
+                {/* Map Pin (Bouncing) */}
+                <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-[#EA4335] drop-shadow-xl animate-bounce">
+                  <MapPin size={32} fill="currentColor" strokeWidth={1} />
                 </div>
 
-                {/* HIGHLIGHT PULSE (Placed behind the thumbnail) */}
-                <div className="absolute top-[48%] left-3 w-14 h-14 z-30">
-                  <span className="absolute inset-0 rounded-lg bg-blue-500 animate-ping opacity-60 duration-1000"></span>
-                  <span className="absolute inset-0 rounded-lg bg-blue-400 opacity-40 blur-md"></span>
+                {/* HIGHLIGHT PULSE */}
+                <div className="absolute top-[42%] left-[10%] w-16 h-16 z-30 pointer-events-none">
+                  <span className="absolute inset-0 rounded-xl bg-blue-500 animate-ping opacity-60 duration-1000"></span>
                 </div>
 
-                {/* THE AUTHENTIC 360 THUMBNAIL */}
-                <div className="absolute top-[48%] left-3 w-14 h-14 rounded-lg border-[1.5px] border-white bg-[url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=400')] bg-cover bg-center z-40 shadow-[0_4px_10px_rgba(0,0,0,0.3)] cursor-pointer group-hover:scale-105 transition-transform duration-300 flex items-end justify-start p-1">
-                   {/* Custom 3D Orbit Icon Overlay */}
-                   <div className="bg-black/70 backdrop-blur-md w-[22px] h-[22px] rounded-full flex items-center justify-center border border-white/20 shadow-lg relative z-10">
-                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                {/* THE AUTHENTIC 360 THUMBNAIL ON MAP */}
+                <div className="absolute top-[42%] left-[10%] w-16 h-16 rounded-xl border-2 border-white bg-[url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=400')] bg-cover bg-center z-40 shadow-lg cursor-pointer group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                   {/* Google Maps 360 Circular Arrow Icon */}
+                   <div className="bg-black/50 backdrop-blur-sm w-7 h-7 rounded-full flex items-center justify-center border border-white/30 shadow-md">
+                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M3 12c0-3.31 4.03-6 9-6s9 2.69 9 6-4.03 6-9 6c-1.55 0-3.02-.27-4.3-.75" />
                         <path d="M7 17l.7-3.3-3.3.7" />
                      </svg>
                    </div>
                 </div>
 
-                {/* Fake Bottom Sheet (Property Details) */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl p-3.5 z-40 shadow-[0_-20px_40px_rgba(0,0,0,0.5)] transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
-                  {/* Pull Handle */}
-                  <div className="w-6 h-1 bg-gray-300 rounded-full mx-auto mb-2.5"></div>
+                {/* Authentic Bottom Sheet */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-[1.5rem] pt-2 pb-6 px-4 z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.2)] transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="w-8 h-1 bg-gray-300 rounded-full mx-auto mb-3"></div>
                   
-                  <h4 className="text-black font-bold text-[13px] leading-tight truncate">Mai House Saigon Hotel</h4>
-                  <p className="text-gray-500 text-[9px] mt-0.5">Khách sạn Mai House Saigon</p>
+                  <h4 className="text-gray-900 font-medium text-[15px] leading-tight truncate">Mai House Saigon</h4>
+                  <p className="text-gray-500 text-[11px] mt-0.5">Khách sạn Mai House</p>
                   
                   {/* Reviews */}
-                  <div className="flex items-center text-yellow-500 text-[10px] mt-1 mb-1.5">
+                  <div className="flex items-center text-[11px] mt-1 mb-3">
                     <span className="text-gray-800 font-medium mr-1">4.8</span>
-                    ★★★★★ 
-                    <span className="text-gray-500 ml-1 font-medium">(3,359)</span>
-                  </div>
-
-                  {/* Deal Badge */}
-                  <div className="flex items-center gap-1.5 mb-2.5">
-                    <span className="bg-[#e6f4ea] text-[#137333] text-[8px] font-bold px-1.5 py-0.5 rounded">DEAL</span>
-                    <span className="text-gray-600 text-[9px]">17% off</span>
+                    <div className="flex text-[#FBBC04] text-[10px]">★★★★★</div>
+                    <span className="text-gray-500 ml-1">(3,359)</span>
                   </div>
                   
-                  {/* Action Buttons */}
-                  <div className="flex gap-1.5">
-                    <div className="flex-1 bg-[#0b57d0] text-white rounded-full py-1.5 flex items-center justify-center text-[10px] font-bold gap-1 shadow-md">
-                      <Navigation size={10} fill="currentColor"/> Directions
+                  {/* Action Buttons Row */}
+                  <div className="flex justify-between items-start gap-1">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full bg-[#0b57d0] flex items-center justify-center text-white">
+                        <Navigation size={16} fill="currentColor"/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Directions</span>
                     </div>
-                    <div className="flex-1 bg-blue-50 text-[#0b57d0] rounded-full py-1.5 flex items-center justify-center text-[10px] font-bold">
-                      Start
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
+                        <Bookmark size={14}/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Save</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
+                        <PhoneCall size={14}/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Call</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
+                        <Share2 size={14}/>
+                      </div>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">Share</span>
                     </div>
                   </div>
                 </div>
-
               </div>
             </motion.div>
 
@@ -315,20 +359,20 @@ export default function ExperiencePage() {
           </motion.p>
           
           <motion.div variants={fadeUp} className="flex justify-center items-center mt-12">
-  <MagneticButton>
-    <Link 
-      href="/portfolio" 
-      className="group flex items-center gap-3 text-xl font-bold text-white transition-all duration-300"
-    >
-      <span className="border-b-2 border-white/20 group-hover:border-white transition-colors pb-1">
-        View Our Portfolio
-      </span>
-      <div className="bg-white/10 p-2 rounded-full group-hover:bg-blue-600 transition-colors">
-        <ArrowRight className="w-5 h-5 text-white" />
-      </div>
-    </Link>
-  </MagneticButton>
-</motion.div>
+            <MagneticButton>
+              <Link 
+                href="/portfolio" 
+                className="group flex items-center gap-3 text-xl font-bold text-white transition-all duration-300"
+              >
+                <span className="border-b-2 border-white/20 group-hover:border-white transition-colors pb-1">
+                  View Our Portfolio
+                </span>
+                <div className="bg-white/10 p-2 rounded-full group-hover:bg-blue-600 transition-colors">
+                  <ArrowRight className="w-5 h-5 text-white" />
+                </div>
+              </Link>
+            </MagneticButton>
+          </motion.div>
         </motion.div>
       </section>
 
