@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa6';
+import { FaInstagram, FaFacebook } from 'react-icons/fa6';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,24 +17,35 @@ export default function Footer() {
               RealView<span className="text-rv-blue">.</span>
             </Link>
             <p className="text-sm font-light leading-relaxed max-w-sm mb-8">
-              Premium visual marketing and Google Business 360 virtual tours engineered to turn local search traffic into physical foot traffic.
+              Boost your Google Business Profile with 360° virtual tours and premium visual content that help your business get discovered, earn trust, and drive more customers.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-6">
+              {/* Instagram */}
               <a 
                 href="https://www.instagram.com/realviewmedia_vn/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-rv-white/10 flex items-center justify-center hover:bg-[#E4405F] hover:border-[#E4405F] hover:text-white transition-all"
+                className="group relative w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:border-transparent"
               >
-                <FaInstagram className="w-4 h-4" />
+                {/* Instagram Gradient & Glow Layer */}
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] shadow-[0_0_20px_rgba(220,39,67,0.5)]" />
+                
+                {/* Icon Layer */}
+                <FaInstagram className="w-5 h-5 text-white/70 group-hover:text-white relative z-10 transition-colors duration-300" />
               </a>
+
+              {/* Facebook */}
               <a 
                 href="https://www.facebook.com/realviewmediavn/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-rv-white/10 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all"
+                className="group relative w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:border-transparent"
               >
-                <FaFacebook className="w-4 h-4" />
+                {/* Facebook Color & Glow Layer */}
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#1877F2] shadow-[0_0_20px_rgba(24,119,242,0.5)]" />
+                
+                {/* Icon Layer */}
+                <FaFacebook className="w-5 h-5 text-white/70 group-hover:text-white relative z-10 transition-colors duration-300" />
               </a>
             </div>
           </div>
@@ -65,7 +76,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@realviewmedia.com" className="flex items-center gap-3 hover:text-rv-white transition-colors">
+                <a href="mailto:contact@rvmedia.vn" className="flex items-center gap-3 hover:text-rv-white transition-colors">
                   <Mail className="w-5 h-5 text-rv-blue shrink-0" />
                   <span>contact@rvmedia.vn</span>
                 </a>
@@ -76,7 +87,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-rv-white/10 text-xs font-light">
-          <p>&copy; 2024 RealView Media. All rights reserved.</p>
+          <p>&copy; {currentYear} RealView Media. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-rv-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-rv-white transition-colors">Terms of Service</Link>
