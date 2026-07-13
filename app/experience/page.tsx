@@ -181,7 +181,7 @@ export default function ExperiencePage() {
               <div className="relative z-10 mb-10">
                 <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">Step Inside Before They Arrive</h2>
                 <p className="text-white/70 text-[15px] leading-relaxed">
-                  An interactive 360° tour lets customers explore every corner of your business directly from Google Maps, building trust before they even walk through your door.
+                  Let customers explore your business in 360° directly from Google Maps, building trust before they ever walk through your door.
                 </p>
               </div>
 
