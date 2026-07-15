@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, CheckCircle2, Activity } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import { useTranslations } from 'next-intl';
 
 const Pannellum = dynamic(() => import('pannellum-react').then(mod => mod.Pannellum), { ssr: false }) as any;
 
 export default function Experience360() {
+  const t = useTranslations('Experience360');
   return (
     <section className="py-24 bg-[#050505] px-6">
       <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row gap-6">
@@ -39,7 +41,7 @@ export default function Experience360() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
-            Live Preview
+            {t('livePreview')}
           </div>
         </motion.div>
 
@@ -57,7 +59,7 @@ export default function Experience360() {
               </div>
               <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5">
                 <TrendingUp size={12} />
-                <span>+14.2% MoM</span>
+                <span>{t('momGrowth')}</span>
               </div>
             </div>
 
@@ -65,7 +67,7 @@ export default function Experience360() {
               <h2 className="text-5xl font-black text-white tracking-tighter drop-shadow-md">
                 171K<span className="text-2xl text-white/50">+</span>
               </h2>
-              <p className="text-white/50 text-xs font-bold uppercase tracking-widest mt-1">Verified Maps Views</p>
+              <p className="text-white/50 text-xs font-bold uppercase tracking-widest mt-1">{t('verifiedViews')}</p>
             </div>
 
             {/* Micro-Visualization: SVG Trend Line */}
@@ -93,9 +95,9 @@ export default function Experience360() {
                   <Target size={24} />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-sm tracking-wide">Client Conversion</h3>
+                  <h3 className="text-white font-bold text-sm tracking-wide">{t('clientConversion')}</h3>
                   <div className="flex items-center gap-1.5 mt-0.5">
-                    <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-wider">Measurable ROI</span>
+                    <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-wider">{t('measurableROI')}</span>
                   </div>
                 </div>
               </div>
@@ -103,9 +105,9 @@ export default function Experience360() {
               <div className="w-full h-px bg-white/10 my-4"></div>
 
               <div className="w-full">
-                <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 tracking-tight">2x Higher Interest</h2>
+                <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 tracking-tight">{t('higherInterest')}</h2>
                 <ul className="mt-4 space-y-2.5">
-                  {['Twice as likely to generate interest', 'Higher booking potential'].map((item, i) => (
+                  {[t('likelihoodText'), t('bookingPotential')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">
                       <CheckCircle2 size={14} className="text-emerald-400" />
                       {item}

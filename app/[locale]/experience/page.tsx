@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MagneticButton from '@/components/ui/MagneticButton';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ArrowRight, MapPin, X, Navigation, Images, Orbit, Menu, Mic, Bookmark, Share2, PhoneCall } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function ExperiencePage() {
+  const t = useTranslations('ExperiencePage');
   // Shared animation settings for consistent pacing
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -46,20 +48,20 @@ export default function ExperiencePage() {
           className="relative z-10 text-center max-w-5xl mx-auto space-y-6"
         >
           <motion.p variants={fadeUp} className="text-blue-500 font-mono text-sm tracking-[0.3em] uppercase mb-8 font-bold">
-            The Reality of Digital Choice
+            {t('Hero.tagline')}
           </motion.p>
           
           <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1]">
-            Someone is deciding <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/40 to-white/80">whether to visit right now.</span>
+            {t('Hero.h1_line1')} <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/40 to-white/80">{t('Hero.h1_span')}</span>
           </motion.h1>
 
           <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 pt-12 text-xl md:text-3xl font-light text-white/60">
-            <p>They search.</p>
+            <p>{t('Hero.status_search')}</p>
             <div className="w-2 h-2 rounded-full bg-white/20 hidden md:block" />
-            <p>They compare.</p>
+            <p>{t('Hero.status_compare')}</p>
             <div className="w-2 h-2 rounded-full bg-white/20 hidden md:block" />
-            <p className="text-white font-medium">They hesitate.</p>
+            <p className="text-white font-medium">{t('Hero.status_hesitate')}</p>
           </motion.div>
         </motion.div>
       </section>
@@ -86,9 +88,9 @@ export default function ExperiencePage() {
               </div>
               
               <div className="relative z-10 mb-10">
-                <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">Just another pin on the map.</h2>
+                <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">{t('Comparison.card1_title')}</h2>
                 <p className="text-white/50 text-[15px] leading-relaxed">
-                  Customers see a handful of photos, hesitate, and move on because they can't truly understand your space.
+                  {t('Comparison.card1_desc')}
                 </p>
               </div>
 
@@ -179,9 +181,9 @@ export default function ExperiencePage() {
               </div>
 
               <div className="relative z-10 mb-10">
-                <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">Step Inside Before They Arrive</h2>
+                <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">{t('Comparison.card2_title')}</h2>
                 <p className="text-white/70 text-[15px] leading-relaxed">
-                  Let customers explore your business in 360° directly from Google Maps, building trust before they ever walk through your door.
+                  {t('Comparison.card2_desc')}
                 </p>
               </div>
 
@@ -290,8 +292,8 @@ export default function ExperiencePage() {
             variants={fadeUp}
             className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6"
           >
-            Photos show a place. <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Experiences let them step inside.</span>
+            {t('Interactive360.h2_line1')} <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">{t('Interactive360.h2_span')}</span>
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -300,7 +302,7 @@ export default function ExperiencePage() {
             variants={fadeUp}
             className="text-xl text-white/50 font-medium tracking-wide uppercase"
           >
-            Go ahead. Look around.
+            {t('Interactive360.hint')}
           </motion.p>
         </div>
 
@@ -329,13 +331,13 @@ export default function ExperiencePage() {
           className="max-w-3xl mx-auto text-center mt-32 px-6"
         >
           <motion.h3 variants={fadeUp} className="text-4xl md:text-5xl font-bold mb-8">
-            Notice what just happened?
+            {t('Interactive360.p1')}
           </motion.h3>
           <motion.p variants={fadeUp} className="text-xl md:text-2xl text-white/50 font-light leading-relaxed mb-6">
-            You stopped scrolling. You spent time exploring this space.
+            {t('Interactive360.p2')}
           </motion.p>
           <motion.p variants={fadeUp} className="text-2xl md:text-3xl font-medium">
-            That's exactly what your customers do.
+            {t('Interactive360.p3')}
           </motion.p>
         </motion.div>
       </section>
@@ -352,10 +354,10 @@ export default function ExperiencePage() {
           className="max-w-3xl mx-auto"
         >
           <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-black tracking-tighter mb-8">
-            Every space has a story. <br/> Let's tell yours.
+            {t('CTA.h2')}
           </motion.h2>
           <motion.p variants={fadeUp} className="text-white/60 text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-            Whether you manage luxury hospitality, real estate, or retail, we engineer the visual assets that convert digital views into real-world visits.
+            {t('CTA.p1')}
           </motion.p>
           
           <motion.div variants={fadeUp} className="flex justify-center items-center mt-12">
@@ -365,7 +367,7 @@ export default function ExperiencePage() {
                 className="group flex items-center gap-3 text-xl font-bold text-white transition-all duration-300"
               >
                 <span className="border-b-2 border-white/20 group-hover:border-white transition-colors pb-1">
-                  View Our Portfolio
+                  {t('CTA.btn')}
                 </span>
                 <div className="bg-white/10 p-2 rounded-full group-hover:bg-blue-600 transition-colors">
                   <ArrowRight className="w-5 h-5 text-white" />

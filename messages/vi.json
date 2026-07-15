@@ -1,0 +1,174 @@
+{
+  "Navigation": {
+    "home": "Trang chủ",
+    "experience": "Trải nghiệm",
+    "portfolio": "Dự án",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ"
+  },
+  "AboutPage": {
+    "Hero": {
+      "tagline": "Về Chúng Tôi",
+      "headingLine1": "Chúng tôi biến không gian kỹ thuật số",
+      "headingHighlight": "trở nên chân thực đến khó tin.",
+      "description": "RealView Media được thành lập dựa trên một sự thật đơn giản: nếu một bức ảnh đáng giá ngàn lời nói, thì một trải nghiệm đắm chìm hoàn toàn đáng giá ngàn chuyến viếng thăm."
+    },
+    "Story": {
+      "headingLine1": "Internet là một mặt phẳng.",
+      "headingHighlight": "Chúng tôi thay đổi điều đó.",
+      "paragraph1": "Trong một thế giới bão hòa với những bức ảnh tĩnh được chỉnh sửa kỹ lưỡng, người tiêu dùng đã dần mất niềm tin. Khi khách hàng quyết định nơi lưu trú, ăn uống hoặc mua sắm, một thư viện ảnh 2D tiêu chuẩn khiến họ phải tự đoán xem điều gì nằm ngoài khung hình.",
+      "paragraph2": "Chúng tôi nhận thấy sự ngắt kết nối này và quyết định thu hẹp khoảng cách. Bằng cách kết hợp nhiếp ảnh kiến trúc với công nghệ thực tế ảo đắm chìm, chúng tôi loại bỏ mọi sự phỏng đoán.",
+      "paragraph3": "Chúng tôi không chỉ chụp ảnh doanh nghiệp của bạn. Chúng tôi kiến tạo các bản sao kỹ thuật số, đưa khách hàng bước qua cánh cửa của bạn ngay cả khi họ chưa rời khỏi nhà.",
+      "badge1": "Chuyến tham quan",
+      "badge2": "Tương tác"
+    },
+    "Pillars": {
+      "sectionTitle": "Triết lý Cốt lõi.",
+      "sectionDesc": "Chúng tôi không chỉ ghi lại không gian. Chúng tôi xây dựng niềm tin, thúc đẩy tương tác và mang lại sự tăng trưởng có thể đo lường.",
+      "item1": {
+        "title": "Minh bạch Tuyệt đối",
+        "desc": "Niềm tin là giá trị cốt lõi. Bằng cách để khách hàng tự do khám phá, bạn chứng minh rằng mình không có gì phải giấu diếm và có mọi thứ đáng để phô diễn."
+      },
+      "item2": {
+        "title": "Khám phá Không giới hạn",
+        "desc": "Chúng tôi tiếp cận khán giả của bạn ngay tại nơi họ tìm kiếm. Bằng cách tích hợp không gian trực tiếp lên Google Maps, chúng tôi thu hút lượng truy cập địa phương vào chính thời điểm họ ra quyết định."
+      },
+      "item3": {
+        "title": "ROI Đo lường được",
+        "desc": "Mọi điểm ảnh đều được thiết kế để chuyển đổi. Các chuyến tham quan ảo là tài sản đã được chứng minh giúp tăng tốc độ đặt chỗ và thu hút khách hàng đến trực tiếp."
+      }
+    }
+  },
+  "ExperiencePage": {
+    "Hero": {
+      "tagline": "Thực Tế Về Quyết Định Khách Hàng",
+      "h1_line1": "Ai đó đang quyết định",
+      "h1_span": "có nên đến thăm bạn ngay lúc này.",
+      "status_search": "Họ tìm kiếm.",
+      "status_compare": "Họ so sánh.",
+      "status_hesitate": "Và họ phân vân."
+    },
+    "Comparison": {
+      "card1_title": "Chỉ là một ghim trên bản đồ.",
+      "card1_desc": "Khách hàng lướt qua vài bức ảnh, phân vân và rời đi vì họ không thể thực sự cảm nhận được không gian của bạn.",
+      "card2_title": "Bước Vào Trước Khi Đến",
+      "card2_desc": "Để khách hàng khám phá doanh nghiệp của bạn 360° trực tiếp từ Google Maps, xây dựng niềm tin ngay cả trước khi họ bước qua cánh cửa."
+    },
+    "Interactive360": {
+      "h2_line1": "Hình ảnh chỉ cho thấy địa điểm.",
+      "h2_span": "Trải nghiệm cho họ bước vào trong.",
+      "hint": "Hãy tiến lên. Khám phá xung quanh.",
+      "loading": "Đang tải dữ liệu không gian...",
+      "interaction": "Nhấp và kéo để khám phá",
+      "p1": "Bạn có nhận ra điều gì vừa xảy ra không?",
+      "p2": "Bạn ngừng lướt. Bạn dành thời gian để khám phá không gian này.",
+      "p3": "Đó chính xác là những gì khách hàng của bạn sẽ làm."
+    },
+    "CTA": {
+      "h2": "Mỗi không gian đều có một câu chuyện. Hãy để chúng tôi kể câu chuyện của bạn.",
+      "p1": "Cho dù bạn quản lý khách sạn cao cấp, bất động sản hay bán lẻ, chúng tôi kiến tạo các tài sản hình ảnh giúp chuyển đổi lượt xem trực tuyến thành lượng khách hàng thực tế.",
+      "btn": "Xem Các Dự Án"
+    }
+  },
+  "PortfolioPage": {
+    "Hero": { 
+      "title": "Dự Án Tiêu Biểu.", 
+      "subtitle": "Khám phá tuyển tập các chuyến tham quan ảo cao cấp được chúng tôi thực hiện cho các doanh nghiệp trên khắp Việt Nam." 
+    },
+    "Projects": {
+      "mai_house": { "title": "Mai House Saigon", "cat": "Khách Sạn Cao Cấp" },
+      "oakwood": { "title": "Oakwood Residence", "cat": "Căn Hộ Cao Cấp" },
+      "lavilla": { "title": "La Villa French Restaurant", "cat": "Nhà Hàng Sang Trọng" },
+      "aqua_clinic": { "title": "Aqua Clinic", "cat": "Thẩm Mỹ Viện Cao Cấp" }
+    },
+    "CTA": {
+      "h2": "Sẵn sàng đưa không gian của bạn lên không gian số?",
+      "p1": "Đội ngũ của chúng tôi luôn sẵn sàng 24/7 để thảo luận về dự án của bạn.",
+      "p2": "Chỉ cần nhấn vào biểu tượng Zalo hoặc Messenger ở góc màn hình để bắt đầu trò chuyện ngay lập tức."
+    }
+  },
+  "ContactPage": {
+    "Hero": { 
+      "h1": "Hãy trò chuyện.", 
+      "p": "Không cần điền form, không phải chờ đợi. Chúng tôi sẵn sàng 24/7 để hiện thực hóa dự án của bạn." 
+    },
+    "Methods": {
+      "chat_title": "Trò Chuyện Trực Tuyến",
+      "zalo_btn": "Nhắn tin qua Zalo",
+      "messenger_btn": "Nhắn tin qua Messenger",
+      "direct_title": "Liên Hệ Trực Tiếp",
+      "direct_desc": "Bạn muốn trao đổi chi tiết hơn? Hãy gửi email hoặc gọi ngay cho chúng tôi."
+    },
+    "Support": "Hỗ trợ 24/7"
+  },
+  "Footer": {
+    "tagline": "Tăng cường hồ sơ doanh nghiệp Google của bạn bằng các chuyến tham quan ảo 360° và nội dung hình ảnh cao cấp giúp doanh nghiệp bạn được phát hiện, xây dựng niềm tin và thu hút thêm khách hàng.",
+    "sections": {
+      "nav": "Điều hướng",
+      "contact": "Liên hệ"
+    },
+    "nav": {
+      "home": "Trang chủ",
+      "experience": "Trải nghiệm",
+      "portfolio": "Dự án",
+      "about": "Về chúng tôi"
+    },
+    "contact": {
+      "location": "Thành phố Hồ Chí Minh, Việt Nam",
+      "phone": "+84 96 688 87 82",
+      "email": "contact@rvmedia.vn"
+    },
+    "copyright": "© {year} RealView Media. Tất cả quyền được bảo lưu.",
+    "legal": {
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản dịch vụ"
+    }
+  },
+  "Hero": {
+    "heading": "Trở thành doanh nghiệp mà họ chọn.",
+    "tagline": "Trước khi họ bước qua cửa của bạn."
+  },
+  "Services": {
+    "sectionHeading": "Đừng chỉ cho thấy không gian của bạn.",
+    "sectionHighlight": "Hãy chứng minh điều đó.",
+    "sectionDesc": "Chúng tôi tạo các chuyến tham quan ảo 360° chuyên nghiệp giúp khách hàng tìm thấy doanh nghiệp bạn, khám phá không gian của bạn và ghé thăm trực tiếp.",
+    "cinema": {
+      "title": "Quay Phim 8K Chuyên Nghiệp",
+      "desc": "Không thiết bị nghiệp dư. Không cạnh bị méo. Chúng tôi sử dụng những bộ máy ảnh độ chuyên nghiệp để chụp không gian của bạn với chất lượng cao hoàn hảo. Chúng tôi đảm bảo doanh nghiệp của bạn trông rộng rãi, cao cấp và không thể để bị bỏ qua bởi khách hàng."
+    },
+    "maps": {
+      "title": "Tích hợp Street View",
+      "desc": "Chúng tôi triển khai chuyến tham quan 360° của bạn trực tiếp vào Google Maps—chính là công cụ định vị mà khách hàng của bạn đang sử dụng để tìm kiếm bạn.",
+      "status": "Sẵn sàng API"
+    },
+    "roi": {
+      "title": "Tăng Chuyển Đổi Đo Lường",
+      "desc": "Các danh sách được nâng cấp bằng chuyến tham quan ảo cao cấp có khả năng tạo ra sự quan tâm cao hơn gấp đôi. Chúng tôi không chỉ nhận được lượt xem cho bạn; chúng tôi biến lượng truy cập kỹ thuật số của bạn thành doanh thu thực tế và lượt khách hàng trực tiếp.",
+      "cta": "Xem Các Nghiên Cứu"
+    }
+  },
+  "Experience360": {
+    "livePreview": "Xem trực tiếp",
+    "verifiedViews": "Lượt xem Google Maps được xác minh",
+    "momGrowth": "+14,2% Tăng trưởng theo tháng",
+    "clientConversion": "Chuyển đổi khách hàng",
+    "measurableROI": "ROI có thể đo lường",
+    "higherInterest": "Sự quan tâm cao gấp 2 lần",
+    "likelihoodText": "Có khả năng tạo ra sự quan tâm gấp hai lần",
+    "bookingPotential": "Tiềm năng đặt phòng cao hơn"
+  },
+  "CTA": {
+    "subtitle": "Hãy Hợp Tác Với Chúng Tôi",
+    "heading": "Sẵn sàng nâng cao",
+    "headingHighlight": "doanh nghiệp của bạn?",
+    "zaloLabel": "Trò chuyện qua",
+    "zaloLabelMobile": "Zalo",
+    "messengerLabel": "Trò chuyện qua",
+    "messengerLabelMobile": "Messenger"
+  },
+  "PortfolioCarousel": {
+    "title": "Dự Án Nổi Bật.",
+    "subtitle": "Một lựa chọn được tuyển chọn kỹ lưỡng của các không gian mà chúng tôi đã đưa vào cuộc sống thông qua các chuyến tham quan 360° đắm chìm.",
+    "launchTour": "Khởi Chạy Chuyến Tham Quan Ảo"
+  }
+}

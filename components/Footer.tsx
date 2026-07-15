@@ -1,9 +1,11 @@
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { FaInstagram, FaFacebook } from 'react-icons/fa6';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations('Footer');
 
   return (
     <footer className="bg-[#050505] pt-24 pb-12 border-t border-rv-white/5 text-rv-white/60">
@@ -17,7 +19,7 @@ export default function Footer() {
               RealView<span className="text-rv-blue">.</span>
             </Link>
             <p className="text-sm font-light leading-relaxed max-w-sm mb-8">
-              Boost your Google Business Profile with 360° virtual tours and premium visual content that help your business get discovered, earn trust, and drive more customers.
+              {t('tagline')}
             </p>
             <div className="flex gap-6">
               {/* Instagram */}
@@ -52,33 +54,33 @@ export default function Footer() {
 
           {/* Navigation Column */}
           <div className="md:col-span-1">
-            <h4 className="text-rv-white font-medium mb-6">Navigation</h4>
+            <h4 className="text-rv-white font-medium mb-6">{t('sections.nav')}</h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><Link href="/" className="hover:text-rv-white transition-colors">Home</Link></li>
-              <li><Link href="/experience" className="hover:text-rv-white transition-colors">Experience</Link></li>
-              <li><Link href="/portfolio" className="hover:text-rv-white transition-colors">Portfolio</Link></li>
-              <li><Link href="/about" className="hover:text-rv-white transition-colors">About Us</Link></li>
+              <li><Link href="/" className="hover:text-rv-white transition-colors">{t('nav.home')}</Link></li>
+              <li><Link href="/experience" className="hover:text-rv-white transition-colors">{t('nav.experience')}</Link></li>
+              <li><Link href="/portfolio" className="hover:text-rv-white transition-colors">{t('nav.portfolio')}</Link></li>
+              <li><Link href="/about" className="hover:text-rv-white transition-colors">{t('nav.about')}</Link></li>
             </ul>
           </div>
 
           {/* Contact Column */}
           <div className="md:col-span-1">
-            <h4 className="text-rv-white font-medium mb-6">Contact</h4>
+            <h4 className="text-rv-white font-medium mb-6">{t('sections.contact')}</h4>
             <ul className="space-y-4 text-sm font-light">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-rv-blue shrink-0" />
-                <span>Ho Chi Minh City, Vietnam</span>
+                <span>{t('contact.location')}</span>
               </li>
               <li>
                 <a href="tel:+84966888782" className="flex items-center gap-3 hover:text-rv-white transition-colors">
                   <Phone className="w-5 h-5 text-rv-blue shrink-0" />
-                  <span>+84 96 688 87 82</span>
+                  <span>{t('contact.phone')}</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:contact@rvmedia.vn" className="flex items-center gap-3 hover:text-rv-white transition-colors">
                   <Mail className="w-5 h-5 text-rv-blue shrink-0" />
-                  <span>contact@rvmedia.vn</span>
+                  <span>{t('contact.email')}</span>
                 </a>
               </li>
             </ul>
@@ -87,10 +89,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-rv-white/10 text-xs font-light">
-          <p>&copy; {currentYear} RealView Media. All rights reserved.</p>
+          <p>{t('copyright', { year: currentYear })}</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-rv-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-rv-white transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-rv-white transition-colors">{t('legal.privacy')}</Link>
+            <Link href="/terms" className="hover:text-rv-white transition-colors">{t('legal.terms')}</Link>
           </div>
         </div>
       </div>

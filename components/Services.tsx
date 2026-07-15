@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Aperture, Map, BarChart3, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function Services() {
+  const t = useTranslations('Services');
   return (
     <section className="py-32 bg-[#050505] px-6 relative overflow-hidden">
       {/* Background glow for tech feel */}
@@ -20,9 +22,9 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-6"
           >
-            Don't just show your space.<br />
+            {t('sectionHeading')}<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              Prove it.
+              {t('sectionHighlight')}
             </span>
           </motion.h2>
           <motion.p 
@@ -32,7 +34,7 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="text-white/70 text-lg font-medium leading-relaxed"
           >
-            We create professional 360° virtual tours that help customers find your business, explore your space, and visit in person.
+            {t('sectionDesc')}
           </motion.p>
         </div>
 
@@ -50,9 +52,9 @@ export default function Services() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <Aperture className="w-10 h-10 text-blue-400 mb-6 shrink-0" />
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">8K Cinematic Capture</h3>
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">{t('cinema.title')}</h3>
             <p className="text-white/70 text-sm leading-relaxed mb-8">
-              No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore.
+              {t('cinema.desc')}
             </p>
             <Link href="/portfolio" className="mt-auto inline-flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-wider group-hover:gap-4 transition-all w-fit">
             </Link>
@@ -69,13 +71,13 @@ export default function Services() {
           >
              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 via-orange-500/0 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <Map className="w-10 h-10 text-orange-400 mb-6 shrink-0" />
-            <h3 className="text-xl font-bold text-white mb-3 tracking-tight">Street View Injection</h3>
+            <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{t('maps.title')}</h3>
             <p className="text-white/70 text-sm leading-relaxed mb-8">
-              We deploy your 360° tour directly into Google Maps—the exact navigation engine your customers are already using to find you.
+              {t('maps.desc')}
             </p>
             <div className="mt-auto flex items-center gap-2 text-white/30 text-xs font-mono uppercase">
               <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-              API Ready
+              {t('maps.status')}
             </div>
           </motion.div>
 
@@ -97,15 +99,15 @@ export default function Services() {
                 </div>
                 <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">The Bottom Line</span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">Measurable Conversion Spikes</h3>
+              <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">{t('roi.title')}</h3>
               <p className="text-white/70 text-sm leading-relaxed md:text-base">
-                Listings upgraded with a premium virtual tour are twice as likely to generate interest. We don't just get you views; we turn your digital traffic into actual revenue and real-world bookings.
+                {t('roi.desc')}
               </p>
             </div>
 
             <div className="relative z-10 shrink-0">
                <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black rounded-full font-bold text-sm hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-                 See Case Studies
+                 {t('roi.cta')}
                </Link>
             </div>
           </motion.div>

@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Eye, Map, BarChart3, Aperture, Globe2 } from 'lucide-react';
+import { Eye, Map, BarChart3, Globe2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function AboutPage() {
-  // Shared animation settings
+  const t = useTranslations('AboutPage');
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { 
@@ -27,15 +29,40 @@ export default function AboutPage() {
     }
   };
 
+  // Define the pillars using the translated keys
+  const pillars = [
+    { 
+      icon: Eye, 
+      title: t('Pillars.item1.title'), 
+      desc: t('Pillars.item1.desc'),
+      color: 'text-blue-400',
+      bg: 'bg-blue-500/10',
+      border: 'group-hover:border-blue-500/30'
+    },
+    { 
+      icon: Map, 
+      title: t('Pillars.item2.title'), 
+      desc: t('Pillars.item2.desc'),
+      color: 'text-orange-400',
+      bg: 'bg-orange-500/10',
+      border: 'group-hover:border-orange-500/30'
+    },
+    { 
+      icon: BarChart3, 
+      title: t('Pillars.item3.title'), 
+      desc: t('Pillars.item3.desc'),
+      color: 'text-emerald-400',
+      bg: 'bg-emerald-500/10',
+      border: 'group-hover:border-emerald-500/30'
+    }
+  ];
+
   return (
     <main className="relative bg-[#050505] min-h-screen text-white selection:bg-blue-600 selection:text-white overflow-hidden">
       <Navbar />
 
-      {/* ====================================================
-          CHAPTER 1: The Hero (The Core Belief)
-          ==================================================== */}
+      {/* CHAPTER 1: Hero */}
       <section className="relative pt-48 pb-32 px-6 flex flex-col items-center justify-center">
-        {/* Background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="container mx-auto max-w-5xl relative z-10">
@@ -46,28 +73,25 @@ export default function AboutPage() {
             className="text-center space-y-8"
           >
             <motion.p variants={fadeUp} className="text-blue-500 font-mono text-sm tracking-[0.3em] uppercase font-bold">
-              Who We Are
+              {t('Hero.tagline')}
             </motion.p>
             
             <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1]">
-              We make the digital <br />
+              {t('Hero.headingLine1')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                feel undeniably real.
+                {t('Hero.headingHighlight')}
               </span>
             </motion.h1>
             
             <motion.p variants={fadeUp} className="text-lg md:text-2xl text-white/60 font-light max-w-3xl mx-auto leading-relaxed">
-              RealView Media was founded on a simple truth: if a picture is worth a thousand words, a fully immersive experience is worth a thousand visits.
+              {t('Hero.description')}
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* ====================================================
-          CHAPTER 2: The Story (The Problem & Solution)
-          ==================================================== */}
+      {/* CHAPTER 2: Story */}
       <section className="py-24 px-6 border-y border-white/10 bg-[#0a0a0c] relative">
-        {/* Subtle Grid Background */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-overlay"></div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -81,24 +105,19 @@ export default function AboutPage() {
               className="space-y-8"
             >
               <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tighter">
-                The internet is flat. <br/>
-                <span className="text-white/40">We fix that.</span>
+                {t('Story.headingLine1')} <br/>
+                <span className="text-white/40">{t('Story.headingHighlight')}</span>
               </motion.h2>
               
               <motion.div variants={fadeUp} className="space-y-6 text-white/70 text-lg leading-relaxed font-light">
-                <p>
-                  In a world saturated with heavily edited, static photos, consumers have lost trust. When your customers are deciding where to stay, eat, or shop, a standard 2D photo gallery leaves them guessing what lies just outside the frame.
-                </p>
-                <p>
-                  We saw this disconnect and decided to bridge the gap. By combining architectural-grade photography with immersive virtual reality technology, we eliminate the guesswork. 
-                </p>
+                <p>{t('Story.paragraph1')}</p>
+                <p>{t('Story.paragraph2')}</p>
                 <p className="text-white font-medium border-l-2 border-blue-500 pl-4">
-                  We don't just take photos of your business. We engineer digital twins that put your customers halfway through your front door before they ever leave their house.
+                  {t('Story.paragraph3')}
                 </p>
               </motion.div>
             </motion.div>
             
-            {/* Visual Element: Panning 360 Simulation */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -106,25 +125,23 @@ export default function AboutPage() {
               transition={{ duration: 1 }}
               className="relative aspect-square rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.1)] group"
             >
-              {/* Slowly Panning Panorama Image */}
               <motion.div 
                 className="absolute inset-y-0 left-0 h-full w-[200%] bg-[url('/images/mai.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                 animate={{ x: ["0%", "-50%", "0%"] }}
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
               />
               
-              {/* Premium Vignette Overlays */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90"></div>
               <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-700"></div>
               
-              {/* Content Badge Embedded at the Bottom */}
               <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between z-10">
                 <div>
                   <div className="w-12 h-12 bg-black/60 backdrop-blur-xl rounded-xl border border-white/20 flex items-center justify-center mb-4 shadow-2xl group-hover:-translate-y-2 transition-transform duration-500">
                     <Globe2 className="w-6 h-6 text-blue-400" />
                   </div>
-                  {/* Replaced Jargon with clear, searchable terminology */}
-                  <h3 className="text-3xl font-bold text-white tracking-tight leading-tight">Interactive<br/>Tours</h3>
+                  <h3 className="text-3xl font-bold text-white tracking-tight leading-tight">
+                    {t('Story.badge1')}<br/>{t('Story.badge2')}
+                  </h3>
                 </div>
                 <div className="text-right flex flex-col items-end">
                   <span className="relative flex h-3 w-3 mb-3">
@@ -140,43 +157,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ====================================================
-          CHAPTER 3: The Pillars (Bento Box Layout)
-          ==================================================== */}
+      {/* CHAPTER 3: Pillars */}
       <section className="py-32 px-6 relative">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-black tracking-tighter mb-4 text-white">Our Core Philosophy.</h2>
-            <p className="text-white/50 text-lg">We don't just capture spaces. We build trust, drive engagement, and deliver measurable growth.</p>
+            <h2 className="text-4xl font-black tracking-tighter mb-4 text-white">
+              {t('Pillars.sectionTitle')}
+            </h2>
+            <p className="text-white/50 text-lg">
+              {t('Pillars.sectionDesc')}
+            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { 
-                icon: Eye, 
-                title: 'Absolute Transparency', 
-                desc: 'Trust is our currency. By letting your customers explore freely, you prove you have nothing to hide and everything to show off.',
-                color: 'text-blue-400',
-                bg: 'bg-blue-500/10',
-                border: 'group-hover:border-blue-500/30'
-              },
-              { 
-                icon: Map, 
-                title: 'Frictionless Discovery', 
-                desc: 'We go where your audience is. By injecting your space directly into Google Maps, we capture local search traffic at the exact moment of decision.',
-                color: 'text-orange-400',
-                bg: 'bg-orange-500/10',
-                border: 'group-hover:border-orange-500/30'
-              },
-              { 
-                icon: BarChart3, 
-                title: 'Measurable ROI', 
-                desc: 'Every pixel is designed to convert. Our virtual tours are proven assets that increase booking velocity and drive physical walk-ins.',
-                color: 'text-emerald-400',
-                bg: 'bg-emerald-500/10',
-                border: 'group-hover:border-emerald-500/30'
-              }
-            ].map((pillar, i) => (
+            {pillars.map((pillar, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

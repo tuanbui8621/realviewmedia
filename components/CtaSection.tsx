@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import MagneticButton from '@/components/ui/MagneticButton';
+import { useTranslations } from 'next-intl';
 
 export default function CtaSection() {
+  const t = useTranslations('CTA');
   return (
     <section className="py-32 relative overflow-hidden bg-[#050505] border-t border-white/10">
       {/* Subtle Glow Effect */}
@@ -16,7 +18,7 @@ export default function CtaSection() {
           viewport={{ once: true }}
           className="text-white/60 text-lg mb-4"
         >
-          Let's Work Together
+          {t('subtitle')}
         </motion.p>
         
         <motion.h2 
@@ -26,7 +28,7 @@ export default function CtaSection() {
           transition={{ delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-16 max-w-2xl"
         >
-          Ready to elevate <br /> your business?
+          {t('heading')} <br /> {t('headingHighlight')}
         </motion.h2>
 
         <motion.div
@@ -50,7 +52,7 @@ export default function CtaSection() {
                   <text x="50.5" y="55.5" fill="#ffffff" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" textAnchor="middle" letterSpacing="-0.5">Zalo</text>
                 </svg>
               </div>
-              <span className="text-3xl md:text-4xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors text-left">Chat on<br/>Zalo</span>
+              <span className="text-3xl md:text-4xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors text-left">{t('zaloLabel')}<br/>{t('zaloLabelMobile')}</span>
             </a>
           </MagneticButton>
 
@@ -75,7 +77,7 @@ export default function CtaSection() {
                   <path d="M18 0C8.06 0 0 7.6 0 17c0 5.37 2.68 10.15 6.84 13.3V36l6.18-3.41c1.6.44 3.26.68 5 .68 9.94 0 18-7.6 18-17S27.94 0 18 0zm1.88 22.53l-4.79-5.11-9.35 5.11 10.28-10.9 4.88 5.11 9.27-5.12-10.29 10.91z" fill="url(#messenger-grad)"/>
                 </svg>
               </div>
-              <span className="text-3xl md:text-4xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors text-left">Chat on<br/>Messenger</span>
+              <span className="text-3xl md:text-4xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors text-left">{t('messengerLabel')}<br/>{t('messengerLabelMobile')}</span>
             </a>
           </MagneticButton>
         </motion.div>

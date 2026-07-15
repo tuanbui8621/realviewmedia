@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MagneticButton from '@/components/ui/MagneticButton';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import Image from 'next/image';
 import { ArrowRight, MapPin, X, Eye, MousePointer2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 // Fast local database for portfolio
 const portfolioProjects = [
@@ -52,6 +53,7 @@ const portfolioProjects = [
 
 export default function PortfolioPage() {
   const [activeProject, setActiveProject] = useState<typeof portfolioProjects[0] | null>(null);
+  const t = useTranslations('PortfolioPage');
 
   return (
     <main className="relative bg-rv-black min-h-screen text-rv-white selection:bg-rv-blue/30">
@@ -65,7 +67,7 @@ export default function PortfolioPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-6xl md:text-8xl font-bold tracking-tighter mb-8"
         >
-          Selected <br />
+          {t('Hero.title')}<br />
           <span className="text-rv-white/30">Works.</span>
         </motion.h1>
         <motion.p 
@@ -74,7 +76,7 @@ export default function PortfolioPage() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-lg md:text-2xl text-rv-white/60 max-w-3xl mx-auto font-light leading-relaxed"
         >
-          Explore a selection of premium virtual tours created for businesses across Vietnam.
+          {t('Hero.subtitle')}
         </motion.p>
       </section>
 
@@ -190,7 +192,7 @@ export default function PortfolioPage() {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8"
           >
-            Ready to bring <br /> your space to life?
+            {t('CTA.h2')}
           </motion.h2>
           
           <motion.div
@@ -200,10 +202,10 @@ export default function PortfolioPage() {
             transition={{ delay: 0.2 }}
           >
             <p className="text-white/90 text-xl font-medium mb-2">
-              Our team is available 24/7 to discuss your project.
+              {t('CTA.p1')}
             </p>
             <p className="text-white/60 text-lg">
-              Simply tap the Zalo or Messenger icon in the corner to start a conversation instantly.
+              {t('CTA.p2')}
             </p>
           </motion.div>
         </div>

@@ -1,0 +1,174 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "experience": "Experience",
+    "portfolio": "Portfolio",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "AboutPage": {
+    "Hero": {
+      "tagline": "Who We Are",
+      "headingLine1": "We make the digital",
+      "headingHighlight": "feel undeniably real.",
+      "description": "RealView Media was founded on a simple truth: if a picture is worth a thousand words, a fully immersive experience is worth a thousand visits."
+    },
+    "Story": {
+      "headingLine1": "The internet is flat.",
+      "headingHighlight": "We fix that.",
+      "paragraph1": "In a world saturated with heavily edited, static photos, consumers have lost trust. When your customers are deciding where to stay, eat, or shop, a standard 2D photo gallery leaves them guessing what lies just outside the frame.",
+      "paragraph2": "We saw this disconnect and decided to bridge the gap. By combining architectural-grade photography with immersive virtual reality technology, we eliminate the guesswork.",
+      "paragraph3": "We don't just take photos of your business. We engineer digital twins that put your customers halfway through your front door before they ever leave their house.",
+      "badge1": "Interactive",
+      "badge2": "Tours"
+    },
+    "Pillars": {
+      "sectionTitle": "Our Core Philosophy.",
+      "sectionDesc": "We don't just capture spaces. We build trust, drive engagement, and deliver measurable growth.",
+      "item1": {
+        "title": "Absolute Transparency",
+        "desc": "Trust is our currency. By letting your customers explore freely, you prove you have nothing to hide and everything to show off."
+      },
+      "item2": {
+        "title": "Frictionless Discovery",
+        "desc": "We go where your audience is. By injecting your space directly into Google Maps, we capture local search traffic at the exact moment of decision."
+      },
+      "item3": {
+        "title": "Measurable ROI",
+        "desc": "Every pixel is designed to convert. Our virtual tours are proven assets that increase booking velocity and drive physical walk-ins."
+      }
+    }
+  },
+  "ExperiencePage": {
+    "Hero": {
+      "tagline": "The Reality of Digital Choice",
+      "h1_line1": "Someone is deciding",
+      "h1_span": "whether to visit right now.",
+      "status_search": "They search.",
+      "status_compare": "They compare.",
+      "status_hesitate": "They hesitate."
+    },
+    "Comparison": {
+      "card1_title": "Just another pin on the map.",
+      "card1_desc": "Customers see a handful of photos, hesitate, and move on because they can't truly understand your space.",
+      "card2_title": "Step Inside Before They Arrive",
+      "card2_desc": "Let customers explore your business in 360° directly from Google Maps, building trust before they ever walk through your door."
+    },
+    "Interactive360": {
+      "h2_line1": "Photos show a place.",
+      "h2_span": "Experiences let them step inside.",
+      "hint": "Go ahead. Look around.",
+      "loading": "Mapping spatial data...",
+      "interaction": "Click and drag to explore",
+      "p1": "Notice what just happened?",
+      "p2": "You stopped scrolling. You spent time exploring this space.",
+      "p3": "That's exactly what your customers do."
+    },
+    "CTA": {
+      "h2": "Every space has a story. Let's tell yours.",
+      "p1": "Whether you manage luxury hospitality, real estate, or retail, we engineer the visual assets that convert digital views into real-world visits.",
+      "btn": "View Our Portfolio"
+    }
+  },
+  "PortfolioPage": {
+    "Hero": {
+      "title": "Selected Works.",
+      "subtitle": "Explore a selection of premium virtual tours created for businesses across Vietnam."
+    },
+    "Projects": {
+      "mai_house": { "title": "Mai House Saigon", "cat": "Luxury Hospitality" },
+      "oakwood": { "title": "Oakwood Residence", "cat": "Premium Residential" },
+      "lavilla": { "title": "La Villa French Restaurant", "cat": "Fine Dining" },
+      "aqua_clinic": { "title": "Aqua Clinic", "cat": "Medical Aesthetics" }
+    },
+    "CTA": {
+      "h2": "Ready to bring your space to life?",
+      "p1": "Our team is available 24/7 to discuss your project.",
+      "p2": "Simply tap the Zalo or Messenger icon in the corner to start a conversation instantly."
+    }
+  },
+  "ContactPage": {
+    "Hero": {
+      "h1": "Let's talk.",
+      "p": "No forms, no wait times. We are available 24/7 to bring your space to life."
+    },
+    "Methods": {
+      "chat_title": "Let's Chat",
+      "zalo_btn": "Chat on Zalo",
+      "messenger_btn": "Chat on Messenger",
+      "direct_title": "Direct Contact",
+      "direct_desc": "Prefer a formal discussion? Send us an email or give us a quick call."
+    },
+    "Support": "Support Available 24/7"
+  },
+  "Footer": {
+    "tagline": "Boost your Google Business Profile with 360° virtual tours and premium visual content that help your business get discovered, earn trust, and drive more customers.",
+    "sections": {
+      "nav": "Navigation",
+      "contact": "Contact"
+    },
+    "nav": {
+      "home": "Home",
+      "experience": "Experience",
+      "portfolio": "Portfolio",
+      "about": "About Us"
+    },
+    "contact": {
+      "location": "Ho Chi Minh City, Vietnam",
+      "phone": "+84 96 688 87 82",
+      "email": "contact@rvmedia.vn"
+    },
+    "copyright": "© {year} RealView Media. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "Hero": {
+    "heading": "Be the business they choose.",
+    "tagline": "Before they ever walk through your door."
+  },
+  "Services": {
+    "sectionHeading": "Don't just show your space.",
+    "sectionHighlight": "Prove it.",
+    "sectionDesc": "We create professional 360° virtual tours that help customers find your business, explore your space, and visit in person.",
+    "cinema": {
+      "title": "8K Cinematic Capture",
+      "desc": "No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore."
+    },
+    "maps": {
+      "title": "Street View Injection",
+      "desc": "We deploy your 360° tour directly into Google Maps—the exact navigation engine your customers are already using to find you.",
+      "status": "API Ready"
+    },
+    "roi": {
+      "title": "Measurable Conversion Spikes",
+      "desc": "Listings upgraded with a premium virtual tour are twice as likely to generate interest. We don't just get you views; we turn your digital traffic into actual revenue and real-world bookings.",
+      "cta": "See Case Studies"
+    }
+  },
+  "Experience360": {
+    "livePreview": "Live Preview",
+    "verifiedViews": "Verified Maps Views",
+    "momGrowth": "+14.2% MoM",
+    "clientConversion": "Client Conversion",
+    "measurableROI": "Measurable ROI",
+    "higherInterest": "2x Higher Interest",
+    "likelihoodText": "Twice as likely to generate interest",
+    "bookingPotential": "Higher booking potential"
+  },
+  "CTA": {
+    "subtitle": "Let's Work Together",
+    "heading": "Ready to elevate",
+    "headingHighlight": "your business?",
+    "zaloLabel": "Chat on",
+    "zaloLabelMobile": "Zalo",
+    "messengerLabel": "Chat on",
+    "messengerLabelMobile": "Messenger"
+  },
+  "PortfolioCarousel": {
+    "title": "Featured Work.",
+    "subtitle": "A curated selection of spaces we have brought to life through immersive 360° captures.",
+    "launchTour": "Launch Virtual Tour"
+  }
+}

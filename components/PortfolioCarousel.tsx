@@ -4,7 +4,8 @@ import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight, RotateCcw, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 // Featured Virtual Tours Data
 const projects = [
@@ -78,6 +79,7 @@ export default function PortfolioCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
+  const t = useTranslations('PortfolioCarousel');
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -106,10 +108,10 @@ export default function PortfolioCarousel() {
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-8">
           <div>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-4">
-              Featured Work.
+              {t('title')}
             </h2>
             <p className="text-white/50 text-lg font-light max-w-md">
-              A curated selection of spaces we have brought to life through immersive 360° captures.
+              {t('subtitle')}
             </p>
           </div>
           
@@ -183,7 +185,7 @@ export default function PortfolioCarousel() {
                     <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">{project.client}</h3>
                     
                     <div className="inline-flex items-center gap-2 text-white/70 text-sm font-medium group-hover:text-white transition-colors">
-                      Launch Virtual Tour <ExternalLink size={16} />
+                      {t('launchTour')} <ExternalLink size={16} />
                     </div>
                   </div>
                 </div>
