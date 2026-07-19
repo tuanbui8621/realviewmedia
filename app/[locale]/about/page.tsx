@@ -1,22 +1,24 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Eye, Map, BarChart3, Globe2 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Eye, Map, Images, BarChart3, Globe2 } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 export default function AboutPage() {
   const t = useTranslations('AboutPage');
+  const locale = useLocale();
 
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { 
       opacity: 1, 
       y: 0, 
       transition: { 
         duration: 0.8, 
-        ease: [0.16, 1, 0.3, 1] as any
+        ease: [0.16, 1, 0.3, 1]
       } 
     }
   };
@@ -48,7 +50,7 @@ export default function AboutPage() {
       border: 'group-hover:border-orange-500/30'
     },
     { 
-      icon: BarChart3, 
+      icon: locale === 'vi' ? Images : BarChart3,
       title: t('Pillars.item3.title'), 
       desc: t('Pillars.item3.desc'),
       color: 'text-emerald-400',
@@ -58,8 +60,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="relative bg-[#050505] min-h-screen text-white selection:bg-blue-600 selection:text-white overflow-hidden">
+    <div className="relative bg-[#050505] min-h-screen text-white selection:bg-blue-600 selection:text-white overflow-hidden">
       <Navbar />
+      <main>
 
       {/* CHAPTER 1: Hero */}
       <section className="relative pt-48 pb-32 px-6 flex flex-col items-center justify-center">
@@ -92,8 +95,6 @@ export default function AboutPage() {
 
       {/* CHAPTER 2: Story */}
       <section className="py-24 px-6 border-y border-white/10 bg-[#0a0a0c] relative">
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-overlay"></div>
-        
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
@@ -113,7 +114,10 @@ export default function AboutPage() {
                 <p>{t('Story.paragraph1')}</p>
                 <p>{t('Story.paragraph2')}</p>
                 <p className="text-white font-medium border-l-2 border-blue-500 pl-4">
-                  {t('Story.paragraph3')}
+                  {t('Story.paragraph3')}{' '}
+                  <Link href="/portfolio" className="underline decoration-white/30 underline-offset-4 hover:text-blue-400 transition-colors">
+                    {t('Story.portfolioLink')}
+                  </Link>
                 </p>
               </motion.div>
             </motion.div>
@@ -139,9 +143,9 @@ export default function AboutPage() {
                   <div className="w-12 h-12 bg-black/60 backdrop-blur-xl rounded-xl border border-white/20 flex items-center justify-center mb-4 shadow-2xl group-hover:-translate-y-2 transition-transform duration-500">
                     <Globe2 className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white tracking-tight leading-tight">
+                  <p className="text-3xl font-bold text-white tracking-tight leading-tight">
                     {t('Story.badge1')}<br/>{t('Story.badge2')}
-                  </h3>
+                  </p>
                 </div>
                 <div className="text-right flex flex-col items-end">
                   <span className="relative flex h-3 w-3 mb-3">
@@ -190,7 +194,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }

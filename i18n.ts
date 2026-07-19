@@ -1,18 +1,17 @@
 // i18n.ts (Root folder)
-import { getRequestConfig } from 'next-intl/server';
+import { hasLocale } from "next-intl";
+import { getRequestConfig } from "next-intl/server";
 
-export const locales = ['vi', 'en'];
+import { routing } from "@/i18n/routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale;
-
-  // Fallback to 'vi' if locale is undefined
-  if (!locale || !locales.includes(locale as any)) {
-    locale = 'vi';
-  }
+  const requestedLocale = await requestLocale;
+  const locale = hasLocale(routing.locales, requestedLocale)
+    ? requestedLocale
+    : routing.defaultLocale;
 
   return {
     locale,
-    messages: (await import(`./messages/${locale}.json`)).default
+    messages: (await import(`./messages/${locale}.json`)).default,
   };
 });

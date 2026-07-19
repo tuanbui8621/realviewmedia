@@ -1,22 +1,31 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
+
+import {
+  getCanonicalUrl,
+  type Locale,
+  type SeoPage,
+} from "@/lib/seo-metadata";
+
+const sitemapPages: ReadonlyArray<{
+  locale: Locale;
+  page: SeoPage;
+}> = [
+  { locale: "en", page: "home" },
+  { locale: "en", page: "experience" },
+  { locale: "en", page: "portfolio" },
+  { locale: "en", page: "about" },
+  { locale: "en", page: "contact" },
+  { locale: "en", page: "privacy" },
+  { locale: "en", page: "terms" },
+  { locale: "vi", page: "home" },
+  { locale: "vi", page: "experience" },
+  { locale: "vi", page: "portfolio" },
+  { locale: "vi", page: "about" },
+  { locale: "vi", page: "contact" },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.rvmedia.vn';
-  const locales = ['en', 'vi'];
-  const routes = ['', '/experience', '/portfolio', '/about', '/contact'];
-
-  const sitemapEntries: MetadataRoute.Sitemap = [];
-
-  locales.forEach((locale) => {
-    routes.forEach((route) => {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: route === '' ? 1 : 0.8,
-      });
-    });
-  });
-
-  return sitemapEntries;
+  return sitemapPages.map(({ locale, page }) => ({
+    url: getCanonicalUrl(locale, page),
+  }));
 }

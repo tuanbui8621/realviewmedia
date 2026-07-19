@@ -1,24 +1,24 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { Link } from '@/navigation';
-import { ArrowRight, MapPin, X, Navigation, Images, Orbit, Menu, Mic, Bookmark, Share2, PhoneCall } from 'lucide-react';
+import { ArrowRight, MapPin, Navigation, Images, Orbit, Menu, Mic, Bookmark, Share2, PhoneCall } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function ExperiencePage() {
   const t = useTranslations('ExperiencePage');
   // Shared animation settings for consistent pacing
-  const fadeUp = {
+  const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { 
       opacity: 1, 
       y: 0, 
       transition: { 
         duration: 0.8, 
-        ease: [0.16, 1, 0.3, 1] as any
+        ease: [0.16, 1, 0.3, 1]
       } 
     }
   };
@@ -32,8 +32,9 @@ export default function ExperiencePage() {
   };
 
   return (
-    <main className="relative bg-[#050505] min-h-screen text-white selection:bg-blue-600 selection:text-white overflow-hidden">
+    <div className="relative bg-[#050505] min-h-screen text-white selection:bg-blue-600 selection:text-white overflow-hidden">
       <Navbar />
+      <main>
 
       {/* ====================================================
           CHAPTER 1: The Hook (Hero)
@@ -70,6 +71,7 @@ export default function ExperiencePage() {
           CHAPTER 2: The Comparison (Visual Hook)
           ==================================================== */}
       <section className="py-24 bg-[#050505] relative z-10">
+        <h2 className="sr-only">{t('Comparison.heading')}</h2>
         <div className="container mx-auto px-6 max-w-6xl">
           <motion.div 
             initial="hidden"
@@ -88,7 +90,7 @@ export default function ExperiencePage() {
               </div>
               
               <div className="relative z-10 mb-10">
-                <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">{t('Comparison.card1_title')}</h2>
+                <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">{t('Comparison.card1_title')}</h3>
                 <p className="text-white/50 text-[15px] leading-relaxed">
                   {t('Comparison.card1_desc')}
                 </p>
@@ -110,7 +112,7 @@ export default function ExperiencePage() {
                 {/* Authentic Search Bar */}
                 <div className="absolute top-8 left-3 right-3 bg-white rounded-full h-10 shadow-md flex items-center px-3 z-40 gap-2">
                   <Menu size={16} className="text-gray-600 shrink-0" />
-                  <span className="flex-1 text-[11px] font-medium text-gray-800 truncate">Victory Hotel Saigon</span>
+                  <span className="flex-1 text-[11px] font-medium text-gray-800 truncate">{t('Comparison.card1_name')}</span>
                   <Mic size={14} className="text-gray-600 shrink-0" />
                 </div>
 
@@ -124,14 +126,12 @@ export default function ExperiencePage() {
                   {/* Pull Handle */}
                   <div className="w-8 h-1 bg-gray-300 rounded-full mx-auto mb-3"></div>
                   
-                  <h4 className="text-gray-900 font-medium text-[15px] leading-tight truncate">Victory Hotel Saigon</h4>
-                  <p className="text-gray-500 text-[11px] mt-0.5">Khách sạn Victory</p>
+                  <p className="text-gray-900 font-medium text-[15px] leading-tight truncate">{t('Comparison.card1_name')}</p>
+                  <p className="text-gray-500 text-[11px] mt-0.5">{t('Comparison.card1_category')}</p>
                   
                   {/* Reviews */}
                   <div className="flex items-center text-[11px] mt-1 mb-3">
-                    <span className="text-gray-800 font-medium mr-1">4.1</span>
-                    <div className="flex text-[#FBBC04] text-[10px]">★★★★☆</div>
-                    <span className="text-gray-500 ml-1">(1,204)</span>
+                    <span className="text-gray-500">{t('Comparison.card1_summary')}</span>
                   </div>
                   
                   {/* Action Buttons Row */}
@@ -140,25 +140,25 @@ export default function ExperiencePage() {
                       <div className="w-9 h-9 rounded-full bg-[#0b57d0] flex items-center justify-center text-white">
                         <Navigation size={16} fill="currentColor"/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Directions</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.directions')}</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
                         <Bookmark size={14}/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Save</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.save')}</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
                         <PhoneCall size={14}/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Call</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.call')}</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
                         <Share2 size={14}/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Share</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.share')}</span>
                     </div>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function ExperiencePage() {
               </div>
 
               <div className="relative z-10 mb-10">
-                <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">{t('Comparison.card2_title')}</h2>
+                <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">{t('Comparison.card2_title')}</h3>
                 <p className="text-white/70 text-[15px] leading-relaxed">
                   {t('Comparison.card2_desc')}
                 </p>
@@ -206,7 +206,7 @@ export default function ExperiencePage() {
                 {/* Authentic Search Bar */}
                 <div className="absolute top-8 left-3 right-3 bg-white rounded-full h-10 shadow-md flex items-center px-3 z-40 gap-2">
                   <Menu size={16} className="text-gray-600 shrink-0" />
-                  <span className="flex-1 text-[11px] font-medium text-gray-800 truncate">Mai House Saigon</span>
+                  <span className="flex-1 text-[11px] font-medium text-gray-800 truncate">{t('Comparison.card2_name')}</span>
                   <Mic size={14} className="text-gray-600 shrink-0" />
                 </div>
 
@@ -235,14 +235,12 @@ export default function ExperiencePage() {
                 <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-[1.5rem] pt-2 pb-6 px-4 z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.2)] transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="w-8 h-1 bg-gray-300 rounded-full mx-auto mb-3"></div>
                   
-                  <h4 className="text-gray-900 font-medium text-[15px] leading-tight truncate">Mai House Saigon</h4>
-                  <p className="text-gray-500 text-[11px] mt-0.5">Khách sạn Mai House</p>
+                  <p className="text-gray-900 font-medium text-[15px] leading-tight truncate">{t('Comparison.card2_name')}</p>
+                  <p className="text-gray-500 text-[11px] mt-0.5">{t('Comparison.card2_category')}</p>
                   
                   {/* Reviews */}
                   <div className="flex items-center text-[11px] mt-1 mb-3">
-                    <span className="text-gray-800 font-medium mr-1">4.8</span>
-                    <div className="flex text-[#FBBC04] text-[10px]">★★★★★</div>
-                    <span className="text-gray-500 ml-1">(3,359)</span>
+                    <span className="text-gray-500">{t('Comparison.card2_summary')}</span>
                   </div>
                   
                   {/* Action Buttons Row */}
@@ -251,25 +249,25 @@ export default function ExperiencePage() {
                       <div className="w-9 h-9 rounded-full bg-[#0b57d0] flex items-center justify-center text-white">
                         <Navigation size={16} fill="currentColor"/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Directions</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.directions')}</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
                         <Bookmark size={14}/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Save</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.save')}</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
                         <PhoneCall size={14}/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Call</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.call')}</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-[#0b57d0]">
                         <Share2 size={14}/>
                       </div>
-                      <span className="text-[#0b57d0] text-[9px] font-medium">Share</span>
+                      <span className="text-[#0b57d0] text-[9px] font-medium">{t('Comparison.actions.share')}</span>
                     </div>
                   </div>
                 </div>
@@ -317,7 +315,7 @@ export default function ExperiencePage() {
             src="https://www.rvmedia.vn/MaiHouseSaigon/"
             className="w-full h-full border-0"
             allowFullScreen
-            title="Mai House Saigon Virtual Tour"
+            title={t('Interactive360.iframe_title')}
           />
           {/* Internal gradient to make it feel embedded */}
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.8)] rounded-[2rem]" />
@@ -357,7 +355,10 @@ export default function ExperiencePage() {
             {t('CTA.h2')}
           </motion.h2>
           <motion.p variants={fadeUp} className="text-white/60 text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-            {t('CTA.p1')}
+            {t('CTA.p1')}{' '}
+            <Link href="/contact" className="underline decoration-white/30 underline-offset-4 hover:text-white transition-colors">
+              {t('CTA.contact')}
+            </Link>
           </motion.p>
           
           <motion.div variants={fadeUp} className="flex justify-center items-center mt-12">
@@ -378,7 +379,8 @@ export default function ExperiencePage() {
         </motion.div>
       </section>
 
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }

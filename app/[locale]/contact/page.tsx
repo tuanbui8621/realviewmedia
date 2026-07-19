@@ -3,11 +3,12 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Mail, Phone, MessageCircle, Send, Clock } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { Mail, Phone, MessageCircle, Send, MapPin, Clock } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function ContactPage() {
   const t = useTranslations('ContactPage');
+  const locale = useLocale();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
@@ -19,8 +20,9 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="relative bg-rv-black min-h-screen text-rv-white">
+    <div className="relative bg-rv-black min-h-screen text-rv-white">
       <Navbar />
+      <main>
 
       <section className="pt-48 pb-32 px-6">
         <div className="container mx-auto max-w-4xl">
@@ -90,14 +92,15 @@ export default function ContactPage() {
 
             {/* Availability Badge */}
             <motion.div variants={itemVariants} className="flex justify-center items-center gap-2 text-rv-white/40">
-              <Clock className="w-4 h-4" />
+              {locale === 'vi' ? <MapPin className="w-4 h-4" /> : <Clock className="w-4 h-4" />}
               <span className="text-sm uppercase tracking-widest font-semibold">{t('Support')}</span>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }

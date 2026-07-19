@@ -4,13 +4,33 @@ import { motion } from 'framer-motion';
 import { TrendingUp, Target, CheckCircle2, Activity } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
+import type { ComponentType } from 'react';
 
-const Pannellum = dynamic(() => import('pannellum-react').then(mod => mod.Pannellum), { ssr: false }) as any;
+type PanoramaProps = {
+  width: string;
+  height: string;
+  image: string;
+  pitch: number;
+  yaw: number;
+  hfov: number;
+  autoLoad: boolean;
+  showZoomCtrl: boolean;
+  showFullscreenCtrl: boolean;
+  compass: boolean;
+  mouseZoom: boolean;
+  autoRotate: number;
+};
+
+const Pannellum = dynamic<PanoramaProps>(
+  () => import('pannellum-react').then((mod) => mod.Pannellum as ComponentType<PanoramaProps>),
+  { ssr: false },
+);
 
 export default function Experience360() {
   const t = useTranslations('Experience360');
   return (
     <section className="py-24 bg-[#050505] px-6">
+      <h2 className="sr-only">{t('sectionHeading')}</h2>
       <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row gap-6">
         
         {/* LEFT SIDE: The 360 Panorama */}
@@ -20,6 +40,8 @@ export default function Experience360() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="relative w-full lg:w-2/3 aspect-[16/11] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group"
+          role="region"
+          aria-label={t('panoramaLabel')}
         >
           <Pannellum
             width="100%"
@@ -50,9 +72,6 @@ export default function Experience360() {
           
           {/* Card 1: Verified Views Analytics */}
           <div className="flex-1 bg-[#0a0a0c] border border-white/10 rounded-[2rem] p-8 relative overflow-hidden flex flex-col justify-between group hover:border-white/20 transition-all duration-300">
-            {/* Subtle Grid Background */}
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-overlay"></div>
-            
             <div className="relative z-10 flex justify-between items-start w-full">
               <div className="bg-white/5 p-2 rounded-xl border border-white/10">
                 <Activity size={20} className="text-white/70" />
@@ -64,10 +83,10 @@ export default function Experience360() {
             </div>
 
             <div className="relative z-10 mt-6">
-              <h2 className="text-5xl font-black text-white tracking-tighter drop-shadow-md">
-                171K<span className="text-2xl text-white/50">+</span>
-              </h2>
-              <p className="text-white/50 text-xs font-bold uppercase tracking-widest mt-1">{t('verifiedViews')}</p>
+              <p className="text-5xl font-black text-white tracking-tighter drop-shadow-md">
+                {t('primaryValue')}
+              </p>
+              <h3 className="text-white/50 text-xs font-bold uppercase tracking-widest mt-1">{t('verifiedViews')}</h3>
             </div>
 
             {/* Micro-Visualization: SVG Trend Line */}
@@ -105,7 +124,7 @@ export default function Experience360() {
               <div className="w-full h-px bg-white/10 my-4"></div>
 
               <div className="w-full">
-                <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 tracking-tight">{t('higherInterest')}</h2>
+                <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 tracking-tight">{t('higherInterest')}</p>
                 <ul className="mt-4 space-y-2.5">
                   {[t('likelihoodText'), t('bookingPotential')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">

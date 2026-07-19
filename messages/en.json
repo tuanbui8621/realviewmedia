@@ -1,7 +1,35 @@
 {
   "Metadata": {
-    "title": "RealView Media | Premium Visual Marketing & 360 Tours",
-    "description": "Google Business 360 Virtual Tours, Professional Photography, and Digital Media Marketing."
+    "pages": {
+      "home": {
+        "title": "360° Photography & Virtual Tours in Vietnam | RealView Media",
+        "description": "RealView Media creates 360° photography and Google Maps virtual tours that help businesses in Ho Chi Minh City and Vietnam showcase spaces and build trust."
+      },
+      "experience": {
+        "title": "360° Virtual Tours for Google Maps | RealView Media",
+        "description": "See how 360° virtual tours let customers explore your business on Google Maps before visiting, with an interactive example from RealView Media."
+      },
+      "portfolio": {
+        "title": "360° Photography & Virtual Tour Portfolio | RealView Media",
+        "description": "Explore 360° photography and virtual tour projects by RealView Media for hotels, residences, restaurants and businesses across Ho Chi Minh City and Vietnam."
+      },
+      "about": {
+        "title": "About RealView Media | 360° Photography in Vietnam",
+        "description": "Learn about RealView Media and our approach to 360° photography, virtual tours and Google Maps visual content for businesses in Ho Chi Minh City and Vietnam."
+      },
+      "contact": {
+        "title": "Contact for 360° Photography & Virtual Tours | RealView Media",
+        "description": "Contact RealView Media about 360° photography, Google Maps virtual tours and visual content for businesses in Ho Chi Minh City and Vietnam."
+      },
+      "privacy": {
+        "title": "Privacy Policy | RealView Media",
+        "description": "Learn how RealView Media collects, uses and protects information when you use our website, 360° photography and virtual tour services."
+      },
+      "terms": {
+        "title": "Terms of Service | RealView Media",
+        "description": "Read the terms that apply when using the RealView Media website, 360° photography and virtual tour services."
+      }
+    }
   },
   "Navigation": {
     "home": "Home",
@@ -37,6 +65,7 @@
       "paragraph1": "In a world saturated with heavily edited, static photos, consumers have lost trust. When your customers are deciding where to stay, eat, or shop, a standard 2D photo gallery leaves them guessing what lies just outside the frame.",
       "paragraph2": "We saw this disconnect and decided to bridge the gap. By combining architectural-grade photography with immersive virtual reality technology, we eliminate the guesswork.",
       "paragraph3": "We don't just take photos of your business. We engineer digital twins that put your customers halfway through your front door before they ever leave their house.",
+      "portfolioLink": "View our 360° virtual tour projects.",
       "badge1": "Interactive",
       "badge2": "Tours"
     },
@@ -67,10 +96,23 @@
       "status_hesitate": "They hesitate."
     },
     "Comparison": {
+      "heading": "Static photos and 360° virtual tours",
       "card1_title": "Just another pin on the map.",
       "card1_desc": "Customers see a handful of photos, hesitate, and move on because they can't truly understand your space.",
+      "card1_name": "Victory Hotel Saigon",
+      "card1_category": "Victory Hotel",
+      "card1_summary": "Static photos • Basic information",
       "card2_title": "Step Inside Before They Arrive",
-      "card2_desc": "Let customers explore your business in 360° directly from Google Maps, building trust before they ever walk through your door."
+      "card2_desc": "Let customers explore your business in 360° directly from Google Maps, building trust before they ever walk through your door.",
+      "card2_name": "Mai House Saigon",
+      "card2_category": "Mai House Hotel",
+      "card2_summary": "360° virtual tour • Full-space view",
+      "actions": {
+        "directions": "Directions",
+        "save": "Save",
+        "call": "Call",
+        "share": "Share"
+      }
     },
     "Interactive360": {
       "h2_line1": "Photos show a place.",
@@ -78,6 +120,7 @@
       "hint": "Go ahead. Look around.",
       "loading": "Mapping spatial data...",
       "interaction": "Click and drag to explore",
+      "iframe_title": "360° virtual tour of Mai House Saigon",
       "p1": "Notice what just happened?",
       "p2": "You stopped scrolling. You spent time exploring this space.",
       "p3": "That's exactly what your customers do."
@@ -85,24 +128,60 @@
     "CTA": {
       "h2": "Every space has a story. Let's tell yours.",
       "p1": "Whether you manage luxury hospitality, real estate, or retail, we engineer the visual assets that convert digital views into real-world visits.",
+      "contact": "Contact RealView Media to discuss your space.",
       "btn": "View Our Portfolio"
     }
   },
   "PortfolioPage": {
     "Hero": {
-      "title": "Selected Works.",
+      "title": "Selected",
+      "titleHighlight": "Works.",
       "subtitle": "Explore a selection of premium virtual tours created for businesses across Vietnam."
     },
     "Projects": {
-      "mai_house": { "title": "Mai House Saigon", "cat": "Luxury Hospitality" },
-      "oakwood": { "title": "Oakwood Residence", "cat": "Premium Residential" },
-      "lavilla": { "title": "La Villa French Restaurant", "cat": "Fine Dining" },
-      "aqua_clinic": { "title": "Aqua Clinic", "cat": "Medical Aesthetics" }
+      "heading": "360° virtual tour projects",
+      "mai_house": {
+        "title": "Mai House Saigon",
+        "cat": "Hotel",
+        "location": "District 3, HCMC",
+        "format": "360° virtual tour",
+        "alt": "Living space at Mai House Saigon in a 360° image"
+      },
+      "oakwood": {
+        "title": "Oakwood Residence",
+        "cat": "Serviced apartments",
+        "location": "District 7, HCMC",
+        "format": "360° virtual tour",
+        "alt": "360° view of the pool area at Oakwood Residence"
+      },
+      "lavilla": {
+        "title": "La Villa French Restaurant",
+        "cat": "Restaurant",
+        "location": "District 2, HCMC",
+        "format": "Google Maps tour",
+        "alt": "Garden area at La Villa French Restaurant in a 360° image"
+      },
+      "aqua_clinic": {
+        "title": "Aqua Clinic",
+        "cat": "Spa & wellness",
+        "location": "District 1, HCMC",
+        "format": "Google Maps tour",
+        "alt": "Reception area at Aqua Clinic in a 360° image"
+      }
+    },
+    "Modal": {
+      "loading": "Loading the 360° virtual tour...",
+      "hint": "Click or tap and drag to explore {title}"
+    },
+    "Accessibility": {
+      "openProject": "Open the 360° virtual tour of {title}",
+      "closeTour": "Close virtual tour",
+      "iframeTitle": "360° virtual tour of {title}"
     },
     "CTA": {
-      "h2": "Ready to bring your space to life?",
-      "p1": "Our team is available 24/7 to discuss your project.",
-      "p2": "Simply tap the Zalo or Messenger icon in the corner to start a conversation instantly."
+      "h2": "Ready to create a 360° virtual tour?",
+      "p1": "Talk with RealView Media about your space and project needs.",
+      "p2": "Explore our <experience>360° photography process</experience> or <contact>contact RealView Media</contact>."
     }
   },
   "ContactPage": {
@@ -159,7 +238,8 @@
     "sectionDesc": "We create professional 360° virtual tours that help customers find your business, explore your space, and visit in person.",
     "cinema": {
       "title": "8K Cinematic Capture",
-      "desc": "No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore."
+      "desc": "No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore.",
+      "cta": "Explore virtual tour services"
     },
     "maps": {
       "title": "Street View Injection",
@@ -167,20 +247,24 @@
       "status": "API Ready"
     },
     "roi": {
+      "eyebrow": "The Bottom Line",
       "title": "Measurable Conversion Spikes",
       "desc": "Listings upgraded with a premium virtual tour are twice as likely to generate interest. We don't just get you views; we turn your digital traffic into actual revenue and real-world bookings.",
       "cta": "See Case Studies"
     }
   },
   "Experience360": {
-    "livePreview": "Live Preview",
-    "verifiedViews": "Verified Maps Views",
-    "momGrowth": "+14.2% MoM",
-    "clientConversion": "Client Conversion",
-    "measurableROI": "Measurable ROI",
-    "higherInterest": "2x Higher Interest",
-    "likelihoodText": "Twice as likely to generate interest",
-    "bookingPotential": "Higher booking potential"
+    "sectionHeading": "360° virtual tour experience",
+    "panoramaLabel": "360° virtual tour of the pool area at Oakwood Residence",
+    "primaryValue": "360°",
+    "livePreview": "Live tour",
+    "verifiedViews": "Explore the full space",
+    "momGrowth": "Self-guided",
+    "clientConversion": "Practical benefit",
+    "measurableROI": "Visual information",
+    "higherInterest": "Understand before visiting",
+    "likelihoodText": "See the space layout",
+    "bookingPotential": "Explore at your own pace"
   },
   "CTA": {
     "subtitle": "Let's Work Together",
@@ -194,6 +278,62 @@
   "PortfolioCarousel": {
     "title": "Featured Work.",
     "subtitle": "A curated selection of spaces we have brought to life through immersive 360° captures.",
-    "launchTour": "Launch Virtual Tour"
+    "launchTour": "Launch Virtual Tour",
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
+    "openProject": "Open the 360° virtual tour of {client} in a new tab",
+    "projects": {
+      "maiHouse": {
+        "client": "Mai House Saigon",
+        "category": "Hospitality",
+        "type": "Hosted 360° Tour"
+      },
+      "oakwood": {
+        "client": "Oakwood Residence",
+        "category": "Luxury Real Estate",
+        "type": "Hosted 360° Tour"
+      },
+      "richlane": {
+        "client": "Richlane Residence",
+        "category": "Real Estate",
+        "type": "Hosted 360° Tour"
+      },
+      "hongHome": {
+        "client": "Hong Home",
+        "category": "Residential",
+        "type": "Hosted 360° Tour"
+      },
+      "artistic": {
+        "client": "Artistic",
+        "category": "Creative Space",
+        "type": "Google Street View"
+      },
+      "lamboKids": {
+        "client": "Lambo Kids",
+        "category": "Retail & Education",
+        "type": "Google Street View"
+      },
+      "laVilla": {
+        "client": "La Villa",
+        "category": "Hospitality & F&B",
+        "type": "Google Street View"
+      },
+      "aquaClinic": {
+        "client": "Aqua Clinic",
+        "category": "Healthcare & Spa",
+        "type": "Google Street View"
+      }
+    }
+  },
+  "PhoneMockup": {
+    "iframeTitle": "360° virtual tour of Oakwood Residence",
+    "imageAlt": "360° view of the pool area at Oakwood Residence",
+    "searchPlaceholder": "Oakwood Residence...",
+    "launchTour": "Launch 360° tour",
+    "propertyName": "Oakwood Residence",
+    "summary": "Pool area • 360° virtual tour",
+    "directions": "Directions",
+    "save": "Save",
+    "closeTour": "Close virtual tour"
   }
 }

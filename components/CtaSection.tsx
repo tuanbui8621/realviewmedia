@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 export default function CtaSection() {
   const t = useTranslations('CTA');
@@ -18,7 +19,7 @@ export default function CtaSection() {
           viewport={{ once: true }}
           className="text-white/60 text-lg mb-4"
         >
-          {t('subtitle')}
+          <Link href="/contact">{t('subtitle')}</Link>
         </motion.p>
         
         <motion.h2 

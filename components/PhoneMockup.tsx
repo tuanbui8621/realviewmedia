@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Navigation, Star, X, Compass, ChevronLeft } from 'lucide-react';
+import { Search, Navigation, X, Compass, ChevronLeft } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function PhoneMockup() {
   const [isTourActive, setIsTourActive] = useState(false);
+  const t = useTranslations('PhoneMockup');
   const tourUrl = "https://oakwood-richlane-residence.pages.dev/";
 
   return (
@@ -31,7 +33,7 @@ export default function PhoneMockup() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}
             src={tourUrl} 
             className="w-full h-full border-0"
-            title="360 Virtual Tour"
+            title={t('iframeTitle')}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
@@ -39,7 +41,7 @@ export default function PhoneMockup() {
           <div className="relative w-full h-full">
             <Image 
               src="/images/oakwood.png" 
-              alt="Oakwood Residence Preview" 
+              alt={t('imageAlt')}
               fill 
               priority
               sizes="320px"
@@ -62,11 +64,11 @@ export default function PhoneMockup() {
           >
             {/* Top Navigation */}
             <div className="pt-12 px-4 flex items-center gap-2">
-              <button className="w-10 h-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white shadow-lg">
+              <div aria-hidden="true" className="w-10 h-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white shadow-lg">
                 <ChevronLeft size={20} />
-              </button>
+              </div>
               <div className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg h-10 rounded-full flex items-center px-4 text-white/80 text-xs font-medium">
-                <Search size={14} className="mr-2 text-white" /> Oakwood Residence...
+                <Search size={14} className="mr-2 text-white" /> {t('searchPlaceholder')}
               </div>
             </div>
 
@@ -79,7 +81,7 @@ export default function PhoneMockup() {
                   className="relative bg-white/20 backdrop-blur-xl border border-white/40 px-6 py-3 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center gap-3 text-white hover:bg-white/30 transition-all hover:scale-105 active:scale-95 group"
                 >
                   <Compass className="text-white group-hover:rotate-45 transition-transform duration-500" size={20} />
-                  <span className="font-bold text-[13px] tracking-widest uppercase">Launch Experience</span>
+                  <span className="font-bold text-[13px] tracking-widest uppercase">{t('launchTour')}</span>
                 </button>
               </div>
             </div>
@@ -88,25 +90,19 @@ export default function PhoneMockup() {
             <div className="bg-white rounded-t-[2rem] p-6 pb-8 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] relative transform translate-y-2">
               <div className="w-12 h-1.5 bg-gray-200 rounded-full absolute top-3 left-1/2 -translate-x-1/2" />
               
-              <h3 className="font-black text-2xl text-gray-900 mt-2 tracking-tight">Oakwood Residence</h3>
+              <p className="font-black text-2xl text-gray-900 mt-2 tracking-tight">{t('propertyName')}</p>
               
               <div className="flex items-center text-sm text-gray-500 mt-2 gap-1.5">
-                <span className="font-bold text-gray-900">4.9</span>
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <span>(1.2k) • Premium Hotel</span>
+                <span>{t('summary')}</span>
               </div>
               
               <div className="flex gap-3 mt-6">
-                <button className="flex-[2] bg-[#000] text-white py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors shadow-lg">
-                  <Navigation size={16} /> Get Directions
-                </button>
-                <button className="flex-1 bg-gray-100 text-gray-900 py-3.5 rounded-2xl font-bold text-sm hover:bg-gray-200 transition-colors">
-                  Save
-                </button>
+                <div className="flex-[2] bg-[#000] text-white py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors shadow-lg">
+                  <Navigation size={16} /> {t('directions')}
+                </div>
+                <div className="flex-1 bg-gray-100 text-gray-900 py-3.5 rounded-2xl font-bold text-sm hover:bg-gray-200 transition-colors flex items-center justify-center">
+                  {t('save')}
+                </div>
               </div>
             </div>
           </motion.div>
@@ -117,6 +113,7 @@ export default function PhoneMockup() {
       {isTourActive && (
         <button 
           onClick={() => setIsTourActive(false)}
+          aria-label={t('closeTour')}
           className="absolute top-12 right-4 z-20 bg-black/60 backdrop-blur-md border border-white/20 p-2.5 rounded-full text-white hover:bg-black/80 transition-colors shadow-xl"
         >
           <X size={16} />

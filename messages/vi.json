@@ -1,7 +1,35 @@
 {
   "Metadata": {
-    "title": "RealView Media | Truyền Thông Trực Quan & Tour 360",
-    "description": "Virtual Tour 360 cho Google Business, Nhiếp Ảnh Chuyên Nghiệp và Tiếp Thị Truyền Thông Số."
+    "pages": {
+      "home": {
+        "title": "Dịch vụ chụp ảnh 360° & tour ảo TP.HCM | RealView Media",
+        "description": "RealView Media cung cấp dịch vụ chụp ảnh 360° và tour ảo Google Maps, giúp doanh nghiệp tại TP.HCM và Việt Nam giới thiệu không gian, xây dựng niềm tin."
+      },
+      "experience": {
+        "title": "Tour ảo 360° trên Google Maps | RealView Media",
+        "description": "Khám phá cách tour ảo 360° giúp khách hàng tham quan không gian doanh nghiệp trên Google Maps trước khi ghé thăm, với trải nghiệm thực tế từ RealView Media."
+      },
+      "portfolio": {
+        "title": "Dự án chụp ảnh & tour ảo 360° | RealView Media",
+        "description": "Xem các dự án chụp ảnh và tour ảo 360° RealView Media thực hiện cho khách sạn, căn hộ, nhà hàng và doanh nghiệp tại TP.HCM và Việt Nam."
+      },
+      "about": {
+        "title": "Về RealView Media | Chụp ảnh & tour ảo 360° TP.HCM",
+        "description": "Tìm hiểu RealView Media, đơn vị thực hiện chụp ảnh 360°, tour ảo và nội dung Google Maps cho doanh nghiệp tại TP.HCM và Việt Nam."
+      },
+      "contact": {
+        "title": "Liên hệ chụp ảnh 360° & tour ảo | RealView Media",
+        "description": "Liên hệ RealView Media để trao đổi về chụp ảnh 360°, tour ảo Google Maps và nội dung hình ảnh cho doanh nghiệp tại TP.HCM và Việt Nam."
+      },
+      "privacy": {
+        "title": "Chính sách bảo mật | RealView Media",
+        "description": "Tìm hiểu cách RealView Media thu thập, sử dụng và bảo vệ thông tin khi bạn sử dụng website và dịch vụ chụp ảnh, tour ảo 360°."
+      },
+      "terms": {
+        "title": "Điều khoản dịch vụ | RealView Media",
+        "description": "Đọc các điều khoản áp dụng khi sử dụng website và dịch vụ chụp ảnh, tour ảo 360° của RealView Media."
+      }
+    }
   },
   "Navigation": {
     "home": "Trang chủ",
@@ -26,101 +54,152 @@
   },
   "AboutPage": {
     "Hero": {
-      "tagline": "Về Chúng Tôi",
-      "headingLine1": "Chúng tôi biến không gian kỹ thuật số",
-      "headingHighlight": "trở nên chân thực đến khó tin.",
-      "description": "RealView Media được thành lập dựa trên một sự thật đơn giản: nếu một bức ảnh đáng giá ngàn lời nói, thì một trải nghiệm đắm chìm hoàn toàn đáng giá ngàn chuyến viếng thăm."
+      "tagline": "Về RealView Media",
+      "headingLine1": "Ảnh 360° & tour ảo",
+      "headingHighlight": "tại Việt Nam.",
+      "description": "RealView Media thực hiện chụp ảnh 360°, tour ảo Google Maps và nội dung hình ảnh cho nhà hàng, khách sạn, showroom và doanh nghiệp tại TP.HCM, phục vụ dự án trên khắp Việt Nam."
     },
     "Story": {
-      "headingLine1": "Internet là một mặt phẳng.",
-      "headingHighlight": "Chúng tôi thay đổi điều đó.",
-      "paragraph1": "Trong một thế giới bão hòa với những bức ảnh tĩnh được chỉnh sửa kỹ lưỡng, người tiêu dùng đã dần mất niềm tin. Khi khách hàng quyết định nơi lưu trú, ăn uống hoặc mua sắm, một thư viện ảnh 2D tiêu chuẩn khiến họ phải tự đoán xem điều gì nằm ngoài khung hình.",
-      "paragraph2": "Chúng tôi nhận thấy sự ngắt kết nối này và quyết định thu hẹp khoảng cách. Bằng cách kết hợp nhiếp ảnh kiến trúc với công nghệ thực tế ảo đắm chìm, chúng tôi loại bỏ mọi sự phỏng đoán.",
-      "paragraph3": "Chúng tôi không chỉ chụp ảnh doanh nghiệp của bạn. Chúng tôi kiến tạo các bản sao kỹ thuật số, đưa khách hàng bước qua cánh cửa của bạn ngay cả khi họ chưa rời khỏi nhà.",
-      "badge1": "Chuyến tham quan",
+      "headingLine1": "Khách hàng cần nhìn rõ không gian.",
+      "headingHighlight": "Trước khi họ quyết định ghé thăm.",
+      "paragraph1": "Ảnh tĩnh chỉ cho thấy từng góc riêng lẻ. Với nhà hàng, khách sạn, showroom và các địa điểm kinh doanh, khách hàng thường cần nhìn rõ toàn bộ không gian trước khi quyết định ghé thăm hoặc liên hệ.",
+      "paragraph2": "RealView Media kết hợp chụp ảnh 360° với tour ảo tương tác để khách hàng tự khám phá không gian trên Google Maps, website hoặc qua liên kết doanh nghiệp chia sẻ.",
+      "paragraph3": "Chúng tôi tập trung thể hiện không gian rõ ràng và liền mạch cho doanh nghiệp tại TP.HCM và Việt Nam.",
+      "portfolioLink": "Xem các dự án tour ảo 360° đã thực hiện.",
+      "badge1": "Tour ảo 360°",
       "badge2": "Tương tác"
     },
     "Pillars": {
-      "sectionTitle": "Triết lý Cốt lõi.",
-      "sectionDesc": "Chúng tôi không chỉ ghi lại không gian. Chúng tôi xây dựng niềm tin, thúc đẩy tương tác và mang lại sự tăng trưởng có thể đo lường.",
+      "sectionTitle": "Cách chúng tôi thực hiện dự án.",
+      "sectionDesc": "Mỗi dự án tập trung vào ba điều: thể hiện không gian rõ ràng, giúp khách hàng dễ khám phá và chuẩn bị nội dung phù hợp với kênh sử dụng.",
       "item1": {
-        "title": "Minh bạch Tuyệt đối",
-        "desc": "Niềm tin là giá trị cốt lõi. Bằng cách để khách hàng tự do khám phá, bạn chứng minh rằng mình không có gì phải giấu diếm và có mọi thứ đáng để phô diễn."
+        "title": "Không gian trung thực",
+        "desc": "Góc chụp và lộ trình tour được sắp xếp để khách hàng quan sát không gian rõ ràng, liền mạch và sát với trải nghiệm thực tế."
       },
       "item2": {
-        "title": "Khám phá Không giới hạn",
-        "desc": "Chúng tôi tiếp cận khán giả của bạn ngay tại nơi họ tìm kiếm. Bằng cách tích hợp không gian trực tiếp lên Google Maps, chúng tôi thu hút lượng truy cập địa phương vào chính thời điểm họ ra quyết định."
+        "title": "Khám phá dễ dàng",
+        "desc": "Tour 360° giúp khách hàng xem cách các khu vực kết nối trên Google Maps, website hoặc liên kết được doanh nghiệp chia sẻ."
       },
       "item3": {
-        "title": "ROI Đo lường được",
-        "desc": "Mọi điểm ảnh đều được thiết kế để chuyển đổi. Các chuyến tham quan ảo là tài sản đã được chứng minh giúp tăng tốc độ đặt chỗ và thu hút khách hàng đến trực tiếp."
+        "title": "Nội dung phù hợp",
+        "desc": "Hình ảnh và tour được chuẩn bị theo đặc điểm không gian, đối tượng khách hàng và kênh sử dụng của từng dự án."
       }
     }
   },
   "ExperiencePage": {
     "Hero": {
-      "tagline": "Thực Tế Về Quyết Định Khách Hàng",
-      "h1_line1": "Ai đó đang quyết định",
-      "h1_span": "có nên đến thăm bạn ngay lúc này.",
-      "status_search": "Họ tìm kiếm.",
-      "status_compare": "Họ so sánh.",
-      "status_hesitate": "Và họ phân vân."
+      "tagline": "Tour Ảo Cho Không Gian Doanh Nghiệp",
+      "h1_line1": "Tour ảo 360°:",
+      "h1_span": "Xem trước khi đến.",
+      "status_search": "Tìm thấy trên Google Maps.",
+      "status_compare": "Khám phá không gian.",
+      "status_hesitate": "Tự tin trước khi ghé thăm."
     },
     "Comparison": {
-      "card1_title": "Chỉ là một ghim trên bản đồ.",
-      "card1_desc": "Khách hàng lướt qua vài bức ảnh, phân vân và rời đi vì họ không thể thực sự cảm nhận được không gian của bạn.",
-      "card2_title": "Bước Vào Trước Khi Đến",
-      "card2_desc": "Để khách hàng khám phá doanh nghiệp của bạn 360° trực tiếp từ Google Maps, xây dựng niềm tin ngay cả trước khi họ bước qua cánh cửa."
+      "heading": "So sánh ảnh tĩnh và tour ảo 360°",
+      "card1_title": "Ảnh tĩnh chỉ cho thấy từng góc.",
+      "card1_desc": "Một vài hình ảnh rời rạc có thể chưa đủ để khách hàng hiểu cách bố trí, quy mô và cảm giác thực tế của không gian.",
+      "card1_name": "Victory Hotel Saigon",
+      "card1_category": "Khách sạn Victory",
+      "card1_summary": "Ảnh tĩnh • Thông tin cơ bản",
+      "card2_title": "Tự khám phá bằng tour ảo 360°",
+      "card2_desc": "Tour ảo kết nối các ảnh toàn cảnh thành trải nghiệm tương tác. Khách hàng có thể xoay, kéo và di chuyển giữa các vị trí trên website hoặc Google Maps.",
+      "card2_name": "Mai House Saigon",
+      "card2_category": "Khách sạn Mai House",
+      "card2_summary": "Tour ảo 360° • Xem toàn cảnh",
+      "actions": {
+        "directions": "Chỉ đường",
+        "save": "Lưu",
+        "call": "Gọi",
+        "share": "Chia sẻ"
+      }
     },
     "Interactive360": {
-      "h2_line1": "Hình ảnh chỉ cho thấy địa điểm.",
-      "h2_span": "Trải nghiệm cho họ bước vào trong.",
-      "hint": "Hãy tiến lên. Khám phá xung quanh.",
-      "loading": "Đang tải dữ liệu không gian...",
-      "interaction": "Nhấp và kéo để khám phá",
-      "p1": "Bạn có nhận ra điều gì vừa xảy ra không?",
-      "p2": "Bạn ngừng lướt. Bạn dành thời gian để khám phá không gian này.",
-      "p3": "Đó chính xác là những gì khách hàng của bạn sẽ làm."
+      "h2_line1": "Xoay để xem toàn cảnh.",
+      "h2_span": "Di chuyển để khám phá từng khu vực.",
+      "hint": "Nhấp hoặc chạm và kéo để trải nghiệm.",
+      "loading": "Đang tải tour ảo 360°...",
+      "interaction": "Kéo để khám phá không gian",
+      "iframe_title": "Tour ảo 360° Mai House Saigon",
+      "p1": "Từ buổi chụp đến tour ảo hoàn chỉnh.",
+      "p2": "Chúng tôi xác định các điểm chụp, ghi lại không gian 360°, xử lý hình ảnh và liên kết từng góc nhìn thành một hành trình trực quan.",
+      "p3": "Bạn nhận tour ảo cùng đường dẫn chia sẻ, sẵn sàng nhúng trên website hoặc xuất bản lên Google Maps theo phạm vi dự án."
     },
     "CTA": {
-      "h2": "Mỗi không gian đều có một câu chuyện. Hãy để chúng tôi kể câu chuyện của bạn.",
-      "p1": "Cho dù bạn quản lý khách sạn cao cấp, bất động sản hay bán lẻ, chúng tôi kiến tạo các tài sản hình ảnh giúp chuyển đổi lượt xem trực tuyến thành lượng khách hàng thực tế.",
-      "btn": "Xem Các Dự Án"
+      "h2": "Tour ảo 360° phù hợp với không gian nào?",
+      "p1": "Phù hợp với nhà hàng, khách sạn, showroom, spa, phòng gym, bất động sản và căn hộ dịch vụ muốn giúp khách hàng hiểu rõ không gian trước khi ghé thăm.",
+      "contact": "Liên hệ RealView Media để trao đổi về không gian của bạn.",
+      "btn": "Xem dự án tour ảo"
     }
   },
   "PortfolioPage": {
     "Hero": { 
-      "title": "Dự Án Tiêu Biểu.", 
-      "subtitle": "Khám phá tuyển tập các chuyến tham quan ảo cao cấp được chúng tôi thực hiện cho các doanh nghiệp trên khắp Việt Nam." 
+      "title": "Dự án chụp ảnh 360°",
+      "titleHighlight": "& tour ảo.",
+      "subtitle": "Khám phá dự án chụp ảnh 360° và tour ảo cho khách sạn, căn hộ, nhà hàng và không gian dịch vụ tại TP.HCM và Việt Nam."
     },
     "Projects": {
-      "mai_house": { "title": "Mai House Saigon", "cat": "Khách Sạn Cao Cấp" },
-      "oakwood": { "title": "Oakwood Residence", "cat": "Căn Hộ Cao Cấp" },
-      "lavilla": { "title": "La Villa French Restaurant", "cat": "Nhà Hàng Sang Trọng" },
-      "aqua_clinic": { "title": "Aqua Clinic", "cat": "Thẩm Mỹ Viện Cao Cấp" }
+      "heading": "Các dự án tour ảo 360°",
+      "mai_house": {
+        "title": "Mai House Saigon",
+        "cat": "Khách sạn",
+        "location": "Quận 3, TP.HCM",
+        "format": "Tour ảo 360°",
+        "alt": "Không gian phòng khách tại Mai House Saigon trong ảnh 360°"
+      },
+      "oakwood": {
+        "title": "Oakwood Residence",
+        "cat": "Căn hộ dịch vụ",
+        "location": "Quận 7, TP.HCM",
+        "format": "Tour ảo 360°",
+        "alt": "Toàn cảnh 360° khu vực hồ bơi tại Oakwood Residence"
+      },
+      "lavilla": {
+        "title": "La Villa French Restaurant",
+        "cat": "Nhà hàng",
+        "location": "Quận 2, TP.HCM",
+        "format": "Tour Google Maps",
+        "alt": "Khu vực sân vườn nhà hàng La Villa trong ảnh 360°"
+      },
+      "aqua_clinic": {
+        "title": "Aqua Clinic",
+        "cat": "Spa & sức khỏe",
+        "location": "Quận 1, TP.HCM",
+        "format": "Tour Google Maps",
+        "alt": "Khu vực lễ tân Aqua Clinic trong ảnh 360°"
+      }
+    },
+    "Modal": {
+      "loading": "Đang tải tour ảo 360°...",
+      "hint": "Nhấp hoặc chạm và kéo để khám phá {title}"
+    },
+    "Accessibility": {
+      "openProject": "Mở tour ảo 360° của {title}",
+      "closeTour": "Đóng tour ảo",
+      "iframeTitle": "Tour ảo 360° {title}"
     },
     "CTA": {
-      "h2": "Sẵn sàng đưa không gian của bạn lên không gian số?",
-      "p1": "Đội ngũ của chúng tôi luôn sẵn sàng 24/7 để thảo luận về dự án của bạn.",
-      "p2": "Chỉ cần nhấn vào biểu tượng Zalo hoặc Messenger ở góc màn hình để bắt đầu trò chuyện ngay lập tức."
+      "h2": "Sẵn sàng tạo tour ảo 360°?",
+      "p1": "Trao đổi với RealView Media về không gian và nhu cầu của bạn.",
+      "p2": "Xem <experience>quy trình chụp 360°</experience> hoặc <contact>liên hệ RealView Media</contact>."
     }
   },
   "ContactPage": {
     "Hero": { 
-      "h1": "Hãy trò chuyện.", 
-      "p": "Không cần điền form, không phải chờ đợi. Chúng tôi sẵn sàng 24/7 để hiện thực hóa dự án của bạn." 
+      "h1": "Liên hệ chụp ảnh & tour ảo 360°.",
+      "p": "Trao đổi với RealView Media về chụp ảnh 360°, tour ảo Google Maps và nội dung hình ảnh cho doanh nghiệp tại TP.HCM và Việt Nam."
     },
     "Methods": {
-      "chat_title": "Trò Chuyện Trực Tuyến",
+      "chat_title": "Nhắn tin với chúng tôi",
       "zalo_btn": "Nhắn tin qua Zalo",
       "messenger_btn": "Nhắn tin qua Messenger",
-      "direct_title": "Liên Hệ Trực Tiếp",
-      "direct_desc": "Bạn muốn trao đổi chi tiết hơn? Hãy gửi email hoặc gọi ngay cho chúng tôi."
+      "direct_title": "Email hoặc gọi điện",
+      "direct_desc": "Gửi email hoặc gọi cho RealView Media để trao đổi nhu cầu, địa điểm và phạm vi dự án."
     },
-    "Support": "Hỗ trợ 24/7"
+    "Support": "Phục vụ doanh nghiệp tại TP.HCM và Việt Nam"
   },
   "Footer": {
-    "tagline": "Tăng cường hồ sơ doanh nghiệp Google của bạn bằng các chuyến tham quan ảo 360° và nội dung hình ảnh cao cấp giúp doanh nghiệp bạn được phát hiện, xây dựng niềm tin và thu hút thêm khách hàng.",
+    "tagline": "Chụp ảnh 360°, tour ảo Google Maps và nội dung hình ảnh cho doanh nghiệp tại TP.HCM và Việt Nam.",
     "sections": {
       "nav": "Điều hướng",
       "contact": "Liên hệ"
@@ -150,50 +229,111 @@
     }
   },
   "Hero": {
-    "heading": "Trở thành doanh nghiệp mà họ chọn.",
-    "tagline": "Trước khi họ bước qua cửa của bạn."
+    "heading": "Chụp ảnh 360° & tour ảo tại TP.HCM.",
+    "tagline": "Giúp doanh nghiệp giới thiệu không gian trên Google Maps để khách hàng khám phá trước khi ghé thăm."
   },
   "Services": {
-    "sectionHeading": "Đừng chỉ cho thấy không gian của bạn.",
-    "sectionHighlight": "Hãy chứng minh điều đó.",
-    "sectionDesc": "Chúng tôi tạo các chuyến tham quan ảo 360° chuyên nghiệp giúp khách hàng tìm thấy doanh nghiệp bạn, khám phá không gian của bạn và ghé thăm trực tiếp.",
+    "sectionHeading": "Cho khách hàng xem trước không gian.",
+    "sectionHighlight": "Trước khi họ ghé thăm.",
+    "sectionDesc": "RealView Media cung cấp dịch vụ chụp ảnh 360° và tour ảo Google Maps cho nhà hàng, khách sạn, showroom, spa, phòng gym và căn hộ dịch vụ tại TP.HCM và Việt Nam.",
     "cinema": {
-      "title": "Quay Phim 8K Chuyên Nghiệp",
-      "desc": "Không thiết bị nghiệp dư. Không cạnh bị méo. Chúng tôi sử dụng những bộ máy ảnh độ chuyên nghiệp để chụp không gian của bạn với chất lượng cao hoàn hảo. Chúng tôi đảm bảo doanh nghiệp của bạn trông rộng rãi, cao cấp và không thể để bị bỏ qua bởi khách hàng."
+      "title": "Chụp ảnh 360° chuyên nghiệp",
+      "desc": "Chúng tôi chụp toàn cảnh với hình ảnh rõ nét, bố cục chỉn chu và góc nhìn tự nhiên. Thành phẩm giúp khách hàng dễ hình dung không gian trước khi ghé thăm.",
+      "cta": "Khám phá dịch vụ tour ảo"
     },
     "maps": {
-      "title": "Tích hợp Street View",
-      "desc": "Chúng tôi triển khai chuyến tham quan 360° của bạn trực tiếp vào Google Maps—chính là công cụ định vị mà khách hàng của bạn đang sử dụng để tìm kiếm bạn.",
-      "status": "Sẵn sàng API"
+      "title": "Tour ảo Google Maps",
+      "desc": "Tour ảo 360° có thể xuất hiện trên Google Maps và Hồ sơ doanh nghiệp trên Google, giúp khách hàng xem không gian ngay khi tìm kiếm địa điểm của bạn.",
+      "status": "Hiển thị trên Google Maps"
     },
     "roi": {
-      "title": "Tăng Chuyển Đổi Đo Lường",
-      "desc": "Các danh sách được nâng cấp bằng chuyến tham quan ảo cao cấp có khả năng tạo ra sự quan tâm cao hơn gấp đôi. Chúng tôi không chỉ nhận được lượt xem cho bạn; chúng tôi biến lượng truy cập kỹ thuật số của bạn thành doanh thu thực tế và lượt khách hàng trực tiếp.",
-      "cta": "Xem Các Nghiên Cứu"
+      "eyebrow": "Lợi ích thực tế",
+      "title": "Hỗ trợ quyết định ghé thăm",
+      "desc": "Khách hàng có thể xem cách bố trí, bầu không khí và các khu vực chính trước khi đến. Thông tin trực quan giúp họ dễ so sánh địa điểm và chủ động liên hệ hoặc ghé thăm.",
+      "cta": "Xem dự án 360°"
     }
   },
   "Experience360": {
-    "livePreview": "Xem trực tiếp",
-    "verifiedViews": "Lượt xem Google Maps được xác minh",
-    "momGrowth": "+14,2% Tăng trưởng theo tháng",
-    "clientConversion": "Chuyển đổi khách hàng",
-    "measurableROI": "ROI có thể đo lường",
-    "higherInterest": "Sự quan tâm cao gấp 2 lần",
-    "likelihoodText": "Có khả năng tạo ra sự quan tâm gấp hai lần",
-    "bookingPotential": "Tiềm năng đặt phòng cao hơn"
+    "sectionHeading": "Trải nghiệm tour ảo 360°",
+    "panoramaLabel": "Tour ảo 360° khu vực hồ bơi tại Oakwood Residence",
+    "primaryValue": "360°",
+    "livePreview": "Trải nghiệm",
+    "verifiedViews": "Xem toàn bộ không gian",
+    "momGrowth": "Tự khám phá",
+    "clientConversion": "Lợi ích thực tế",
+    "measurableROI": "Thông tin trực quan",
+    "higherInterest": "Hiểu rõ trước khi đến",
+    "likelihoodText": "Xem bố trí không gian",
+    "bookingPotential": "Khám phá theo nhu cầu"
   },
   "CTA": {
-    "subtitle": "Hãy Hợp Tác Với Chúng Tôi",
-    "heading": "Sẵn sàng nâng cao",
-    "headingHighlight": "doanh nghiệp của bạn?",
+    "subtitle": "Liên hệ RealView Media",
+    "heading": "Sẵn sàng giới thiệu",
+    "headingHighlight": "không gian của bạn?",
     "zaloLabel": "Trò chuyện qua",
     "zaloLabelMobile": "Zalo",
     "messengerLabel": "Trò chuyện qua",
     "messengerLabelMobile": "Messenger"
   },
   "PortfolioCarousel": {
-    "title": "Dự Án Nổi Bật.",
-    "subtitle": "Một lựa chọn được tuyển chọn kỹ lưỡng của các không gian mà chúng tôi đã đưa vào cuộc sống thông qua các chuyến tham quan 360° đắm chìm.",
-    "launchTour": "Khởi Chạy Chuyến Tham Quan Ảo"
+    "title": "Dự án chụp ảnh 360°.",
+    "subtitle": "Khám phá không gian doanh nghiệp qua ảnh 360°, tour ảo và Google Street View.",
+    "launchTour": "Mở tour ảo 360°",
+    "previousProject": "Dự án trước",
+    "nextProject": "Dự án tiếp theo",
+    "openProject": "Mở tour ảo 360° của {client} trong tab mới",
+    "projects": {
+      "maiHouse": {
+        "client": "Mai House Saigon",
+        "category": "Khách sạn",
+        "type": "Tour ảo 360°"
+      },
+      "oakwood": {
+        "client": "Oakwood Residence",
+        "category": "Căn hộ dịch vụ",
+        "type": "Tour ảo 360°"
+      },
+      "richlane": {
+        "client": "Richlane Residence",
+        "category": "Căn hộ",
+        "type": "Tour ảo 360°"
+      },
+      "hongHome": {
+        "client": "Hong Home",
+        "category": "Nhà ở",
+        "type": "Tour ảo 360°"
+      },
+      "artistic": {
+        "client": "Artistic",
+        "category": "Không gian sáng tạo",
+        "type": "Google Street View"
+      },
+      "lamboKids": {
+        "client": "Lambo Kids",
+        "category": "Bán lẻ & giáo dục",
+        "type": "Google Street View"
+      },
+      "laVilla": {
+        "client": "La Villa",
+        "category": "Nhà hàng",
+        "type": "Google Street View"
+      },
+      "aquaClinic": {
+        "client": "Aqua Clinic",
+        "category": "Spa & sức khỏe",
+        "type": "Google Street View"
+      }
+    }
+  },
+  "PhoneMockup": {
+    "iframeTitle": "Tour ảo 360° Oakwood Residence",
+    "imageAlt": "Toàn cảnh 360° khu vực hồ bơi tại Oakwood Residence",
+    "searchPlaceholder": "Oakwood Residence...",
+    "launchTour": "Khám phá tour 360°",
+    "propertyName": "Oakwood Residence",
+    "summary": "Hồ bơi • Tour ảo 360°",
+    "directions": "Chỉ đường",
+    "save": "Lưu",
+    "closeTour": "Đóng tour ảo"
   }
 }

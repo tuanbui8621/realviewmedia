@@ -56,7 +56,8 @@ export default function Services() {
             <p className="text-white/70 text-sm leading-relaxed mb-8">
               {t('cinema.desc')}
             </p>
-            <Link href="/portfolio" className="mt-auto inline-flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-wider group-hover:gap-4 transition-all w-fit">
+            <Link href="/experience" className="mt-auto inline-flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-wider group-hover:gap-4 transition-all w-fit">
+              {t('cinema.cta')} <ArrowRight size={16} />
             </Link>
           </motion.div>
 
@@ -97,7 +98,7 @@ export default function Services() {
                 <div className="p-2 bg-emerald-500/20 rounded-xl text-emerald-400">
                   <BarChart3 size={20} />
                 </div>
-                <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">The Bottom Line</span>
+                <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">{t('roi.eyebrow')}</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">{t('roi.title')}</h3>
               <p className="text-white/70 text-sm leading-relaxed md:text-base">
