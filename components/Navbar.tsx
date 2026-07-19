@@ -1,36 +1,118 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { Link, usePathname } from '@/navigation';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useLenis } from '@studio-freight/react-lenis';
 import LanguageSwitcher from './LanguageSwitcher';
+
+const NAVIGATION_LINKS = [
+  { key: 'home', href: '/' },
+  { key: 'experience', href: '/experience' },
+  { key: 'portfolio', href: '/portfolio' },
+  { key: 'about', href: '/about' },
+  { key: 'contact', href: '/contact' },
+] as const;
+
+const MOBILE_MENU_ID = 'mobile-navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
   const t = useTranslations('Navigation');
+  const lenis = useLenis();
+  const shouldReduceMotion = useReducedMotion();
+
+  const handleHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    setMenuOpen(false);
+
+    const target = event.currentTarget.target;
+    const isModifiedActivation =
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey;
+    const isExternal =
+      new URL(event.currentTarget.href).origin !== window.location.origin;
+
+    if (
+      pathname !== '/' ||
+      event.defaultPrevented ||
+      isModifiedActivation ||
+      (target !== '' && target !== '_self') ||
+      isExternal
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (window.scrollY <= 0) return;
+
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: Boolean(shouldReduceMotion) });
+      return;
+    }
+
+    if (shouldReduceMotion) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
-    // Check scroll position immediately on load to prevent jumping
-    setScrolled(window.scrollY > 50);
+    let animationFrameId: number | null = null;
+    let lastScrolled = false;
 
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const updateScrolledState = () => {
+      animationFrameId = null;
+      const nextScrolled = window.scrollY > 50;
+
+      if (nextScrolled !== lastScrolled) {
+        lastScrolled = nextScrolled;
+        setScrolled(nextScrolled);
+      }
+    };
+
+    const handleScroll = () => {
+      if (animationFrameId === null) {
+        animationFrameId = window.requestAnimationFrame(updateScrolledState);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+
+      if (animationFrameId !== null) {
+        window.cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, []);
 
-  // Navigation links with translation keys
-  const links = [
-    { key: 'home', href: '/' },
-    { key: 'experience', href: '/experience' },
-    { key: 'portfolio', href: '/portfolio' },
-    { key: 'about', href: '/about' },
-    { key: 'contact', href: '/contact' },
-  ];
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [menuOpen]);
 
   return (
     <>
@@ -47,24 +129,39 @@ export default function Navbar() {
         <div className="container mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-3 items-center">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link
+            href="/"
+            onClick={handleHomeClick}
+            aria-label={t('accessibility.home')}
+            className="flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-rv-black"
+          >
             <Image
-              src="/images/logowhite.png"
-              alt="RealView Media Logo"
-              width={200}
-              height={80}
-              className="h-16 md:h-20 w-auto brightness-110"
+              src="/images/logo5.png"
+              alt=""
+              width={172}
+              height={64}
+              sizes="(min-width: 768px) 129px, 172px"
+              className="h-16 md:h-12 w-auto brightness-110"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex justify-center gap-8">
-            {links.map((link) => (
+          <nav
+            aria-label={t('accessibility.primaryNavigation')}
+            className="hidden md:flex justify-center gap-8"
+          >
+            {NAVIGATION_LINKS.map((link) => (
               <Link
                 key={link.key}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
+                onClick={link.href === '/' ? handleHomeClick : undefined}
+                aria-current={
+                  pathname === link.href || pathname === `${link.href}/`
+                    ? 'page'
+                    : undefined
+                }
+                className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-rv-black ${
                   pathname === link.href || pathname === link.href + '/'
                     ? 'text-rv-white'
                     : 'text-rv-white/50 hover:text-rv-white'
@@ -81,14 +178,22 @@ export default function Navbar() {
             
             {/* Mobile Hamburger */}
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden text-white"
-              aria-label="Toggle Menu"
+              ref={menuButtonRef}
+              type="button"
+              onClick={() => setMenuOpen((open) => !open)}
+              className="rounded-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-rv-black md:hidden"
+              aria-label={
+                menuOpen
+                  ? t('accessibility.closeMenu')
+                  : t('accessibility.openMenu')
+              }
+              aria-expanded={menuOpen}
+              aria-controls={MOBILE_MENU_ID}
             >
               {menuOpen ? (
-                <X className="w-8 h-8" />
+                <X aria-hidden="true" className="w-8 h-8" />
               ) : (
-                <Menu className="w-8 h-8" />
+                <Menu aria-hidden="true" className="w-8 h-8" />
               )}
             </button>
           </div>
@@ -99,19 +204,32 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id={MOBILE_MENU_ID}
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.3 }}
             className="fixed top-20 left-0 w-full z-40 bg-rv-black/95 backdrop-blur-xl border-b border-rv-white/10 md:hidden"
           >
-            <nav className="flex flex-col py-6">
-              {links.map((link) => (
+            <nav
+              aria-label={t('accessibility.mobileNavigation')}
+              className="flex flex-col py-6"
+            >
+              {NAVIGATION_LINKS.map((link) => (
                 <Link
                   key={link.key}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`px-8 py-4 text-lg transition-colors ${
+                  onClick={
+                    link.href === '/'
+                      ? handleHomeClick
+                      : () => setMenuOpen(false)
+                  }
+                  aria-current={
+                    pathname === link.href || pathname === `${link.href}/`
+                      ? 'page'
+                      : undefined
+                  }
+                  className={`px-8 py-4 text-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-rv-white ${
                     pathname === link.href || pathname === link.href + '/'
                       ? 'text-rv-white'
                       : 'text-rv-white/60 hover:text-rv-white'
