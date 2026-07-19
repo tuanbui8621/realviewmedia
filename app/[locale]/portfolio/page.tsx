@@ -103,10 +103,21 @@ export default function PortfolioPage() {
                 />
                 
                 {/* Dark Gradient Overlay (Lightened the middle so it doesn't darken the whole image) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none transition-opacity duration-500" />
                 
-                <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                <div 
+                  className="absolute inset-0 p-8 flex flex-col justify-between"
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      setActiveProject(project);
+                    }
+                  }}
+                  aria-label={`View details for ${project.title}`}
+                >
                   <div className="flex justify-between items-start">
+
                     <div className="bg-black/50 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-rv-blue border border-white/10 uppercase tracking-widest">
                       {project.category}
                     </div>

@@ -1,10 +1,28 @@
 {
+  "Metadata": {
+    "title": "RealView Media | Premium Visual Marketing & 360 Tours",
+    "description": "Google Business 360 Virtual Tours, Professional Photography, and Digital Media Marketing."
+  },
   "Navigation": {
     "home": "Home",
     "experience": "Experience",
     "portfolio": "Portfolio",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "accessibility": {
+      "home": "RealView Media home",
+      "primaryNavigation": "Primary navigation",
+      "mobileNavigation": "Mobile navigation",
+      "openMenu": "Open navigation menu",
+      "closeMenu": "Close navigation menu"
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Language selection",
+    "vietnamese": "Switch language to Vietnamese",
+    "vietnameseShort": "VN",
+    "english": "Switch language to English",
+    "englishShort": "EN"
   },
   "AboutPage": {
     "Hero": {
@@ -122,6 +140,13 @@
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
+    },
+    "accessibility": {
+      "home": "RealView Media home",
+      "socialMedia": "Social media",
+      "instagram": "RealView Media on Instagram (opens in a new tab)",
+      "facebook": "RealView Media on Facebook (opens in a new tab)",
+      "legal": "Legal information"
     }
   },
   "Hero": {

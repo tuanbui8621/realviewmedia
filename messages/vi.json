@@ -1,10 +1,28 @@
 {
+  "Metadata": {
+    "title": "RealView Media | Truyền Thông Trực Quan & Tour 360",
+    "description": "Virtual Tour 360 cho Google Business, Nhiếp Ảnh Chuyên Nghiệp và Tiếp Thị Truyền Thông Số."
+  },
   "Navigation": {
     "home": "Trang chủ",
     "experience": "Trải nghiệm",
     "portfolio": "Dự án",
     "about": "Về chúng tôi",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "accessibility": {
+      "home": "Trang chủ RealView Media",
+      "primaryNavigation": "Điều hướng chính",
+      "mobileNavigation": "Điều hướng trên thiết bị di động",
+      "openMenu": "Mở menu điều hướng",
+      "closeMenu": "Đóng menu điều hướng"
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Chọn ngôn ngữ",
+    "vietnamese": "Chuyển ngôn ngữ sang tiếng Việt",
+    "vietnameseShort": "VN",
+    "english": "Chuyển ngôn ngữ sang tiếng Anh",
+    "englishShort": "EN"
   },
   "AboutPage": {
     "Hero": {
@@ -122,6 +140,13 @@
     "legal": {
       "privacy": "Chính sách bảo mật",
       "terms": "Điều khoản dịch vụ"
+    },
+    "accessibility": {
+      "home": "Trang chủ RealView Media",
+      "socialMedia": "Mạng xã hội",
+      "instagram": "RealView Media trên Instagram (mở trong tab mới)",
+      "facebook": "RealView Media trên Facebook (mở trong tab mới)",
+      "legal": "Thông tin pháp lý"
     }
   },
   "Hero": {

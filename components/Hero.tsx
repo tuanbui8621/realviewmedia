@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import PhoneMockup from './PhoneMockup';
 import { useTranslations } from 'next-intl';
@@ -12,11 +13,14 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden bg-rv-black">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden bg-rv-black"
+    >
 
       {/* Text Layer */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 mb-12 text-center">
-        <h1 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] text-white mb-6 break-words">
+        <h1 id="hero-heading" className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] text-white mb-6 break-words">
           {t('heading')}
         </h1>
 
@@ -35,12 +39,17 @@ export default function Hero() {
 
       {/* Background */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-20 blur-sm"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')",
-        }}
-      />
+        aria-hidden="true"
+        className="absolute inset-0 z-0 opacity-20 blur-sm"
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
     </section>
   );
 }

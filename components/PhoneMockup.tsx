@@ -42,6 +42,7 @@ export default function PhoneMockup() {
               alt="Oakwood Residence Preview" 
               fill 
               priority
+              sizes="320px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />

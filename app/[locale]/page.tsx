@@ -8,14 +8,16 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-rv-black min-h-screen">
+    <>
       <Navbar />
-      <Hero />
-      <Services />
-      <Experience360 />
-      <PortfolioCarousel />
-      <CtaSection />
+      <main className="relative bg-rv-black min-h-screen">
+        <Hero />
+        <Services />
+        <Experience360 />
+        <PortfolioCarousel />
+        <CtaSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
