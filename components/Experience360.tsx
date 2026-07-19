@@ -2,9 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, CheckCircle2, Activity } from 'lucide-react';
-import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
-import type { ComponentType } from 'react';
+import { useEffect, useRef, useState, type ComponentType } from 'react';
 
 type PanoramaProps = {
   width: string;
@@ -21,13 +20,69 @@ type PanoramaProps = {
   autoRotate: number;
 };
 
-const Pannellum = dynamic<PanoramaProps>(
-  () => import('pannellum-react').then((mod) => mod.Pannellum as ComponentType<PanoramaProps>),
-  { ssr: false },
-);
+type ViewerStatus = 'idle' | 'loading' | 'ready' | 'failed';
+
+const VIEWER_ROOT_MARGIN = '800px 0px';
 
 export default function Experience360() {
   const t = useTranslations('Experience360');
+  const viewerWrapperRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadViewer, setShouldLoadViewer] = useState(false);
+  const [PanoramaViewer, setPanoramaViewer] = useState<ComponentType<PanoramaProps> | null>(null);
+  const [viewerFailed, setViewerFailed] = useState(false);
+
+  useEffect(() => {
+    const viewerWrapper = viewerWrapperRef.current;
+
+    if (!viewerWrapper || typeof IntersectionObserver === 'undefined') {
+      setShouldLoadViewer(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        setShouldLoadViewer(true);
+        observer.disconnect();
+      },
+      { rootMargin: VIEWER_ROOT_MARGIN },
+    );
+
+    observer.observe(viewerWrapper);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!shouldLoadViewer) return;
+
+    let cancelled = false;
+
+    void import('pannellum-react')
+      .then((mod) => {
+        if (cancelled) return;
+
+        setPanoramaViewer(() => mod.Pannellum as ComponentType<PanoramaProps>);
+      })
+      .catch(() => {
+        if (!cancelled) setViewerFailed(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [shouldLoadViewer]);
+
+  const viewerStatus: ViewerStatus = PanoramaViewer
+    ? 'ready'
+    : viewerFailed
+      ? 'failed'
+      : shouldLoadViewer
+        ? 'loading'
+        : 'idle';
+  const viewerIsReady = viewerStatus === 'ready';
+
   return (
     <section className="py-24 bg-[#050505] px-6">
       <h2 className="sr-only">{t('sectionHeading')}</h2>
@@ -35,36 +90,44 @@ export default function Experience360() {
         
         {/* LEFT SIDE: The 360 Panorama */}
         <motion.div 
+          ref={viewerWrapperRef}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="relative w-full lg:w-2/3 aspect-[16/11] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group"
-          role="region"
-          aria-label={t('panoramaLabel')}
+          role={viewerIsReady ? 'region' : undefined}
+          aria-label={viewerIsReady ? t('panoramaLabel') : undefined}
+          data-viewer-state={viewerStatus}
         >
-          <Pannellum
-            width="100%"
-            height="100%"
-            image="/images/oakwood.png"
-            pitch={0}
-            yaw={0}
-            hfov={100}
-            autoLoad={true}
-            showZoomCtrl={false}
-            showFullscreenCtrl={false}
-            compass={false}
-            mouseZoom={true}
-            autoRotate={-2}
-          />
+          {viewerIsReady && PanoramaViewer ? (
+            <PanoramaViewer
+              width="100%"
+              height="100%"
+              image="/images/oakwood.png"
+              pitch={0}
+              yaw={0}
+              hfov={100}
+              autoLoad={true}
+              showZoomCtrl={false}
+              showFullscreenCtrl={false}
+              compass={false}
+              mouseZoom={true}
+              autoRotate={-2}
+            />
+          ) : (
+            <div className="absolute inset-0 bg-[#050505]" aria-hidden="true" />
+          )}
           {/* Minimalist Live Indicator */}
-          <div className="absolute top-6 left-6 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold tracking-widest uppercase flex items-center gap-2 text-white">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-            </span>
-            {t('livePreview')}
-          </div>
+          {viewerIsReady && (
+            <div className="absolute top-6 left-6 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold tracking-widest uppercase flex items-center gap-2 text-white">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+              </span>
+              {t('livePreview')}
+            </div>
+          )}
         </motion.div>
 
         {/* RIGHT SIDE: Expert Analytics Dashboard */}
