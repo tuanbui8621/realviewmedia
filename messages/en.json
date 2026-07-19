@@ -66,6 +66,7 @@
       "paragraph2": "We saw this disconnect and decided to bridge the gap. By combining architectural-grade photography with immersive virtual reality technology, we eliminate the guesswork.",
       "paragraph3": "We don't just take photos of your business. We engineer digital twins that put your customers halfway through your front door before they ever leave their house.",
       "portfolioLink": "View our 360° virtual tour projects.",
+      "imageAlt": "Living space at Mai House Saigon in a 360° image",
       "badge1": "Interactive",
       "badge2": "Tours"
     },
@@ -286,42 +287,50 @@
       "maiHouse": {
         "client": "Mai House Saigon",
         "category": "Hospitality",
-        "type": "Hosted 360° Tour"
+        "type": "Hosted 360° Tour",
+        "alt": "Living room in a suite at Mai House Saigon"
       },
       "oakwood": {
         "client": "Oakwood Residence",
         "category": "Luxury Real Estate",
-        "type": "Hosted 360° Tour"
+        "type": "Hosted 360° Tour",
+        "alt": "Outdoor pool at Oakwood Residence"
       },
       "richlane": {
         "client": "Richlane Residence",
         "category": "Real Estate",
-        "type": "Hosted 360° Tour"
+        "type": "Hosted 360° Tour",
+        "alt": "Rooftop pool overlooking the city at Richlane Residence"
       },
       "hongHome": {
         "client": "Hong Home",
         "category": "Residential",
-        "type": "Hosted 360° Tour"
+        "type": "Hosted 360° Tour",
+        "alt": "Bedroom at Hong Home"
       },
       "artistic": {
         "client": "Artistic",
         "category": "Creative Space",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Rooftop terrace overlooking the city at Artistic"
       },
       "lamboKids": {
         "client": "Lambo Kids",
         "category": "Retail & Education",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Reception and stairway at Lambo Kids"
       },
       "laVilla": {
         "client": "La Villa",
         "category": "Hospitality & F&B",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Garden dining area at La Villa"
       },
       "aquaClinic": {
         "client": "Aqua Clinic",
         "category": "Healthcare & Spa",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Reception area at Aqua Clinic"
       }
     }
   },

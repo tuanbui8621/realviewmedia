@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Eye, Map, Images, BarChart3, Globe2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/navigation';
 
 export default function AboutPage() {
@@ -130,10 +131,20 @@ export default function AboutPage() {
               className="relative aspect-square rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.1)] group"
             >
               <motion.div 
-                className="absolute inset-y-0 left-0 h-full w-[200%] bg-[url('/images/mai.jpg')] bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                className="absolute inset-y-0 left-0 h-full w-[200%] opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                 animate={{ x: ["0%", "-50%", "0%"] }}
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              />
+              >
+                <Image
+                  src="/images/mai.jpg"
+                  alt={t('Story.imageAlt')}
+                  fill
+                  sizes="(min-width: 1200px) 1024px, (min-width: 768px) calc(100vw - 112px), calc(200vw - 96px)"
+                  loading="lazy"
+                  draggable={false}
+                  className="pointer-events-none select-none object-cover object-center"
+                />
+              </motion.div>
               
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90"></div>
               <div className="absolute inset-0 bg-blue-500/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-700"></div>

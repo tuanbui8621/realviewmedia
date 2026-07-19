@@ -4,6 +4,7 @@ import { useCallback, useSyncExternalStore } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight, RotateCcw, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -67,41 +68,49 @@ export default function PortfolioCarousel() {
       client: t('projects.maiHouse.client'),
       category: t('projects.maiHouse.category'),
       type: t('projects.maiHouse.type'),
+      alt: t('projects.maiHouse.alt'),
     },
     oakwood: {
       client: t('projects.oakwood.client'),
       category: t('projects.oakwood.category'),
       type: t('projects.oakwood.type'),
+      alt: t('projects.oakwood.alt'),
     },
     richlane: {
       client: t('projects.richlane.client'),
       category: t('projects.richlane.category'),
       type: t('projects.richlane.type'),
+      alt: t('projects.richlane.alt'),
     },
     hongHome: {
       client: t('projects.hongHome.client'),
       category: t('projects.hongHome.category'),
       type: t('projects.hongHome.type'),
+      alt: t('projects.hongHome.alt'),
     },
     artistic: {
       client: t('projects.artistic.client'),
       category: t('projects.artistic.category'),
       type: t('projects.artistic.type'),
+      alt: t('projects.artistic.alt'),
     },
     lamboKids: {
       client: t('projects.lamboKids.client'),
       category: t('projects.lamboKids.category'),
       type: t('projects.lamboKids.type'),
+      alt: t('projects.lamboKids.alt'),
     },
     laVilla: {
       client: t('projects.laVilla.client'),
       category: t('projects.laVilla.category'),
       type: t('projects.laVilla.type'),
+      alt: t('projects.laVilla.alt'),
     },
     aquaClinic: {
       client: t('projects.aquaClinic.client'),
       category: t('projects.aquaClinic.category'),
       type: t('projects.aquaClinic.type'),
+      alt: t('projects.aquaClinic.alt'),
     },
   };
 
@@ -201,10 +210,17 @@ export default function PortfolioCarousel() {
                 className="block relative aspect-[4/5] md:aspect-[3/4] rounded-[2rem] overflow-hidden group border border-white/10 shadow-2xl"
               >
                 {/* Image Background */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] group-hover:scale-110 ease-linear"
-                  style={{ backgroundImage: `url(${project.image})` }}
-                />
+                <div className="absolute inset-0 transition-transform duration-[10s] group-hover:scale-110 ease-linear">
+                  <Image
+                    src={project.image}
+                    alt={copy.alt}
+                    fill
+                    sizes="(min-width: 1024px) and (min-resolution: 1.5dppx) 1024px, (min-width: 1024px) 83vw, (min-width: 768px) 125vw, 210vw"
+                    loading="lazy"
+                    draggable={false}
+                    className="pointer-events-none select-none object-cover object-center"
+                  />
+                </div>
                 
                 {/* Gradient Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />

@@ -117,6 +117,7 @@ export default function PortfolioPage() {
                   src={project.image}
                   alt={copy.alt}
                   fill
+                  sizes="(min-width: 768px) 900px, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 

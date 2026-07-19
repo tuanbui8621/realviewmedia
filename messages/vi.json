@@ -66,6 +66,7 @@
       "paragraph2": "RealView Media kết hợp chụp ảnh 360° với tour ảo tương tác để khách hàng tự khám phá không gian trên Google Maps, website hoặc qua liên kết doanh nghiệp chia sẻ.",
       "paragraph3": "Chúng tôi tập trung thể hiện không gian rõ ràng và liền mạch cho doanh nghiệp tại TP.HCM và Việt Nam.",
       "portfolioLink": "Xem các dự án tour ảo 360° đã thực hiện.",
+      "imageAlt": "Không gian phòng khách tại Mai House Saigon trong ảnh 360°",
       "badge1": "Tour ảo 360°",
       "badge2": "Tương tác"
     },
@@ -286,42 +287,50 @@
       "maiHouse": {
         "client": "Mai House Saigon",
         "category": "Khách sạn",
-        "type": "Tour ảo 360°"
+        "type": "Tour ảo 360°",
+        "alt": "Phòng khách trong phòng suite tại Mai House Saigon"
       },
       "oakwood": {
         "client": "Oakwood Residence",
         "category": "Căn hộ dịch vụ",
-        "type": "Tour ảo 360°"
+        "type": "Tour ảo 360°",
+        "alt": "Hồ bơi ngoài trời tại Oakwood Residence"
       },
       "richlane": {
         "client": "Richlane Residence",
         "category": "Căn hộ",
-        "type": "Tour ảo 360°"
+        "type": "Tour ảo 360°",
+        "alt": "Hồ bơi trên cao nhìn ra thành phố tại Richlane Residence"
       },
       "hongHome": {
         "client": "Hong Home",
         "category": "Nhà ở",
-        "type": "Tour ảo 360°"
+        "type": "Tour ảo 360°",
+        "alt": "Phòng ngủ tại Hong Home"
       },
       "artistic": {
         "client": "Artistic",
         "category": "Không gian sáng tạo",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Sân thượng nhìn ra thành phố tại Artistic"
       },
       "lamboKids": {
         "client": "Lambo Kids",
         "category": "Bán lẻ & giáo dục",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Không gian lễ tân và cầu thang tại Lambo Kids"
       },
       "laVilla": {
         "client": "La Villa",
         "category": "Nhà hàng",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Khu vực bàn ăn sân vườn tại La Villa"
       },
       "aquaClinic": {
         "client": "Aqua Clinic",
         "category": "Spa & sức khỏe",
-        "type": "Google Street View"
+        "type": "Google Street View",
+        "alt": "Khu vực lễ tân tại Aqua Clinic"
       }
     }
   },
