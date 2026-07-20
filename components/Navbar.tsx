@@ -47,13 +47,13 @@ export default function Navbar() {
         <div className="container mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-3 items-center">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex max-w-full shrink-0 items-center">
             <Image
               src="/images/logo2.png"
               alt="RealView Media Logo"
-              width={200}
-              height={80}
-              className="h-24 md:h-34 w-auto brightness-110"
+              width={1340}
+              height={275}
+              className="block h-8 max-h-8 w-auto max-w-full object-contain brightness-110 md:h-10 md:max-h-10"
               priority
             />
           </Link>
