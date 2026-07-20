@@ -10,7 +10,7 @@ import { routing } from "@/i18n/routing";
 export const SITE_URL = "https://www.rvmedia.vn";
 
 const SOCIAL_IMAGE_URL = `${SITE_URL}/images/media.png`;
-const LOGO_URL = `${SITE_URL}/images/logo5.png`;
+const LOGO_URL = `${SITE_URL}/images/logo2.png`;
 
 export const pagePaths = {
   home: "",
@@ -147,8 +147,8 @@ export const organizationJsonLd = {
   logo: {
     "@type": "ImageObject",
     url: LOGO_URL,
-    width: 1455,
-    height: 541,
+    width: 1340,
+    height: 275,
   },
   email: "contact@rvmedia.vn",
   telephone: "+84966888782",

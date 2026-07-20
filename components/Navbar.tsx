@@ -15,12 +15,18 @@ export default function Navbar() {
   const t = useTranslations('Navigation');
 
   useEffect(() => {
-    // Check scroll position immediately on load to prevent jumping
-    setScrolled(window.scrollY > 50);
+    const updateScrolled = () => {
+      setScrolled(window.scrollY > 50);
+    };
 
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const initialFrame = window.requestAnimationFrame(updateScrolled);
+
+    window.addEventListener('scroll', updateScrolled, { passive: true });
+
+    return () => {
+      window.cancelAnimationFrame(initialFrame);
+      window.removeEventListener('scroll', updateScrolled);
+    };
   }, []);
 
   // Navigation links with translation keys
