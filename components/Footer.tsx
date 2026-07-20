@@ -17,20 +17,20 @@ export default function Footer() {
           {/* Brand Column - Now spans 2 columns for a premium, spacious look */}
           <div className="md:col-span-2 pr-8">
             <Link
-              href="/"
-              aria-label={t('accessibility.home')}
-              className="mb-6 inline-block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
-            >
-              <Image
-                src="/images/logo5.png"
-                alt=""
-                width={129}
-                height={48}
-                sizes="129px"
-                className="h-12 w-auto"
-              />
-            </Link>
-            <p className="text-sm font-light leading-relaxed max-w-sm mb-8">
+  href="/"
+  aria-label={t('accessibility.home')}
+  className="-mb-8 inline-block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+>
+  <Image
+  src="/images/logo2.png"
+  alt="RealView Media"
+  width={300}
+  height={85}
+  sizes="160px"
+  className="block h-auto w-50 -translate-y-10"
+/>
+</Link>
+            <p className="-mt-10 text-sm font-light leading-relaxed max-w-sm mb-8">
               {t('tagline')}
             </p>
             <div
