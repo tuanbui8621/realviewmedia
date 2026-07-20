@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo1.png"
+              src="/images/logo2.png"
               alt="RealView Media Logo"
               width={200}
               height={80}
