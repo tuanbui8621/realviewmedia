@@ -23,12 +23,12 @@ export default function Footer() {
   className="block max-w-full shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
 >
   <Image
-  src="/images/logo2.png"
+  src="/images/logo1.png"
   alt="RealView Media"
-  width={1340}
-  height={275}
-  sizes="(min-width: 768px) 234px, 195px"
-  className="block h-10 max-h-10 w-auto max-w-full object-contain md:h-12 md:max-h-12"
+  width={904}
+  height={762}
+  sizes="(min-width: 768px) 133px, 114px"
+  className="block h-24 max-h-24 w-auto max-w-full object-contain md:h-28 md:max-h-28"
 />
 </Link>
             <p className="text-sm font-light leading-relaxed max-w-sm mb-8">

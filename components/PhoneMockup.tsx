@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Navigation, X, Compass, ChevronLeft } from 'lucide-react';
+import { Search, Navigation, X, ChevronLeft } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function PhoneMockup() {
@@ -80,7 +80,36 @@ export default function PhoneMockup() {
                   onClick={() => setIsTourActive(true)}
                   className="relative bg-white/20 backdrop-blur-xl border border-white/40 px-6 py-3 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] flex items-center gap-3 text-white hover:bg-white/30 transition-all hover:scale-105 active:scale-95 group"
                 >
-                  <Compass className="text-white group-hover:rotate-45 transition-transform duration-500" size={20} />
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 32 24"
+                    className="h-5 w-6 shrink-0 overflow-visible text-white"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.5 13.5C5.7 18 10.2 21 16 21c5.3 0 9.5-2.5 11.1-6.4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="m24.7 15.2 2.8-.9.7 2.9"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <text
+                      x="16"
+                      y="12.5"
+                      fill="currentColor"
+                      fontSize="8.5"
+                      fontWeight="700"
+                      textAnchor="middle"
+                    >
+                      {t('icon360')}
+                    </text>
+                  </svg>
                   <span className="font-bold text-[13px] tracking-widest uppercase">{t('launchTour')}</span>
                 </button>
               </div>

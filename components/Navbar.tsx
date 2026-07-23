@@ -55,11 +55,12 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex max-w-full shrink-0 items-center">
             <Image
-              src="/images/logo2.png"
+              src="/images/logo1.png"
               alt="RealView Media Logo"
-              width={1340}
-              height={275}
-              className="block h-8 max-h-8 w-auto max-w-full object-contain brightness-110 md:h-10 md:max-h-10"
+              width={904}
+              height={762}
+              sizes="(min-width: 768px) 85px, 76px"
+              className="block h-16 max-h-16 w-auto max-w-full object-contain brightness-110 md:h-18 md:max-h-18"
               priority
             />
           </Link>
