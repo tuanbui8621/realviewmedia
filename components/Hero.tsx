@@ -14,6 +14,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import PhoneMockup from './PhoneMockup';
 
 const ORBIT_COLOR = '#BFE8FF';
+const TRACE_COLOR = '#F7FCFF';
 const ORBIT_PATH =
   'M400 254A368 104 0 0 1 32 150A368 104 0 0 1 400 46A368 104 0 0 1 768 150A368 104 0 0 1 400 254';
 
@@ -37,8 +38,8 @@ export default function Hero() {
     mass: 0.35,
   });
 
-  useMotionValueEvent(smoothProgress, 'change', (latest) => {
-    if (!orbitActivatedRef.current && latest >= 0.14) {
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    if (!orbitActivatedRef.current && latest >= 0.02) {
       orbitActivatedRef.current = true;
       setOrbitActivated(true);
     }
@@ -85,7 +86,7 @@ export default function Hero() {
   const markerOpacity = useTransform(
     smoothProgress,
     [0.04, 0.1, 0.18],
-    [0, 1, 1],
+    [0.72, 1, 1],
   );
   const markerY = useTransform(smoothProgress, [0.04, 0.14], [10, 0]);
   const panoramaX = useTransform(smoothProgress, [0, 1], ['-2.5%', '2.5%']);
@@ -231,8 +232,15 @@ export default function Hero() {
                   <defs>
                     <filter id="orbit-glow" x="-20%" y="-60%" width="140%" height="220%">
                       <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feFlood floodColor={ORBIT_COLOR} floodOpacity="0.75" result="glow-color" />
+                      <feComposite
+                        in="glow-color"
+                        in2="blur"
+                        operator="in"
+                        result="color-glow"
+                      />
                       <feMerge>
-                        <feMergeNode in="blur" />
+                        <feMergeNode in="color-glow" />
                         <feMergeNode in="SourceGraphic" />
                       </feMerge>
                     </filter>
@@ -251,62 +259,53 @@ export default function Hero() {
                     rx="368"
                     ry="104"
                     stroke={ORBIT_COLOR}
-                    strokeOpacity="0.42"
-                    strokeWidth="2"
+                    strokeOpacity="0.3"
+                    strokeWidth="1.75"
                     vectorEffect="non-scaling-stroke"
                     filter="url(#orbit-glow)"
                     mask="url(#orbit-back-mask)"
                     style={{ pathLength: reduceMotion ? 1 : orbitDraw }}
                   />
-                  <motion.path
-                    d={ORBIT_PATH}
-                    pathLength="1"
-                    stroke={ORBIT_COLOR}
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                    strokeDasharray="1 1"
-                    vectorEffect="non-scaling-stroke"
-                    filter="url(#orbit-glow)"
-                    mask="url(#orbit-back-mask)"
-                    initial={{ strokeDashoffset: 1 }}
-                    animate={
-                      orbitActivated && !reduceMotion
-                        ? { strokeDashoffset: [1, 0] }
-                        : { strokeDashoffset: 1 }
-                    }
-                    transition={
-                      orbitActivated && !reduceMotion
-                        ? {
-                            duration: 4.8,
-                            ease: 'linear',
-                            repeat: Infinity,
-                            repeatDelay: 0,
-                            repeatType: 'loop',
-                          }
-                        : { duration: 0 }
-                    }
-                  />
+                  {orbitActivated && !reduceMotion && (
+                    <path
+                      d={ORBIT_PATH}
+                      pathLength="1"
+                      stroke={TRACE_COLOR}
+                      strokeWidth="3.25"
+                      strokeLinecap="round"
+                      strokeDasharray="1 1"
+                      strokeDashoffset="1"
+                      vectorEffect="non-scaling-stroke"
+                      filter="url(#orbit-glow)"
+                      mask="url(#orbit-back-mask)"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        from="1"
+                        to="0"
+                        dur="4.8s"
+                        begin="0s"
+                        calcMode="linear"
+                        repeatCount="indefinite"
+                      />
+                    </path>
+                  )}
                   {orbitActivated && !reduceMotion && (
                     <g mask="url(#orbit-back-mask)">
-                      <path
-                        d="M-10-5 0 0-10 5"
-                        fill="none"
-                        stroke={ORBIT_COLOR}
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        filter="url(#orbit-glow)"
-                      >
+                      <g filter="url(#orbit-glow)">
+                        <circle cx="2" cy="0" r="5.5" fill={ORBIT_COLOR} fillOpacity="0.3" />
+                        <path d="M-12-6 2 0-12 6-8 0Z" fill={TRACE_COLOR} />
+                        <circle cx="2" cy="0" r="2.75" fill={TRACE_COLOR} />
                         <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
                           <mpath href="#orbit-motion-path-back" />
                         </animateMotion>
-                      </path>
+                      </g>
                     </g>
                   )}
                 </motion.svg>
               </div>
 
-              <div className="relative z-20">
+              <div className="relative z-20 origin-center translate-y-3 scale-[0.92]">
                 <PhoneMockup />
               </div>
 
@@ -325,15 +324,22 @@ export default function Hero() {
                   <defs>
                     <filter id="orbit-front-glow" x="-20%" y="-60%" width="140%" height="220%">
                       <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feFlood floodColor={ORBIT_COLOR} floodOpacity="0.75" result="glow-color" />
+                      <feComposite
+                        in="glow-color"
+                        in2="blur"
+                        operator="in"
+                        result="color-glow"
+                      />
                       <feMerge>
-                        <feMergeNode in="blur" />
+                        <feMergeNode in="color-glow" />
                         <feMergeNode in="SourceGraphic" />
                       </feMerge>
                     </filter>
                     <mask id="orbit-front-mask">
                       <rect width="800" height="300" fill="black" />
                       <rect y="150" width="800" height="150" fill="white" />
-                      <rect x="347" y="228" width="106" height="52" rx="26" fill="black" />
+                      <rect x="320" y="220" width="160" height="68" rx="34" fill="black" />
                     </mask>
                     <path
                       id="orbit-motion-path-front"
@@ -346,102 +352,90 @@ export default function Hero() {
                     rx="368"
                     ry="104"
                     stroke={ORBIT_COLOR}
-                    strokeOpacity="0.42"
-                    strokeWidth="2"
+                    strokeOpacity="0.3"
+                    strokeWidth="1.75"
                     vectorEffect="non-scaling-stroke"
                     filter="url(#orbit-front-glow)"
                     mask="url(#orbit-front-mask)"
                     style={{ pathLength: reduceMotion ? 1 : orbitDraw }}
                   />
-                  <motion.path
-                    d={ORBIT_PATH}
-                    pathLength="1"
-                    stroke={ORBIT_COLOR}
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                    strokeDasharray="1 1"
-                    vectorEffect="non-scaling-stroke"
-                    filter="url(#orbit-front-glow)"
-                    mask="url(#orbit-front-mask)"
-                    initial={{ strokeDashoffset: 1 }}
-                    animate={
-                      orbitActivated && !reduceMotion
-                        ? { strokeDashoffset: [1, 0] }
-                        : { strokeDashoffset: 1 }
-                    }
-                    transition={
-                      orbitActivated && !reduceMotion
-                        ? {
-                            duration: 4.8,
-                            ease: 'linear',
-                            repeat: Infinity,
-                            repeatDelay: 0,
-                            repeatType: 'loop',
-                          }
-                        : { duration: 0 }
-                    }
-                  />
+                  {orbitActivated && !reduceMotion && (
+                    <path
+                      d={ORBIT_PATH}
+                      pathLength="1"
+                      stroke={TRACE_COLOR}
+                      strokeWidth="3.25"
+                      strokeLinecap="round"
+                      strokeDasharray="1 1"
+                      strokeDashoffset="1"
+                      vectorEffect="non-scaling-stroke"
+                      filter="url(#orbit-front-glow)"
+                      mask="url(#orbit-front-mask)"
+                    >
+                      <animate
+                        attributeName="stroke-dashoffset"
+                        from="1"
+                        to="0"
+                        dur="4.8s"
+                        begin="0s"
+                        calcMode="linear"
+                        repeatCount="indefinite"
+                      />
+                    </path>
+                  )}
                   {orbitActivated && !reduceMotion && (
                     <g mask="url(#orbit-front-mask)">
-                      <path
-                        d="M-10-5 0 0-10 5"
-                        fill="none"
-                        stroke={ORBIT_COLOR}
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        filter="url(#orbit-front-glow)"
-                      >
+                      <g filter="url(#orbit-front-glow)">
+                        <circle cx="2" cy="0" r="5.5" fill={ORBIT_COLOR} fillOpacity="0.3" />
+                        <path d="M-12-6 2 0-12 6-8 0Z" fill={TRACE_COLOR} />
+                        <circle cx="2" cy="0" r="2.75" fill={TRACE_COLOR} />
                         <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
                           <mpath href="#orbit-motion-path-front" />
                         </animateMotion>
-                      </path>
+                      </g>
                     </g>
                   )}
-                  <g transform="translate(400 254)">
-                  <motion.g
-                    filter="url(#orbit-front-glow)"
-                    style={{
-                      opacity: reduceMotion ? 0.85 : markerOpacity,
-                      y: reduceMotion ? 0 : markerY,
-                    }}
+                </motion.svg>
+                {/* Compact 360-degree mark anchored to the masked front gap */}
+                <motion.div
+                  aria-hidden="true"
+                  style={{
+                    opacity: reduceMotion ? 0.95 : markerOpacity,
+                    y: reduceMotion ? 0 : markerY,
+                  }}
+                  className="absolute left-1/2 top-[84.667%] z-10 h-[42px] w-[100px] -translate-x-1/2 -translate-y-1/2"
+                >
+                  <svg
+                    viewBox="0 0 100 42"
+                    fill="none"
+                    className="block h-full w-full overflow-visible drop-shadow-[0_0_5px_rgba(126,220,255,0.48)]"
                   >
-                    <rect
-                      x="-43"
-                      y="-17"
-                      width="86"
-                      height="34"
-                      rx="17"
+                    <ellipse
+                      cx="50"
+                      cy="21"
+                      rx="47"
+                      ry="18"
                       fill="#07101B"
-                      fillOpacity="0.9"
+                      fillOpacity="0.92"
                       stroke={ORBIT_COLOR}
-                      strokeOpacity="0.6"
-                    />
-                    <path
-                      d="M-29 4C-24 12-10 15 0 15c12 0 24-4 29-12"
-                      stroke={ORBIT_COLOR}
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="m24 4 6-2 1 6"
-                      stroke={ORBIT_COLOR}
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      strokeOpacity="0.9"
+                      strokeWidth="1.4"
+                      vectorEffect="non-scaling-stroke"
                     />
                     <text
-                      y="1"
-                      fill={ORBIT_COLOR}
-                      fontSize="13"
+                      x="50"
+                      y="21.5"
+                      fill={TRACE_COLOR}
+                      fontFamily="var(--font-space-grotesk)"
+                      fontSize="16"
                       fontWeight="700"
                       textAnchor="middle"
+                      dominantBaseline="middle"
                     >
                       {phoneT('icon360')}
                     </text>
-                  </motion.g>
-                  </g>
-                </motion.svg>
+                  </svg>
+                </motion.div>
               </div>
             </div>
           </motion.div>

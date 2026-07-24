@@ -16,7 +16,7 @@ export default function PhoneMockup() {
       initial={{ y: 60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-      className="relative w-[320px] h-[640px] bg-[#0a0a0c] rounded-[3.5rem] border-[8px] border-[#1a1a1c] shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden ring-1 ring-white/10 will-change-transform"
+      className="relative isolate w-[320px] h-[640px] bg-[#0a0a0c] rounded-[3.5rem] border-[8px] border-[#1a1a1c] shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden ring-1 ring-white/10 will-change-transform"
     >
       {/* MODERN HARDWARE: Dynamic Island */}
       <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[100px] h-[28px] bg-black rounded-full z-50 flex items-center justify-between px-3 shadow-inner">
@@ -140,12 +140,23 @@ export default function PhoneMockup() {
 
       {/* Close Tour UI */}
       {isTourActive && (
-        <button 
-          onClick={() => setIsTourActive(false)}
+        <button
+          type="button"
+          onPointerDown={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            setIsTourActive(false);
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+            setIsTourActive(false);
+          }}
           aria-label={t('closeTour')}
-          className="absolute top-12 right-4 z-20 bg-black/60 backdrop-blur-md border border-white/20 p-2.5 rounded-full text-white hover:bg-black/80 transition-colors shadow-xl"
+          className="group pointer-events-auto touch-manipulation absolute top-9 right-1 z-[70] flex size-16 items-center justify-center text-white focus-visible:outline-none"
         >
-          <X size={16} />
+          <span className="flex size-10 items-center justify-center rounded-full border border-white/20 bg-black/60 shadow-xl backdrop-blur-md transition-colors group-hover:bg-black/80 group-focus-visible:ring-2 group-focus-visible:ring-white/60">
+            <X size={16} />
+          </span>
         </button>
       )}
     </motion.div>
