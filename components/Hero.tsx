@@ -10,7 +10,7 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import PhoneMockup from './PhoneMockup';
 
 const ORBIT_COLOR = '#BFE8FF';
@@ -22,6 +22,8 @@ export default function Hero() {
   const orbitActivatedRef = useRef(false);
   const [orbitActivated, setOrbitActivated] = useState(false);
   const reduceMotion = useReducedMotion();
+  const locale = useLocale();
+  const isVietnamese = locale === 'vi';
   const t = useTranslations('Hero');
   const phoneT = useTranslations('PhoneMockup');
   const { scrollYProgress } = useScroll({
@@ -52,7 +54,7 @@ export default function Hero() {
   const phoneY = useTransform(
     smoothProgress,
     [0, 0.42, 1],
-    [150, 24, -10],
+    [isVietnamese ? 210 : 150, isVietnamese ? 64 : 24, -10],
   );
   const phoneGlow = useTransform(
     smoothProgress,
@@ -165,7 +167,7 @@ export default function Hero() {
             opacity: reduceMotion ? 1 : textOpacity,
             y: reduceMotion ? 0 : textY,
           }}
-          className="absolute inset-x-0 top-0 z-30 mx-auto w-full max-w-6xl px-6 pt-28 text-center sm:pt-32 lg:pt-36"
+          className="absolute inset-x-0 top-0 z-50 mx-auto w-full max-w-6xl px-6 pt-28 text-center sm:pt-32 lg:pt-36"
         >
           <h1
             id="hero-heading"
@@ -204,7 +206,7 @@ export default function Hero() {
             style={{
               opacity: 1,
               scale: reduceMotion ? 0.94 : phoneScale,
-              y: reduceMotion ? 0 : phoneY,
+              y: reduceMotion ? (isVietnamese ? 80 : 0) : phoneY,
             }}
             className="will-change-transform"
           >
