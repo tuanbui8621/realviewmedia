@@ -16,19 +16,19 @@ export default function Footer() {
           
           {/* Brand Column - Now spans 2 columns for a premium, spacious look */}
           <div className="md:col-span-2 pr-8">
-            <div className="flex flex-col items-start gap-6">
+            <div className="flex flex-col items-start gap-4">
             <Link
   href="/"
   aria-label={t('accessibility.home')}
-  className="block max-w-full shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+  className="relative block h-[58px] w-[240px] max-w-full shrink-0 overflow-hidden rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] md:h-[67px] md:w-[280px]"
 >
   <Image
-  src="/images/logo1.png"
+  src="/images/logo3.png"
   alt="RealView Media"
-  width={904}
-  height={762}
-  sizes="(min-width: 768px) 133px, 114px"
-  className="block h-24 max-h-24 w-auto max-w-full object-contain md:h-28 md:max-h-28"
+  width={1672}
+  height={941}
+  sizes="(min-width: 768px) 280px, 240px"
+  className="absolute inset-0 h-full w-full object-cover"
 />
 </Link>
             <p className="text-sm font-light leading-relaxed max-w-sm mb-8">

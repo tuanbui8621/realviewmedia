@@ -14,6 +14,8 @@ import { useTranslations } from 'next-intl';
 import PhoneMockup from './PhoneMockup';
 
 const ORBIT_COLOR = '#BFE8FF';
+const ORBIT_PATH =
+  'M400 254A368 104 0 0 1 32 150A368 104 0 0 1 400 46A368 104 0 0 1 768 150A368 104 0 0 1 400 254';
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -238,7 +240,7 @@ export default function Hero() {
                     </mask>
                     <path
                       id="orbit-motion-path-back"
-                      d="M32 150a368 104 0 1 1 736 0a368 104 0 1 1-736 0"
+                      d={ORBIT_PATH}
                     />
                   </defs>
                   <motion.ellipse
@@ -254,11 +256,8 @@ export default function Hero() {
                     mask="url(#orbit-back-mask)"
                     style={{ pathLength: reduceMotion ? 1 : orbitDraw }}
                   />
-                  <motion.ellipse
-                    cx="400"
-                    cy="150"
-                    rx="368"
-                    ry="104"
+                  <motion.path
+                    d={ORBIT_PATH}
                     pathLength="1"
                     stroke={ORBIT_COLOR}
                     strokeWidth="3.5"
@@ -279,6 +278,7 @@ export default function Hero() {
                             duration: 4.8,
                             ease: 'linear',
                             repeat: Infinity,
+                            repeatDelay: 0,
                             repeatType: 'loop',
                           }
                         : { duration: 0 }
@@ -331,11 +331,11 @@ export default function Hero() {
                     <mask id="orbit-front-mask">
                       <rect width="800" height="300" fill="black" />
                       <rect y="150" width="800" height="150" fill="white" />
-                      <rect x="305" y="145" width="190" height="155" rx="24" fill="black" />
+                      <rect x="347" y="228" width="106" height="52" rx="26" fill="black" />
                     </mask>
                     <path
                       id="orbit-motion-path-front"
-                      d="M32 150a368 104 0 1 1 736 0a368 104 0 1 1-736 0"
+                      d={ORBIT_PATH}
                     />
                   </defs>
                   <motion.ellipse
@@ -351,11 +351,8 @@ export default function Hero() {
                     mask="url(#orbit-front-mask)"
                     style={{ pathLength: reduceMotion ? 1 : orbitDraw }}
                   />
-                  <motion.ellipse
-                    cx="400"
-                    cy="150"
-                    rx="368"
-                    ry="104"
+                  <motion.path
+                    d={ORBIT_PATH}
                     pathLength="1"
                     stroke={ORBIT_COLOR}
                     strokeWidth="3.5"
@@ -376,6 +373,7 @@ export default function Hero() {
                             duration: 4.8,
                             ease: 'linear',
                             repeat: Infinity,
+                            repeatDelay: 0,
                             repeatType: 'loop',
                           }
                         : { duration: 0 }
