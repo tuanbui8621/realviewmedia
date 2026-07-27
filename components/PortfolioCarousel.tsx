@@ -15,24 +15,28 @@ const projects = [
     key: 'maiHouse' as const,
     image: '/images/mai.jpg',
     link: 'https://www.rvmedia.vn/MaiHouseSaigon/',
+    standaloneTour: true,
   },
   {
     id: 2,
     key: 'oakwood' as const,
     image: '/images/oakwood.png',
     link: 'https://www.rvmedia.vn/OakwoodResidence/',
+    standaloneTour: true,
   },
   {
     id: 3,
     key: 'richlane' as const,
     image: '/images/Richlane.png',
     link: 'https://www.rvmedia.vn/Richlane/',
+    standaloneTour: true,
   },
   {
     id: 4,
     key: 'hongHome' as const,
     image: '/images/hong.jpg',
     link: 'https://www.rvmedia.vn/HongHome/',
+    standaloneTour: true,
   },
   {
     id: 5,
@@ -192,6 +196,7 @@ export default function PortfolioCarousel() {
         <div className="flex gap-6 cursor-grab active:cursor-grabbing">
           {projects.map((project, index) => {
             const copy = projectCopy[project.key];
+            const ProjectLink = project.standaloneTour ? 'a' : Link;
 
             return (
               <motion.div
@@ -202,7 +207,7 @@ export default function PortfolioCarousel() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_35%] min-w-0"
             >
-              <Link 
+              <ProjectLink
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -252,7 +257,7 @@ export default function PortfolioCarousel() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </ProjectLink>
               </motion.div>
             );
           })}
