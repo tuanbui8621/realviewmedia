@@ -9,7 +9,10 @@ import { routing } from "@/i18n/routing";
 
 export const SITE_URL = "https://www.rvmedia.vn";
 
-const SOCIAL_IMAGE_URL = `${SITE_URL}/images/media.png`;
+const SOCIAL_IMAGE_BASE_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : SITE_URL;
+const SOCIAL_IMAGE_URL = `${SOCIAL_IMAGE_BASE_URL}/images/media.png`;
 const LOGO_URL = `${SITE_URL}/images/logo2.png`;
 
 export const pagePaths = {
@@ -118,8 +121,8 @@ export async function buildPageMetadata(
       images: [
         {
           url: SOCIAL_IMAGE_URL,
-          width: 1734,
-          height: 907,
+          width: 1672,
+          height: 941,
           alt: "RealView Media",
         },
       ],
