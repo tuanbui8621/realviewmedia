@@ -5,6 +5,27 @@ import type { NextConfig } from "next";
 const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const nextConfig: NextConfig = {
+  skipTrailingSlashRedirect: true,
+  async rewrites() {
+    return [
+      {
+        source: '/MaiHouseSaigon',
+        destination: '/MaiHouseSaigon/index.html',
+      },
+      {
+        source: '/OakwoodResidence',
+        destination: '/OakwoodResidence/index.html',
+      },
+      {
+        source: '/HongHome',
+        destination: '/HongHome/index.html',
+      },
+      {
+        source: '/Richlane',
+        destination: '/Richlane/index.html',
+      },
+    ];
+  },
   async redirects() {
     const publicRequestOnly = [
       {
