@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -18,7 +19,14 @@ export async function generateMetadata({
   return buildPageMetadata(locale, "home");
 }
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Navbar />

@@ -7,9 +7,39 @@ import MagneticButton from '@/components/ui/MagneticButton';
 import { Link } from '@/navigation';
 import { ArrowRight, MapPin, Navigation, Images, Orbit, Menu, Mic, Bookmark, Share2, PhoneCall } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useEffect, useRef, useState } from 'react';
+
+const TOUR_URL = 'https://www.rvmedia.vn/MaiHouseSaigon/';
+const TOUR_ROOT_MARGIN = '800px 0px';
 
 export default function ExperiencePage() {
   const t = useTranslations('ExperiencePage');
+  const tourFrameWrapperRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadTour, setShouldLoadTour] = useState(false);
+
+  useEffect(() => {
+    const tourFrameWrapper = tourFrameWrapperRef.current;
+
+    if (!tourFrameWrapper || typeof IntersectionObserver === 'undefined') {
+      setShouldLoadTour(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        setShouldLoadTour(true);
+        observer.disconnect();
+      },
+      { rootMargin: TOUR_ROOT_MARGIN },
+    );
+
+    observer.observe(tourFrameWrapper);
+
+    return () => observer.disconnect();
+  }, []);
+
   // Shared animation settings for consistent pacing
   const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
@@ -305,18 +335,22 @@ export default function ExperiencePage() {
         </div>
 
         <motion.div
+          ref={tourFrameWrapperRef}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true, margin: "-10%" }}
           className="w-full max-w-[85vw] mx-auto aspect-video rounded-[2rem] overflow-hidden relative border border-white/20 shadow-[0_0_100px_rgba(255,255,255,0.05)]"
         >
-          <iframe
-            src="https://www.rvmedia.vn/MaiHouseSaigon/"
-            className="w-full h-full border-0"
-            allowFullScreen
-            title={t('Interactive360.iframe_title')}
-          />
+          {shouldLoadTour && (
+            <iframe
+              src={TOUR_URL}
+              className="w-full h-full border-0"
+              loading="lazy"
+              allowFullScreen
+              title={t('Interactive360.iframe_title')}
+            />
+          )}
           {/* Internal gradient to make it feel embedded */}
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.8)] rounded-[2rem]" />
         </motion.div>

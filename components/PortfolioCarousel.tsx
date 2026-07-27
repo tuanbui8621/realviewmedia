@@ -215,7 +215,7 @@ export default function PortfolioCarousel() {
                     src={project.image}
                     alt={copy.alt}
                     fill
-                    sizes="(min-width: 1024px) and (min-resolution: 1.5dppx) 1024px, (min-width: 1024px) 83vw, (min-width: 768px) 125vw, 210vw"
+                    sizes="(min-width: 1024px) 35vw, (min-width: 768px) 45vw, 85vw"
                     loading="lazy"
                     draggable={false}
                     className="pointer-events-none select-none object-cover object-center"

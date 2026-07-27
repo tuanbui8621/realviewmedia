@@ -59,11 +59,11 @@ export default function Experience360() {
 
     let cancelled = false;
 
-    void import('pannellum-react')
+    void import('pannellum-react/es/elements/Pannellum')
       .then((mod) => {
         if (cancelled) return;
 
-        setPanoramaViewer(() => mod.Pannellum as ComponentType<PanoramaProps>);
+        setPanoramaViewer(() => mod.default as ComponentType<PanoramaProps>);
       })
       .catch(() => {
         if (!cancelled) setViewerFailed(true);

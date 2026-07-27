@@ -61,7 +61,8 @@ export default function Navbar() {
               height={762}
               sizes="(min-width: 768px) 85px, 76px"
               className="block h-16 max-h-16 w-auto max-w-full object-contain brightness-110 md:h-18 md:max-h-18"
-              priority
+              loading="eager"
+              fetchPriority="low"
             />
           </Link>
 

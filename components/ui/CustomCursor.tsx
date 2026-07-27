@@ -1,57 +1,111 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { animate, motion, useMotionValue, useSpring } from 'framer-motion';
+
+const CURSOR_MEDIA_QUERY = '(min-width: 768px) and (any-pointer: fine)';
+const DOT_TRANSITION = {
+  type: 'tween' as const,
+  ease: 'backOut' as const,
+  duration: 0.1,
+};
+const RING_TRANSITION = {
+  type: 'spring' as const,
+  stiffness: 150,
+  damping: 15,
+  mass: 0.5,
+};
 
 export default function CustomCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isEnabled, setIsEnabled] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const isHoveringRef = useRef(false);
+  const dotX = useMotionValue(-4);
+  const dotY = useMotionValue(-4);
+  const ringTargetX = useMotionValue(-20);
+  const ringTargetY = useMotionValue(-20);
+  const ringX = useSpring(ringTargetX, RING_TRANSITION);
+  const ringY = useSpring(ringTargetY, RING_TRANSITION);
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      animate(dotX, e.clientX - 4, DOT_TRANSITION);
+      animate(dotY, e.clientY - 4, DOT_TRANSITION);
+      ringTargetX.set(e.clientX - 20);
+      ringTargetY.set(e.clientY - 20);
     };
 
     const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      // Check if the hovered element is a link, button, or has a specific class
-      if (target.tagName.toLowerCase() === 'a' || target.tagName.toLowerCase() === 'button' || target.closest('a') || target.closest('button')) {
-        setIsHovering(true);
+      const target = e.target;
+      const nextIsHovering =
+        target instanceof Element && target.closest('a, button') !== null;
+
+      if (nextIsHovering !== isHoveringRef.current) {
+        isHoveringRef.current = nextIsHovering;
+        setIsHovering(nextIsHovering);
+      }
+    };
+
+    const mediaQuery = window.matchMedia(CURSOR_MEDIA_QUERY);
+    let listenersAttached = false;
+
+    const addCursorListeners = () => {
+      if (listenersAttached) return;
+
+      window.addEventListener('mousemove', updateMousePosition, { passive: true });
+      window.addEventListener('mouseover', handleMouseOver, { passive: true });
+      listenersAttached = true;
+    };
+
+    const removeCursorListeners = () => {
+      if (!listenersAttached) return;
+
+      window.removeEventListener('mousemove', updateMousePosition);
+      window.removeEventListener('mouseover', handleMouseOver);
+      listenersAttached = false;
+    };
+
+    const syncCursor = () => {
+      setIsEnabled(mediaQuery.matches);
+
+      if (mediaQuery.matches) {
+        addCursorListeners();
       } else {
+        removeCursorListeners();
+        isHoveringRef.current = false;
         setIsHovering(false);
       }
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', handleMouseOver);
+    syncCursor();
+    mediaQuery.addEventListener('change', syncCursor);
 
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-      window.removeEventListener('mouseover', handleMouseOver);
+      mediaQuery.removeEventListener('change', syncCursor);
+      removeCursorListeners();
+      dotX.stop();
+      dotY.stop();
     };
-  }, []);
+  }, [dotX, dotY, ringTargetX, ringTargetY]);
+
+  if (!isEnabled) return null;
 
   return (
     <>
       {/* The tiny center dot */}
       <motion.div
         className="fixed top-0 left-0 w-2 h-2 bg-rv-white rounded-full pointer-events-none z-[100] mix-blend-difference hidden md:block"
-        animate={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
-        }}
-        transition={{ type: 'tween', ease: 'backOut', duration: 0.1 }}
+        style={{ x: dotX, y: dotY }}
       />
       {/* The physics ring that expands on hover */}
       <motion.div
         className="fixed top-0 left-0 w-10 h-10 border border-rv-white/50 rounded-full pointer-events-none z-[100] mix-blend-difference hidden md:block"
+        style={{ x: ringX, y: ringY }}
         animate={{
-          x: mousePosition.x - 20,
-          y: mousePosition.y - 20,
           scale: isHovering ? 1.5 : 1,
           backgroundColor: isHovering ? 'rgba(255,255,255,0.1)' : 'transparent',
         }}
-        transition={{ type: 'spring', stiffness: 150, damping: 15, mass: 0.5 }}
+        transition={RING_TRANSITION}
       />
     </>
   );

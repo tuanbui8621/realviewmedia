@@ -43,7 +43,6 @@ export default function PhoneMockup() {
               src="/images/oakwood.png" 
               alt={t('imageAlt')}
               fill 
-              priority
               sizes="320px"
               className="object-cover"
             />

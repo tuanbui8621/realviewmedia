@@ -117,7 +117,8 @@ export default function PortfolioPage() {
                   src={project.image}
                   alt={copy.alt}
                   fill
-                  sizes="(min-width: 768px) 900px, 100vw"
+                  sizes="(min-width: 1328px) 628px, (min-width: 768px) calc(50vw - 36px), calc(100vw - 48px)"
+                  preload={i === 0}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
