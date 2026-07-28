@@ -172,12 +172,18 @@ export default function Hero() {
         >
           <h1
             id="hero-heading"
-            className="mx-auto mb-6 max-w-5xl break-words text-[2.35rem] font-bold leading-[0.92] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            className={`mx-auto mb-6 max-w-5xl break-words font-bold leading-[0.92] tracking-tight text-white [text-shadow:0_3px_18px_rgba(0,0,0,0.9),0_1px_3px_rgba(0,0,0,0.95)] ${
+              isVietnamese
+                ? 'text-[2.35rem] sm:text-5xl md:text-6xl lg:text-7xl'
+                : 'text-[2.15rem] sm:text-[2.2rem] md:text-[2.65rem] lg:text-[3.6rem] xl:text-[4.25rem]'
+            }`}
           >
-            <span className="block">{t('headingLine1')}</span>
+            <span className={isVietnamese ? 'block' : 'block sm:whitespace-nowrap'}>
+              {t('headingLine1')}
+            </span>
             <span className="mt-2 block text-[#6AAEFF]">{t('headingLine2')}</span>
           </h1>
-          <p className="mx-auto max-w-4xl text-base font-light leading-relaxed text-rv-white/65 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="mx-auto max-w-4xl text-base font-light leading-relaxed text-rv-white/70 [text-shadow:0_2px_10px_rgba(0,0,0,0.9)] sm:text-lg md:text-xl lg:text-2xl">
             {t('tagline')}
           </p>
         </motion.div>
