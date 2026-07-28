@@ -42,8 +42,9 @@ export default function PhoneMockup() {
             <Image 
               src="/images/mai.jpg"
               alt={t('imageAlt')}
-              fill 
-              sizes="320px"
+              fill
+              sizes="1280px"
+              quality={90}
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
