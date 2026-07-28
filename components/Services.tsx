@@ -22,7 +22,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-4xl text-5xl font-black leading-[0.92] tracking-[-0.055em] md:text-7xl"
+              className="max-w-4xl text-4xl font-bold leading-[0.92] tracking-tight sm:text-[2.75rem] md:text-5xl lg:text-6xl"
             >
               {t('sectionHeading')}
               <span className="block text-[#65a0ff]">{t('sectionHighlight')}</span>
