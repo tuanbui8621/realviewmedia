@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, usePathname } from '@/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -140,21 +140,19 @@ export default function Navbar() {
                 aria-expanded={servicesOpen}
                 aria-controls="desktop-services-dropdown"
                 onClick={() => setServicesOpen((open) => !open)}
-                className={`flex items-center gap-1 rounded-sm text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white lg:text-sm ${
+                className={`flex items-center gap-1.5 rounded-sm text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white lg:text-sm ${
                   servicesActive || servicesOpen
                     ? 'text-rv-white'
                     : 'text-rv-white/50 hover:text-rv-white'
                 }`}
               >
                 {t('services')}
-                <span
+                <ChevronDown
                   aria-hidden="true"
-                  className={`text-[0.65rem] transition-transform duration-200 motion-reduce:transition-none ${
+                  className={`h-4 w-4 shrink-0 transition-transform duration-200 motion-reduce:transition-none ${
                     servicesOpen ? 'rotate-180' : ''
                   }`}
-                >
-                  ▾
-                </span>
+                />
               </button>
 
               <div
