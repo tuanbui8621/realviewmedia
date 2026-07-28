@@ -33,7 +33,8 @@ export default function Services() {
             transition={{ delay: 0.08 }}
             className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-white/60 lg:text-lg"
           >
-            {t('sectionDesc')}
+            <span className="block">{t('sectionDescLine1')}</span>
+            <span className="block">{t('sectionDescLine2')}</span>
           </motion.p>
         </div>
 
