@@ -230,7 +230,30 @@
       "eyebrow": "Google Ads Search",
       "title": "Turn high-intent searches into real customers.",
       "description": "Show up when customers are actively looking—and turn that intent into measurable action.",
-      "cta": "Request a Campaign Review"
+      "cta": "Request a Campaign Review",
+      "visual": {
+        "label": "Example of a high-intent search becoming a relevant advertisement",
+        "intent": "High-intent moment",
+        "query": "service near me",
+        "adLabel": "Sponsored",
+        "resultTitle": "The service you were looking for",
+        "resultDescription": "A focused message, shown at the moment the customer is ready to compare.",
+        "action": "Take the next step",
+        "signals": [
+          {
+            "label": "Intent",
+            "value": "High"
+          },
+          {
+            "label": "Location",
+            "value": "Relevant"
+          },
+          {
+            "label": "Action",
+            "value": "Measurable"
+          }
+        ]
+      }
     },
     "benefits": {
       "eyebrow": "Intent matters",
@@ -335,6 +358,10 @@
       "visual": {
         "title": "Visual and 360° experiences",
         "description": "Give those visitors a stronger reason to choose you."
+      },
+      "action": {
+        "title": "Customer action",
+        "description": "Turn attention and confidence into the next meaningful step."
       }
     },
     "faq": {
@@ -436,7 +463,8 @@
         "Measurable customer actions"
       ],
       "cta": "Explore Google Ads"
-    }
+    },
+    "connector": "Discovered → convinced"
   },
   "Experience360": {
     "sectionHeading": "360° virtual tour experience",

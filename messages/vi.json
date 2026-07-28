@@ -230,7 +230,30 @@
       "eyebrow": "Google Ads Search",
       "title": "Biến lượt tìm kiếm có nhu cầu cao thành khách hàng thực tế.",
       "description": "Xuất hiện khi khách hàng đang chủ động tìm kiếm—và biến nhu cầu đó thành hành động có thể đo lường.",
-      "cta": "Yêu Cầu Đánh Giá Chiến Dịch"
+      "cta": "Yêu Cầu Đánh Giá Chiến Dịch",
+      "visual": {
+        "label": "Ví dụ về lượt tìm kiếm có nhu cầu cao dẫn đến quảng cáo phù hợp",
+        "intent": "Thời điểm nhu cầu cao",
+        "query": "dịch vụ gần tôi",
+        "adLabel": "Được tài trợ",
+        "resultTitle": "Dịch vụ bạn đang tìm kiếm",
+        "resultDescription": "Thông điệp tập trung, xuất hiện đúng lúc khách hàng sẵn sàng so sánh.",
+        "action": "Thực hiện bước tiếp theo",
+        "signals": [
+          {
+            "label": "Nhu cầu",
+            "value": "Cao"
+          },
+          {
+            "label": "Khu vực",
+            "value": "Phù hợp"
+          },
+          {
+            "label": "Hành động",
+            "value": "Đo lường"
+          }
+        ]
+      }
     },
     "benefits": {
       "eyebrow": "Nhu cầu tạo khác biệt",
@@ -335,6 +358,10 @@
       "visual": {
         "title": "Hình ảnh và trải nghiệm 360°",
         "description": "Mang đến cho khách truy cập lý do thuyết phục hơn để lựa chọn bạn."
+      },
+      "action": {
+        "title": "Hành động của khách hàng",
+        "description": "Biến sự chú ý và tin tưởng thành bước tiếp theo có ý nghĩa."
       }
     },
     "faq": {
@@ -436,7 +463,8 @@
         "Hành động khách hàng có thể đo lường"
       ],
       "cta": "Tìm Hiểu Google Ads"
-    }
+    },
+    "connector": "Được tìm thấy → được tin tưởng"
   },
   "Experience360": {
     "sectionHeading": "Trải nghiệm tour ảo 360°",
