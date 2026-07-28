@@ -37,10 +37,18 @@
   },
   "Navigation": {
     "home": "Trang chủ",
+    "services": "Dịch vụ",
     "experience": "Trải nghiệm",
     "portfolio": "Dự án",
     "about": "Về chúng tôi",
     "contact": "Liên hệ",
+    "serviceLinks": {
+      "virtualTours": "Tour ảo 360°",
+      "virtualToursDescription": "Trải nghiệm hình ảnh chuyên nghiệp cho Google Maps và website.",
+      "googleAds": "Google Ads Search",
+      "googleAdsDescription": "Quản lý chiến dịch tập trung vào nhu cầu tìm kiếm chủ động.",
+      "new": "Mới"
+    },
     "accessibility": {
       "home": "Trang chủ RealView Media",
       "primaryNavigation": "Điều hướng chính",
@@ -385,9 +393,10 @@
     "sectionHighlight": "Trước khi họ ghé thăm.",
     "sectionDesc": "RealView Media cung cấp dịch vụ chụp ảnh 360° và tour ảo Google Maps cho nhà hàng, khách sạn, showroom, spa, phòng gym và căn hộ dịch vụ tại TP.HCM và Việt Nam.",
     "cinema": {
-      "title": "Chụp ảnh 360° chuyên nghiệp",
+      "eyebrow": "Dịch vụ chủ lực",
+      "title": "Tour ảo 360° & trải nghiệm hình ảnh",
       "desc": "Chúng tôi chụp toàn cảnh với hình ảnh rõ nét, bố cục chỉn chu và góc nhìn tự nhiên. Thành phẩm giúp khách hàng dễ hình dung không gian trước khi ghé thăm.",
-      "cta": "Khám phá dịch vụ tour ảo"
+      "cta": "Khám Phá Tour 360°"
     },
     "maps": {
       "title": "Tour ảo Google Maps",
@@ -402,9 +411,9 @@
     },
     "ads": {
       "eyebrow": "Dịch vụ bổ trợ",
-      "title": "Tiếp cận khách hàng đang chủ động tìm kiếm dịch vụ của bạn.",
+      "title": "Quản lý Google Ads Search",
       "desc": "Chiến dịch Google Ads Search tập trung có thể thu hút khách truy cập phù hợp, trong khi nội dung hình ảnh chuyên nghiệp giúp xây dựng niềm tin sau lượt nhấp.",
-      "cta": "Khám phá Google Ads Search"
+      "cta": "Tìm Hiểu Google Ads"
     }
   },
   "Experience360": {

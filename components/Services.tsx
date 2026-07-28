@@ -38,114 +38,99 @@ export default function Services() {
           </motion.p>
         </div>
 
-        {/* The Interactive Bento Box Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Box 1: Cinematic Capture */}
-          <motion.div 
+        {/* Connected service system */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
+          {/* Primary service: 360° virtual tours */}
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             whileHover={{ y: -5 }}
-            className="md:col-span-2 group relative p-8 rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden flex flex-col"
+            className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0a0a0c] p-7 md:p-10 lg:col-span-3 lg:rounded-[3rem]"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <Aperture className="w-10 h-10 text-blue-400 mb-6 shrink-0" />
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">{t('cinema.title')}</h3>
-            <p className="text-white/70 text-sm leading-relaxed mb-8">
-              {t('cinema.desc')}
-            </p>
-            <Link href="/experience" className="mt-auto inline-flex items-center gap-2 text-blue-400 text-sm font-bold uppercase tracking-wider group-hover:gap-4 transition-all w-fit">
-              {t('cinema.cta')} <ArrowRight size={16} />
-            </Link>
-          </motion.div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_12%,rgba(59,130,246,0.12),transparent_36%)] opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="relative z-10">
+              <div className="mb-8 flex items-center justify-between gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-400/10 text-blue-300">
+                  <Aperture className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <span className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-blue-300/70">
+                  {t('cinema.eyebrow')}
+                </span>
+              </div>
+              <h3 className="max-w-2xl text-3xl font-black tracking-tighter text-white lg:text-4xl">
+                {t('cinema.title')}
+              </h3>
+              <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/65 md:text-base">
+                {t('cinema.desc')}
+              </p>
+              <Link
+                href="/experience"
+                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition-colors hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 focus-visible:ring-offset-4 focus-visible:ring-offset-[#0a0a0c]"
+              >
+                {t('cinema.cta')} <ArrowRight size={16} aria-hidden="true" />
+              </Link>
 
-          {/* Box 2: Native Maps */}
-          <motion.div 
+              <div className="mt-10 grid gap-4 border-t border-white/10 pt-7 lg:grid-cols-2">
+                <div className="rounded-2xl bg-white/[0.025] p-5">
+                  <Map className="mb-4 h-6 w-6 text-orange-300" aria-hidden="true" />
+                  <h4 className="text-sm font-bold text-white">{t('maps.title')}</h4>
+                  <p className="mt-2 text-xs leading-relaxed text-white/50">
+                    {t('maps.desc')}
+                  </p>
+                  <p className="mt-4 font-mono text-[0.6rem] font-bold uppercase tracking-wider text-orange-300/70">
+                    {t('maps.status')}
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white/[0.025] p-5">
+                  <BarChart3 className="mb-4 h-6 w-6 text-emerald-300" aria-hidden="true" />
+                  <h4 className="text-sm font-bold text-white">{t('roi.title')}</h4>
+                  <p className="mt-2 text-xs leading-relaxed text-white/50">
+                    {t('roi.desc')}
+                  </p>
+                  <Link
+                    href="/portfolio"
+                    className="mt-4 inline-flex rounded-sm text-xs font-bold text-emerald-300 underline decoration-emerald-300/30 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    {t('roi.cta')}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.article>
+
+          {/* Connected service: Google Ads Search */}
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             whileHover={{ y: -5 }}
-            className="group relative p-8 rounded-[3rem] bg-[#0a0a0c] border border-white/10 overflow-hidden flex flex-col"
+            className="group relative flex overflow-hidden rounded-[2.5rem] border border-blue-400/20 bg-[#080d16] p-7 md:p-9 lg:col-span-2 lg:rounded-[3rem] lg:p-10"
           >
-             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 via-orange-500/0 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <Map className="w-10 h-10 text-orange-400 mb-6 shrink-0" />
-            <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{t('maps.title')}</h3>
-            <p className="text-white/70 text-sm leading-relaxed mb-8">
-              {t('maps.desc')}
-            </p>
-            <div className="mt-auto flex items-center gap-2 text-white/30 text-xs font-mono uppercase">
-              <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-              {t('maps.status')}
-            </div>
-          </motion.div>
-
-          {/* Box 3: ROI */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            whileHover={{ y: -5 }}
-            className="md:col-span-3 group relative p-8 rounded-[3rem] bg-gradient-to-r from-[#0a0a0c] to-[#0d1424] border border-emerald-500/20 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
-          >
-            <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
-            <div className="max-w-2xl relative z-10">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-emerald-500/20 rounded-xl text-emerald-400">
-                  <BarChart3 size={20} />
-                </div>
-                <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">{t('roi.eyebrow')}</span>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_15%,rgba(59,130,246,0.16),transparent_40%)] opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
+            <div className="relative z-10 flex min-h-full flex-col">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-400/25 bg-blue-400/10 text-blue-300">
+                <Search className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">{t('roi.title')}</h3>
-              <p className="text-white/70 text-sm leading-relaxed md:text-base">
-                {t('roi.desc')}
+              <p className="mt-8 font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-blue-300/70">
+                {t('ads.eyebrow')}
               </p>
-            </div>
-
-            <div className="relative z-10 shrink-0">
-               <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black rounded-full font-bold text-sm hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-                 {t('roi.cta')}
-               </Link>
-            </div>
-          </motion.div>
-
-          {/* Supporting service: Google Ads Search */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.45 }}
-            whileHover={{ y: -5 }}
-            className="md:col-span-3 group relative overflow-hidden rounded-[3rem] border border-blue-400/15 bg-[#080d16] p-8 md:p-10"
-          >
-            <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <div className="max-w-3xl">
-                <div className="mb-5 flex items-center gap-3">
-                  <Search className="h-6 w-6 text-blue-400" aria-hidden="true" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
-                    {t('ads.eyebrow')}
-                  </span>
-                </div>
-                <h3 className="mb-3 text-2xl font-bold tracking-tight text-white md:text-3xl">
-                  {t('ads.title')}
-                </h3>
-                <p className="text-sm leading-relaxed text-white/65 md:text-base">
-                  {t('ads.desc')}
-                </p>
-              </div>
+              <h3 className="mt-4 text-3xl font-black tracking-tighter text-white lg:text-4xl">
+                {t('ads.title')}
+              </h3>
+              <p className="mt-5 text-sm leading-relaxed text-white/65 md:text-base">
+                {t('ads.desc')}
+              </p>
               <Link
                 href="/google-ads-search"
-                className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-blue-400/50 hover:bg-blue-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-blue-300/30 bg-blue-400/10 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-blue-300/60 hover:bg-blue-400/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 md:mt-auto md:translate-y-0"
               >
                 {t('ads.cta')} <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
-          </motion.div>
-
+          </motion.article>
         </div>
       </div>
     </section>

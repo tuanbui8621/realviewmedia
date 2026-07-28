@@ -238,21 +238,23 @@ export default async function GoogleAdsSearchPage({
             <h2 className="mb-14 max-w-3xl text-4xl font-black tracking-tighter md:text-5xl">
               {t("process.heading")}
             </h2>
-            <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <ol className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#0d0e12] before:absolute before:bottom-10 before:left-[2.45rem] before:top-10 before:w-px before:bg-gradient-to-b before:from-blue-400/60 before:via-blue-400/25 before:to-white/10 before:content-[''] lg:grid lg:grid-cols-4 lg:before:bottom-auto lg:before:left-8 lg:before:right-8 lg:before:top-[4.55rem] lg:before:h-px lg:before:w-auto lg:before:bg-gradient-to-r">
               {processKeys.map((key, index) => (
                 <li
                   key={key}
-                  className="relative rounded-[2rem] border border-white/10 bg-[#0d0e12] p-7"
+                  className="relative grid grid-cols-[3rem_1fr] gap-5 border-b border-white/10 px-6 py-8 last:border-b-0 sm:px-8 lg:block lg:min-h-[18rem] lg:border-b-0 lg:border-r lg:p-8 lg:last:border-r-0"
                 >
-                  <span className="mb-8 block font-mono text-sm font-bold text-blue-400">
+                  <div className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-blue-300/30 bg-[#0d0e12] font-mono text-[0.65rem] font-bold text-blue-300 ring-8 ring-[#0d0e12] lg:mb-12">
                     {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mb-3 text-xl font-bold">
-                    {t(`process.steps.${key}.title`)}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/60">
-                    {t(`process.steps.${key}.description`)}
-                  </p>
+                  </div>
+                  <div>
+                    <h3 className="mb-3 text-xl font-bold">
+                      {t(`process.steps.${key}.title`)}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-white/60">
+                      {t(`process.steps.${key}.description`)}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ol>

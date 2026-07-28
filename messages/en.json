@@ -37,10 +37,18 @@
   },
   "Navigation": {
     "home": "Home",
+    "services": "Services",
     "experience": "Experience",
     "portfolio": "Portfolio",
     "about": "About Us",
     "contact": "Contact",
+    "serviceLinks": {
+      "virtualTours": "360° Virtual Tours",
+      "virtualToursDescription": "Premium visual experiences for Google Maps and websites.",
+      "googleAds": "Google Ads Search",
+      "googleAdsDescription": "Focused campaign management for active search demand.",
+      "new": "New"
+    },
     "accessibility": {
       "home": "RealView Media home",
       "primaryNavigation": "Primary navigation",
@@ -385,9 +393,10 @@
     "sectionHighlight": "Prove it.",
     "sectionDesc": "We create professional 360° virtual tours that help customers find your business, explore your space, and visit in person.",
     "cinema": {
-      "title": "8K Cinematic Capture",
+      "eyebrow": "Primary service",
+      "title": "360° Virtual Tours & Visual Experiences",
       "desc": "No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore.",
-      "cta": "Explore virtual tour services"
+      "cta": "Explore 360° Tours"
     },
     "maps": {
       "title": "Street View Injection",
@@ -402,9 +411,9 @@
     },
     "ads": {
       "eyebrow": "Complementary service",
-      "title": "Reach customers actively searching for your services.",
+      "title": "Google Ads Search Management",
       "desc": "Focused Google Ads Search campaigns can bring relevant visitors to your business, while premium visual content helps build trust after the click.",
-      "cta": "Explore Google Ads Search"
+      "cta": "Explore Google Ads"
     }
   },
   "Experience360": {
