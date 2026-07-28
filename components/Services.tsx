@@ -16,38 +16,48 @@ export default function Services() {
       <div aria-hidden="true" className="absolute left-1/2 top-20 h-[34rem] w-[54rem] max-w-full -translate-x-1/2 rounded-full bg-[#1468ff]/10 blur-[130px]" />
 
       <div className="container relative mx-auto max-w-7xl">
-        <div className="pb-12 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mx-auto max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.055em] md:text-7xl"
-          >
-            {t('sectionHeading')}
-            <span className="block text-[#65a0ff]">{t('sectionHighlight')}</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.08 }}
-            className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-white/60 lg:text-lg"
-          >
-            <span className="block">{t('sectionDescLine1')}</span>
-            <span className="block">{t('sectionDescLine2')}</span>
-          </motion.p>
-        </div>
+        <div className="relative grid gap-12 border-b border-[#65a0ff]/35 pb-12 shadow-[0_16px_28px_-24px_rgba(101,160,255,0.65)] lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+          <div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl text-5xl font-black leading-[0.92] tracking-[-0.055em] md:text-7xl"
+            >
+              {t('sectionHeading')}
+              <span className="block text-[#65a0ff]">{t('sectionHighlight')}</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.08 }}
+              className="mt-8 max-w-2xl text-base leading-relaxed text-white/60 lg:text-lg"
+            >
+              <span className="block">{t('sectionDescLine1')}</span>
+              <span className="block">{t('sectionDescLine2')}</span>
+            </motion.p>
+          </div>
 
-        <ul
-          className="relative flex flex-wrap justify-center gap-2 border-y border-[#65a0ff]/30 py-7 shadow-[inset_0_1px_0_rgba(191,232,255,0.08),inset_0_-1px_0_rgba(191,232,255,0.08),0_0_28px_rgba(20,104,255,0.08)]"
-          aria-label={t('industriesLabel')}
-        >
-          {industries.map((industry) => (
-            <li key={industry} className="rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-white/55 transition-colors hover:border-[#65a0ff]/60 hover:text-white">
-              {t(`industries.${industry}`)}
-            </li>
-          ))}
-        </ul>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.14 }}
+            className="lg:pl-10"
+          >
+            <p className="mb-5 font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-[#65a0ff]">
+              {t('industriesEyebrow')}
+            </p>
+            <ul className="flex flex-wrap gap-2" aria-label={t('industriesLabel')}>
+              {industries.map((industry) => (
+                <li key={industry} className="rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-white/55 transition-colors hover:border-[#65a0ff]/60 hover:text-white">
+                  {t(`industries.${industry}`)}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
 
         <div className="relative mt-14 overflow-hidden border-y border-white/15 bg-[#080c14]">
           <motion.div
