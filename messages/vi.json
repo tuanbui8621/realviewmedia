@@ -445,8 +445,8 @@
   "Services": {
     "sectionHeading": "Từ lượt tìm kiếm",
     "sectionHighlight": "đến lượt ghé thăm.",
-    "sectionDescLine1": "RealView Media thực hiện tour ảo 360° cho các không gian dịch vụ",
-    "sectionDescLine2": "để mỗi địa điểm tự kể câu chuyện, chân thật đến từng góc nhìn.",
+    "sectionDescLine1": "Khi khách tìm “quán ăn gần đây” hay “khách sạn Quận 1”, Google Ads và Google Maps giúp địa điểm của bạn được tìm thấy.",
+    "sectionDescLine2": "Tour ảo 360° giúp họ hiểu không gian và tự tin lựa chọn.",
     "industriesLabel": "Các ngành phù hợp với tour ảo 360°",
     "industriesEyebrow": "Phù hợp với",
     "industries": {
@@ -460,29 +460,31 @@
     },
     "journey": {
       "capture": {
-        "eyebrow": "Bước 1",
-        "title": "Ghi lại trọn vẹn không gian",
-        "description": "Chụp ảnh 360° sắc nét, bố cục chỉn chu và góc nhìn tự nhiên. Không gian càng thật, niềm tin càng bền."
+        "metric": "44%",
+        "eyebrow": "Đúng lúc",
+        "title": "Được tìm thấy",
+        "description": "Khi tìm doanh nghiệp, người tiêu dùng sử dụng nền tảng bản đồ 44% thời gian. Google Ads và Google Maps giúp bạn tiếp cận nhu cầu đang rõ ràng.",
+        "cta": "Tìm hiểu Google Ads"
       },
       "discovery": {
-        "eyebrow": "Bước 2",
-        "title": "Đưa đúng khách hàng đến đó",
-        "maps": {
-          "title": "Hiện diện trên Google Maps",
-          "description": "Tour xuất hiện tại nơi khách hàng tìm kiếm và khám phá doanh nghiệp mỗi ngày."
-        },
-        "ads": {
-          "title": "Tiếp cận qua Google Ads Search",
-          "description": "Xuất hiện khi khách hàng chủ động tìm một dịch vụ giống như dịch vụ của bạn.",
-          "cta": "Tìm hiểu Google Ads"
-        }
+        "metric": "2×",
+        "eyebrow": "Trước khi ghé",
+        "title": "Cho khách thấy",
+        "description": "Địa điểm có ảnh và tour ảo có khả năng tạo quan tâm gấp đôi. Khách tự khám phá không gian trước khi lựa chọn.",
+        "cta": "Xem thử tour ảo"
       },
       "decision": {
-        "eyebrow": "Bước 3",
-        "title": "Khách tự khám phá, tự tin lựa chọn",
-        "description": "Khách xoay, kéo và di chuyển như đang đứng tại chỗ. Khi đã hiểu rõ không gian, quyết định ghé thăm trở nên dễ dàng hơn.",
-        "cta": "Xem thử tour ảo"
+        "metric": "41%",
+        "eyebrow": "Từ online đến offline",
+        "title": "Dẫn đến lượt ghé thăm",
+        "description": "Trung bình, 41% lượt tìm kiếm địa điểm qua nền tảng bản đồ dẫn đến một lượt ghé thăm thực tế."
       }
+    },
+    "source": {
+      "label": "Nguồn dữ liệu:",
+      "mapStudy": "Google — The Power of Media-Rich Map Listings",
+      "localSearchStudy": "Think with Google — Local Search Behavior",
+      "context": "Các nghiên cứu được thực hiện tại một số thị trường ngoài Việt Nam; số liệu mang tính tham khảo, không phải cam kết kết quả."
     }
   },
   "Experience360": {
