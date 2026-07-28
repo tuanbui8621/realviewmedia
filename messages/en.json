@@ -445,8 +445,8 @@
   "Services": {
     "sectionHeading": "From a search",
     "sectionHighlight": "to an in-person visit.",
-    "sectionDescLine1": "When people search for “restaurants near me” or “hotels in District 1,” Google Ads and Google Maps help your location get discovered.",
-    "sectionDescLine2": "A 360° virtual tour helps them understand the space and choose with confidence.",
+    "sectionDescLine1": "RealView Media creates 360° virtual tours for service businesses",
+    "sectionDescLine2": "helping every location tell its story truthfully from every angle.",
     "industriesLabel": "Industries suited to 360° virtual tours",
     "industriesEyebrow": "A good fit for",
     "industries": {
@@ -460,31 +460,29 @@
     },
     "journey": {
       "capture": {
-        "metric": "44%",
-        "eyebrow": "At the right moment",
-        "title": "Get discovered",
-        "description": "When searching for businesses, consumers use mapping products 44% of the time. Google Ads and Google Maps help you meet clear local intent.",
-        "cta": "Explore Google Ads"
+        "eyebrow": "Step 1",
+        "title": "Capture the complete space",
+        "description": "Sharp 360° photography, thoughtful composition, and natural viewpoints. The more truthful the space feels, the stronger the trust."
       },
       "discovery": {
-        "metric": "2×",
-        "eyebrow": "Before they visit",
-        "title": "Show the real space",
-        "description": "Listings with photos and a virtual tour are twice as likely to generate interest. Customers can explore before they choose.",
-        "cta": "Try a virtual tour"
+        "eyebrow": "Step 2",
+        "title": "Bring the right customers in",
+        "maps": {
+          "title": "Be present on Google Maps",
+          "description": "Your tour appears where customers search for and explore businesses every day."
+        },
+        "ads": {
+          "title": "Reach them through Google Ads Search",
+          "description": "Appear when customers actively search for a service like yours.",
+          "cta": "Explore Google Ads"
+        }
       },
       "decision": {
-        "metric": "41%",
-        "eyebrow": "Online to offline",
-        "title": "Turn searches into visits",
-        "description": "On average, 41% of place searches on mapping products result in an on-site visit."
+        "eyebrow": "Step 3",
+        "title": "Let customers explore and choose confidently",
+        "description": "Customers turn, drag, and move through the space as if they were there. Once they understand it, visiting feels like an easier decision.",
+        "cta": "Try a virtual tour"
       }
-    },
-    "source": {
-      "label": "Data sources:",
-      "mapStudy": "Google — The Power of Media-Rich Map Listings",
-      "localSearchStudy": "Think with Google — Local Search Behavior",
-      "context": "These studies were conducted in selected markets outside Vietnam. Figures are directional and do not guarantee results."
     }
   },
   "Experience360": {
