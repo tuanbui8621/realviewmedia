@@ -3,10 +3,8 @@ import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
-  BarChart3,
   Building2,
   Check,
-  CircleDollarSign,
   Crosshair,
   Search,
   Sparkles,
@@ -14,6 +12,7 @@ import {
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import Footer from "@/components/Footer";
+import { GoogleAdsJourney, InteractiveBenefits } from "@/components/GoogleAdsJourney";
 import Navbar from "@/components/Navbar";
 import { Link } from "@/navigation";
 import {
@@ -24,7 +23,6 @@ import {
   type Locale,
 } from "@/lib/seo-metadata";
 
-const benefitIcons = [Crosshair, CircleDollarSign, BarChart3] as const;
 const processKeys = ["understand", "build", "launch", "improve"] as const;
 const includedGroupKeys = ["opportunity", "campaign", "measurement", "growth"] as const;
 const includedKeys = [
@@ -171,63 +169,7 @@ export default async function GoogleAdsSearchPage({
                 </Link>
               </div>
 
-              <div
-                aria-label={t("hero.visual.label")}
-                className="relative mx-auto w-full max-w-lg overflow-hidden border border-white/15 border-l-4 border-l-[#1468ff] bg-[#0a1220] p-5 shadow-[24px_24px_0_rgba(20,104,255,0.12)] md:p-7"
-              >
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:28px_28px]"
-                />
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <div className="flex gap-1.5" aria-hidden="true">
-                      <span className="h-2 w-2 rounded-full bg-white/20" />
-                      <span className="h-2 w-2 rounded-full bg-white/15" />
-                      <span className="h-2 w-2 rounded-full bg-white/10" />
-                    </div>
-                    <span className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.18em] text-cyan-200/60">
-                      {t("hero.visual.intent")}
-                    </span>
-                  </div>
-                  <div className="mt-6 flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-4">
-                    <Search className="h-5 w-5 shrink-0 text-white/40" aria-hidden="true" />
-                    <span className="text-sm text-white/80">
-                      {t("hero.visual.query")}
-                    </span>
-                  </div>
-                  <div className="relative mt-5 overflow-hidden bg-[#f3f1ea] p-6 text-[#0b1726]">
-                    <div
-                      aria-hidden="true"
-                      className="absolute right-0 top-0 h-24 w-24 rounded-full bg-cyan-300/20 blur-2xl"
-                    />
-                    <p className="font-mono text-[0.6rem] font-bold uppercase tracking-widest text-emerald-700">
-                      {t("hero.visual.adLabel")}
-                    </p>
-                    <h2 className="mt-3 text-xl font-bold tracking-tight text-blue-800">
-                      {t("hero.visual.resultTitle")}
-                    </h2>
-                    <p className="mt-2 text-xs leading-relaxed text-slate-600">
-                      {t("hero.visual.resultDescription")}
-                    </p>
-                    <div className="mt-5 inline-flex rounded-full bg-blue-700 px-4 py-2 text-xs font-bold text-white">
-                      {t("hero.visual.action")}
-                    </div>
-                  </div>
-                  <div className="mt-5 grid grid-cols-3 gap-px overflow-hidden bg-white/10">
-                    {[0, 1, 2].map((index) => (
-                      <div key={index} className="bg-[#0b0e15] px-3 py-4 text-center">
-                        <p className="font-mono text-[0.55rem] uppercase tracking-wider text-white/35">
-                          {t(`hero.visual.signals.${index}.label`)}
-                        </p>
-                        <p className="mt-2 text-xs font-bold text-white/75">
-                          {t(`hero.visual.signals.${index}.value`)}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <GoogleAdsJourney />
             </div>
           </div>
         </section>
@@ -242,25 +184,7 @@ export default async function GoogleAdsSearchPage({
                 {t("benefits.heading")}
               </h2>
             </div>
-            <div className="relative grid border-y border-black/15 md:grid-cols-3">
-              {benefitIcons.map((Icon, index) => (
-                <div
-                  key={index}
-                  className="relative border-b border-black/15 px-0 py-9 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="mb-10 h-8 w-8 text-[#1468ff]"
-                  />
-                  <h3 className="mb-3 text-xl font-bold">
-                    {t(`benefits.items.${index}.title`)}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-black/60">
-                    {t(`benefits.items.${index}.description`)}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <InteractiveBenefits />
           </div>
         </section>
 
@@ -360,9 +284,9 @@ export default async function GoogleAdsSearchPage({
               {processKeys.map((key, index) => (
                 <li
                   key={key}
-                  className="relative grid grid-cols-[3rem_1fr] gap-5 border-b border-white/10 px-6 py-8 last:border-b-0 sm:px-8 lg:block lg:min-h-[18rem] lg:border-b-0 lg:border-r lg:p-8 lg:last:border-r-0"
+                  className="group relative grid grid-cols-[3rem_1fr] gap-5 border-b border-white/10 px-6 py-8 last:border-b-0 sm:px-8 lg:block lg:min-h-[18rem] lg:border-b-0 lg:border-r lg:p-8 lg:last:border-r-0"
                 >
-                  <div className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-white bg-[#1468ff] font-mono text-[0.65rem] font-bold text-white ring-8 ring-[#1468ff] lg:mb-12">
+                  <div className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border border-white bg-[#1468ff] font-mono text-[0.65rem] font-bold text-white ring-8 ring-[#1468ff] transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110 motion-reduce:transform-none lg:mb-12">
                     {String(index + 1).padStart(2, "0")}
                   </div>
                   <div>
@@ -381,11 +305,11 @@ export default async function GoogleAdsSearchPage({
 
         <section className="bg-[#f3f1ea] px-6 py-24 text-[#07111f] md:py-32">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div className="group grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <div>
                 <Building2
                   aria-hidden="true"
-                  className="mb-7 h-10 w-10 text-[#1468ff]"
+                  className="mb-7 h-10 w-10 text-[#1468ff] transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-4deg] motion-reduce:transform-none"
                 />
                 <h2 className="text-4xl font-black tracking-tighter md:text-5xl">
                   {t("clients.heading")}
@@ -413,11 +337,11 @@ export default async function GoogleAdsSearchPage({
         </section>
 
         <section className="border-y border-black/10 bg-white px-6 py-24 text-[#081525] md:py-32">
-          <div className="container mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
+          <div className="group container mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.25fr_0.75fr] lg:gap-20">
             <div>
               <BadgeCheck
                 aria-hidden="true"
-                  className="mb-7 h-10 w-10 text-blue-700"
+                  className="mb-7 h-10 w-10 text-blue-700 transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-6 motion-reduce:transform-none"
               />
               <h2 className="text-4xl font-black tracking-tighter md:text-5xl">
                 {t("certification.heading")}
@@ -470,8 +394,8 @@ export default async function GoogleAdsSearchPage({
                 className="absolute inset-0 bg-[linear-gradient(110deg,rgba(20,104,255,0.18),transparent_55%)]"
               />
               <div className="relative z-10 grid items-center gap-6 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
-                <div>
-                  <Search aria-hidden="true" className="mb-6 h-9 w-9 text-[#65a0ff]" />
+                <div className="group">
+                  <Search aria-hidden="true" className="mb-6 h-9 w-9 text-[#65a0ff] transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110 motion-reduce:transform-none" />
                   <p className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#65a0ff]">
                     01
                   </p>
@@ -486,8 +410,8 @@ export default async function GoogleAdsSearchPage({
                   aria-hidden="true"
                   className="h-6 w-6 rotate-90 text-white/20 lg:rotate-0"
                 />
-                <div>
-                  <Sparkles aria-hidden="true" className="mb-6 h-9 w-9 text-[#65a0ff]" />
+                <div className="group">
+                  <Sparkles aria-hidden="true" className="mb-6 h-9 w-9 text-[#65a0ff] transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-12 group-hover:scale-110 motion-reduce:transform-none" />
                   <p className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#65a0ff]">
                     02
                   </p>
@@ -502,8 +426,8 @@ export default async function GoogleAdsSearchPage({
                   aria-hidden="true"
                   className="h-6 w-6 rotate-90 text-white/20 lg:rotate-0"
                 />
-                <div>
-                  <Crosshair aria-hidden="true" className="mb-6 h-9 w-9 text-[#65a0ff]" />
+                <div className="group">
+                  <Crosshair aria-hidden="true" className="mb-6 h-9 w-9 text-[#65a0ff] transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-45 group-hover:scale-110 motion-reduce:transform-none" />
                   <p className="font-mono text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#65a0ff]">
                     03
                   </p>

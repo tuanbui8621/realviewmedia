@@ -30,8 +30,8 @@
         "description": "Đọc các điều khoản áp dụng khi sử dụng website và dịch vụ chụp ảnh, tour ảo 360° của RealView Media."
       },
       "googleAdsSearch": {
-        "title": "Dịch Vụ Quản Lý Google Ads Search | RealView Media",
-        "description": "Thiết lập, quản lý và tối ưu chiến dịch Google Ads Search cho doanh nghiệp tại Việt Nam, giúp tiếp cận khách hàng đang chủ động tìm kiếm dịch vụ."
+        "title": "Dịch vụ quản lý Google Ads tại TP.HCM | RealView Media",
+        "description": "Quản lý và tối ưu chiến dịch Google Ads Search cho doanh nghiệp tại TP.HCM và Việt Nam, giúp tiếp cận khách hàng đang chủ động tìm kiếm."
       }
     }
   },
@@ -228,72 +228,79 @@
     },
     "hero": {
       "eyebrow": "Google Ads Search",
-      "title": "Biến lượt tìm kiếm có nhu cầu cao thành khách hàng thực tế.",
-      "description": "Xuất hiện khi khách hàng đang chủ động tìm kiếm—và biến nhu cầu đó thành hành động có thể đo lường.",
-      "cta": "Yêu Cầu Đánh Giá Chiến Dịch",
+      "title": "Khách hàng đang tìm. Hãy xuất hiện đúng lúc.",
+      "description": "RealView Media quản lý Google Ads Search để doanh nghiệp tiếp cận đúng người, đúng nhu cầu và đo lường những hành động quan trọng.",
+      "cta": "Đánh Giá Chiến Dịch",
       "visual": {
-        "label": "Ví dụ về lượt tìm kiếm có nhu cầu cao dẫn đến quảng cáo phù hợp",
-        "intent": "Thời điểm nhu cầu cao",
-        "query": "dịch vụ gần tôi",
+        "label": "Mô phỏng hành trình từ lượt tìm kiếm đến hành động của khách hàng",
+        "intent": "Thử một lượt tìm kiếm",
+        "examplesLabel": "Chọn một ví dụ tìm kiếm",
         "adLabel": "Được tài trợ",
-        "resultTitle": "Dịch vụ bạn đang tìm kiếm",
-        "resultDescription": "Thông điệp tập trung, xuất hiện đúng lúc khách hàng sẵn sàng so sánh.",
-        "action": "Thực hiện bước tiếp theo",
-        "signals": [
+        "resultDescription": "Thông điệp rõ ràng, xuất hiện khi khách hàng sẵn sàng tìm hiểu.",
+        "action": "Xem bước tiếp theo",
+        "examples": [
           {
-            "label": "Nhu cầu",
-            "value": "Cao"
+            "label": "Khách sạn",
+            "query": "khách sạn quận 1",
+            "resultTitle": "Khách sạn tại trung tâm TP.HCM"
           },
           {
-            "label": "Khu vực",
-            "value": "Phù hợp"
+            "label": "Nha khoa",
+            "query": "nha khoa gần đây",
+            "resultTitle": "Đặt lịch tư vấn nha khoa"
           },
           {
-            "label": "Hành động",
-            "value": "Đo lường"
+            "label": "Nội thất",
+            "query": "thiết kế nội thất tphcm",
+            "resultTitle": "Tư vấn thiết kế nội thất"
           }
+        ],
+        "journey": [
+          "Tìm kiếm",
+          "Nhấp xem",
+          "Liên hệ"
         ]
       }
     },
     "benefits": {
-      "eyebrow": "Nhu cầu tạo khác biệt",
-      "heading": "Xuất hiện khi nhu cầu cao nhất.",
+      "eyebrow": "Đúng người. Đúng lúc.",
+      "heading": "Không cần tiếp cận tất cả mọi người.",
       "items": [
         {
-          "title": "Tiếp cận đúng nhu cầu",
-          "description": "Gặp đúng người đang tìm kiếm dịch vụ bạn cung cấp."
+          "title": "Gặp người đang cần",
+          "description": "Quảng cáo xuất hiện khi khách hàng chủ động tìm dịch vụ của bạn."
         },
         {
-          "title": "Kiểm soát ngân sách",
-          "description": "Tập trung ngân sách vào những lượt tìm kiếm quan trọng."
+          "title": "Chi tiêu có chủ đích",
+          "description": "Tập trung ngân sách vào khu vực, từ khóa và nhu cầu phù hợp."
         },
         {
-          "title": "Hiệu quả có thể đo lường",
-          "description": "Theo dõi những hành động đưa khách hàng đến gần quyết định."
+          "title": "Biết điều gì hiệu quả",
+          "description": "Theo dõi cuộc gọi, yêu cầu tư vấn, đặt chỗ và hành động quan trọng."
         }
       ]
     },
     "included": {
-      "eyebrow": "Từ tín hiệu đến chiến lược",
-      "heading": "Biến lượt tìm kiếm thành hành động có thể đo lường.",
-      "description": "Bốn nhóm công việc giúp chiến dịch rõ ràng, có trách nhiệm và liên tục cải thiện.",
-      "detailsLabel": "Xem toàn bộ hạng mục quản lý",
+      "eyebrow": "Bên trong một chiến dịch tốt",
+      "heading": "Mỗi lượt nhấp đều cần một lý do.",
+      "description": "Chúng tôi kết nối nhu cầu tìm kiếm, thông điệp quảng cáo, ngân sách và dữ liệu trong một hệ thống rõ ràng.",
+      "detailsLabel": "Xem chi tiết công việc quản lý",
       "groups": {
         "opportunity": {
-          "title": "Tìm cơ hội",
-          "description": "Hiểu nhu cầu, ý định, khu vực và những lượt tìm kiếm đáng theo đuổi."
+          "title": "Tìm nhu cầu thật",
+          "description": "Xác định khách hàng đang tìm gì, ở đâu và khi nào."
         },
         "campaign": {
-          "title": "Xây dựng chiến dịch",
-          "description": "Thiết lập từ khóa, quảng cáo, nhắm mục tiêu và cấu trúc theo mục tiêu rõ ràng."
+          "title": "Tạo thông điệp phù hợp",
+          "description": "Kết nối từ khóa, quảng cáo và trang đích với một mục tiêu rõ ràng."
         },
         "measurement": {
-          "title": "Đo lường hành động thực tế",
-          "description": "Kết nối chiến dịch với cuộc gọi, yêu cầu tư vấn, đặt chỗ hoặc tín hiệu hữu ích khác."
+          "title": "Theo dõi hành động",
+          "description": "Ghi nhận cuộc gọi, yêu cầu tư vấn, đặt chỗ và tín hiệu hữu ích."
         },
         "growth": {
-          "title": "Liên tục cải thiện",
-          "description": "Dùng dữ liệu tìm kiếm thực tế để tối ưu chi tiêu, mức độ liên quan và cơ hội."
+          "title": "Học và cải thiện",
+          "description": "Dùng dữ liệu thực tế để loại bỏ lãng phí và tìm thêm cơ hội."
         }
       },
       "items": {
@@ -310,7 +317,7 @@
       }
     },
     "process": {
-      "heading": "Quy trình tập trung gồm bốn bước",
+      "heading": "Rõ ràng từ ngày đầu tiên.",
       "steps": {
         "understand": {
           "title": "Tìm hiểu",
@@ -331,8 +338,8 @@
       }
     },
     "clients": {
-      "heading": "Phù hợp với doanh nghiệp phụ thuộc vào nhu cầu tại địa phương",
-      "description": "Dành cho doanh nghiệp có khách hàng chủ động tìm kiếm, so sánh, gọi điện, đặt chỗ hoặc ghé thăm.",
+      "heading": "Khách hàng có tìm dịch vụ của bạn trên Google?",
+      "description": "Nếu họ tìm kiếm, so sánh, gọi điện, đặt chỗ hoặc ghé thăm, Google Ads Search có thể giúp bạn xuất hiện đúng lúc.",
       "items": {
         "hospitality": "Khách sạn và căn hộ dịch vụ",
         "restaurants": "Nhà hàng và quán cà phê",
@@ -349,8 +356,8 @@
       "certificateLink": "Xem Chứng Nhận"
     },
     "combined": {
-      "heading": "Thu hút sự chú ý—và xây dựng niềm tin sau lượt nhấp.",
-      "description": "Tìm kiếm tạo nên lời giới thiệu. Trải nghiệm hình ảnh thuyết phục khách hàng tiếp tục.",
+      "heading": "Được tìm thấy chỉ là bước đầu.",
+      "description": "Google Ads tạo lượt truy cập. Hình ảnh và tour 360° giúp khách hàng tin tưởng để tiếp tục.",
       "search": {
         "title": "Google Ads Search",
         "description": "Thu hút khách truy cập phù hợp đến với doanh nghiệp."
@@ -394,9 +401,9 @@
       }
     },
     "finalCta": {
-      "heading": "Tiếp cận khách hàng đang chủ động tìm kiếm.",
-      "description": "Bắt đầu bằng việc đánh giá cơ hội, mục tiêu và thiết lập hiện tại.",
-      "button": "Yêu Cầu Đánh Giá Chiến Dịch"
+      "heading": "Khách hàng tiếp theo có thể đang tìm bạn.",
+      "description": "Bắt đầu bằng một buổi đánh giá ngắn về nhu cầu, mục tiêu và tài khoản hiện tại.",
+      "button": "Đánh Giá Cơ Hội"
     }
   },
   "Footer": {

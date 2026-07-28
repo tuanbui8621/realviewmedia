@@ -30,8 +30,8 @@
         "description": "Read the terms that apply when using the RealView Media website, 360° photography and virtual tour services."
       },
       "googleAdsSearch": {
-        "title": "Google Ads Search Management in Vietnam | RealView Media",
-        "description": "Google Ads Search campaign setup, management, and optimization for businesses in Vietnam. Reach customers actively searching for your services."
+        "title": "Google Ads Management in Ho Chi Minh City | RealView Media",
+        "description": "Google Ads Search campaign management and optimization for businesses in Ho Chi Minh City and Vietnam seeking customers who are ready to act."
       }
     }
   },
@@ -228,72 +228,79 @@
     },
     "hero": {
       "eyebrow": "Google Ads Search",
-      "title": "Turn high-intent searches into real customers.",
-      "description": "Show up when customers are actively looking—and turn that intent into measurable action.",
-      "cta": "Request a Campaign Review",
+      "title": "Customers are searching. Be there at the right moment.",
+      "description": "RealView Media manages Google Ads Search campaigns that reach the right people, match real intent, and measure the actions that matter.",
+      "cta": "Review My Campaign",
       "visual": {
-        "label": "Example of a high-intent search becoming a relevant advertisement",
-        "intent": "High-intent moment",
-        "query": "service near me",
+        "label": "Interactive journey from customer search to action",
+        "intent": "Try a search",
+        "examplesLabel": "Choose a search example",
         "adLabel": "Sponsored",
-        "resultTitle": "The service you were looking for",
-        "resultDescription": "A focused message, shown at the moment the customer is ready to compare.",
-        "action": "Take the next step",
-        "signals": [
+        "resultDescription": "A clear message, shown when the customer is ready to learn more.",
+        "action": "See the next step",
+        "examples": [
           {
-            "label": "Intent",
-            "value": "High"
+            "label": "Hotel",
+            "query": "hotel in district 1",
+            "resultTitle": "Stay in central Ho Chi Minh City"
           },
           {
-            "label": "Location",
-            "value": "Relevant"
+            "label": "Dental",
+            "query": "dentist near me",
+            "resultTitle": "Book a dental consultation"
           },
           {
-            "label": "Action",
-            "value": "Measurable"
+            "label": "Interiors",
+            "query": "interior design hcmc",
+            "resultTitle": "Interior design consultation"
           }
+        ],
+        "journey": [
+          "Search",
+          "Visit",
+          "Contact"
         ]
       }
     },
     "benefits": {
-      "eyebrow": "Intent matters",
-      "heading": "Show up when intent is highest.",
+      "eyebrow": "Right person. Right moment.",
+      "heading": "You do not need to reach everyone.",
       "items": [
         {
-          "title": "High-intent reach",
-          "description": "Meet people already looking for what you offer."
+          "title": "Meet people who need you",
+          "description": "Your ad appears when customers actively search for your service."
         },
         {
-          "title": "Controlled spending",
-          "description": "Focus your budget on searches that matter."
+          "title": "Spend with purpose",
+          "description": "Focus budget on relevant locations, keywords, and customer intent."
         },
         {
-          "title": "Measurable performance",
-          "description": "See the actions that move customers forward."
+          "title": "Know what works",
+          "description": "Track calls, inquiries, bookings, and other important actions."
         }
       ]
     },
     "included": {
-      "eyebrow": "From signal to strategy",
-      "heading": "Turn searches into measurable actions.",
-      "description": "Four focused disciplines keep the campaign clear, accountable, and improving.",
-      "detailsLabel": "See everything included",
+      "eyebrow": "Inside a strong campaign",
+      "heading": "Every click needs a reason.",
+      "description": "We connect search intent, advertising messages, budget, and data in one clear system.",
+      "detailsLabel": "See detailed management scope",
       "groups": {
         "opportunity": {
-          "title": "Find the opportunity",
-          "description": "Understand demand, intent, location, and the searches worth pursuing."
+          "title": "Find real demand",
+          "description": "Learn what customers search, where they are, and when they need you."
         },
         "campaign": {
-          "title": "Build the campaign",
-          "description": "Shape keywords, ads, targeting, and structure around a clear goal."
+          "title": "Match the message",
+          "description": "Connect keywords, advertisements, and landing pages to one clear goal."
         },
         "measurement": {
-          "title": "Track real actions",
-          "description": "Connect campaign activity to calls, inquiries, bookings, or other useful signals."
+          "title": "Track the action",
+          "description": "Measure calls, inquiries, bookings, and other useful signals."
         },
         "growth": {
-          "title": "Improve continuously",
-          "description": "Use real search data to refine spending, relevance, and opportunity."
+          "title": "Learn and improve",
+          "description": "Use real data to remove waste and uncover better opportunities."
         }
       },
       "items": {
@@ -310,7 +317,7 @@
       }
     },
     "process": {
-      "heading": "A focused four-step process",
+      "heading": "Clear from day one.",
       "steps": {
         "understand": {
           "title": "Understand",
@@ -331,8 +338,8 @@
       }
     },
     "clients": {
-      "heading": "Designed for businesses that depend on local demand",
-      "description": "For businesses customers actively search, compare, call, book, or visit.",
+      "heading": "Do customers search for your service on Google?",
+      "description": "If they search, compare, call, book, or visit, Google Ads Search can help you appear at the right moment.",
       "items": {
         "hospitality": "Hotels and serviced apartments",
         "restaurants": "Restaurants and cafés",
@@ -349,8 +356,8 @@
       "certificateLink": "View Certificate"
     },
     "combined": {
-      "heading": "Drive attention—and build trust after the click.",
-      "description": "Search creates the introduction. Strong visual experiences give customers a reason to continue.",
+      "heading": "Getting found is only the beginning.",
+      "description": "Google Ads brings the visit. Strong visuals and 360° tours build confidence to continue.",
       "search": {
         "title": "Google Ads Search",
         "description": "Bring relevant visitors to your business."
@@ -394,9 +401,9 @@
       }
     },
     "finalCta": {
-      "heading": "Reach customers who are already searching.",
-      "description": "Start with a focused review of your opportunity, goals, and current setup.",
-      "button": "Request a Campaign Review"
+      "heading": "Your next customer may already be searching.",
+      "description": "Start with a short review of demand, goals, and your current account.",
+      "button": "Review the Opportunity"
     }
   },
   "Footer": {
