@@ -13,7 +13,7 @@ const SOCIAL_IMAGE_BASE_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : SITE_URL;
 const SOCIAL_IMAGE_URL = `${SOCIAL_IMAGE_BASE_URL}/images/media.png`;
-const LOGO_URL = `${SITE_URL}/images/logo2.png`;
+const LOGO_URL = `${SITE_URL}/images/favicon.png`;
 
 export const pagePaths = {
   home: "",
@@ -129,8 +129,8 @@ export const organizationJsonLd = {
   logo: {
     "@type": "ImageObject",
     url: LOGO_URL,
-    width: 1340,
-    height: 275,
+    width: 817,
+    height: 817,
   },
   email: "contact@rvmedia.vn",
   telephone: "+84966888782",
