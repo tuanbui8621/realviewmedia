@@ -1,154 +1,107 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Aperture, Map, BarChart3, ArrowRight, Search } from 'lucide-react';
+import { Aperture, ArrowUpRight, BarChart3, Map, Search } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
 export default function Services() {
   const t = useTranslations('Services');
-  return (
-    <section id="services" className="py-32 bg-[#050505] px-6 relative overflow-hidden">
-      {/* Background glow for tech feel */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-      <div className="container mx-auto max-w-7xl relative z-10">
-        
-        {/* The Hook (Header) */}
-        <div className="max-w-2xl mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+  return (
+    <section id="services" className="relative overflow-hidden bg-[#f3f1ea] px-6 py-24 text-[#07111f] md:py-32">
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-black/10" />
+      <div className="container relative mx-auto max-w-7xl">
+        <div className="grid gap-8 border-b border-black/15 pb-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <motion.h2
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-6"
+            className="text-5xl font-black leading-[0.9] tracking-[-0.06em] md:text-7xl"
           >
-            {t('sectionHeading')}<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              {t('sectionHighlight')}
-            </span>
+            {t('sectionHeading')}
+            <span className="block text-[#1468ff]">{t('sectionHighlight')}</span>
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-white/70 text-lg font-medium leading-relaxed"
+            transition={{ delay: 0.08 }}
+            className="max-w-xl text-base leading-relaxed text-black/60 lg:ml-auto lg:text-lg"
           >
             {t('sectionDesc')}
           </motion.p>
         </div>
 
-        {/* One connected discovery-to-trust service canvas */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.7 }}
-          className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#080a0f] lg:grid lg:grid-cols-5 lg:rounded-[3rem]"
+          transition={{ delay: 0.15, duration: 0.65 }}
+          className="relative"
         >
-          <article className="relative overflow-hidden p-7 md:p-10 lg:col-span-3 lg:min-h-[39rem] lg:p-12">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-[radial-gradient(circle_at_12%_12%,rgba(34,211,238,0.2),transparent_34%),linear-gradient(145deg,rgba(15,62,79,0.5),transparent_58%)]"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-24 -right-20 h-80 w-80 rounded-full border border-cyan-300/15 shadow-[0_0_0_40px_rgba(34,211,238,0.025),0_0_0_80px_rgba(34,211,238,0.018)]"
-            />
-            <div className="relative z-10 flex h-full flex-col">
-              <div className="flex items-center gap-3 font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-cyan-200/80">
-                <Aperture className="h-5 w-5" aria-hidden="true" />
+          <article className="group grid border-b border-black/15 py-10 md:py-14 lg:grid-cols-[7rem_1.2fr_0.8fr_auto] lg:items-center lg:gap-10">
+            <span className="mb-6 font-mono text-xs font-bold tracking-[0.2em] text-[#1468ff] lg:mb-0">01 / 02</span>
+            <div>
+              <div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-black/45">
+                <Aperture className="h-5 w-5 text-[#1468ff]" aria-hidden="true" />
                 {t('cinema.serviceName')}
               </div>
-              <h3 className="mt-8 max-w-2xl text-4xl font-black tracking-tighter text-white md:text-5xl">
+              <h3 className="max-w-2xl text-4xl font-black leading-[0.95] tracking-[-0.045em] md:text-6xl">
                 {t('cinema.hook')}
               </h3>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65">
-                {t('cinema.desc')}
-              </p>
-
-              <div className="mt-10 flex flex-col gap-5 border-y border-cyan-200/10 py-6 sm:flex-row sm:gap-10">
-                <div className="flex items-start gap-3">
-                  <Map className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" aria-hidden="true" />
-                  <div>
-                    <p className="text-sm font-bold text-white">{t('maps.hook')}</p>
-                    <p className="mt-1 text-xs text-white/45">{t('maps.signal')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <BarChart3 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-300" aria-hidden="true" />
-                  <div>
-                    <p className="text-sm font-bold text-white">{t('roi.hook')}</p>
-                    <p className="mt-1 text-xs text-white/45">{t('roi.signal')}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 flex flex-wrap items-center gap-5 lg:mt-auto">
-                <Link
-                  href="/experience"
-                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition-colors hover:bg-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-4 focus-visible:ring-offset-[#080a0f]"
-                >
-                  {t('cinema.cta')} <ArrowRight size={16} aria-hidden="true" />
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="rounded-sm text-sm font-bold text-cyan-200 underline decoration-cyan-200/30 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                >
-                  {t('roi.cta')}
-                </Link>
+            </div>
+            <div className="mt-8 lg:mt-0">
+              <p className="max-w-md text-sm leading-relaxed text-black/60 md:text-base">{t('cinema.desc')}</p>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-xs font-bold text-black/55">
+                <span className="inline-flex items-center gap-2"><Map className="h-4 w-4 text-[#1468ff]" />{t('maps.hook')}</span>
+                <span className="inline-flex items-center gap-2"><BarChart3 className="h-4 w-4 text-[#1468ff]" />{t('roi.hook')}</span>
               </div>
             </div>
+            <Link
+              href="/experience"
+              aria-label={t('cinema.cta')}
+              className="mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-black/20 transition-all hover:border-[#1468ff] hover:bg-[#1468ff] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1468ff] lg:mt-0"
+            >
+              <ArrowUpRight aria-hidden="true" />
+            </Link>
           </article>
 
-          <article className="relative overflow-hidden border-t border-white/10 p-7 md:p-10 lg:col-span-2 lg:min-h-[39rem] lg:border-l lg:border-t-0 lg:p-12">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-[radial-gradient(circle_at_85%_12%,rgba(139,92,246,0.2),transparent_36%),linear-gradient(155deg,rgba(37,42,92,0.48),transparent_62%)]"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute right-8 top-8 font-mono text-[8rem] font-black leading-none text-violet-300/[0.035]"
-            >
-              ?
-            </div>
-            <div className="relative z-10 flex h-full flex-col">
-              <div className="flex items-center gap-3 font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-violet-200/80">
-                <Search className="h-5 w-5" aria-hidden="true" />
+          <article className="group grid py-10 md:py-14 lg:grid-cols-[7rem_1.2fr_0.8fr_auto] lg:items-center lg:gap-10">
+            <span className="mb-6 font-mono text-xs font-bold tracking-[0.2em] text-[#1468ff] lg:mb-0">02 / 02</span>
+            <div>
+              <div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-black/45">
+                <Search className="h-5 w-5 text-[#1468ff]" aria-hidden="true" />
                 {t('ads.serviceName')}
               </div>
-              <h3 className="mt-8 text-4xl font-black tracking-tighter text-white md:text-5xl lg:text-4xl">
+              <h3 className="max-w-2xl text-4xl font-black leading-[0.95] tracking-[-0.045em] md:text-6xl">
                 {t('ads.hook')}
               </h3>
-              <p className="mt-6 text-base leading-relaxed text-white/65">
-                {t('ads.desc')}
+            </div>
+            <div className="mt-8 lg:mt-0">
+              <p className="max-w-md text-sm leading-relaxed text-black/60 md:text-base">{t('ads.desc')}</p>
+              <p className="mt-6 border-l-2 border-[#1468ff] pl-4 text-xs font-bold uppercase tracking-[0.14em] text-black/50">
+                {t('connector')}
               </p>
-              <ul className="mt-9 space-y-4 border-l border-violet-300/20 pl-5 text-sm text-white/60">
-                {[0, 1, 2].map((index) => (
-                  <li key={index} className="relative">
-                    <span
-                      aria-hidden="true"
-                      className="absolute -left-[1.45rem] top-1.5 h-2 w-2 rounded-full bg-violet-300 ring-4 ring-violet-300/10"
-                    />
-                    {t(`ads.signals.${index}`)}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/google-ads-search"
-                className="mt-9 inline-flex w-fit items-center gap-2 rounded-full border border-violet-300/35 bg-violet-300/10 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-violet-200/70 hover:bg-violet-300/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-200 lg:mt-auto"
-              >
-                {t('ads.cta')} <ArrowRight size={16} aria-hidden="true" />
-              </Link>
             </div>
+            <Link
+              href="/google-ads-search"
+              aria-label={t('ads.cta')}
+              className="mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-[#1468ff] text-white transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1468ff] focus-visible:ring-offset-4 focus-visible:ring-offset-[#f3f1ea] lg:mt-0"
+            >
+              <ArrowUpRight aria-hidden="true" />
+            </Link>
           </article>
-
-          <div className="pointer-events-none absolute left-[60%] top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
-            <div className="rounded-full border border-white/15 bg-[#0b0d14] px-4 py-2 font-mono text-[0.6rem] font-bold uppercase tracking-[0.16em] text-white/55 shadow-xl">
-              {t('connector')}
-            </div>
-          </div>
         </motion.div>
+
+        <div className="flex flex-wrap gap-6 border-t border-black/15 pt-8 text-sm font-bold">
+          <Link href="/portfolio" className="underline decoration-black/25 underline-offset-4 hover:decoration-[#1468ff]">
+            {t('roi.cta')}
+          </Link>
+          <Link href="/google-ads-search" className="text-[#1468ff] underline decoration-[#1468ff]/25 underline-offset-4">
+            {t('ads.cta')}
+          </Link>
+        </div>
       </div>
     </section>
   );
