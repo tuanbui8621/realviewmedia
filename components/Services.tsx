@@ -16,7 +16,7 @@ export default function Services() {
       <div aria-hidden="true" className="absolute left-1/2 top-20 h-[34rem] w-[54rem] max-w-full -translate-x-1/2 rounded-full bg-[#1468ff]/10 blur-[130px]" />
 
       <div className="container relative mx-auto max-w-7xl">
-        <div className="border-b border-white/10 pb-12 text-center">
+        <div className="pb-12 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,10 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <ul className="flex flex-wrap gap-2 border-b border-white/10 py-7" aria-label={t('industriesLabel')}>
+        <ul
+          className="relative flex flex-wrap justify-center gap-2 border-y border-[#65a0ff]/30 py-7 shadow-[inset_0_1px_0_rgba(191,232,255,0.08),inset_0_-1px_0_rgba(191,232,255,0.08),0_0_28px_rgba(20,104,255,0.08)]"
+          aria-label={t('industriesLabel')}
+        >
           {industries.map((industry) => (
             <li key={industry} className="rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-white/55 transition-colors hover:border-[#65a0ff]/60 hover:text-white">
               {t(`industries.${industry}`)}
