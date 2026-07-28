@@ -438,40 +438,49 @@
     }
   },
   "Hero": {
-    "heading": "Chụp ảnh 360° & tour ảo tại TP.HCM.",
-    "tagline": "Giúp doanh nghiệp giới thiệu không gian trên Google Maps để khách hàng khám phá trước khi ghé thăm."
+    "heading": "Khách chọn nơi họ tin. Khách tin không gian thực.",
+    "tagline": "Tour thực tế ảo 360° trên Google Maps mang đến góc nhìn đa chiều về không gian thật — giúp khách hàng khám phá, trải nghiệm và tin tưởng lựa chọn."
   },
   "Services": {
-    "sectionHeading": "Được tìm thấy.",
-    "sectionHighlight": "Và trở thành lựa chọn của khách hàng.",
-    "sectionDesc": "Thu hút đúng người—sau đó giúp họ tin tưởng vào những gì họ khám phá.",
-    "cinema": {
-      "serviceName": "Tour ảo 360°",
-      "hook": "Để khách hàng bước vào không gian trước khi họ ghé thăm.",
-      "desc": "Biến không gian thành trải nghiệm sống động trên Google Maps và website.",
-      "cta": "Khám Phá Tour 360°"
+    "sectionHeading": "Ảo là công nghệ.",
+    "sectionHighlight": "Thực là không gian của bạn.",
+    "sectionDesc": "RealView Media thực hiện tour ảo 360° cho các không gian dịch vụ — để mỗi địa điểm tự kể câu chuyện, chân thật đến từng góc nhìn.",
+    "industriesLabel": "Các ngành phù hợp với tour ảo 360°",
+    "industries": {
+      "hospitality": "Khách sạn & Lưu trú",
+      "property": "Bất động sản",
+      "food": "F&B",
+      "wellness": "Spa & Thẩm mỹ",
+      "retail": "Bán lẻ & Showroom",
+      "education": "Giáo dục",
+      "industrial": "Nhà máy & Khu công nghiệp"
     },
-    "maps": {
-      "hook": "Được khám phá trên Google Maps",
-      "signal": "Gặp khách hàng ngay tại nơi họ đang tìm kiếm."
-    },
-    "roi": {
-      "hook": "Biến tò mò thành tin tưởng",
-      "signal": "Cho khách hàng thấy không khí, bố cục và chi tiết ảnh hưởng đến quyết định ghé thăm.",
-      "cta": "Xem dự án 360°"
-    },
-    "ads": {
-      "serviceName": "Google Ads Search",
-      "hook": "Tiếp cận khách hàng đang chủ động tìm kiếm.",
-      "desc": "Xuất hiện đúng lúc họ đang tìm một dịch vụ giống như dịch vụ của bạn.",
-      "signals": [
-        "Lượt tìm kiếm có nhu cầu cao",
-        "Ngân sách chiến dịch được kiểm soát",
-        "Hành động khách hàng có thể đo lường"
-      ],
-      "cta": "Tìm Hiểu Google Ads"
-    },
-    "connector": "Được tìm thấy → được tin tưởng"
+    "journey": {
+      "capture": {
+        "eyebrow": "Bước 1",
+        "title": "Ghi lại trọn vẹn không gian",
+        "description": "Chụp ảnh 360° sắc nét, bố cục chỉn chu và góc nhìn tự nhiên. Không gian càng thật, niềm tin càng bền."
+      },
+      "discovery": {
+        "eyebrow": "Bước 2",
+        "title": "Đưa đúng khách hàng đến đó",
+        "maps": {
+          "title": "Hiện diện trên Google Maps",
+          "description": "Tour xuất hiện tại nơi khách hàng tìm kiếm và khám phá doanh nghiệp mỗi ngày."
+        },
+        "ads": {
+          "title": "Tiếp cận qua Google Ads Search",
+          "description": "Xuất hiện khi khách hàng chủ động tìm một dịch vụ giống như dịch vụ của bạn.",
+          "cta": "Tìm hiểu Google Ads"
+        }
+      },
+      "decision": {
+        "eyebrow": "Bước 3",
+        "title": "Khách tự khám phá, tự tin lựa chọn",
+        "description": "Khách xoay, kéo và di chuyển như đang đứng tại chỗ. Khi đã hiểu rõ không gian, quyết định ghé thăm trở nên dễ dàng hơn.",
+        "cta": "Xem thử tour ảo"
+      }
+    }
   },
   "Experience360": {
     "sectionHeading": "Trải nghiệm tour ảo 360°",

@@ -438,40 +438,49 @@
     }
   },
   "Hero": {
-    "heading": "Be the business they choose.",
-    "tagline": "Before they ever walk through your door."
+    "heading": "Customers choose places they trust. They trust spaces that feel real.",
+    "tagline": "360° virtual tours on Google Maps reveal your real space from every angle — helping customers explore, experience, and choose with confidence."
   },
   "Services": {
-    "sectionHeading": "Get found.",
-    "sectionHighlight": "Give them a reason to choose you.",
-    "sectionDesc": "Bring the right people in—then help them feel confident about what they find.",
-    "cinema": {
-      "serviceName": "360° Virtual Tours",
-      "hook": "Let customers step inside before they arrive.",
-      "desc": "Turn your space into an immersive experience customers can explore on Google Maps and your website.",
-      "cta": "Explore 360° Tours"
+    "sectionHeading": "Virtual is the technology.",
+    "sectionHighlight": "The space is genuinely yours.",
+    "sectionDesc": "RealView Media creates 360° virtual tours for service businesses — helping every location tell its story truthfully, from every angle.",
+    "industriesLabel": "Industries suited to 360° virtual tours",
+    "industries": {
+      "hospitality": "Hotels & Hospitality",
+      "property": "Property",
+      "food": "Food & Beverage",
+      "wellness": "Spa & Wellness",
+      "retail": "Retail & Showrooms",
+      "education": "Education",
+      "industrial": "Factories & Industrial"
     },
-    "maps": {
-      "hook": "Be explored on Google Maps",
-      "signal": "Meet customers where they already search."
-    },
-    "roi": {
-      "hook": "Turn curiosity into confidence",
-      "signal": "Show the atmosphere, layout, and details that influence a visit.",
-      "cta": "See Case Studies"
-    },
-    "ads": {
-      "serviceName": "Google Ads Search",
-      "hook": "Meet customers already searching.",
-      "desc": "Reach people at the moment they are looking for a service like yours.",
-      "signals": [
-        "High-intent searches",
-        "Controlled campaign budgets",
-        "Measurable customer actions"
-      ],
-      "cta": "Explore Google Ads"
-    },
-    "connector": "Discovered → convinced"
+    "journey": {
+      "capture": {
+        "eyebrow": "Step 1",
+        "title": "Capture the complete space",
+        "description": "Sharp 360° photography, thoughtful composition, and natural viewpoints. The more truthful the space feels, the stronger the trust."
+      },
+      "discovery": {
+        "eyebrow": "Step 2",
+        "title": "Bring the right customers in",
+        "maps": {
+          "title": "Be present on Google Maps",
+          "description": "Your tour appears where customers search for and explore businesses every day."
+        },
+        "ads": {
+          "title": "Reach them through Google Ads Search",
+          "description": "Appear when customers actively search for a service like yours.",
+          "cta": "Explore Google Ads"
+        }
+      },
+      "decision": {
+        "eyebrow": "Step 3",
+        "title": "Let customers explore and choose confidently",
+        "description": "Customers turn, drag, and move through the space as if they were there. Once they understand it, visiting feels like an easier decision.",
+        "cta": "Try a virtual tour"
+      }
+    }
   },
   "Experience360": {
     "sectionHeading": "360° virtual tour experience",

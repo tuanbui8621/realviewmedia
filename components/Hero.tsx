@@ -172,11 +172,11 @@ export default function Hero() {
         >
           <h1
             id="hero-heading"
-            className="mb-6 break-words text-[2.5rem] font-bold leading-[0.9] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+            className="mx-auto mb-6 max-w-5xl break-words text-[2.35rem] font-bold leading-[0.92] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
           >
             {t('heading')}
           </h1>
-          <p className="mx-auto max-w-3xl text-lg font-light leading-relaxed text-rv-white/60 sm:text-xl md:text-2xl lg:text-3xl">
+          <p className="mx-auto max-w-4xl text-base font-light leading-relaxed text-rv-white/65 sm:text-lg md:text-xl lg:text-2xl">
             {t('tagline')}
           </p>
         </motion.div>

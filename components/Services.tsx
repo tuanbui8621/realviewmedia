@@ -1,106 +1,128 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Aperture, ArrowUpRight, BarChart3, Map, Search } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Aperture, ArrowUpRight, MapPin, MousePointer2, Search } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
+const industries = ['hospitality', 'property', 'food', 'wellness', 'retail', 'education', 'industrial'] as const;
+
 export default function Services() {
   const t = useTranslations('Services');
+  const reduceMotion = useReducedMotion();
 
   return (
-    <section id="services" className="relative overflow-hidden bg-[#f3f1ea] px-6 py-24 text-[#07111f] md:py-32">
-      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-black/10" />
+    <section id="services" className="relative overflow-hidden bg-[#050608] px-6 py-24 text-white md:py-32">
+      <div aria-hidden="true" className="absolute left-1/2 top-20 h-[34rem] w-[54rem] max-w-full -translate-x-1/2 rounded-full bg-[#1468ff]/10 blur-[130px]" />
+
       <div className="container relative mx-auto max-w-7xl">
-        <div className="grid gap-8 border-b border-black/15 pb-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <motion.h2
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-black leading-[0.9] tracking-[-0.06em] md:text-7xl"
+            className="max-w-4xl text-5xl font-black leading-[0.92] tracking-[-0.055em] md:text-7xl"
           >
             {t('sectionHeading')}
-            <span className="block text-[#1468ff]">{t('sectionHighlight')}</span>
+            <span className="block text-[#65a0ff]">{t('sectionHighlight')}</span>
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="max-w-xl text-base leading-relaxed text-black/60 lg:ml-auto lg:text-lg"
+            className="max-w-xl text-base leading-relaxed text-white/60 lg:ml-auto lg:text-lg"
           >
             {t('sectionDesc')}
           </motion.p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15, duration: 0.65 }}
-          className="relative"
-        >
-          <article className="group grid border-b border-black/15 py-10 md:py-14 lg:grid-cols-[7rem_1.2fr_0.8fr_auto] lg:items-center lg:gap-10">
-            <span className="mb-6 font-mono text-xs font-bold tracking-[0.2em] text-[#1468ff] lg:mb-0">01 / 02</span>
-            <div>
-              <div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-black/45">
-                <Aperture className="h-5 w-5 text-[#1468ff]" aria-hidden="true" />
-                {t('cinema.serviceName')}
-              </div>
-              <h3 className="max-w-2xl text-4xl font-black leading-[0.95] tracking-[-0.045em] md:text-6xl">
-                {t('cinema.hook')}
-              </h3>
-            </div>
-            <div className="mt-8 lg:mt-0">
-              <p className="max-w-md text-sm leading-relaxed text-black/60 md:text-base">{t('cinema.desc')}</p>
-              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-xs font-bold text-black/55">
-                <span className="inline-flex items-center gap-2"><Map className="h-4 w-4 text-[#1468ff]" />{t('maps.hook')}</span>
-                <span className="inline-flex items-center gap-2"><BarChart3 className="h-4 w-4 text-[#1468ff]" />{t('roi.hook')}</span>
-              </div>
-            </div>
-            <Link
-              href="/experience"
-              aria-label={t('cinema.cta')}
-              className="mt-8 flex h-14 w-14 items-center justify-center rounded-full border border-black/20 transition-all hover:border-[#1468ff] hover:bg-[#1468ff] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1468ff] lg:mt-0"
-            >
-              <ArrowUpRight aria-hidden="true" />
-            </Link>
-          </article>
+        <ul className="flex flex-wrap gap-2 border-b border-white/10 py-7" aria-label={t('industriesLabel')}>
+          {industries.map((industry) => (
+            <li key={industry} className="rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-white/55 transition-colors hover:border-[#65a0ff]/60 hover:text-white">
+              {t(`industries.${industry}`)}
+            </li>
+          ))}
+        </ul>
 
-          <article className="group grid py-10 md:py-14 lg:grid-cols-[7rem_1.2fr_0.8fr_auto] lg:items-center lg:gap-10">
-            <span className="mb-6 font-mono text-xs font-bold tracking-[0.2em] text-[#1468ff] lg:mb-0">02 / 02</span>
-            <div>
-              <div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-black/45">
-                <Search className="h-5 w-5 text-[#1468ff]" aria-hidden="true" />
-                {t('ads.serviceName')}
-              </div>
-              <h3 className="max-w-2xl text-4xl font-black leading-[0.95] tracking-[-0.045em] md:text-6xl">
-                {t('ads.hook')}
-              </h3>
-            </div>
-            <div className="mt-8 lg:mt-0">
-              <p className="max-w-md text-sm leading-relaxed text-black/60 md:text-base">{t('ads.desc')}</p>
-              <p className="mt-6 border-l-2 border-[#1468ff] pl-4 text-xs font-bold uppercase tracking-[0.14em] text-black/50">
-                {t('connector')}
-              </p>
-            </div>
-            <Link
-              href="/google-ads-search"
-              aria-label={t('ads.cta')}
-              className="mt-8 flex h-14 w-14 items-center justify-center rounded-full bg-[#1468ff] text-white transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1468ff] focus-visible:ring-offset-4 focus-visible:ring-offset-[#f3f1ea] lg:mt-0"
-            >
-              <ArrowUpRight aria-hidden="true" />
-            </Link>
-          </article>
-        </motion.div>
+        <div className="relative mt-14 overflow-hidden border-y border-white/15 bg-[#080c14]">
+          <motion.div
+            aria-hidden="true"
+            initial={reduceMotion ? false : { scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute left-[8%] right-[8%] top-[5.15rem] hidden h-px origin-left bg-gradient-to-r from-[#65a0ff] via-[#1468ff] to-[#65a0ff] lg:block"
+          />
 
-        <div className="flex flex-wrap gap-6 border-t border-black/15 pt-8 text-sm font-bold">
-          <Link href="/portfolio" className="underline decoration-black/25 underline-offset-4 hover:decoration-[#1468ff]">
-            {t('roi.cta')}
-          </Link>
-          <Link href="/google-ads-search" className="text-[#1468ff] underline decoration-[#1468ff]/25 underline-offset-4">
-            {t('ads.cta')}
-          </Link>
+          <ol className="grid lg:grid-cols-3">
+            <motion.li
+              whileHover={reduceMotion ? undefined : { y: -5 }}
+              className="group relative border-b border-white/10 p-7 md:p-10 lg:border-b-0 lg:border-r lg:p-12"
+            >
+              <div className="relative z-10 flex items-center justify-between">
+                <span className="font-mono text-xs font-bold tracking-[0.22em] text-[#65a0ff]">01</span>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#65a0ff]/30 bg-[#0a1220] text-[#65a0ff] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 motion-reduce:transform-none">
+                  <Aperture aria-hidden="true" className="h-6 w-6" />
+                </div>
+              </div>
+              <p className="mt-10 text-xs font-bold uppercase tracking-[0.2em] text-white/35">{t('journey.capture.eyebrow')}</p>
+              <h3 className="mt-4 text-3xl font-black tracking-[-0.035em]">{t('journey.capture.title')}</h3>
+              <p className="mt-5 text-sm leading-relaxed text-white/55">{t('journey.capture.description')}</p>
+            </motion.li>
+
+            <li className="relative border-b border-white/10 p-7 md:p-10 lg:border-b-0 lg:border-r lg:p-12">
+              <div className="relative z-10 flex items-center justify-between">
+                <span className="font-mono text-xs font-bold tracking-[0.22em] text-[#65a0ff]">02</span>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#65a0ff]/30 bg-[#0a1220] text-[#65a0ff]">
+                  <MapPin aria-hidden="true" className="h-6 w-6" />
+                </div>
+              </div>
+              <p className="mt-10 text-xs font-bold uppercase tracking-[0.2em] text-white/35">{t('journey.discovery.eyebrow')}</p>
+              <h3 className="mt-4 text-3xl font-black tracking-[-0.035em]">{t('journey.discovery.title')}</h3>
+
+              <div className="mt-7 divide-y divide-white/10 border-y border-white/10">
+                <div className="group/channel flex gap-4 py-5">
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#65a0ff] transition-transform group-hover/channel:-translate-y-1 motion-reduce:transform-none" aria-hidden="true" />
+                  <div>
+                    <h4 className="text-sm font-bold">{t('journey.discovery.maps.title')}</h4>
+                    <p className="mt-1 text-xs leading-relaxed text-white/45">{t('journey.discovery.maps.description')}</p>
+                  </div>
+                </div>
+                <div className="group/channel flex gap-4 py-5">
+                  <Search className="mt-0.5 h-5 w-5 shrink-0 text-[#65a0ff] transition-transform group-hover/channel:scale-110 group-hover/channel:rotate-[-8deg] motion-reduce:transform-none" aria-hidden="true" />
+                  <div>
+                    <h4 className="text-sm font-bold">{t('journey.discovery.ads.title')}</h4>
+                    <p className="mt-1 text-xs leading-relaxed text-white/45">{t('journey.discovery.ads.description')}</p>
+                    <Link href="/google-ads-search" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[#65a0ff] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                      {t('journey.discovery.ads.cta')} <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <motion.li
+              whileHover={reduceMotion ? undefined : { y: -5 }}
+              className="group relative p-7 md:p-10 lg:p-12"
+            >
+              <div className="relative z-10 flex items-center justify-between">
+                <span className="font-mono text-xs font-bold tracking-[0.22em] text-[#65a0ff]">03</span>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#65a0ff]/30 bg-[#0a1220] text-[#65a0ff] transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110 motion-reduce:transform-none">
+                  <MousePointer2 aria-hidden="true" className="h-6 w-6" />
+                </div>
+              </div>
+              <p className="mt-10 text-xs font-bold uppercase tracking-[0.2em] text-white/35">{t('journey.decision.eyebrow')}</p>
+              <h3 className="mt-4 text-3xl font-black tracking-[-0.035em]">{t('journey.decision.title')}</h3>
+              <p className="mt-5 text-sm leading-relaxed text-white/55">{t('journey.decision.description')}</p>
+              <Link
+                href="/experience"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-bold text-[#050608] transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#65a0ff] focus-visible:ring-offset-4 focus-visible:ring-offset-[#080c14]"
+              >
+                {t('journey.decision.cta')} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </motion.li>
+          </ol>
         </div>
       </div>
     </section>
