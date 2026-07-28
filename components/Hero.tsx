@@ -174,7 +174,8 @@ export default function Hero() {
             id="hero-heading"
             className="mx-auto mb-6 max-w-5xl break-words text-[2.35rem] font-bold leading-[0.92] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            {t('heading')}
+            <span className="block">{t('headingLine1')}</span>
+            <span className="mt-2 block text-[#65a0ff]">{t('headingLine2')}</span>
           </h1>
           <p className="mx-auto max-w-4xl text-base font-light leading-relaxed text-rv-white/65 sm:text-lg md:text-xl lg:text-2xl">
             {t('tagline')}

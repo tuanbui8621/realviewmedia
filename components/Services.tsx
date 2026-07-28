@@ -16,12 +16,12 @@ export default function Services() {
       <div aria-hidden="true" className="absolute left-1/2 top-20 h-[34rem] w-[54rem] max-w-full -translate-x-1/2 rounded-full bg-[#1468ff]/10 blur-[130px]" />
 
       <div className="container relative mx-auto max-w-7xl">
-        <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+        <div className="border-b border-white/10 pb-12 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl text-5xl font-black leading-[0.92] tracking-[-0.055em] md:text-7xl"
+            className="mx-auto max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.055em] md:text-7xl"
           >
             {t('sectionHeading')}
             <span className="block text-[#65a0ff]">{t('sectionHighlight')}</span>
@@ -31,7 +31,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
-            className="max-w-xl text-base leading-relaxed text-white/60 lg:ml-auto lg:text-lg"
+            className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-white/60 lg:text-lg"
           >
             {t('sectionDesc')}
           </motion.p>

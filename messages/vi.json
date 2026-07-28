@@ -438,13 +438,14 @@
     }
   },
   "Hero": {
-    "heading": "Khách chọn nơi họ tin. Khách tin không gian thực.",
+    "headingLine1": "Khách chọn nơi họ tin.",
+    "headingLine2": "Khách tin không gian thực.",
     "tagline": "Tour thực tế ảo 360° trên Google Maps mang đến góc nhìn đa chiều về không gian thật — giúp khách hàng khám phá, trải nghiệm và tin tưởng lựa chọn."
   },
   "Services": {
     "sectionHeading": "Ảo là công nghệ.",
     "sectionHighlight": "Thực là không gian của bạn.",
-    "sectionDesc": "RealView Media thực hiện tour ảo 360° cho các không gian dịch vụ — để mỗi địa điểm tự kể câu chuyện, chân thật đến từng góc nhìn.",
+    "sectionDesc": "RealView Media thực hiện tour ảo 360° cho các không gian dịch vụ để mỗi địa điểm tự kể câu chuyện, chân thật đến từng góc nhìn.",
     "industriesLabel": "Các ngành phù hợp với tour ảo 360°",
     "industries": {
       "hospitality": "Khách sạn & Lưu trú",

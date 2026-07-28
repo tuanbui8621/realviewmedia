@@ -438,13 +438,14 @@
     }
   },
   "Hero": {
-    "heading": "Customers choose places they trust. They trust spaces that feel real.",
+    "headingLine1": "Customers choose places they trust.",
+    "headingLine2": "They trust spaces that feel real.",
     "tagline": "360° virtual tours on Google Maps reveal your real space from every angle — helping customers explore, experience, and choose with confidence."
   },
   "Services": {
     "sectionHeading": "Virtual is the technology.",
     "sectionHighlight": "The space is genuinely yours.",
-    "sectionDesc": "RealView Media creates 360° virtual tours for service businesses — helping every location tell its story truthfully, from every angle.",
+    "sectionDesc": "RealView Media creates 360° virtual tours for service businesses, helping every location tell its story truthfully from every angle.",
     "industriesLabel": "Industries suited to 360° virtual tours",
     "industries": {
       "hospitality": "Hotels & Hospitality",
