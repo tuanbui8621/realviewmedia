@@ -13,8 +13,8 @@ import {
 import { useLocale, useTranslations } from 'next-intl';
 import PhoneMockup from './PhoneMockup';
 
-const ORBIT_COLOR = '#BFE8FF';
-const TRACE_COLOR = '#F7FCFF';
+const ORBIT_COLOR = '#72C7E8';
+const TRACE_COLOR = '#F2C66D';
 const ORBIT_PATH =
   'M400 254A368 104 0 0 1 32 150A368 104 0 0 1 400 46A368 104 0 0 1 768 150A368 104 0 0 1 400 254';
 
@@ -115,7 +115,7 @@ export default function Hero() {
         {/* Cinematic environment */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(191,232,255,0.12),transparent_30%),linear-gradient(180deg,#090b10_0%,#050608_58%,#020304_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(106,174,255,0.12),transparent_32%),linear-gradient(180deg,#0a121a_0%,#07101a_58%,#030506_100%)]"
         />
         <motion.div
           aria-hidden="true"
@@ -128,7 +128,7 @@ export default function Hero() {
           className="absolute -inset-[4%]"
         >
           <Image
-            src="/images/hero-3d.png"
+            src="/images/mai.jpg"
             alt=""
             fill
             priority
@@ -138,7 +138,7 @@ export default function Hero() {
         </motion.div>
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,5,8,0.12)_0%,rgba(4,7,11,0.22)_45%,rgba(1,2,4,0.5)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,15,0.5)_0%,rgba(6,13,21,0.24)_42%,rgba(3,5,7,0.62)_100%)]"
         />
         <motion.div
           aria-hidden="true"
@@ -148,18 +148,18 @@ export default function Hero() {
           }}
           className="absolute inset-0"
         >
-          <div className="absolute -left-[18%] top-[16%] h-[70%] w-[44%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(191,232,255,0.1),transparent_68%)] blur-3xl" />
-          <div className="absolute -right-[18%] top-[10%] h-[76%] w-[46%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(191,232,255,0.1),transparent_68%)] blur-3xl" />
-          <div className="absolute inset-x-[8%] top-[22%] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="absolute -left-[18%] top-[16%] h-[70%] w-[44%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(114,199,232,0.12),transparent_68%)] blur-3xl" />
+          <div className="absolute -right-[18%] top-[10%] h-[76%] w-[46%] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(242,198,109,0.08),transparent_68%)] blur-3xl" />
+          <div className="absolute inset-x-[8%] top-[22%] h-px bg-gradient-to-r from-transparent via-[#F2C66D]/20 to-transparent" />
         </motion.div>
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.74)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_34%,rgba(8,5,3,0.76)_100%)]"
         />
         <motion.div
           aria-hidden="true"
           style={{ x: '-50%', y: reduceMotion ? 0 : depthY }}
-          className="absolute left-1/2 top-[62%] h-[34%] w-[125%] rounded-[50%] border-t border-[#BFE8FF]/20 bg-[radial-gradient(ellipse_at_top,rgba(191,232,255,0.11),rgba(5,8,12,0.12)_42%,transparent_72%)] shadow-[0_-24px_70px_rgba(191,232,255,0.08)]"
+          className="absolute left-1/2 top-[62%] h-[34%] w-[125%] rounded-[50%] border-t border-[#72C7E8]/25 bg-[radial-gradient(ellipse_at_top,rgba(114,199,232,0.12),rgba(242,198,109,0.035)_38%,transparent_72%)] shadow-[0_-24px_70px_rgba(114,199,232,0.1)]"
         />
 
         {/* Text layer */}
@@ -175,7 +175,7 @@ export default function Hero() {
             className="mx-auto mb-6 max-w-5xl break-words text-[2.35rem] font-bold leading-[0.92] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
           >
             <span className="block">{t('headingLine1')}</span>
-            <span className="mt-2 block text-[#65a0ff]">{t('headingLine2')}</span>
+            <span className="mt-2 block text-[#6AAEFF]">{t('headingLine2')}</span>
           </h1>
           <p className="mx-auto max-w-4xl text-base font-light leading-relaxed text-rv-white/65 sm:text-lg md:text-xl lg:text-2xl">
             {t('tagline')}
@@ -189,17 +189,17 @@ export default function Hero() {
             opacity: reduceMotion ? 0.32 : surfaceOpacity,
             y: reduceMotion ? 0 : surfaceY,
           }}
-          className="absolute inset-x-0 top-[72%] z-10 h-[38%] bg-[linear-gradient(180deg,rgba(191,232,255,0.08),rgba(5,7,10,0.42)_16%,rgba(0,0,0,0.84)_100%)]"
+          className="absolute inset-x-0 top-[72%] z-10 h-[38%] bg-[linear-gradient(180deg,rgba(114,199,232,0.1),rgba(18,21,24,0.5)_16%,rgba(4,3,2,0.88)_100%)]"
         >
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#BFE8FF]/40 to-transparent" />
-          <div className="absolute inset-x-[10%] top-0 h-20 bg-[#BFE8FF]/5 blur-2xl" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#F2C66D]/55 to-transparent" />
+          <div className="absolute inset-x-[10%] top-0 h-20 bg-[#72C7E8]/7 blur-2xl" />
         </motion.div>
 
         {/* Phone reflection */}
         <motion.div
           aria-hidden="true"
           style={{ opacity: reduceMotion ? 0.12 : reflectionOpacity }}
-          className="absolute left-1/2 top-[72%] z-20 h-40 w-44 -translate-x-1/2 bg-[linear-gradient(180deg,rgba(191,232,255,0.18),transparent_76%)] blur-xl [clip-path:polygon(18%_0,82%_0,100%_100%,0_100%)]"
+          className="absolute left-1/2 top-[72%] z-20 h-40 w-44 -translate-x-1/2 bg-[linear-gradient(180deg,rgba(114,199,232,0.2),rgba(242,198,109,0.04)_45%,transparent_76%)] blur-xl [clip-path:polygon(18%_0,82%_0,100%_100%,0_100%)]"
         />
 
         {/* Existing phone, unchanged */}
@@ -215,7 +215,7 @@ export default function Hero() {
             <motion.div
               style={{ opacity: reduceMotion ? 0.35 : phoneGlow }}
               aria-hidden="true"
-              className="absolute -inset-12 rounded-[5rem] bg-[#BFE8FF]/15 blur-3xl"
+              className="absolute -inset-12 rounded-[5rem] bg-[#72C7E8]/15 blur-3xl"
             />
             <div className="relative h-[640px] w-[320px] origin-center scale-[0.72] sm:scale-[0.82] lg:scale-100">
               {/* Back half of the orbit */}
@@ -409,16 +409,16 @@ export default function Hero() {
                   <svg
                     viewBox="0 0 100 42"
                     fill="none"
-                    className="block h-full w-full overflow-visible drop-shadow-[0_0_5px_rgba(126,220,255,0.48)]"
+                    className="block h-full w-full overflow-visible drop-shadow-[0_0_6px_rgba(242,198,109,0.48)]"
                   >
                     <ellipse
                       cx="50"
                       cy="21"
                       rx="47"
                       ry="18"
-                      fill="#07101B"
+                      fill="#081725"
                       fillOpacity="0.92"
-                      stroke={ORBIT_COLOR}
+                      stroke={TRACE_COLOR}
                       strokeOpacity="0.9"
                       strokeWidth="1.4"
                       vectorEffect="non-scaling-stroke"
