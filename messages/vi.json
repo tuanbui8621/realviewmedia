@@ -566,13 +566,13 @@
     }
   },
   "PhoneMockup": {
-    "iframeTitle": "Tour ảo 360° Oakwood Residence",
-    "imageAlt": "Toàn cảnh 360° khu vực hồ bơi tại Oakwood Residence",
-    "searchPlaceholder": "Oakwood Residence...",
+    "iframeTitle": "Tour ảo 360° Mai House Saigon",
+    "imageAlt": "Không gian tại Mai House Saigon trong góc nhìn 360°",
+    "searchPlaceholder": "Mai House Saigon...",
     "launchTour": "Khám phá tour 360°",
     "icon360": "360°",
-    "propertyName": "Oakwood Residence",
-    "summary": "Hồ bơi • Tour ảo 360°",
+    "propertyName": "Mai House Saigon",
+    "summary": "Khách sạn cao cấp • Tour ảo 360°",
     "directions": "Chỉ đường",
     "save": "Lưu",
     "closeTour": "Đóng tour ảo"

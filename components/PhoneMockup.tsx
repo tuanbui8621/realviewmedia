@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl';
 export default function PhoneMockup() {
   const [isTourActive, setIsTourActive] = useState(false);
   const t = useTranslations('PhoneMockup');
-  const tourUrl = "https://oakwood-richlane-residence.pages.dev/";
+  const tourUrl = "/MaiHouseSaigon/";
 
   return (
     <motion.div 
@@ -40,7 +40,7 @@ export default function PhoneMockup() {
         ) : (
           <div className="relative w-full h-full">
             <Image 
-              src="/images/oakwood.png" 
+              src="/images/mai.jpg"
               alt={t('imageAlt')}
               fill 
               sizes="320px"

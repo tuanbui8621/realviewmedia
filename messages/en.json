@@ -566,13 +566,13 @@
     }
   },
   "PhoneMockup": {
-    "iframeTitle": "360° virtual tour of Oakwood Residence",
-    "imageAlt": "360° view of the pool area at Oakwood Residence",
-    "searchPlaceholder": "Oakwood Residence...",
+    "iframeTitle": "360° virtual tour of Mai House Saigon",
+    "imageAlt": "Living space at Mai House Saigon in a 360° view",
+    "searchPlaceholder": "Mai House Saigon...",
     "launchTour": "Launch 360° tour",
     "icon360": "360°",
-    "propertyName": "Oakwood Residence",
-    "summary": "Pool area • 360° virtual tour",
+    "propertyName": "Mai House Saigon",
+    "summary": "Luxury hotel • 360° virtual tour",
     "directions": "Directions",
     "save": "Save",
     "closeTour": "Close virtual tour"
