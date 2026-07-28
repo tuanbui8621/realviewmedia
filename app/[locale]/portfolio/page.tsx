@@ -8,6 +8,7 @@ import { Link } from '@/navigation';
 import Image from 'next/image';
 import { ArrowRight, MapPin, X, Eye, MousePointer2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { highQualityImageLoader } from '@/lib/image-loaders';
 
 // Fast local database for portfolio
 const portfolioProjects = [
@@ -117,7 +118,9 @@ export default function PortfolioPage() {
                   src={project.image}
                   alt={copy.alt}
                   fill
-                  sizes="(min-width: 1328px) 628px, (min-width: 768px) calc(50vw - 36px), calc(100vw - 48px)"
+                  sizes="960px"
+                  quality={90}
+                  loader={highQualityImageLoader}
                   preload={i === 0}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

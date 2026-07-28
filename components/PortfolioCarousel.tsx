@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import { highQualityImageLoader } from '@/lib/image-loaders';
 
 // Featured Virtual Tours Data
 const projects = [
@@ -220,7 +221,9 @@ export default function PortfolioCarousel() {
                     src={project.image}
                     alt={copy.alt}
                     fill
-                    sizes="(min-width: 1024px) 35vw, (min-width: 768px) 45vw, 85vw"
+                    sizes="960px"
+                    quality={90}
+                    loader={highQualityImageLoader}
                     loading="lazy"
                     draggable={false}
                     className="pointer-events-none select-none object-cover object-center"

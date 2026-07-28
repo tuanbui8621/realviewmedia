@@ -2,13 +2,10 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import type { ImageLoaderProps } from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Navigation, X, ChevronLeft } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-
-const phonePreviewLoader = ({ src, width, quality }: ImageLoaderProps) =>
-  `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=${quality ?? 90}`;
+import { highQualityImageLoader } from '@/lib/image-loaders';
 
 export default function PhoneMockup() {
   const [isTourActive, setIsTourActive] = useState(false);
@@ -49,7 +46,7 @@ export default function PhoneMockup() {
               fill
               sizes="1280px"
               quality={90}
-              loader={phonePreviewLoader}
+              loader={highQualityImageLoader}
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
