@@ -80,6 +80,7 @@ export default function Footer() {
               <li><Link href="/experience" className="rounded-sm hover:text-rv-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white">{t('nav.experience')}</Link></li>
               <li><Link href="/portfolio" className="rounded-sm hover:text-rv-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white">{t('nav.portfolio')}</Link></li>
               <li><Link href="/about" className="rounded-sm hover:text-rv-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white">{t('nav.about')}</Link></li>
+              <li><Link href="/google-ads-search" className="rounded-sm hover:text-rv-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rv-white">{t('nav.googleAdsSearch')}</Link></li>
             </ul>
           </nav>
 

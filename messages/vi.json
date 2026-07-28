@@ -28,6 +28,10 @@
       "terms": {
         "title": "Điều khoản dịch vụ | RealView Media",
         "description": "Đọc các điều khoản áp dụng khi sử dụng website và dịch vụ chụp ảnh, tour ảo 360° của RealView Media."
+      },
+      "googleAdsSearch": {
+        "title": "Dịch Vụ Quản Lý Google Ads Search | RealView Media",
+        "description": "Thiết lập, quản lý và tối ưu chiến dịch Google Ads Search cho doanh nghiệp tại Việt Nam, giúp tiếp cận khách hàng đang chủ động tìm kiếm dịch vụ."
       }
     }
   },
@@ -197,7 +201,149 @@
       "direct_title": "Email hoặc gọi điện",
       "direct_desc": "Gửi email hoặc gọi cho RealView Media để trao đổi nhu cầu, địa điểm và phạm vi dự án."
     },
+    "CampaignReview": {
+      "title": "Bạn quan tâm đến dịch vụ quản lý Google Ads Search?",
+      "description": "Tìm hiểu cách chiến dịch tìm kiếm tập trung có thể giúp doanh nghiệp tiếp cận khách hàng đang chủ động tìm kiếm dịch vụ bạn cung cấp.",
+      "link": "Khám phá Google Ads Search"
+    },
     "Support": "Phục vụ doanh nghiệp tại TP.HCM và Việt Nam"
+  },
+  "GoogleAdsSearchPage": {
+    "breadcrumbs": {
+      "label": "Điều hướng phân cấp",
+      "home": "Trang chủ",
+      "current": "Google Ads Search"
+    },
+    "schema": {
+      "name": "Dịch vụ quản lý chiến dịch Google Ads Search",
+      "description": "Thiết lập, quản lý và tối ưu chiến dịch Google Ads Search cho doanh nghiệp tại Việt Nam."
+    },
+    "hero": {
+      "eyebrow": "Google Ads Search",
+      "title": "Biến lượt tìm kiếm có nhu cầu cao thành khách hàng thực tế.",
+      "description": "Tiếp cận khách hàng tiềm năng ngay khi họ đang chủ động tìm kiếm dịch vụ mà doanh nghiệp bạn cung cấp. RealView Media xây dựng và quản lý chiến dịch Google Search tập trung vào các mục tiêu kinh doanh có thể đo lường.",
+      "cta": "Yêu Cầu Đánh Giá Chiến Dịch"
+    },
+    "benefits": {
+      "eyebrow": "Hiển thị đúng nhu cầu",
+      "heading": "Xuất hiện khi khách hàng sẵn sàng hành động.",
+      "items": [
+        {
+          "title": "Tiếp cận đúng nhu cầu",
+          "description": "Tiếp cận những người đang chủ động tìm kiếm dịch vụ giống như dịch vụ của bạn."
+        },
+        {
+          "title": "Kiểm soát ngân sách",
+          "description": "Thiết lập ngân sách và tập trung chi tiêu vào các lượt tìm kiếm phù hợp."
+        },
+        {
+          "title": "Hiệu quả có thể đo lường",
+          "description": "Theo dõi cuộc gọi, yêu cầu tư vấn, đặt chỗ và các hành động quan trọng khi hệ thống đo lường được thiết lập."
+        }
+      ]
+    },
+    "included": {
+      "eyebrow": "Quản lý chiến dịch",
+      "heading": "Dịch vụ chúng tôi quản lý",
+      "description": "Dịch vụ tập trung vào nền tảng chiến dịch, theo dõi liên tục và các đề xuất thực tế phù hợp với mục tiêu kinh doanh của bạn.",
+      "items": {
+        "planning": "Lập kế hoạch chiến dịch tìm kiếm",
+        "keywords": "Nghiên cứu từ khóa và ý định tìm kiếm",
+        "structure": "Xây dựng cấu trúc chiến dịch và nhóm quảng cáo",
+        "copywriting": "Viết nội dung quảng cáo tìm kiếm",
+        "targeting": "Thiết lập vị trí và đối tượng mục tiêu",
+        "negativeKeywords": "Quản lý từ khóa phủ định",
+        "budget": "Theo dõi ngân sách và chiến lược giá thầu",
+        "tracking": "Rà soát hệ thống theo dõi chuyển đổi",
+        "searchTerms": "Tối ưu cụm từ tìm kiếm",
+        "reporting": "Báo cáo hiệu quả và đề xuất cải thiện"
+      }
+    },
+    "process": {
+      "heading": "Quy trình tập trung gồm bốn bước",
+      "steps": {
+        "understand": {
+          "title": "Tìm hiểu",
+          "description": "Tìm hiểu doanh nghiệp, khách hàng, khu vực, ưu đãi và mục tiêu chiến dịch."
+        },
+        "build": {
+          "title": "Xây dựng",
+          "description": "Thiết lập cấu trúc chiến dịch, từ khóa, quảng cáo, nhắm mục tiêu và kế hoạch đo lường."
+        },
+        "launch": {
+          "title": "Khởi chạy",
+          "description": "Hoàn tất kiểm tra cuối cùng và bắt đầu thu thập dữ liệu thực tế từ chiến dịch."
+        },
+        "improve": {
+          "title": "Cải thiện",
+          "description": "Theo dõi cụm từ tìm kiếm, chi tiêu, chuyển đổi và cơ hội tối ưu theo thời gian."
+        }
+      }
+    },
+    "clients": {
+      "heading": "Phù hợp với doanh nghiệp phụ thuộc vào nhu cầu tại địa phương",
+      "description": "Google Ads Search có thể hỗ trợ các doanh nghiệp có khách hàng chủ động tìm hiểu, so sánh, gọi điện, đặt chỗ hoặc ghé thăm trong khu vực dịch vụ cụ thể.",
+      "items": {
+        "hospitality": "Khách sạn và căn hộ dịch vụ",
+        "restaurants": "Nhà hàng và quán cà phê",
+        "wellness": "Phòng khám và doanh nghiệp chăm sóc sức khỏe",
+        "property": "Doanh nghiệp bất động sản và nội thất",
+        "education": "Đơn vị cung cấp dịch vụ giáo dục",
+        "professional": "Dịch vụ chuyên môn và dịch vụ địa phương"
+      }
+    },
+    "certification": {
+      "heading": "Kiến thức được chứng nhận về Google Ads Search",
+      "description": "Các chiến dịch được quản lý bởi chuyên gia đã đạt chứng nhận Google Ads Search. Chứng nhận thể hiện kiến thức về thiết lập chiến dịch tìm kiếm, chiến lược từ khóa, đặt giá thầu và tối ưu hóa.",
+      "disclaimer": "RealView Media là đơn vị cung cấp dịch vụ độc lập và không trực thuộc hoặc được Google xác nhận. Google và Google Ads là nhãn hiệu của Google LLC.",
+      "certificateLink": "Xem Chứng Nhận"
+    },
+    "combined": {
+      "heading": "Thu hút sự chú ý—và xây dựng niềm tin sau lượt nhấp.",
+      "description": "Chiến dịch Google Search giúp khách hàng phù hợp khám phá doanh nghiệp. Hình ảnh chuyên nghiệp và tour ảo 360° giúp họ hiểu rõ trải nghiệm, xây dựng sự tin tưởng và thực hiện bước tiếp theo.",
+      "search": {
+        "title": "Google Ads Search",
+        "description": "Thu hút khách truy cập phù hợp đến với doanh nghiệp."
+      },
+      "visual": {
+        "title": "Hình ảnh và trải nghiệm 360°",
+        "description": "Mang đến cho khách truy cập lý do thuyết phục hơn để lựa chọn bạn."
+      }
+    },
+    "faq": {
+      "heading": "Câu hỏi thường gặp",
+      "items": {
+        "management": {
+          "question": "Dịch vụ quản lý Google Ads Search là gì?",
+          "answer": "Dịch vụ bao gồm lập kế hoạch, thiết lập, theo dõi và tối ưu liên tục các chiến dịch hiển thị quảng cáo dạng văn bản khi người dùng tìm kiếm dịch vụ liên quan trên Google."
+        },
+        "spend": {
+          "question": "Ngân sách quảng cáo có nằm trong phí quản lý không?",
+          "answer": "Không. Ngân sách quảng cáo được thanh toán trực tiếp cho Google và tách biệt với phí dịch vụ của RealView Media, trừ khi có thỏa thuận khác bằng văn bản."
+        },
+        "launch": {
+          "question": "Chiến dịch có thể khởi chạy trong bao lâu?",
+          "answer": "Thời gian phụ thuộc vào quyền truy cập tài khoản, phạm vi chiến dịch, mức độ sẵn sàng của hệ thống đo lường và quá trình xét duyệt quảng cáo của Google. Lịch khởi chạy sẽ được xác nhận sau bước đánh giá ban đầu."
+        },
+        "existingAccount": {
+          "question": "RealView Media có thể làm việc với tài khoản Google Ads hiện có không?",
+          "answer": "Có. Tài khoản hiện có có thể được rà soát trước khi đề xuất bất kỳ thay đổi nào, dựa trên cấu trúc tài khoản, dữ liệu và mục tiêu kinh doanh."
+        },
+        "guarantees": {
+          "question": "Bạn có đảm bảo vị trí đầu tiên hoặc số lượng khách hàng tiềm năng cụ thể không?",
+          "answer": "Không. Điều kiện đấu giá, cạnh tranh, ngân sách, nhu cầu thị trường, website và nhiều yếu tố khác ảnh hưởng đến kết quả, vì vậy không thể đảm bảo thứ hạng, lưu lượng truy cập, khách hàng tiềm năng, chuyển đổi hoặc lợi nhuận."
+        },
+        "combined": {
+          "question": "Google Ads có thể kết hợp với dự án tour ảo 360° không?",
+          "answer": "Có. Chiến dịch tìm kiếm có thể đưa khách truy cập phù hợp đến với doanh nghiệp, trong khi nội dung hình ảnh chất lượng và tour ảo giúp họ hiểu rõ không gian và quyết định bước tiếp theo. Không có kết quả cụ thể nào được đảm bảo."
+        }
+      }
+    },
+    "finalCta": {
+      "heading": "Tiếp cận khách hàng đang chủ động tìm kiếm.",
+      "description": "Trao đổi với RealView Media về doanh nghiệp, khu vực dịch vụ, mục tiêu chiến dịch và thiết lập Google Ads hiện tại của bạn.",
+      "button": "Yêu Cầu Đánh Giá Chiến Dịch"
+    }
   },
   "Footer": {
     "tagline": "Chụp ảnh 360°, tour ảo Google Maps và nội dung hình ảnh cho doanh nghiệp tại TP.HCM và Việt Nam.",
@@ -209,7 +355,8 @@
       "home": "Trang chủ",
       "experience": "Trải nghiệm",
       "portfolio": "Dự án",
-      "about": "Về chúng tôi"
+      "about": "Về chúng tôi",
+      "googleAdsSearch": "Google Ads Search"
     },
     "contact": {
       "location": "Thành phố Hồ Chí Minh, Việt Nam",
@@ -252,6 +399,12 @@
       "title": "Hỗ trợ quyết định ghé thăm",
       "desc": "Khách hàng có thể xem cách bố trí, bầu không khí và các khu vực chính trước khi đến. Thông tin trực quan giúp họ dễ so sánh địa điểm và chủ động liên hệ hoặc ghé thăm.",
       "cta": "Xem dự án 360°"
+    },
+    "ads": {
+      "eyebrow": "Dịch vụ bổ trợ",
+      "title": "Tiếp cận khách hàng đang chủ động tìm kiếm dịch vụ của bạn.",
+      "desc": "Chiến dịch Google Ads Search tập trung có thể thu hút khách truy cập phù hợp, trong khi nội dung hình ảnh chuyên nghiệp giúp xây dựng niềm tin sau lượt nhấp.",
+      "cta": "Khám phá Google Ads Search"
     }
   },
   "Experience360": {

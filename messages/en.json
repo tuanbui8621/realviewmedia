@@ -28,6 +28,10 @@
       "terms": {
         "title": "Terms of Service | RealView Media",
         "description": "Read the terms that apply when using the RealView Media website, 360° photography and virtual tour services."
+      },
+      "googleAdsSearch": {
+        "title": "Google Ads Search Management in Vietnam | RealView Media",
+        "description": "Google Ads Search campaign setup, management, and optimization for businesses in Vietnam. Reach customers actively searching for your services."
       }
     }
   },
@@ -197,7 +201,149 @@
       "direct_title": "Direct Contact",
       "direct_desc": "Prefer a formal discussion? Send us an email or give us a quick call."
     },
+    "CampaignReview": {
+      "title": "Looking for Google Ads Search management?",
+      "description": "See how focused Search campaigns can help your business reach customers who are actively looking for the services you provide.",
+      "link": "Explore Google Ads Search"
+    },
     "Support": "Support Available 24/7"
+  },
+  "GoogleAdsSearchPage": {
+    "breadcrumbs": {
+      "label": "Breadcrumb",
+      "home": "Home",
+      "current": "Google Ads Search"
+    },
+    "schema": {
+      "name": "Google Ads Search Campaign Management",
+      "description": "Google Ads Search campaign setup, management, and optimization for businesses in Vietnam."
+    },
+    "hero": {
+      "eyebrow": "Google Ads Search",
+      "title": "Turn high-intent searches into real customers.",
+      "description": "Reach potential customers at the moment they are actively searching for the services your business provides. RealView Media builds and manages focused Google Search campaigns designed around measurable business goals.",
+      "cta": "Request a Campaign Review"
+    },
+    "benefits": {
+      "eyebrow": "Focused search visibility",
+      "heading": "Be visible when customers are ready to act.",
+      "items": [
+        {
+          "title": "High-intent reach",
+          "description": "Reach people already searching for services like yours."
+        },
+        {
+          "title": "Controlled spending",
+          "description": "Set campaign budgets and focus spending on relevant searches."
+        },
+        {
+          "title": "Measurable performance",
+          "description": "Track calls, inquiries, bookings, and other meaningful actions when tracking is available."
+        }
+      ]
+    },
+    "included": {
+      "eyebrow": "Campaign management",
+      "heading": "What we manage",
+      "description": "A focused service covering campaign foundations, ongoing oversight, and practical recommendations aligned with your business goals.",
+      "items": {
+        "planning": "Search campaign planning",
+        "keywords": "Keyword and search-intent research",
+        "structure": "Campaign and ad-group structure",
+        "copywriting": "Search-ad copywriting",
+        "targeting": "Location and audience configuration",
+        "negativeKeywords": "Negative-keyword management",
+        "budget": "Budget and bidding oversight",
+        "tracking": "Conversion-tracking review",
+        "searchTerms": "Search-term optimization",
+        "reporting": "Performance reporting and recommendations"
+      }
+    },
+    "process": {
+      "heading": "A focused four-step process",
+      "steps": {
+        "understand": {
+          "title": "Understand",
+          "description": "Review the business, customer, location, offer, and campaign goals."
+        },
+        "build": {
+          "title": "Build",
+          "description": "Create the campaign structure, keywords, ads, targeting, and measurement plan."
+        },
+        "launch": {
+          "title": "Launch",
+          "description": "Complete final checks and begin collecting real campaign data."
+        },
+        "improve": {
+          "title": "Improve",
+          "description": "Review search terms, spending, conversions, and campaign opportunities over time."
+        }
+      }
+    },
+    "clients": {
+      "heading": "Designed for businesses that depend on local demand",
+      "description": "Google Ads Search can support businesses whose customers actively research, compare, call, book, or visit within a defined service area.",
+      "items": {
+        "hospitality": "Hotels and serviced apartments",
+        "restaurants": "Restaurants and cafés",
+        "wellness": "Clinics and wellness businesses",
+        "property": "Property and interior businesses",
+        "education": "Education providers",
+        "professional": "Professional and local services"
+      }
+    },
+    "certification": {
+      "heading": "Certified Google Ads Search knowledge",
+      "description": "Campaigns are managed by a Google Ads Search-certified professional. This certification demonstrates knowledge of Search campaign creation, keyword strategy, bidding, and optimization.",
+      "disclaimer": "RealView Media is an independent service provider and is not affiliated with or endorsed by Google. Google and Google Ads are trademarks of Google LLC.",
+      "certificateLink": "View Certificate"
+    },
+    "combined": {
+      "heading": "Drive attention—and build trust after the click.",
+      "description": "Google Search campaigns help qualified customers discover your business. Premium photography and 360° virtual tours help them understand the experience, build confidence, and take the next step.",
+      "search": {
+        "title": "Google Ads Search",
+        "description": "Bring relevant visitors to your business."
+      },
+      "visual": {
+        "title": "Visual and 360° experiences",
+        "description": "Give those visitors a stronger reason to choose you."
+      }
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": {
+        "management": {
+          "question": "What is Google Ads Search management?",
+          "answer": "It covers the planning, setup, monitoring, and ongoing optimization of campaigns that show text ads when people search for relevant services on Google."
+        },
+        "spend": {
+          "question": "Is advertising spend included in the management fee?",
+          "answer": "No. Advertising spend is paid directly to Google and is separate from the RealView Media service fee unless another written agreement is made."
+        },
+        "launch": {
+          "question": "How quickly can a campaign launch?",
+          "answer": "Timing depends on account access, campaign scope, tracking readiness, and Google's ad review. A launch schedule is confirmed after the initial review."
+        },
+        "existingAccount": {
+          "question": "Can you work with an existing Google Ads account?",
+          "answer": "Yes. Existing accounts can be reviewed before any changes are proposed, with recommendations based on the account structure, data, and business goals."
+        },
+        "guarantees": {
+          "question": "Do you guarantee first position or a specific number of leads?",
+          "answer": "No. Auction conditions, competition, budgets, demand, websites, and many other factors affect results, so rankings, traffic, leads, conversions, and return cannot be guaranteed."
+        },
+        "combined": {
+          "question": "Can Google Ads be combined with a 360° virtual-tour project?",
+          "answer": "Yes. Search campaigns can bring relevant visitors to your business, while strong visual content and virtual tours can help them understand the space and decide what to do next. No specific outcome is guaranteed."
+        }
+      }
+    },
+    "finalCta": {
+      "heading": "Reach customers who are already searching.",
+      "description": "Talk with RealView Media about your business, service area, campaign goals, and current Google Ads setup.",
+      "button": "Request a Campaign Review"
+    }
   },
   "Footer": {
     "tagline": "Boost your Google Business Profile with 360° virtual tours and premium visual content that help your business get discovered, earn trust, and drive more customers.",
@@ -209,7 +355,8 @@
       "home": "Home",
       "experience": "Experience",
       "portfolio": "Portfolio",
-      "about": "About Us"
+      "about": "About Us",
+      "googleAdsSearch": "Google Ads Search"
     },
     "contact": {
       "location": "Ho Chi Minh City, Vietnam",
@@ -252,6 +399,12 @@
       "title": "Measurable Conversion Spikes",
       "desc": "Listings upgraded with a premium virtual tour are twice as likely to generate interest. We don't just get you views; we turn your digital traffic into actual revenue and real-world bookings.",
       "cta": "See Case Studies"
+    },
+    "ads": {
+      "eyebrow": "Complementary service",
+      "title": "Reach customers actively searching for your services.",
+      "desc": "Focused Google Ads Search campaigns can bring relevant visitors to your business, while premium visual content helps build trust after the click.",
+      "cta": "Explore Google Ads Search"
     }
   },
   "Experience360": {

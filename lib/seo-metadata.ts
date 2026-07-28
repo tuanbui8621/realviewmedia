@@ -23,6 +23,7 @@ export const pagePaths = {
   contact: "/contact",
   privacy: "/privacy",
   terms: "/terms",
+  googleAdsSearch: "/google-ads-search",
 } as const;
 
 export type SeoPage = keyof typeof pagePaths;

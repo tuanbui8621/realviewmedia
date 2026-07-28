@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Aperture, Map, BarChart3, ArrowRight } from 'lucide-react';
+import { Aperture, Map, BarChart3, ArrowRight, Search } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -110,6 +110,39 @@ export default function Services() {
                <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black rounded-full font-bold text-sm hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                  {t('roi.cta')}
                </Link>
+            </div>
+          </motion.div>
+
+          {/* Supporting service: Google Ads Search */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.45 }}
+            whileHover={{ y: -5 }}
+            className="md:col-span-3 group relative overflow-hidden rounded-[3rem] border border-blue-400/15 bg-[#080d16] p-8 md:p-10"
+          >
+            <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+              <div className="max-w-3xl">
+                <div className="mb-5 flex items-center gap-3">
+                  <Search className="h-6 w-6 text-blue-400" aria-hidden="true" />
+                  <span className="text-xs font-bold uppercase tracking-widest text-blue-400">
+                    {t('ads.eyebrow')}
+                  </span>
+                </div>
+                <h3 className="mb-3 text-2xl font-bold tracking-tight text-white md:text-3xl">
+                  {t('ads.title')}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/65 md:text-base">
+                  {t('ads.desc')}
+                </p>
+              </div>
+              <Link
+                href="/google-ads-search"
+                className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-blue-400/50 hover:bg-blue-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              >
+                {t('ads.cta')} <ArrowRight size={16} aria-hidden="true" />
+              </Link>
             </div>
           </motion.div>
 

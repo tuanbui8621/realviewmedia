@@ -17,6 +17,7 @@ const sitemapPages: ReadonlyArray<{
   { locale: "en", page: "contact" },
   { locale: "en", page: "privacy" },
   { locale: "en", page: "terms" },
+  { locale: "en", page: "googleAdsSearch" },
   { locale: "vi", page: "home" },
   { locale: "vi", page: "experience" },
   { locale: "vi", page: "portfolio" },
@@ -24,6 +25,7 @@ const sitemapPages: ReadonlyArray<{
   { locale: "vi", page: "contact" },
   { locale: "vi", page: "privacy" },
   { locale: "vi", page: "terms" },
+  { locale: "vi", page: "googleAdsSearch" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

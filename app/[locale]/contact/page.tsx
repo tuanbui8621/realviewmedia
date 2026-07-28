@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Mail, Phone, MessageCircle, Send, MapPin, Clock } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 export default function ContactPage() {
   const t = useTranslations('ContactPage');
@@ -89,6 +90,24 @@ export default function ContactPage() {
                 </div>
               </div>
             </motion.div>
+
+            <motion.aside
+              variants={itemVariants}
+              className="rounded-3xl border border-blue-400/20 bg-blue-500/[0.06] p-8 text-left md:flex md:items-center md:justify-between md:gap-10"
+            >
+              <div className="max-w-2xl">
+                <h2 className="text-2xl font-bold">{t('CampaignReview.title')}</h2>
+                <p className="mt-3 leading-relaxed text-white/60">
+                  {t('CampaignReview.description')}
+                </p>
+              </div>
+              <Link
+                href="/google-ads-search"
+                className="mt-6 inline-flex shrink-0 rounded-full border border-white/20 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-blue-400/50 hover:bg-blue-400/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white md:mt-0"
+              >
+                {t('CampaignReview.link')}
+              </Link>
+            </motion.aside>
 
             {/* Availability Badge */}
             <motion.div variants={itemVariants} className="flex justify-center items-center gap-2 text-rv-white/40">
