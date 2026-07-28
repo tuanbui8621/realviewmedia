@@ -26,6 +26,7 @@ import {
 
 const benefitIcons = [Crosshair, CircleDollarSign, BarChart3] as const;
 const processKeys = ["understand", "build", "launch", "improve"] as const;
+const includedGroupKeys = ["opportunity", "campaign", "measurement", "growth"] as const;
 const includedKeys = [
   "planning",
   "keywords",
@@ -204,32 +205,55 @@ export default async function GoogleAdsSearchPage({
         </section>
 
         <section className="px-6 py-24 md:py-32">
-          <div className="container mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div className="container mx-auto max-w-6xl">
             <div>
               <p className="mb-4 font-mono text-xs font-bold uppercase tracking-[0.25em] text-blue-400">
                 {t("included.eyebrow")}
               </p>
-              <h2 className="text-4xl font-black tracking-tighter md:text-5xl">
+              <h2 className="max-w-3xl text-4xl font-black tracking-tighter md:text-5xl">
                 {t("included.heading")}
               </h2>
-              <p className="mt-6 leading-relaxed text-white/60">
+              <p className="mt-6 max-w-2xl leading-relaxed text-white/60">
                 {t("included.description")}
               </p>
             </div>
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {includedKeys.map((key) => (
-                <li
+            <div className="mt-12 grid gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+              {includedGroupKeys.map((key, index) => (
+                <article
                   key={key}
-                  className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm text-white/75"
+                  className="bg-[#090a0d] p-7"
                 >
-                  <Check
-                    aria-hidden="true"
-                    className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
-                  />
-                  {t(`included.items.${key}`)}
-                </li>
+                  <span className="font-mono text-xs font-bold text-blue-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-6 text-lg font-bold">
+                    {t(`included.groups.${key}.title`)}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/50">
+                    {t(`included.groups.${key}.description`)}
+                  </p>
+                </article>
               ))}
-            </ul>
+            </div>
+            <details className="group mt-6 rounded-2xl border border-white/10 bg-white/[0.025]">
+              <summary className="cursor-pointer list-none px-6 py-5 text-sm font-bold text-white/75 marker:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white">
+                {t("included.detailsLabel")}
+              </summary>
+              <ul className="grid gap-x-8 gap-y-4 border-t border-white/10 px-6 py-6 sm:grid-cols-2">
+                {includedKeys.map((key) => (
+                  <li
+                    key={key}
+                    className="flex items-start gap-3 text-sm text-white/60"
+                  >
+                    <Check
+                      aria-hidden="true"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                    />
+                    {t(`included.items.${key}`)}
+                  </li>
+                ))}
+              </ul>
+            </details>
           </div>
         </section>
 

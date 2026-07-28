@@ -40,7 +40,7 @@ export default function Services() {
 
         {/* Connected service system */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
-          {/* Primary service: 360° virtual tours */}
+          {/* 360° virtual tours */}
           <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,11 +56,11 @@ export default function Services() {
                   <Aperture className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <span className="font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-blue-300/70">
-                  {t('cinema.eyebrow')}
+                  {t('cinema.serviceName')}
                 </span>
               </div>
               <h3 className="max-w-2xl text-3xl font-black tracking-tighter text-white lg:text-4xl">
-                {t('cinema.title')}
+                {t('cinema.hook')}
               </h3>
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/65 md:text-base">
                 {t('cinema.desc')}
@@ -75,19 +75,16 @@ export default function Services() {
               <div className="mt-10 grid gap-4 border-t border-white/10 pt-7 lg:grid-cols-2">
                 <div className="rounded-2xl bg-white/[0.025] p-5">
                   <Map className="mb-4 h-6 w-6 text-orange-300" aria-hidden="true" />
-                  <h4 className="text-sm font-bold text-white">{t('maps.title')}</h4>
+                  <h4 className="text-sm font-bold text-white">{t('maps.hook')}</h4>
                   <p className="mt-2 text-xs leading-relaxed text-white/50">
-                    {t('maps.desc')}
-                  </p>
-                  <p className="mt-4 font-mono text-[0.6rem] font-bold uppercase tracking-wider text-orange-300/70">
-                    {t('maps.status')}
+                    {t('maps.signal')}
                   </p>
                 </div>
                 <div className="rounded-2xl bg-white/[0.025] p-5">
                   <BarChart3 className="mb-4 h-6 w-6 text-emerald-300" aria-hidden="true" />
-                  <h4 className="text-sm font-bold text-white">{t('roi.title')}</h4>
+                  <h4 className="text-sm font-bold text-white">{t('roi.hook')}</h4>
                   <p className="mt-2 text-xs leading-relaxed text-white/50">
-                    {t('roi.desc')}
+                    {t('roi.signal')}
                   </p>
                   <Link
                     href="/portfolio"
@@ -115,14 +112,25 @@ export default function Services() {
                 <Search className="h-6 w-6" aria-hidden="true" />
               </div>
               <p className="mt-8 font-mono text-[0.65rem] font-bold uppercase tracking-[0.22em] text-blue-300/70">
-                {t('ads.eyebrow')}
+                {t('ads.serviceName')}
               </p>
               <h3 className="mt-4 text-3xl font-black tracking-tighter text-white lg:text-4xl">
-                {t('ads.title')}
+                {t('ads.hook')}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/65 md:text-base">
                 {t('ads.desc')}
               </p>
+              <ul className="mt-7 space-y-3 border-t border-blue-300/15 pt-6 text-sm text-white/55">
+                {[0, 1, 2].map((index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-300"
+                    />
+                    {t(`ads.signals.${index}`)}
+                  </li>
+                ))}
+              </ul>
               <Link
                 href="/google-ads-search"
                 className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-blue-300/30 bg-blue-400/10 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-blue-300/60 hover:bg-blue-400/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300 md:mt-auto md:translate-y-0"

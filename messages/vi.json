@@ -229,31 +229,50 @@
     "hero": {
       "eyebrow": "Google Ads Search",
       "title": "Biến lượt tìm kiếm có nhu cầu cao thành khách hàng thực tế.",
-      "description": "Tiếp cận khách hàng tiềm năng ngay khi họ đang chủ động tìm kiếm dịch vụ mà doanh nghiệp bạn cung cấp. RealView Media xây dựng và quản lý chiến dịch Google Search tập trung vào các mục tiêu kinh doanh có thể đo lường.",
+      "description": "Xuất hiện khi khách hàng đang chủ động tìm kiếm—và biến nhu cầu đó thành hành động có thể đo lường.",
       "cta": "Yêu Cầu Đánh Giá Chiến Dịch"
     },
     "benefits": {
-      "eyebrow": "Hiển thị đúng nhu cầu",
-      "heading": "Xuất hiện khi khách hàng sẵn sàng hành động.",
+      "eyebrow": "Nhu cầu tạo khác biệt",
+      "heading": "Xuất hiện khi nhu cầu cao nhất.",
       "items": [
         {
           "title": "Tiếp cận đúng nhu cầu",
-          "description": "Tiếp cận những người đang chủ động tìm kiếm dịch vụ giống như dịch vụ của bạn."
+          "description": "Gặp đúng người đang tìm kiếm dịch vụ bạn cung cấp."
         },
         {
           "title": "Kiểm soát ngân sách",
-          "description": "Thiết lập ngân sách và tập trung chi tiêu vào các lượt tìm kiếm phù hợp."
+          "description": "Tập trung ngân sách vào những lượt tìm kiếm quan trọng."
         },
         {
           "title": "Hiệu quả có thể đo lường",
-          "description": "Theo dõi cuộc gọi, yêu cầu tư vấn, đặt chỗ và các hành động quan trọng khi hệ thống đo lường được thiết lập."
+          "description": "Theo dõi những hành động đưa khách hàng đến gần quyết định."
         }
       ]
     },
     "included": {
-      "eyebrow": "Quản lý chiến dịch",
-      "heading": "Dịch vụ chúng tôi quản lý",
-      "description": "Dịch vụ tập trung vào nền tảng chiến dịch, theo dõi liên tục và các đề xuất thực tế phù hợp với mục tiêu kinh doanh của bạn.",
+      "eyebrow": "Từ tín hiệu đến chiến lược",
+      "heading": "Biến lượt tìm kiếm thành hành động có thể đo lường.",
+      "description": "Bốn nhóm công việc giúp chiến dịch rõ ràng, có trách nhiệm và liên tục cải thiện.",
+      "detailsLabel": "Xem toàn bộ hạng mục quản lý",
+      "groups": {
+        "opportunity": {
+          "title": "Tìm cơ hội",
+          "description": "Hiểu nhu cầu, ý định, khu vực và những lượt tìm kiếm đáng theo đuổi."
+        },
+        "campaign": {
+          "title": "Xây dựng chiến dịch",
+          "description": "Thiết lập từ khóa, quảng cáo, nhắm mục tiêu và cấu trúc theo mục tiêu rõ ràng."
+        },
+        "measurement": {
+          "title": "Đo lường hành động thực tế",
+          "description": "Kết nối chiến dịch với cuộc gọi, yêu cầu tư vấn, đặt chỗ hoặc tín hiệu hữu ích khác."
+        },
+        "growth": {
+          "title": "Liên tục cải thiện",
+          "description": "Dùng dữ liệu tìm kiếm thực tế để tối ưu chi tiêu, mức độ liên quan và cơ hội."
+        }
+      },
       "items": {
         "planning": "Lập kế hoạch chiến dịch tìm kiếm",
         "keywords": "Nghiên cứu từ khóa và ý định tìm kiếm",
@@ -272,25 +291,25 @@
       "steps": {
         "understand": {
           "title": "Tìm hiểu",
-          "description": "Tìm hiểu doanh nghiệp, khách hàng, khu vực, ưu đãi và mục tiêu chiến dịch."
+          "description": "Làm rõ khách hàng, dịch vụ, khu vực và mục tiêu."
         },
         "build": {
           "title": "Xây dựng",
-          "description": "Thiết lập cấu trúc chiến dịch, từ khóa, quảng cáo, nhắm mục tiêu và kế hoạch đo lường."
+          "description": "Xây dựng chiến dịch, thông điệp, nhắm mục tiêu và đo lường."
         },
         "launch": {
           "title": "Khởi chạy",
-          "description": "Hoàn tất kiểm tra cuối cùng và bắt đầu thu thập dữ liệu thực tế từ chiến dịch."
+          "description": "Hoàn tất kiểm tra và bắt đầu thu thập dữ liệu thực tế."
         },
         "improve": {
           "title": "Cải thiện",
-          "description": "Theo dõi cụm từ tìm kiếm, chi tiêu, chuyển đổi và cơ hội tối ưu theo thời gian."
+          "description": "Tối ưu cụm từ tìm kiếm, chi tiêu và cơ hội."
         }
       }
     },
     "clients": {
       "heading": "Phù hợp với doanh nghiệp phụ thuộc vào nhu cầu tại địa phương",
-      "description": "Google Ads Search có thể hỗ trợ các doanh nghiệp có khách hàng chủ động tìm hiểu, so sánh, gọi điện, đặt chỗ hoặc ghé thăm trong khu vực dịch vụ cụ thể.",
+      "description": "Dành cho doanh nghiệp có khách hàng chủ động tìm kiếm, so sánh, gọi điện, đặt chỗ hoặc ghé thăm.",
       "items": {
         "hospitality": "Khách sạn và căn hộ dịch vụ",
         "restaurants": "Nhà hàng và quán cà phê",
@@ -308,7 +327,7 @@
     },
     "combined": {
       "heading": "Thu hút sự chú ý—và xây dựng niềm tin sau lượt nhấp.",
-      "description": "Chiến dịch Google Search giúp khách hàng phù hợp khám phá doanh nghiệp. Hình ảnh chuyên nghiệp và tour ảo 360° giúp họ hiểu rõ trải nghiệm, xây dựng sự tin tưởng và thực hiện bước tiếp theo.",
+      "description": "Tìm kiếm tạo nên lời giới thiệu. Trải nghiệm hình ảnh thuyết phục khách hàng tiếp tục.",
       "search": {
         "title": "Google Ads Search",
         "description": "Thu hút khách truy cập phù hợp đến với doanh nghiệp."
@@ -349,7 +368,7 @@
     },
     "finalCta": {
       "heading": "Tiếp cận khách hàng đang chủ động tìm kiếm.",
-      "description": "Trao đổi với RealView Media về doanh nghiệp, khu vực dịch vụ, mục tiêu chiến dịch và thiết lập Google Ads hiện tại của bạn.",
+      "description": "Bắt đầu bằng việc đánh giá cơ hội, mục tiêu và thiết lập hiện tại.",
       "button": "Yêu Cầu Đánh Giá Chiến Dịch"
     }
   },
@@ -389,30 +408,33 @@
     "tagline": "Giúp doanh nghiệp giới thiệu không gian trên Google Maps để khách hàng khám phá trước khi ghé thăm."
   },
   "Services": {
-    "sectionHeading": "Cho khách hàng xem trước không gian.",
-    "sectionHighlight": "Trước khi họ ghé thăm.",
-    "sectionDesc": "RealView Media cung cấp dịch vụ chụp ảnh 360° và tour ảo Google Maps cho nhà hàng, khách sạn, showroom, spa, phòng gym và căn hộ dịch vụ tại TP.HCM và Việt Nam.",
+    "sectionHeading": "Được tìm thấy.",
+    "sectionHighlight": "Và trở thành lựa chọn của khách hàng.",
+    "sectionDesc": "Thu hút đúng người—sau đó giúp họ tin tưởng vào những gì họ khám phá.",
     "cinema": {
-      "eyebrow": "Dịch vụ chủ lực",
-      "title": "Tour ảo 360° & trải nghiệm hình ảnh",
-      "desc": "Chúng tôi chụp toàn cảnh với hình ảnh rõ nét, bố cục chỉn chu và góc nhìn tự nhiên. Thành phẩm giúp khách hàng dễ hình dung không gian trước khi ghé thăm.",
+      "serviceName": "Tour ảo 360°",
+      "hook": "Để khách hàng bước vào không gian trước khi họ ghé thăm.",
+      "desc": "Biến không gian thành trải nghiệm sống động trên Google Maps và website.",
       "cta": "Khám Phá Tour 360°"
     },
     "maps": {
-      "title": "Tour ảo Google Maps",
-      "desc": "Tour ảo 360° có thể xuất hiện trên Google Maps và Hồ sơ doanh nghiệp trên Google, giúp khách hàng xem không gian ngay khi tìm kiếm địa điểm của bạn.",
-      "status": "Hiển thị trên Google Maps"
+      "hook": "Được khám phá trên Google Maps",
+      "signal": "Gặp khách hàng ngay tại nơi họ đang tìm kiếm."
     },
     "roi": {
-      "eyebrow": "Lợi ích thực tế",
-      "title": "Hỗ trợ quyết định ghé thăm",
-      "desc": "Khách hàng có thể xem cách bố trí, bầu không khí và các khu vực chính trước khi đến. Thông tin trực quan giúp họ dễ so sánh địa điểm và chủ động liên hệ hoặc ghé thăm.",
+      "hook": "Biến tò mò thành tin tưởng",
+      "signal": "Cho khách hàng thấy không khí, bố cục và chi tiết ảnh hưởng đến quyết định ghé thăm.",
       "cta": "Xem dự án 360°"
     },
     "ads": {
-      "eyebrow": "Dịch vụ bổ trợ",
-      "title": "Quản lý Google Ads Search",
-      "desc": "Chiến dịch Google Ads Search tập trung có thể thu hút khách truy cập phù hợp, trong khi nội dung hình ảnh chuyên nghiệp giúp xây dựng niềm tin sau lượt nhấp.",
+      "serviceName": "Google Ads Search",
+      "hook": "Tiếp cận khách hàng đang chủ động tìm kiếm.",
+      "desc": "Xuất hiện đúng lúc họ đang tìm một dịch vụ giống như dịch vụ của bạn.",
+      "signals": [
+        "Lượt tìm kiếm có nhu cầu cao",
+        "Ngân sách chiến dịch được kiểm soát",
+        "Hành động khách hàng có thể đo lường"
+      ],
       "cta": "Tìm Hiểu Google Ads"
     }
   },

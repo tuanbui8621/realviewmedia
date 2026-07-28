@@ -229,31 +229,50 @@
     "hero": {
       "eyebrow": "Google Ads Search",
       "title": "Turn high-intent searches into real customers.",
-      "description": "Reach potential customers at the moment they are actively searching for the services your business provides. RealView Media builds and manages focused Google Search campaigns designed around measurable business goals.",
+      "description": "Show up when customers are actively looking—and turn that intent into measurable action.",
       "cta": "Request a Campaign Review"
     },
     "benefits": {
-      "eyebrow": "Focused search visibility",
-      "heading": "Be visible when customers are ready to act.",
+      "eyebrow": "Intent matters",
+      "heading": "Show up when intent is highest.",
       "items": [
         {
           "title": "High-intent reach",
-          "description": "Reach people already searching for services like yours."
+          "description": "Meet people already looking for what you offer."
         },
         {
           "title": "Controlled spending",
-          "description": "Set campaign budgets and focus spending on relevant searches."
+          "description": "Focus your budget on searches that matter."
         },
         {
           "title": "Measurable performance",
-          "description": "Track calls, inquiries, bookings, and other meaningful actions when tracking is available."
+          "description": "See the actions that move customers forward."
         }
       ]
     },
     "included": {
-      "eyebrow": "Campaign management",
-      "heading": "What we manage",
-      "description": "A focused service covering campaign foundations, ongoing oversight, and practical recommendations aligned with your business goals.",
+      "eyebrow": "From signal to strategy",
+      "heading": "Turn searches into measurable actions.",
+      "description": "Four focused disciplines keep the campaign clear, accountable, and improving.",
+      "detailsLabel": "See everything included",
+      "groups": {
+        "opportunity": {
+          "title": "Find the opportunity",
+          "description": "Understand demand, intent, location, and the searches worth pursuing."
+        },
+        "campaign": {
+          "title": "Build the campaign",
+          "description": "Shape keywords, ads, targeting, and structure around a clear goal."
+        },
+        "measurement": {
+          "title": "Track real actions",
+          "description": "Connect campaign activity to calls, inquiries, bookings, or other useful signals."
+        },
+        "growth": {
+          "title": "Improve continuously",
+          "description": "Use real search data to refine spending, relevance, and opportunity."
+        }
+      },
       "items": {
         "planning": "Search campaign planning",
         "keywords": "Keyword and search-intent research",
@@ -272,25 +291,25 @@
       "steps": {
         "understand": {
           "title": "Understand",
-          "description": "Review the business, customer, location, offer, and campaign goals."
+          "description": "Clarify the customer, offer, location, and goal."
         },
         "build": {
           "title": "Build",
-          "description": "Create the campaign structure, keywords, ads, targeting, and measurement plan."
+          "description": "Shape the campaign, message, targeting, and measurement."
         },
         "launch": {
           "title": "Launch",
-          "description": "Complete final checks and begin collecting real campaign data."
+          "description": "Run final checks and begin collecting real data."
         },
         "improve": {
           "title": "Improve",
-          "description": "Review search terms, spending, conversions, and campaign opportunities over time."
+          "description": "Refine search terms, spending, and opportunities."
         }
       }
     },
     "clients": {
       "heading": "Designed for businesses that depend on local demand",
-      "description": "Google Ads Search can support businesses whose customers actively research, compare, call, book, or visit within a defined service area.",
+      "description": "For businesses customers actively search, compare, call, book, or visit.",
       "items": {
         "hospitality": "Hotels and serviced apartments",
         "restaurants": "Restaurants and cafés",
@@ -308,7 +327,7 @@
     },
     "combined": {
       "heading": "Drive attention—and build trust after the click.",
-      "description": "Google Search campaigns help qualified customers discover your business. Premium photography and 360° virtual tours help them understand the experience, build confidence, and take the next step.",
+      "description": "Search creates the introduction. Strong visual experiences give customers a reason to continue.",
       "search": {
         "title": "Google Ads Search",
         "description": "Bring relevant visitors to your business."
@@ -349,7 +368,7 @@
     },
     "finalCta": {
       "heading": "Reach customers who are already searching.",
-      "description": "Talk with RealView Media about your business, service area, campaign goals, and current Google Ads setup.",
+      "description": "Start with a focused review of your opportunity, goals, and current setup.",
       "button": "Request a Campaign Review"
     }
   },
@@ -389,30 +408,33 @@
     "tagline": "Before they ever walk through your door."
   },
   "Services": {
-    "sectionHeading": "Don't just show your space.",
-    "sectionHighlight": "Prove it.",
-    "sectionDesc": "We create professional 360° virtual tours that help customers find your business, explore your space, and visit in person.",
+    "sectionHeading": "Get found.",
+    "sectionHighlight": "Give them a reason to choose you.",
+    "sectionDesc": "Bring the right people in—then help them feel confident about what they find.",
     "cinema": {
-      "eyebrow": "Primary service",
-      "title": "360° Virtual Tours & Visual Experiences",
-      "desc": "No amateur gear. No distorted edges. We use architectural-grade camera rigs to capture your space in flawless high-definition. We ensure your business looks expansive, premium, and impossible for customers to ignore.",
+      "serviceName": "360° Virtual Tours",
+      "hook": "Let customers step inside before they arrive.",
+      "desc": "Turn your space into an immersive experience customers can explore on Google Maps and your website.",
       "cta": "Explore 360° Tours"
     },
     "maps": {
-      "title": "Street View Injection",
-      "desc": "We deploy your 360° tour directly into Google Maps—the exact navigation engine your customers are already using to find you.",
-      "status": "API Ready"
+      "hook": "Be explored on Google Maps",
+      "signal": "Meet customers where they already search."
     },
     "roi": {
-      "eyebrow": "The Bottom Line",
-      "title": "Measurable Conversion Spikes",
-      "desc": "Listings upgraded with a premium virtual tour are twice as likely to generate interest. We don't just get you views; we turn your digital traffic into actual revenue and real-world bookings.",
+      "hook": "Turn curiosity into confidence",
+      "signal": "Show the atmosphere, layout, and details that influence a visit.",
       "cta": "See Case Studies"
     },
     "ads": {
-      "eyebrow": "Complementary service",
-      "title": "Google Ads Search Management",
-      "desc": "Focused Google Ads Search campaigns can bring relevant visitors to your business, while premium visual content helps build trust after the click.",
+      "serviceName": "Google Ads Search",
+      "hook": "Meet customers already searching.",
+      "desc": "Reach people at the moment they are looking for a service like yours.",
+      "signals": [
+        "High-intent searches",
+        "Controlled campaign budgets",
+        "Measurable customer actions"
+      ],
       "cta": "Explore Google Ads"
     }
   },
