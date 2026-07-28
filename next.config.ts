@@ -36,13 +36,13 @@ const nextConfig: NextConfig = {
 
     return [
       {
-        source: '/en',
+        source: '/vi',
         destination: '/',
         permanent: true,
         missing: publicRequestOnly,
       },
       {
-        source: '/en/:path*',
+        source: '/vi/:path*',
         destination: '/:path*',
         permanent: true,
         missing: publicRequestOnly,

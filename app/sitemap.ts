@@ -22,6 +22,8 @@ const sitemapPages: ReadonlyArray<{
   { locale: "vi", page: "portfolio" },
   { locale: "vi", page: "about" },
   { locale: "vi", page: "contact" },
+  { locale: "vi", page: "privacy" },
+  { locale: "vi", page: "terms" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

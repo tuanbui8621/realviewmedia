@@ -21,6 +21,6 @@ export default function proxy(request: NextRequest) {
 export const config = {
   // Skip internal paths, tours, the default-locale rewrite target, and static files
   matcher: [
-    "/((?!api|_next|_vercel|en(?:/|$)|MaiHouseSaigon(?:/|$)|OakwoodResidence(?:/|$)|HongHome(?:/|$)|Richlane(?:/|$)|.*\\..*).*)",
+    "/((?!api|_next|_vercel|vi(?:/|$)|MaiHouseSaigon(?:/|$)|OakwoodResidence(?:/|$)|HongHome(?:/|$)|Richlane(?:/|$)|.*\\..*).*)",
   ],
 };

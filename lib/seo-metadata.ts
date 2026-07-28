@@ -28,16 +28,6 @@ export const pagePaths = {
 export type SeoPage = keyof typeof pagePaths;
 export type Locale = (typeof routing.locales)[number];
 
-const commercialPages = new Set<SeoPage>([
-  "home",
-  "experience",
-  "portfolio",
-  "about",
-  "contact",
-]);
-
-const legalPages = new Set<SeoPage>(["privacy", "terms"]);
-
 function resolveLocale(locale: string): Locale {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -49,11 +39,11 @@ function resolveLocale(locale: string): Locale {
 export function getPublicPath(locale: Locale, page: SeoPage): string {
   const pathname = pagePaths[page];
 
-  if (locale === "vi") {
-    return `/vi${pathname}`;
+  if (locale === routing.defaultLocale) {
+    return pathname || "/";
   }
 
-  return pathname || "/";
+  return `/${locale}${pathname}`;
 }
 
 export function getCanonicalUrl(locale: Locale, page: SeoPage): string {
@@ -73,14 +63,11 @@ export async function buildPageMetadata(
   const title = t("title");
   const description = t("description");
   const canonical = getCanonicalUrl(locale, page);
-  const isCommercialPage = commercialPages.has(page);
-  const shouldIndex = !(locale === "vi" && legalPages.has(page));
-  const languageAlternates = isCommercialPage
-    ? {
-        en: getCanonicalUrl("en", page),
-        "vi-VN": getCanonicalUrl("vi", page),
-      }
-    : undefined;
+  const languageAlternates = {
+    en: getCanonicalUrl("en", page),
+    "vi-VN": getCanonicalUrl("vi", page),
+    "x-default": getCanonicalUrl(routing.defaultLocale, page),
+  };
 
   return {
     title: {
@@ -89,21 +76,17 @@ export async function buildPageMetadata(
     description,
     alternates: {
       canonical,
-      ...(languageAlternates ? { languages: languageAlternates } : {}),
+      languages: languageAlternates,
     },
     robots: {
-      index: shouldIndex,
+      index: true,
       follow: true,
       googleBot: {
-        index: shouldIndex,
+        index: true,
         follow: true,
-        ...(shouldIndex
-          ? {
-              "max-image-preview": "large" as const,
-              "max-snippet": -1,
-              "max-video-preview": -1,
-            }
-          : {}),
+        "max-image-preview": "large" as const,
+        "max-snippet": -1,
+        "max-video-preview": -1,
       },
     },
     openGraph: {
@@ -113,11 +96,7 @@ export async function buildPageMetadata(
       siteName: "RealView Media",
       locale: locale === "vi" ? "vi_VN" : "en_US",
       type: "website",
-      ...(isCommercialPage
-        ? {
-            alternateLocale: [locale === "vi" ? "en_US" : "vi_VN"],
-          }
-        : {}),
+      alternateLocale: [locale === "vi" ? "en_US" : "vi_VN"],
       images: [
         {
           url: SOCIAL_IMAGE_URL,
