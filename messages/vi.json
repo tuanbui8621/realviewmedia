@@ -486,17 +486,10 @@
     }
   },
   "Experience360": {
-    "sectionHeading": "Trải nghiệm tour ảo 360°",
-    "panoramaLabel": "Tour ảo 360° khu vực hồ bơi tại Oakwood Residence",
-    "primaryValue": "360°",
-    "livePreview": "Trải nghiệm",
-    "verifiedViews": "Xem toàn bộ không gian",
-    "momGrowth": "Tự khám phá",
-    "clientConversion": "Lợi ích thực tế",
-    "measurableROI": "Thông tin trực quan",
-    "higherInterest": "Hiểu rõ trước khi đến",
-    "likelihoodText": "Xem bố trí không gian",
-    "bookingPotential": "Khám phá theo nhu cầu"
+    "sectionHeading": "Trải nghiệm Oakwood Residence qua góc nhìn 360°",
+    "iframeTitle": "Tour ảo 360° tương tác của Oakwood Residence",
+    "liveTour": "Tour trực tiếp",
+    "openFullTour": "Mở toàn bộ tour"
   },
   "CTA": {
     "subtitle": "Liên hệ RealView Media",

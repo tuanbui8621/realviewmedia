@@ -1,206 +1,63 @@
 'use client';
 
+import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Target, CheckCircle2, Activity } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useEffect, useRef, useState, type ComponentType } from 'react';
 
-type PanoramaProps = {
-  width: string;
-  height: string;
-  image: string;
-  pitch: number;
-  yaw: number;
-  hfov: number;
-  autoLoad: boolean;
-  showZoomCtrl: boolean;
-  showFullscreenCtrl: boolean;
-  compass: boolean;
-  mouseZoom: boolean;
-  autoRotate: number;
-};
-
-type ViewerStatus = 'idle' | 'loading' | 'ready' | 'failed';
-
-const VIEWER_ROOT_MARGIN = '800px 0px';
+const OAKWOOD_TOUR_URL = 'https://www.rvmedia.vn/OakwoodResidence/';
 
 export default function Experience360() {
   const t = useTranslations('Experience360');
-  const viewerWrapperRef = useRef<HTMLDivElement>(null);
-  const [shouldLoadViewer, setShouldLoadViewer] = useState(false);
-  const [PanoramaViewer, setPanoramaViewer] = useState<ComponentType<PanoramaProps> | null>(null);
-  const [viewerFailed, setViewerFailed] = useState(false);
-
-  useEffect(() => {
-    const viewerWrapper = viewerWrapperRef.current;
-
-    if (!viewerWrapper || typeof IntersectionObserver === 'undefined') {
-      setShouldLoadViewer(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-
-        setShouldLoadViewer(true);
-        observer.disconnect();
-      },
-      { rootMargin: VIEWER_ROOT_MARGIN },
-    );
-
-    observer.observe(viewerWrapper);
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!shouldLoadViewer) return;
-
-    let cancelled = false;
-
-    void import('pannellum-react/es/elements/Pannellum')
-      .then((mod) => {
-        if (cancelled) return;
-
-        setPanoramaViewer(() => mod.default as ComponentType<PanoramaProps>);
-      })
-      .catch(() => {
-        if (!cancelled) setViewerFailed(true);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [shouldLoadViewer]);
-
-  const viewerStatus: ViewerStatus = PanoramaViewer
-    ? 'ready'
-    : viewerFailed
-      ? 'failed'
-      : shouldLoadViewer
-        ? 'loading'
-        : 'idle';
-  const viewerIsReady = viewerStatus === 'ready';
 
   return (
-    <section className="py-24 bg-[#050505] px-6">
-      <h2 className="sr-only">{t('sectionHeading')}</h2>
-      <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row gap-6">
-        
-        {/* LEFT SIDE: The 360 Panorama */}
-        <motion.div 
-          ref={viewerWrapperRef}
-          initial={{ opacity: 0, scale: 0.95 }}
+    <section className="bg-[#050505] px-6 py-24 text-white md:py-32">
+      <div className="container mx-auto max-w-7xl">
+        <div className="mb-10 border-b border-white/10 pb-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl text-4xl font-bold leading-[0.92] tracking-tight sm:text-[2.75rem] md:text-5xl lg:text-6xl"
+          >
+            {t('sectionHeading')}
+          </motion.h2>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="relative w-full lg:w-2/3 aspect-[16/11] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group"
-          role={viewerIsReady ? 'region' : undefined}
-          aria-label={viewerIsReady ? t('panoramaLabel') : undefined}
-          data-viewer-state={viewerStatus}
+          viewport={{ once: true, amount: 0.2 }}
+          className="group relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#080808] shadow-2xl md:aspect-[2/1]"
         >
-          {viewerIsReady && PanoramaViewer ? (
-            <PanoramaViewer
-              width="100%"
-              height="100%"
-              image="/images/oakwood.png"
-              pitch={0}
-              yaw={0}
-              hfov={100}
-              autoLoad={true}
-              showZoomCtrl={false}
-              showFullscreenCtrl={false}
-              compass={false}
-              mouseZoom={true}
-              autoRotate={-2}
-            />
-          ) : (
-            <div className="absolute inset-0 bg-[#050505]" aria-hidden="true" />
-          )}
-          {/* Minimalist Live Indicator */}
-          {viewerIsReady && (
-            <div className="absolute top-6 left-6 px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold tracking-widest uppercase flex items-center gap-2 text-white">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-              </span>
-              {t('livePreview')}
-            </div>
-          )}
+          <iframe
+            src={OAKWOOD_TOUR_URL}
+            title={t('iframeTitle')}
+            loading="lazy"
+            allow="fullscreen; autoplay; xr-spatial-tracking"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="absolute inset-0 h-full w-full border-0"
+          />
+
+          <div className="pointer-events-none absolute left-5 top-5 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white shadow-lg backdrop-blur-md md:left-6 md:top-6">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#65a0ff] opacity-75 motion-reduce:animate-none" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#1468ff]" />
+            </span>
+            {t('liveTour')}
+          </div>
+
+          <a
+            href={OAKWOOD_TOUR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-5 right-5 z-10 inline-flex items-center gap-2 rounded-full border border-[#65a0ff]/60 bg-[#071a35]/90 px-4 py-2.5 text-xs font-bold text-white shadow-[0_0_18px_rgba(20,104,255,0.45)] backdrop-blur-xl transition duration-300 hover:border-white hover:bg-[#1468ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] md:bottom-6 md:right-6 md:px-5 md:py-3 md:text-sm motion-reduce:transition-colors"
+          >
+            {t('openFullTour')}
+            <ExternalLink aria-hidden="true" className="h-4 w-4" />
+          </a>
         </motion.div>
-
-        {/* RIGHT SIDE: Expert Analytics Dashboard */}
-        <div className="w-full lg:w-1/3 flex flex-col gap-6">
-          
-          {/* Card 1: Verified Views Analytics */}
-          <div className="flex-1 bg-[#0a0a0c] border border-white/10 rounded-[2rem] p-8 relative overflow-hidden flex flex-col justify-between group hover:border-white/20 transition-all duration-300">
-            <div className="relative z-10 flex justify-between items-start w-full">
-              <div className="bg-white/5 p-2 rounded-xl border border-white/10">
-                <Activity size={20} className="text-white/70" />
-              </div>
-              <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5">
-                <TrendingUp size={12} />
-                <span>{t('momGrowth')}</span>
-              </div>
-            </div>
-
-            <div className="relative z-10 mt-6">
-              <p className="text-5xl font-black text-white tracking-tighter drop-shadow-md">
-                {t('primaryValue')}
-              </p>
-              <h3 className="text-white/50 text-xs font-bold uppercase tracking-widest mt-1">{t('verifiedViews')}</h3>
-            </div>
-
-            {/* Micro-Visualization: SVG Trend Line */}
-            <div className="relative z-10 mt-6 w-full h-12 opacity-40 group-hover:opacity-100 transition-opacity duration-500">
-              <svg viewBox="0 0 100 25" className="w-full h-full overflow-visible" preserveAspectRatio="none">
-                <path d="M0 25 L10 20 L20 22 L30 15 L40 18 L50 10 L60 12 L70 5 L80 8 L90 2 L100 0" fill="none" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M0 25 L10 20 L20 22 L30 15 L40 18 L50 10 L60 12 L70 5 L80 8 L90 2 L100 0 L100 25 L0 25 Z" fill="url(#blue-gradient)" stroke="none" />
-                <defs>
-                  <linearGradient id="blue-gradient" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          {/* Card 2: Enterprise ROI Flex */}
-          <div className="flex-1 bg-gradient-to-br from-[#0a0a0c] to-[#0a1410] border border-emerald-500/30 rounded-[2rem] p-8 relative overflow-hidden flex flex-col justify-center group hover:border-emerald-400/50 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.05)]">
-            <div className="absolute -right-6 -top-6 w-32 h-32 bg-emerald-500/10 blur-[40px] rounded-full group-hover:bg-emerald-500/20 transition-colors"></div>
-            
-            <div className="relative z-10 flex flex-col items-start">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="bg-emerald-500 text-white p-2.5 rounded-xl shadow-[0_0_15px_rgba(16,185,129,0.5)]">
-                  <Target size={24} />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-sm tracking-wide">{t('clientConversion')}</h3>
-                  <div className="flex items-center gap-1.5 mt-0.5">
-                    <span className="text-emerald-400 text-[10px] font-bold uppercase tracking-wider">{t('measurableROI')}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="w-full h-px bg-white/10 my-4"></div>
-
-              <div className="w-full">
-                <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 tracking-tight">{t('higherInterest')}</p>
-                <ul className="mt-4 space-y-2.5">
-                  {[t('likelihoodText'), t('bookingPotential')].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">
-                      <CheckCircle2 size={14} className="text-emerald-400" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-        </div>
       </div>
     </section>
   );

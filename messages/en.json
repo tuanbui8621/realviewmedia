@@ -486,17 +486,10 @@
     }
   },
   "Experience360": {
-    "sectionHeading": "360° virtual tour experience",
-    "panoramaLabel": "360° virtual tour of the pool area at Oakwood Residence",
-    "primaryValue": "360°",
-    "livePreview": "Live tour",
-    "verifiedViews": "Explore the full space",
-    "momGrowth": "Self-guided",
-    "clientConversion": "Practical benefit",
-    "measurableROI": "Visual information",
-    "higherInterest": "Understand before visiting",
-    "likelihoodText": "See the space layout",
-    "bookingPotential": "Explore at your own pace"
+    "sectionHeading": "Experience Oakwood Residence in 360°",
+    "iframeTitle": "Interactive 360° virtual tour of Oakwood Residence",
+    "liveTour": "Live tour",
+    "openFullTour": "Open full tour"
   },
   "CTA": {
     "subtitle": "Let's Work Together",
