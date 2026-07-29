@@ -6,8 +6,8 @@
         "description": "RealView Media cung cấp dịch vụ chụp ảnh 360° và tour ảo Google Maps, giúp doanh nghiệp tại TP.HCM và Việt Nam giới thiệu không gian, xây dựng niềm tin."
       },
       "experience": {
-        "title": "Tour ảo 360° trên Google Maps | RealView Media",
-        "description": "Khám phá cách tour ảo 360° giúp khách hàng tham quan không gian doanh nghiệp trên Google Maps trước khi ghé thăm, với trải nghiệm thực tế từ RealView Media."
+        "title": "Sản xuất tour ảo 360° & Google Business Profile | RealView Media",
+        "description": "Dịch vụ chụp ảnh 360°, sản xuất tour ảo và hỗ trợ Google Business Profile, bàn giao trong vòng 10 ngày làm việc kể từ ngày chụp."
       },
       "portfolio": {
         "title": "Dự án & hiệu quả tour ảo 360° | RealView Media",
@@ -101,48 +101,150 @@
   },
   "ExperiencePage": {
     "Hero": {
-      "tagline": "Tour Ảo Cho Không Gian Doanh Nghiệp",
-      "h1_line1": "Tour ảo 360°:",
-      "h1_span": "Xem trước khi đến.",
-      "status_search": "Tìm thấy trên Google Maps.",
-      "status_compare": "Khám phá không gian.",
-      "status_hesitate": "Tự tin trước khi ghé thăm."
+      "eyebrow": "Sản xuất tour ảo 360°",
+      "title": "Từ ngày chụp đến tour ảo hoàn chỉnh.",
+      "titleHighlight": "Bàn giao trong vòng 10 ngày làm việc.",
+      "description": "RealView Media lên kế hoạch, ghi hình, xử lý và xây dựng trải nghiệm 360°, sau đó chuẩn bị để đăng trên website, Google Maps hoặc Google Business Profile.",
+      "cta": "Trao đổi dự án",
+      "secondaryCta": "Xem quy trình thực hiện"
     },
-    "Comparison": {
-      "heading": "So sánh ảnh tĩnh và tour ảo 360°",
-      "card1_title": "Ảnh tĩnh chỉ cho thấy từng góc.",
-      "card1_desc": "Một vài hình ảnh rời rạc có thể chưa đủ để khách hàng hiểu cách bố trí, quy mô và cảm giác thực tế của không gian.",
-      "card1_name": "Victory Hotel Saigon",
-      "card1_category": "Khách sạn Victory",
-      "card1_summary": "Ảnh tĩnh • Thông tin cơ bản",
-      "card2_title": "Tự khám phá bằng tour ảo 360°",
-      "card2_desc": "Tour ảo kết nối các ảnh toàn cảnh thành trải nghiệm tương tác. Khách hàng có thể xoay, kéo và di chuyển giữa các vị trí trên website hoặc Google Maps.",
-      "card2_name": "Mai House Saigon",
-      "card2_category": "Khách sạn Mai House",
-      "card2_summary": "Tour ảo 360° • Xem toàn cảnh",
-      "actions": {
-        "directions": "Chỉ đường",
-        "save": "Lưu",
-        "call": "Gọi",
-        "share": "Chia sẻ"
+    "Deliverables": {
+      "eyebrow": "Sản phẩm bàn giao",
+      "title": "Một quy trình hoàn chỉnh, không chỉ là buổi chụp.",
+      "description": "Mỗi góc chụp đã thống nhất được phát triển thành trải nghiệm rõ ràng, tương thích nhiều thiết bị và sẵn sàng chia sẻ, nhúng hoặc xuất bản.",
+      "items": {
+        "capture": {
+          "title": "Ghi hình 360° chuyên nghiệp",
+          "description": "Chúng tôi lên tuyến tham quan và chụp các khu vực đã thống nhất với độ phơi sáng và phạm vi nhất quán."
+        },
+        "processing": {
+          "title": "Ghép ảnh và hậu kỳ",
+          "description": "Ảnh toàn cảnh được ghép, cân chỉnh màu sắc và hoàn thiện để thể hiện không gian tự nhiên, sạch sẽ."
+        },
+        "tour": {
+          "title": "Xây dựng tour tương tác",
+          "description": "Các cảnh được kết nối thành luồng di chuyển trực quan trên máy tính, máy tính bảng và điện thoại."
+        },
+        "maps": {
+          "title": "Chuẩn bị xuất bản",
+          "description": "Tour được chuẩn bị cho đường dẫn riêng, mã nhúng website và Google Maps khi nằm trong phạm vi dự án."
+        },
+        "quality": {
+          "title": "Kiểm tra chất lượng",
+          "description": "Điều hướng, chất lượng hình ảnh, liên kết và khả năng hiển thị trên nhiều thiết bị được kiểm tra trước bàn giao."
+        },
+        "handover": {
+          "title": "Bàn giao cuối cùng",
+          "description": "Khách hàng nhận đường dẫn tour đã duyệt, hướng dẫn nhúng và hỗ trợ xuất bản theo thỏa thuận."
+        }
       }
     },
-    "Interactive360": {
-      "h2_line1": "Xoay để xem toàn cảnh.",
-      "h2_span": "Di chuyển để khám phá từng khu vực.",
-      "hint": "Nhấp hoặc chạm và kéo để trải nghiệm.",
-      "loading": "Đang tải tour ảo 360°...",
-      "interaction": "Kéo để khám phá không gian",
-      "iframe_title": "Tour ảo 360° Mai House Saigon",
-      "p1": "Từ buổi chụp đến tour ảo hoàn chỉnh.",
-      "p2": "Chúng tôi xác định các điểm chụp, ghi lại không gian 360°, xử lý hình ảnh và liên kết từng góc nhìn thành một hành trình trực quan.",
-      "p3": "Bạn nhận tour ảo cùng đường dẫn chia sẻ, sẵn sàng nhúng trên website hoặc xuất bản lên Google Maps theo phạm vi dự án."
+    "Process": {
+      "eyebrow": "Quy trình sản xuất",
+      "title": "Lộ trình rõ ràng từ ghi hình đến bàn giao.",
+      "commitment": "Tối đa 10 ngày làm việc",
+      "steps": {
+        "prepare": {
+          "timing": "Trước ngày chụp",
+          "title": "Lên kế hoạch không gian",
+          "description": "Thống nhất phạm vi, quyền tiếp cận, khu vực ưu tiên, tuyến chụp và yêu cầu chuẩn bị."
+        },
+        "shoot": {
+          "timing": "Ngày chụp",
+          "title": "Ghi lại từng góc nhìn",
+          "description": "Đội ngũ ghi hình các cảnh đã thống nhất, đồng thời hạn chế ảnh hưởng đến hoạt động của địa điểm."
+        },
+        "process": {
+          "timing": "Ngày 1–4",
+          "title": "Xử lý hình ảnh",
+          "description": "Ghép ảnh, cân chỉnh, hậu kỳ và kiểm tra từng ảnh toàn cảnh được chọn cho tour."
+        },
+        "build": {
+          "timing": "Ngày 5–9",
+          "title": "Xây dựng và duyệt tour",
+          "description": "Kết nối các cảnh, thiết lập điều hướng và hoàn thiện các điều chỉnh đã thống nhất."
+        },
+        "deliver": {
+          "timing": "Trước ngày 10",
+          "title": "Bàn giao và xuất bản",
+          "description": "Tour hoàn chỉnh được bàn giao và đăng lên các kênh đã thống nhất khi nằm trong phạm vi dự án."
+        }
+      },
+      "condition": "Thời gian 10 ngày làm việc được tính từ ngày chụp và áp dụng khi quyền tiếp cận địa điểm, thông tin doanh nghiệp và phản hồi duyệt được cung cấp đúng tiến độ. Phạm vi đặc biệt sẽ được thống nhất trước khi sản xuất."
+    },
+    "BusinessProfile": {
+      "eyebrow": "Google Business Profile",
+      "title": "Tối ưu hồ sơ đi cùng tour ảo.",
+      "description": "Trải nghiệm 360° phát huy hiệu quả tốt hơn khi thông tin doanh nghiệp xung quanh chính xác, đầy đủ và được duy trì thường xuyên.",
+      "ownership": "Doanh nghiệp luôn giữ quyền sở hữu chính. RealView Media làm việc thông qua quyền quản lý chính thức và không yêu cầu chia sẻ mật khẩu.",
+      "items": {
+        "audit": {
+          "title": "Kiểm tra hồ sơ",
+          "description": "Rà soát quyền sở hữu, trạng thái xác minh, hồ sơ trùng lặp, mức độ đầy đủ và thông tin chưa nhất quán."
+        },
+        "foundation": {
+          "title": "Thông tin cốt lõi",
+          "description": "Tối ưu danh mục, giờ hoạt động, liên hệ, dịch vụ, mô tả và các đường dẫn doanh nghiệp phù hợp."
+        },
+        "media": {
+          "title": "Tài nguyên hình ảnh",
+          "description": "Sắp xếp logo, ảnh bìa, ảnh doanh nghiệp và hình ảnh 360° đã duyệt để tạo hình ảnh nhất quán."
+        },
+        "publishing": {
+          "title": "Xuất bản trên Maps",
+          "description": "Đăng nội dung 360° tương thích và kết nối khách hàng với trải nghiệm hoàn chỉnh."
+        },
+        "monitoring": {
+          "title": "Theo dõi hồ sơ",
+          "description": "Rà soát các chỉnh sửa do Google đề xuất và duy trì thông tin quan trọng theo thời gian."
+        },
+        "ongoing": {
+          "title": "Quản lý định kỳ",
+          "description": "Bài đăng, cập nhật hình ảnh và hỗ trợ phản hồi đánh giá có thể được triển khai như dịch vụ riêng."
+        }
+      }
+    },
+    "TourExample": {
+      "eyebrow": "Sản phẩm hoàn chỉnh",
+      "title": "Trải nghiệm kết quả bàn giao.",
+      "description": "Khám phá tour Mai House Saigon để xem cách các ảnh toàn cảnh riêng lẻ được kết nối thành một hành trình tương tác liền mạch.",
+      "iframeTitle": "Tour ảo 360° tương tác của Mai House Saigon",
+      "openTour": "Mở toàn bộ tour"
+    },
+    "FAQ": {
+      "eyebrow": "Câu hỏi thường gặp",
+      "title": "Trước ngày chụp.",
+      "items": {
+        "preparation": {
+          "question": "Cần chuẩn bị gì trước khi chụp?",
+          "answer": "Không gian nên được vệ sinh, sắp xếp hoàn chỉnh và loại bỏ vật dụng tạm thời. Chúng tôi cung cấp danh sách chuẩn bị và xác nhận các giới hạn tiếp cận trước ngày chụp."
+        },
+        "shootDuration": {
+          "question": "Buổi chụp kéo dài bao lâu?",
+          "answer": "Thời gian phụ thuộc vào diện tích, số lượng góc chụp và điều kiện hoạt động. Chúng tôi ước tính thời gian tại địa điểm sau khi rà soát phạm vi."
+        },
+        "revisions": {
+          "question": "Phần duyệt bao gồm những gì?",
+          "answer": "Phạm vi sản xuất đã thống nhất bao gồm duyệt điều hướng, nhãn và các điều chỉnh trình bày hợp lý. Chụp lại hoặc bổ sung khu vực mới sẽ được báo riêng."
+        },
+        "ownership": {
+          "question": "Ai sở hữu Google Business Profile?",
+          "answer": "Khách hàng luôn giữ quyền sở hữu chính. RealView Media chỉ được mời với vai trò quản lý khi có dịch vụ hồ sơ, vì vậy quyền truy cập có thể được kiểm tra hoặc thu hồi bất cứ lúc nào."
+        },
+        "embedding": {
+          "question": "Tour có thể dùng ngoài Google Maps không?",
+          "answer": "Có. Tùy sản phẩm đã chọn, tour có thể bao gồm đường dẫn chia sẻ và hỗ trợ nhúng trên website."
+        },
+        "timeline": {
+          "question": "Điều gì có thể ảnh hưởng tiến độ 10 ngày làm việc?",
+          "answer": "Chậm tiếp cận địa điểm, thiếu thông tin doanh nghiệp, phản hồi duyệt trễ, chụp lại hoặc bổ sung ngoài phạm vi có thể thay đổi tiến độ. Mọi ngoại lệ sẽ được thông báo rõ ràng."
+        }
+      }
     },
     "CTA": {
-      "h2": "Tour ảo 360° phù hợp với không gian nào?",
-      "p1": "Phù hợp với nhà hàng, khách sạn, showroom, spa, phòng gym, bất động sản và căn hộ dịch vụ muốn giúp khách hàng hiểu rõ không gian trước khi ghé thăm.",
-      "contact": "Liên hệ RealView Media để trao đổi về không gian của bạn.",
-      "btn": "Xem dự án tour ảo"
+      "title": "Sẵn sàng lập kế hoạch cho không gian?",
+      "description": "Hãy cho chúng tôi biết địa điểm, số lượng khu vực và nơi bạn muốn tour hoàn chỉnh xuất hiện.",
+      "button": "Bắt đầu dự án"
     }
   },
   "PortfolioPage": {
