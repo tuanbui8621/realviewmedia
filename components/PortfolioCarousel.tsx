@@ -194,7 +194,8 @@ export default function PortfolioCarousel() {
         <div className="border-b border-white/10 pb-8">
           <div>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-4">
-              {t('title')}
+              <span className="block">{t('title')}</span>
+              <span className="block text-[#65a0ff]">{t('titleHighlight')}</span>
             </h2>
             <p className="text-white/50 text-lg font-light max-w-md">
               {t('subtitle')}

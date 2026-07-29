@@ -502,7 +502,8 @@
     "messengerLabelMobile": "Messenger"
   },
   "PortfolioCarousel": {
-    "title": "Những doanh nghiệp đã tin chọn RealView Media.",
+    "title": "Những doanh nghiệp đã tin chọn",
+    "titleHighlight": "RealView Media.",
     "subtitle": "Khám phá không gian doanh nghiệp qua ảnh 360°, tour ảo và Google Street View.",
     "launchTour": "Mở tour ảo 360°",
     "previousProject": "Dự án trước",
