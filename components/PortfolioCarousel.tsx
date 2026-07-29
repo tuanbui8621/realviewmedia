@@ -310,18 +310,26 @@ export default function PortfolioCarousel() {
           onClick={scrollPrev}
           disabled={!canScrollPrev}
           aria-label={t('previousProject')}
-          className="absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/75 text-white shadow-xl backdrop-blur-md transition-colors hover:bg-white hover:text-black disabled:opacity-30 disabled:hover:bg-black/75 disabled:hover:text-white md:-left-6 md:h-14 md:w-14"
+          className="group absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#65a0ff]/80 bg-[#071a35]/90 text-white shadow-[0_0_18px_rgba(20,104,255,0.7),inset_0_0_14px_rgba(101,160,255,0.18)] backdrop-blur-xl transition duration-300 hover:scale-110 hover:border-white hover:bg-[#1468ff] hover:shadow-[0_0_30px_rgba(101,160,255,0.95),inset_0_0_18px_rgba(255,255,255,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#050505] disabled:cursor-default disabled:opacity-30 disabled:hover:scale-100 disabled:hover:border-[#65a0ff]/80 disabled:hover:bg-[#071a35]/90 md:-left-6 md:h-14 md:w-14 motion-reduce:transition-colors"
         >
-          <ArrowLeft className="h-5 w-5" />
+          <span
+            aria-hidden="true"
+            className="absolute -inset-1 rounded-full border border-[#65a0ff]/70 [animation:ping_2.8s_cubic-bezier(0,0,0.2,1)_infinite] group-hover:[animation-duration:1.6s] group-disabled:opacity-0 motion-reduce:animate-none"
+          />
+          <ArrowLeft className="relative h-5 w-5 drop-shadow-[0_0_5px_rgba(255,255,255,0.9)]" />
         </button>
         <button
           type="button"
           onClick={scrollNext}
           disabled={!canScrollNext}
           aria-label={t('nextProject')}
-          className="absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/75 text-white shadow-xl backdrop-blur-md transition-colors hover:bg-white hover:text-black disabled:opacity-30 disabled:hover:bg-black/75 disabled:hover:text-white md:-right-6 md:h-14 md:w-14"
+          className="group absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#65a0ff]/80 bg-[#071a35]/90 text-white shadow-[0_0_18px_rgba(20,104,255,0.7),inset_0_0_14px_rgba(101,160,255,0.18)] backdrop-blur-xl transition duration-300 hover:scale-110 hover:border-white hover:bg-[#1468ff] hover:shadow-[0_0_30px_rgba(101,160,255,0.95),inset_0_0_18px_rgba(255,255,255,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#050505] disabled:cursor-default disabled:opacity-30 disabled:hover:scale-100 disabled:hover:border-[#65a0ff]/80 disabled:hover:bg-[#071a35]/90 md:-right-6 md:h-14 md:w-14 motion-reduce:transition-colors"
         >
-          <ArrowRight className="h-5 w-5" />
+          <span
+            aria-hidden="true"
+            className="absolute -inset-1 rounded-full border border-[#65a0ff]/70 [animation:ping_2.8s_cubic-bezier(0,0,0.2,1)_infinite] group-hover:[animation-duration:1.6s] group-disabled:opacity-0 motion-reduce:animate-none"
+          />
+          <ArrowRight className="relative h-5 w-5 drop-shadow-[0_0_5px_rgba(255,255,255,0.9)]" />
         </button>
       </div>
     </section>
