@@ -10,8 +10,8 @@
         "description": "Khám phá cách tour ảo 360° giúp khách hàng tham quan không gian doanh nghiệp trên Google Maps trước khi ghé thăm, với trải nghiệm thực tế từ RealView Media."
       },
       "portfolio": {
-        "title": "Dự án chụp ảnh & tour ảo 360° | RealView Media",
-        "description": "Xem các dự án chụp ảnh và tour ảo 360° RealView Media thực hiện cho khách sạn, căn hộ, nhà hàng và doanh nghiệp tại TP.HCM và Việt Nam."
+        "title": "Dự án & hiệu quả tour ảo 360° | RealView Media",
+        "description": "Khám phá dự án tour ảo 360° của RealView Media và số liệu nghiên cứu Google/Ipsos về cách hình ảnh tương tác giúp doanh nghiệp tạo sự quan tâm."
       },
       "about": {
         "title": "Về RealView Media | Chụp ảnh & tour ảo 360° TP.HCM",
@@ -39,7 +39,7 @@
     "home": "Trang chủ",
     "services": "Dịch vụ",
     "experience": "Trải nghiệm",
-    "portfolio": "Dự án",
+    "portfolio": "Dự án & hiệu quả",
     "about": "Về chúng tôi",
     "contact": "Liên hệ",
     "serviceLinks": {
@@ -147,12 +147,39 @@
   },
   "PortfolioPage": {
     "Hero": { 
-      "title": "Dự án chụp ảnh 360°",
-      "titleHighlight": "& tour ảo.",
-      "subtitle": "Khám phá dự án chụp ảnh 360° và tour ảo cho khách sạn, căn hộ, nhà hàng và không gian dịch vụ tại TP.HCM và Việt Nam."
+      "title": "Dự án tạo nên",
+      "titleHighlight": "hiệu quả thực.",
+      "subtitle": "Số liệu nghiên cứu độc lập kết hợp cùng những tour ảo 360° tiêu biểu RealView Media thực hiện cho doanh nghiệp tại Việt Nam."
+    },
+    "Research": {
+      "eyebrow": "Nghiên cứu Google / Ipsos",
+      "title": "Những con số biết nói.",
+      "intro": "Tour ảo giúp khách hàng hiểu rõ không gian trước khi ghé thăm. Những số liệu sau phản ánh hành vi người dùng đối với thông tin doanh nghiệp, sản phẩm bản đồ và hình ảnh tương tác.",
+      "stats": {
+        "interest": {
+          "value": "2×",
+          "description": "Địa điểm có ảnh và tour ảo có khả năng tạo sự quan tâm cao gấp đôi."
+        },
+        "booking": {
+          "value": "130%",
+          "description": "Khách hàng 18–34 tuổi có khả năng đặt chỗ cao hơn 130% khi có tour ảo."
+        },
+        "demand": {
+          "value": "67%",
+          "description": "Người được khảo sát muốn nhiều doanh nghiệp có tour ảo hơn; chỉ 7% cho rằng không cần thiết."
+        },
+        "visits": {
+          "value": "41%",
+          "description": "Trung bình 41% lượt tìm kiếm địa điểm qua sản phẩm bản đồ dẫn đến một lượt ghé thăm thực tế."
+        }
+      },
+      "source": "Nguồn: Nghiên cứu Ipsos do Google ủy quyền về tour ảo và nghiên cứu của Google về sản phẩm bản đồ.",
+      "sourceLink": "Xem bản lưu trữ nghiên cứu"
     },
     "Projects": {
-      "heading": "Các dự án tour ảo 360°",
+      "eyebrow": "Dự án tiêu biểu",
+      "heading": "Trải nghiệm dự án.",
+      "intro": "Mở từng dự án để trải nghiệm tour hoàn chỉnh và xem cách các lĩnh vực khác nhau giới thiệu không gian trực tuyến.",
       "mai_house": {
         "title": "Mai House Saigon",
         "cat": "Khách sạn",
@@ -415,7 +442,7 @@
     "nav": {
       "home": "Trang chủ",
       "experience": "Trải nghiệm",
-      "portfolio": "Dự án",
+      "portfolio": "Dự án & hiệu quả",
       "about": "Về chúng tôi",
       "googleAdsSearch": "Google Ads Search"
     },

@@ -10,8 +10,8 @@
         "description": "See how 360° virtual tours let customers explore your business on Google Maps before visiting, with an interactive example from RealView Media."
       },
       "portfolio": {
-        "title": "360° Photography & Virtual Tour Portfolio | RealView Media",
-        "description": "Explore 360° photography and virtual tour projects by RealView Media for hotels, residences, restaurants and businesses across Ho Chi Minh City and Vietnam."
+        "title": "360° Virtual Tour Work & Impact | RealView Media",
+        "description": "Explore RealView Media's 360° virtual tour projects and independent Google/Ipsos research on how immersive imagery helps businesses earn customer interest."
       },
       "about": {
         "title": "About RealView Media | 360° Photography in Vietnam",
@@ -39,7 +39,7 @@
     "home": "Home",
     "services": "Services",
     "experience": "Experience",
-    "portfolio": "Portfolio",
+    "portfolio": "Work & Impact",
     "about": "About Us",
     "contact": "Contact",
     "serviceLinks": {
@@ -147,12 +147,39 @@
   },
   "PortfolioPage": {
     "Hero": {
-      "title": "Selected",
-      "titleHighlight": "Works.",
-      "subtitle": "Explore a selection of premium virtual tours created for businesses across Vietnam."
+      "title": "Work that creates",
+      "titleHighlight": "real impact.",
+      "subtitle": "Independent research meets a curated selection of immersive 360° tours created for businesses across Vietnam."
+    },
+    "Research": {
+      "eyebrow": "Google / Ipsos research",
+      "title": "The numbers tell the story.",
+      "intro": "Virtual tours help people understand a place before they visit. These findings describe consumer behavior around business listings, mapping products and immersive imagery.",
+      "stats": {
+        "interest": {
+          "value": "2×",
+          "description": "Listings with photos and a virtual tour are twice as likely to generate interest."
+        },
+        "booking": {
+          "value": "130%",
+          "description": "People aged 18–34 are 130% more likely to book based on a virtual tour."
+        },
+        "demand": {
+          "value": "67%",
+          "description": "People surveyed want more business listings to include virtual tours; only 7% said they were unnecessary."
+        },
+        "visits": {
+          "value": "41%",
+          "description": "On average, 41% of place searches made with mapping products result in an on-site visit."
+        }
+      },
+      "source": "Source: Google-commissioned Ipsos research on virtual tours and Google mapping-product research.",
+      "sourceLink": "View archived study PDF"
     },
     "Projects": {
-      "heading": "360° virtual tour projects",
+      "eyebrow": "Selected work",
+      "heading": "Explore the work.",
+      "intro": "Open each project to experience the finished tour and see how different industries present their spaces online.",
       "mai_house": {
         "title": "Mai House Saigon",
         "cat": "Hotel",
@@ -415,7 +442,7 @@
     "nav": {
       "home": "Home",
       "experience": "Experience",
-      "portfolio": "Portfolio",
+      "portfolio": "Work & Impact",
       "about": "About Us",
       "googleAdsSearch": "Google Ads Search"
     },

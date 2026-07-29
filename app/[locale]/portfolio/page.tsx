@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from '@/navigation';
 import Image from 'next/image';
-import { ArrowRight, MapPin, X, Eye, MousePointer2 } from 'lucide-react';
+import { ArrowRight, ExternalLink, MapPin, X, Eye, MousePointer2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { highQualityImageLoader } from '@/lib/image-loaders';
 
@@ -34,6 +34,9 @@ const portfolioProjects = [
     embedUrl: 'https://www.google.com/maps/embed?pb=!4v1783584586663!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQzNsb1RuOWdF!2m2!1d10.7681740406786!2d106.6966090367288!3f1.2644489026167998!4f-0.36507161825656453!5f0.7820865974627469'
   }
 ];
+
+const researchStats = ['interest', 'booking', 'demand', 'visits'] as const;
+const RESEARCH_SOURCE_URL = 'https://www.tourdeforce360.com/google/files/StreetviewStudy2015.pdf';
 
 export default function PortfolioPage() {
   const [activeProject, setActiveProject] = useState<typeof portfolioProjects[0] | null>(null);
@@ -76,15 +79,15 @@ export default function PortfolioPage() {
       <main>
 
       {/* 1. Hero Section */}
-      <section className="pt-48 pb-12 px-6 text-center">
+      <section className="px-6 pb-16 pt-48 text-center">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-6xl md:text-8xl font-bold tracking-tighter mb-8"
+          className="mb-8 text-5xl font-bold tracking-tighter sm:text-6xl md:text-8xl"
         >
           {t('Hero.title')}<br />
-          <span className="text-rv-white/30">{t('Hero.titleHighlight')}</span>
+          <span className="text-[#65a0ff]">{t('Hero.titleHighlight')}</span>
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -96,10 +99,73 @@ export default function PortfolioPage() {
         </motion.p>
       </section>
 
-      {/* 2. Fast-Loading Portfolio Grid (The Facade Pattern) */}
-      <section className="py-20 px-6 relative z-10">
-        <h2 className="sr-only">{t('Projects.heading')}</h2>
+      {/* 2. Independent research proof points */}
+      <section className="relative z-10 px-6 py-20">
         <div className="container mx-auto max-w-7xl">
+          <div className="grid gap-10 border-b border-[#65a0ff]/30 pb-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="mb-5 font-mono text-[0.7rem] font-bold uppercase tracking-[0.24em] text-[#65a0ff]">
+                {t('Research.eyebrow')}
+              </p>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-bold leading-[0.95] tracking-tight md:text-6xl"
+              >
+                {t('Research.title')}
+              </motion.h2>
+            </div>
+            <p className="max-w-2xl text-base leading-relaxed text-white/55 lg:justify-self-end lg:text-lg">
+              {t('Research.intro')}
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+            {researchStats.map((stat, index) => (
+              <motion.article
+                key={stat}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="bg-[#080b11] p-7 md:p-8"
+              >
+                <p className="mb-5 text-5xl font-black tracking-tighter text-[#65a0ff] md:text-6xl">
+                  {t(`Research.stats.${stat}.value`)}
+                </p>
+                <p className="text-sm leading-relaxed text-white/65">
+                  {t(`Research.stats.${stat}.description`)}
+                </p>
+              </motion.article>
+            ))}
+          </div>
+
+          <div className="mt-5 flex flex-col gap-2 text-xs leading-relaxed text-white/40 sm:flex-row sm:items-center sm:justify-between">
+            <small>{t('Research.source')}</small>
+            <a
+              href={RESEARCH_SOURCE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-1.5 font-medium text-white/55 transition-colors hover:text-[#65a0ff]"
+            >
+              {t('Research.sourceLink')}
+              <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Curated interactive project work */}
+      <section className="relative z-10 px-6 py-20">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-4 font-mono text-[0.7rem] font-bold uppercase tracking-[0.24em] text-[#65a0ff]">
+              {t('Projects.eyebrow')}
+            </p>
+            <h2 className="text-4xl font-bold tracking-tight md:text-6xl">{t('Projects.heading')}</h2>
+            <p className="mt-6 text-base leading-relaxed text-white/55 md:text-lg">{t('Projects.intro')}</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {portfolioProjects.map((project, i) => {
               const copy = projectCopy[project.id];
@@ -160,7 +226,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 3. The Fullscreen Immersive Modal */}
+      {/* 4. The Fullscreen Immersive Modal */}
       <AnimatePresence>
         {activeProject && activeCopy && (
           <motion.div 
@@ -217,7 +283,7 @@ export default function PortfolioPage() {
         )}
       </AnimatePresence>
 
-      {/* 4. Production Call to Action Block */}
+      {/* 5. Production Call to Action Block */}
       <section className="py-32 px-6 bg-rv-blue relative overflow-hidden text-center mt-20">
         <div className="relative z-10 container mx-auto max-w-2xl flex flex-col items-center">
           <motion.h2 
