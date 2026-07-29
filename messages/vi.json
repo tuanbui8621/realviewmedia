@@ -600,6 +600,13 @@
     "launchTour": "Mở tour ảo 360°",
     "previousProject": "Dự án trước",
     "nextProject": "Dự án tiếp theo",
+    "modal": {
+      "loading": "Đang tải tour ảo...",
+      "interactionHint": "Kéo hoặc chạm để khám phá không gian",
+      "openNewTab": "Mở trong tab mới",
+      "closeTour": "Đóng tour ảo",
+      "iframeTitle": "Tour ảo 360° tương tác của {client}"
+    },
     "filterLabel": "Lọc dự án nổi bật theo ngành",
     "industries": {
       "all": "Tất cả",
@@ -659,6 +666,12 @@
         "category": "Spa & sức khỏe",
         "type": "Google Street View",
         "alt": "Khu vực lễ tân tại Aqua Clinic"
+      },
+      "aex": {
+        "client": "AEX Cocktail Bar",
+        "category": "Cocktail Bar",
+        "type": "Google Street View",
+        "alt": "Không gian lấy cảm hứng từ hang động tại AEX Cocktail Bar"
       }
     }
   },

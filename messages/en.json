@@ -600,6 +600,13 @@
     "launchTour": "Launch Virtual Tour",
     "previousProject": "Previous project",
     "nextProject": "Next project",
+    "modal": {
+      "loading": "Loading the virtual tour...",
+      "interactionHint": "Drag or tap to explore the space",
+      "openNewTab": "Open in new tab",
+      "closeTour": "Close virtual tour",
+      "iframeTitle": "Interactive 360° virtual tour of {client}"
+    },
     "filterLabel": "Filter featured work by industry",
     "industries": {
       "all": "All",
@@ -659,6 +666,12 @@
         "category": "Healthcare & Spa",
         "type": "Google Street View",
         "alt": "Reception area at Aqua Clinic"
+      },
+      "aex": {
+        "client": "AEX Cocktail Bar",
+        "category": "Cocktail Bar",
+        "type": "Google Street View",
+        "alt": "Cave-inspired interior of AEX Cocktail Bar"
       }
     }
   },

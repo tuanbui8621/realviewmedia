@@ -1,11 +1,10 @@
 'use client';
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ArrowLeft, ArrowRight, RotateCcw, ExternalLink } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ArrowLeft, ArrowRight, RotateCcw, ExternalLink, MousePointer2, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import { highQualityImageLoader } from '@/lib/image-loaders';
 
@@ -83,12 +82,22 @@ const projects = [
     link: 'https://www.google.com/maps/embed?pb=!4v1783909721105!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2otNlRoRkE.!2m2!1d10.80254648297075!2d106.7151091939389!3f174.87!4f-0.12999999999999545!5f0.4000000000000002',
     industry: 'wellnessSpa' as Industry,
   },
+  {
+    id: 9,
+    key: 'aex' as const,
+    image: '/images/aex.jpg',
+    link: 'https://www.google.com/maps/embed?pb=!4v1785311853734!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0gyN3I3c0FF!2m2!1d10.79564985337983!2d106.6772050381407!3f15.448997352102774!4f-0.023060566962769258!5f0.4000000000000002',
+    industry: 'restaurants' as Industry,
+  },
 ];
 
 export default function PortfolioCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
   const t = useTranslations('PortfolioCarousel');
   const [activeIndustry, setActiveIndustry] = useState<(typeof industries)[number]>('all');
+  const [activeProject, setActiveProject] = useState<(typeof projects)[number] | null>(null);
+  const pointerStartRef = useRef({ x: 0, y: 0 });
+  const draggedRef = useRef(false);
   const filteredProjects = activeIndustry === 'all'
     ? projects
     : projects.filter((project) => project.industry === activeIndustry);
@@ -141,7 +150,14 @@ export default function PortfolioCarousel() {
       type: t('projects.aquaClinic.type'),
       alt: t('projects.aquaClinic.alt'),
     },
+    aex: {
+      client: t('projects.aex.client'),
+      category: t('projects.aex.category'),
+      type: t('projects.aex.type'),
+      alt: t('projects.aex.alt'),
+    },
   };
+  const activeCopy = activeProject ? projectCopy[activeProject.key] : null;
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -157,6 +173,23 @@ export default function PortfolioCarousel() {
     emblaApi.reInit();
     emblaApi.scrollTo(0, true);
   }, [activeIndustry, emblaApi]);
+
+  useEffect(() => {
+    if (!activeProject) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setActiveProject(null);
+    };
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [activeProject]);
 
   const subscribeToCarousel = useCallback((onStoreChange: () => void) => {
     if (!emblaApi) return () => undefined;
@@ -236,7 +269,6 @@ export default function PortfolioCarousel() {
           <div className="flex gap-6 cursor-grab active:cursor-grabbing">
           {filteredProjects.map((project, index) => {
             const copy = projectCopy[project.key];
-            const ProjectLink = project.standaloneTour ? 'a' : Link;
 
             return (
               <motion.div
@@ -247,12 +279,22 @@ export default function PortfolioCarousel() {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="flex-[0_0_76%] min-w-0 sm:flex-[0_0_58%] md:flex-[0_0_40%] lg:flex-[0_0_30%]"
             >
-              <ProjectLink
-                href={project.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <button
+                type="button"
                 aria-label={t('openProject', { client: copy.client })}
-                className="block relative aspect-[4/5] md:aspect-[3/4] rounded-[2rem] overflow-hidden group border border-white/10 shadow-2xl"
+                onPointerDown={(event) => {
+                  pointerStartRef.current = { x: event.clientX, y: event.clientY };
+                  draggedRef.current = false;
+                }}
+                onPointerMove={(event) => {
+                  const horizontalDistance = Math.abs(event.clientX - pointerStartRef.current.x);
+                  const verticalDistance = Math.abs(event.clientY - pointerStartRef.current.y);
+                  if (horizontalDistance > 8 || verticalDistance > 8) draggedRef.current = true;
+                }}
+                onClick={() => {
+                  if (!draggedRef.current) setActiveProject(project);
+                }}
+                className="group relative block aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#65a0ff] focus-visible:ring-offset-4 focus-visible:ring-offset-[#050505] md:aspect-[3/4]"
               >
                 {/* Image Background */}
                 <div className="absolute inset-0 transition-transform duration-[10s] group-hover:scale-110 ease-linear">
@@ -299,7 +341,7 @@ export default function PortfolioCarousel() {
                     </div>
                   </div>
                 </div>
-              </ProjectLink>
+              </button>
               </motion.div>
             );
           })}
@@ -333,6 +375,75 @@ export default function PortfolioCarousel() {
           <ArrowRight className="relative h-5 w-5 drop-shadow-[0_0_5px_rgba(255,255,255,0.9)]" />
         </button>
       </div>
+
+      <AnimatePresence>
+        {activeProject && activeCopy && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveProject(null)}
+            className="fixed inset-0 z-[100] flex bg-black/95 p-2 backdrop-blur-xl sm:p-4 md:p-8"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('modal.iframeTitle', { client: activeCopy.client })}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.25 }}
+              onClick={(event) => event.stopPropagation()}
+              className="mx-auto flex h-full w-full max-w-7xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#08090c] shadow-2xl md:rounded-[2rem]"
+            >
+              <div className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-3 py-3 sm:px-5">
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-bold text-white sm:text-base">{activeCopy.client}</p>
+                  <p className="mt-0.5 hidden items-center gap-1.5 text-xs text-white/45 sm:flex">
+                    <MousePointer2 aria-hidden="true" className="h-3.5 w-3.5" />
+                    {t('modal.interactionHint')}
+                  </p>
+                </div>
+
+                <div className="flex shrink-0 items-center gap-2">
+                  <a
+                    href={activeProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-10 items-center gap-2 rounded-full border border-[#65a0ff]/40 bg-[#071a35] px-3 text-xs font-bold text-white transition-colors hover:bg-[#1468ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:px-4"
+                  >
+                    <span className="hidden sm:inline">{t('modal.openNewTab')}</span>
+                    <ExternalLink aria-hidden="true" className="h-4 w-4" />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setActiveProject(null)}
+                    aria-label={t('modal.closeTour')}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    <X aria-hidden="true" className="h-5 w-5" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="relative min-h-0 flex-1 bg-black">
+                <div className="absolute inset-0 flex items-center justify-center text-sm text-white/45">
+                  <span className="animate-pulse">{t('modal.loading')}</span>
+                </div>
+                <iframe
+                  src={activeProject.link}
+                  title={t('modal.iframeTitle', { client: activeCopy.client })}
+                  loading="lazy"
+                  allow="fullscreen; autoplay; xr-spatial-tracking"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="relative z-10 h-full w-full border-0"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
