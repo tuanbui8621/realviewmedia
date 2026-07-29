@@ -603,7 +603,6 @@
     "modal": {
       "loading": "Loading the virtual tour...",
       "interactionHint": "Drag or tap to explore the space",
-      "openNewTab": "Open in new tab",
       "closeTour": "Close virtual tour",
       "iframeTitle": "Interactive 360° virtual tour of {client}"
     },

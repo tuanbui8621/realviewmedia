@@ -603,7 +603,6 @@
     "modal": {
       "loading": "Đang tải tour ảo...",
       "interactionHint": "Kéo hoặc chạm để khám phá không gian",
-      "openNewTab": "Mở trong tab mới",
       "closeTour": "Đóng tour ảo",
       "iframeTitle": "Tour ảo 360° tương tác của {client}"
     },

@@ -410,15 +410,6 @@ export default function PortfolioCarousel() {
                 </div>
 
                 <div className="flex shrink-0 items-center gap-2">
-                  <a
-                    href={activeProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex h-10 items-center gap-2 rounded-full border border-[#65a0ff]/40 bg-[#071a35] px-3 text-xs font-bold text-white transition-colors hover:bg-[#1468ff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:px-4"
-                  >
-                    <span className="hidden sm:inline">{t('modal.openNewTab')}</span>
-                    <ExternalLink aria-hidden="true" className="h-4 w-4" />
-                  </a>
                   <button
                     type="button"
                     onClick={() => setActiveProject(null)}
