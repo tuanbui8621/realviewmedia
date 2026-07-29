@@ -486,7 +486,8 @@
     }
   },
   "Experience360": {
-    "sectionHeading": "Experience Oakwood Residence in 360°",
+    "sectionHeading": "Experience Oakwood Residence",
+    "sectionHeadingHighlight": "in 360°",
     "iframeTitle": "Interactive 360° virtual tour of Oakwood Residence",
     "liveTour": "Live tour",
     "openFullTour": "Open full tour"

@@ -486,7 +486,8 @@
     }
   },
   "Experience360": {
-    "sectionHeading": "Trải nghiệm Oakwood Residence qua góc nhìn 360°",
+    "sectionHeading": "Trải nghiệm Oakwood Residence",
+    "sectionHeadingHighlight": "qua góc nhìn 360°",
     "iframeTitle": "Tour ảo 360° tương tác của Oakwood Residence",
     "liveTour": "Tour trực tiếp",
     "openFullTour": "Mở toàn bộ tour"
