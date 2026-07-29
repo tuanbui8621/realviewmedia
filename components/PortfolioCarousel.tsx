@@ -58,28 +58,28 @@ const projects = [
     id: 5,
     key: 'artistic' as const,
     image: '/images/art.jpg',
-    link: 'https://www.google.com/maps/embed?pb=!4v1783909643646!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGJ0cXk4Umc.!2m2!1d10.80392931471131!2d106.7330403859467!3f244.87!4f-2.3900000000000006!5f0.4000000000000002',
+    link: 'https://www.google.com/maps/embed?pb=!4v1783909705812!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRGoydHE1eFFF!2m2!1d10.80353445089009!2d106.7325190036474!3f115.59!4f-7.069999999999993!5f0.4000000000000002',
     industry: 'creativeSpaces' as Industry,
   },
   {
     id: 6,
     key: 'lamboKids' as const,
     image: '/images/lambo.jpg',
-    link: 'https://www.google.com/maps/embed?pb=!4v1783909687492!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzNsc1M2RlE.!2m2!1d10.76827922724603!2d106.6965455166198!3f270.39!4f0.6899999999999977!5f0.4000000000000002',
+    link: 'https://www.google.com/maps/embed?pb=!4v1783909721105!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2otNlRoRkE.!2m2!1d10.80254648297075!2d106.7151091939389!3f174.87!4f-0.12999999999999545!5f0.4000000000000002',
     industry: 'retailEducation' as Industry,
   },
   {
     id: 7,
     key: 'laVilla' as const,
     image: '/images/lavilla.jpg',
-    link: 'https://www.google.com/maps/embed?pb=!4v1783909705812!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRGoydHE1eFFF!2m2!1d10.80353445089009!2d106.7325190036474!3f115.59!4f-7.069999999999993!5f0.4000000000000002',
+    link: 'https://www.google.com/maps/embed?pb=!4v1783909643646!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGJ0cXk4Umc.!2m2!1d10.80392931471131!2d106.7330403859467!3f244.87!4f-2.3900000000000006!5f0.4000000000000002',
     industry: 'restaurants' as Industry,
   },
   {
     id: 8,
     key: 'aquaClinic' as const,
     image: '/images/aqua.jpg',
-    link: 'https://www.google.com/maps/embed?pb=!4v1783909721105!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2otNlRoRkE.!2m2!1d10.80254648297075!2d106.7151091939389!3f174.87!4f-0.12999999999999545!5f0.4000000000000002',
+    link: 'https://www.google.com/maps/embed?pb=!4v1783909687492!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzNsc1M2RlE.!2m2!1d10.76827922724603!2d106.6965455166198!3f270.39!4f0.6899999999999977!5f0.4000000000000002',
     industry: 'wellnessSpa' as Industry,
   },
   {
@@ -92,7 +92,11 @@ const projects = [
 ];
 
 export default function PortfolioCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    align: 'start',
+    containScroll: 'trimSnaps',
+  });
   const t = useTranslations('PortfolioCarousel');
   const [activeIndustry, setActiveIndustry] = useState<(typeof industries)[number]>('all');
   const [activeProject, setActiveProject] = useState<(typeof projects)[number] | null>(null);
