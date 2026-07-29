@@ -102,149 +102,112 @@
   "ExperiencePage": {
     "Hero": {
       "eyebrow": "360° virtual tour production",
-      "title": "From shoot day to a finished virtual tour.",
-      "titleHighlight": "Delivered within 10 business days.",
-      "description": "RealView Media plans, captures, processes and builds each 360° experience, then prepares it for your website, Google Maps or Google Business Profile.",
-      "cta": "Discuss your project",
-      "secondaryCta": "See how we work"
+      "title": "A complete 360° tour.",
+      "titleHighlight": "Ready within 10 business days.",
+      "description": "We photograph your space, build the tour and prepare it for your website or Google Maps.",
+      "cta": "Discuss your project"
     },
     "Deliverables": {
       "eyebrow": "What you receive",
-      "title": "A complete production, not just a photo shoot.",
-      "description": "Every agreed viewpoint is developed into a clear, responsive experience that is ready to share, embed or publish.",
+      "title": "Three clear deliverables.",
       "items": {
         "capture": {
-          "title": "Professional 360° capture",
-          "description": "We plan the route and photograph the agreed spaces with consistent exposure and coverage."
-        },
-        "processing": {
-          "title": "Stitching and retouching",
-          "description": "Panoramas are stitched, color-corrected and refined for a clean, natural presentation."
+          "title": "360° photography",
+          "description": "Professional capture of every agreed area."
         },
         "tour": {
-          "title": "Interactive tour build",
-          "description": "Scenes are connected into intuitive navigation that works across desktop, tablet and mobile."
+          "title": "Interactive virtual tour",
+          "description": "A smooth experience for phone, tablet and desktop."
         },
-        "maps": {
-          "title": "Publishing preparation",
-          "description": "We prepare the tour for a hosted link, website embed and Google Maps publishing when included."
-        },
-        "quality": {
-          "title": "Quality assurance",
-          "description": "Navigation, image quality, links and responsive behavior are checked before delivery."
-        },
-        "handover": {
-          "title": "Final handover",
-          "description": "You receive the approved tour link, embed guidance and agreed publishing support."
+        "publish": {
+          "title": "Ready to publish",
+          "description": "A shareable link, website embed or Google Maps support."
         }
       }
     },
     "Process": {
-      "eyebrow": "Production process",
-      "title": "A clear path from capture to delivery.",
-      "commitment": "Up to 10 business days",
+      "eyebrow": "How it works",
+      "title": "Four steps. One clear timeline.",
+      "commitment": "Ready by business day 10",
       "steps": {
-        "prepare": {
+        "plan": {
           "timing": "Before shoot",
-          "title": "Plan the space",
-          "description": "We confirm scope, access, priority areas, shoot route and preparation requirements."
+          "title": "Plan",
+          "description": "Confirm the areas, access and shoot time."
         },
         "shoot": {
           "timing": "Shoot day",
-          "title": "Capture every viewpoint",
-          "description": "Our team photographs the agreed scenes while protecting the natural flow of the location."
-        },
-        "process": {
-          "timing": "Days 1–4",
-          "title": "Process the imagery",
-          "description": "We stitch, balance, retouch and inspect every panorama selected for the tour."
+          "title": "Photograph",
+          "description": "Capture the agreed viewpoints in 1–2 hours."
         },
         "build": {
-          "timing": "Days 5–9",
-          "title": "Build and review",
-          "description": "We connect the scenes, configure navigation and complete the agreed review adjustments."
+          "timing": "Days 1–9",
+          "title": "Build",
+          "description": "Process the images and connect the tour."
         },
         "deliver": {
           "timing": "By day 10",
-          "title": "Deliver and publish",
-          "description": "The final tour is handed over and published to the agreed channels when included."
+          "title": "Deliver",
+          "description": "Review, approve and publish the final tour."
         }
       },
-      "condition": "The 10-business-day turnaround starts on the shoot date and applies when site access, required business information and review feedback are provided on schedule. Any exceptional scope is agreed before production."
+      "shootNoteTitle": "Only 1–2 hours on site",
+      "shootNote": "Most shoots are completed in 1–2 hours. We coordinate around your operating hours and work area by area to minimize disruption.",
+      "condition": "The timeline starts on shoot day and assumes timely access, information and review feedback. Additional areas or reshoots are scheduled separately."
     },
     "BusinessProfile": {
       "eyebrow": "Google Business Profile",
-      "title": "Make the profile around the tour work harder.",
-      "description": "A strong 360° experience is most useful when the surrounding business information is accurate, complete and actively maintained.",
-      "ownership": "Your business remains the primary owner. RealView Media works through official manager access—never by asking for your password.",
-      "items": {
-        "audit": {
-          "title": "Profile audit",
-          "description": "Review ownership, verification status, duplicates, completeness and visible inconsistencies."
+      "title": "Choose the support you need.",
+      "description": "Start with a one-time setup or keep the profile updated each month.",
+      "ownership": "You remain the primary owner. RealView works through official manager access—no password sharing.",
+      "options": {
+        "setup": {
+          "title": "Setup & optimize",
+          "items": {
+            "0": "Check ownership and profile accuracy",
+            "1": "Improve categories, hours, services and links",
+            "2": "Organize photos and publish approved 360° content"
+          }
         },
-        "foundation": {
-          "title": "Core information",
-          "description": "Optimize categories, hours, contact details, services, descriptions and relevant business links."
-        },
-        "media": {
-          "title": "Visual assets",
-          "description": "Organize logo, cover image, business photos and approved 360° imagery for a consistent presentation."
-        },
-        "publishing": {
-          "title": "Maps publishing",
-          "description": "Publish compatible 360° content and connect customers to the finished experience."
-        },
-        "monitoring": {
-          "title": "Profile monitoring",
-          "description": "Review Google-suggested edits and keep important business details accurate over time."
-        },
-        "ongoing": {
-          "title": "Optional management",
-          "description": "Ongoing posts, photo updates and review-response support can be scoped as a separate service."
+        "management": {
+          "title": "Ongoing management",
+          "items": {
+            "0": "Monitor important profile changes",
+            "1": "Add posts and fresh photos",
+            "2": "Support review responses"
+          }
         }
       }
     },
     "TourExample": {
-      "eyebrow": "Finished deliverable",
-      "title": "Experience the final product.",
-      "description": "Explore the completed Mai House Saigon tour to see how individual panoramas become one guided, interactive journey.",
+      "eyebrow": "See the result",
+      "title": "Explore a finished tour.",
+      "description": "Mai House Saigon—captured, connected and ready to explore.",
       "iframeTitle": "Interactive 360° virtual tour of Mai House Saigon",
       "openTour": "Open full tour"
     },
     "FAQ": {
-      "eyebrow": "Frequently asked questions",
-      "title": "Before the shoot.",
+      "eyebrow": "Good to know",
+      "title": "Three quick answers.",
       "items": {
         "preparation": {
-          "question": "What should be prepared before photography?",
-          "answer": "The space should be clean, staged and free of temporary clutter. We provide a preparation checklist and confirm any access restrictions before shoot day."
-        },
-        "shootDuration": {
-          "question": "How long does the shoot take?",
-          "answer": "Timing depends on the size, number of viewpoints and operating conditions. We estimate the required on-site time after reviewing the scope."
-        },
-        "revisions": {
-          "question": "What is included in the review?",
-          "answer": "The agreed production scope includes a review of navigation, labels and reasonable presentation adjustments. Reshoots or new areas are scoped separately."
+          "question": "How should the space be prepared?",
+          "answer": "Clean and stage the agreed areas before arrival. We provide a simple checklist."
         },
         "ownership": {
           "question": "Who owns the Google Business Profile?",
-          "answer": "The client remains primary owner. RealView Media is invited as a manager only when profile work is included, so access can be reviewed or removed at any time."
-        },
-        "embedding": {
-          "question": "Can the tour be used outside Google Maps?",
-          "answer": "Yes. Depending on the selected deliverable, the tour can include a shareable link and website embed support."
+          "answer": "You do. RealView only receives manager access when profile work is included."
         },
         "timeline": {
-          "question": "What can affect the 10-business-day timeline?",
-          "answer": "Delayed access, missing business information, late review feedback, reshoots or additions outside the agreed scope may change the schedule. Any exception is communicated clearly."
+          "question": "What can change the 10-day timeline?",
+          "answer": "Late access, feedback, reshoots or new areas. We confirm any change before proceeding."
         }
       }
     },
     "CTA": {
-      "title": "Ready to map out your space?",
-      "description": "Tell us about the location, number of areas and where the finished tour needs to appear.",
-      "button": "Start a project"
+      "title": "Ready to show your space?",
+      "description": "Tell us where it is and how many areas you want to capture.",
+      "button": "Get started"
     }
   },
   "PortfolioPage": {

@@ -102,149 +102,112 @@
   "ExperiencePage": {
     "Hero": {
       "eyebrow": "Sản xuất tour ảo 360°",
-      "title": "Từ ngày chụp đến tour ảo hoàn chỉnh.",
-      "titleHighlight": "Bàn giao trong vòng 10 ngày làm việc.",
-      "description": "RealView Media lên kế hoạch, ghi hình, xử lý và xây dựng trải nghiệm 360°, sau đó chuẩn bị để đăng trên website, Google Maps hoặc Google Business Profile.",
-      "cta": "Trao đổi dự án",
-      "secondaryCta": "Xem quy trình thực hiện"
+      "title": "Tour ảo 360° hoàn chỉnh.",
+      "titleHighlight": "Sẵn sàng trong 10 ngày làm việc.",
+      "description": "Chúng tôi chụp không gian, xây dựng tour và chuẩn bị để đăng trên website hoặc Google Maps.",
+      "cta": "Trao đổi dự án"
     },
     "Deliverables": {
       "eyebrow": "Sản phẩm bàn giao",
-      "title": "Một quy trình hoàn chỉnh, không chỉ là buổi chụp.",
-      "description": "Mỗi góc chụp đã thống nhất được phát triển thành trải nghiệm rõ ràng, tương thích nhiều thiết bị và sẵn sàng chia sẻ, nhúng hoặc xuất bản.",
+      "title": "Ba sản phẩm rõ ràng.",
       "items": {
         "capture": {
-          "title": "Ghi hình 360° chuyên nghiệp",
-          "description": "Chúng tôi lên tuyến tham quan và chụp các khu vực đã thống nhất với độ phơi sáng và phạm vi nhất quán."
-        },
-        "processing": {
-          "title": "Ghép ảnh và hậu kỳ",
-          "description": "Ảnh toàn cảnh được ghép, cân chỉnh màu sắc và hoàn thiện để thể hiện không gian tự nhiên, sạch sẽ."
+          "title": "Chụp ảnh 360°",
+          "description": "Ghi hình chuyên nghiệp tất cả khu vực đã thống nhất."
         },
         "tour": {
-          "title": "Xây dựng tour tương tác",
-          "description": "Các cảnh được kết nối thành luồng di chuyển trực quan trên máy tính, máy tính bảng và điện thoại."
+          "title": "Tour ảo tương tác",
+          "description": "Trải nghiệm mượt mà trên điện thoại, máy tính bảng và máy tính."
         },
-        "maps": {
-          "title": "Chuẩn bị xuất bản",
-          "description": "Tour được chuẩn bị cho đường dẫn riêng, mã nhúng website và Google Maps khi nằm trong phạm vi dự án."
-        },
-        "quality": {
-          "title": "Kiểm tra chất lượng",
-          "description": "Điều hướng, chất lượng hình ảnh, liên kết và khả năng hiển thị trên nhiều thiết bị được kiểm tra trước bàn giao."
-        },
-        "handover": {
-          "title": "Bàn giao cuối cùng",
-          "description": "Khách hàng nhận đường dẫn tour đã duyệt, hướng dẫn nhúng và hỗ trợ xuất bản theo thỏa thuận."
+        "publish": {
+          "title": "Sẵn sàng xuất bản",
+          "description": "Đường dẫn chia sẻ, mã nhúng website hoặc hỗ trợ Google Maps."
         }
       }
     },
     "Process": {
-      "eyebrow": "Quy trình sản xuất",
-      "title": "Lộ trình rõ ràng từ ghi hình đến bàn giao.",
-      "commitment": "Tối đa 10 ngày làm việc",
+      "eyebrow": "Quy trình thực hiện",
+      "title": "Bốn bước. Một tiến độ rõ ràng.",
+      "commitment": "Hoàn thành trước ngày làm việc thứ 10",
       "steps": {
-        "prepare": {
+        "plan": {
           "timing": "Trước ngày chụp",
-          "title": "Lên kế hoạch không gian",
-          "description": "Thống nhất phạm vi, quyền tiếp cận, khu vực ưu tiên, tuyến chụp và yêu cầu chuẩn bị."
+          "title": "Lên kế hoạch",
+          "description": "Chốt khu vực, quyền tiếp cận và thời gian chụp."
         },
         "shoot": {
           "timing": "Ngày chụp",
-          "title": "Ghi lại từng góc nhìn",
-          "description": "Đội ngũ ghi hình các cảnh đã thống nhất, đồng thời hạn chế ảnh hưởng đến hoạt động của địa điểm."
-        },
-        "process": {
-          "timing": "Ngày 1–4",
-          "title": "Xử lý hình ảnh",
-          "description": "Ghép ảnh, cân chỉnh, hậu kỳ và kiểm tra từng ảnh toàn cảnh được chọn cho tour."
+          "title": "Ghi hình",
+          "description": "Chụp các góc đã thống nhất trong 1–2 giờ."
         },
         "build": {
-          "timing": "Ngày 5–9",
-          "title": "Xây dựng và duyệt tour",
-          "description": "Kết nối các cảnh, thiết lập điều hướng và hoàn thiện các điều chỉnh đã thống nhất."
+          "timing": "Ngày 1–9",
+          "title": "Xây dựng",
+          "description": "Xử lý hình ảnh và kết nối thành tour."
         },
         "deliver": {
           "timing": "Trước ngày 10",
-          "title": "Bàn giao và xuất bản",
-          "description": "Tour hoàn chỉnh được bàn giao và đăng lên các kênh đã thống nhất khi nằm trong phạm vi dự án."
+          "title": "Bàn giao",
+          "description": "Duyệt, hoàn thiện và xuất bản tour."
         }
       },
-      "condition": "Thời gian 10 ngày làm việc được tính từ ngày chụp và áp dụng khi quyền tiếp cận địa điểm, thông tin doanh nghiệp và phản hồi duyệt được cung cấp đúng tiến độ. Phạm vi đặc biệt sẽ được thống nhất trước khi sản xuất."
+      "shootNoteTitle": "Chỉ 1–2 giờ tại địa điểm",
+      "shootNote": "Hầu hết buổi chụp hoàn thành trong 1–2 giờ. Chúng tôi phối hợp theo giờ hoạt động và thực hiện từng khu vực để hạn chế tối đa ảnh hưởng đến việc kinh doanh.",
+      "condition": "Tiến độ tính từ ngày chụp và áp dụng khi quyền tiếp cận, thông tin và phản hồi được cung cấp đúng hạn. Khu vực bổ sung hoặc chụp lại sẽ được sắp xếp riêng."
     },
     "BusinessProfile": {
       "eyebrow": "Google Business Profile",
-      "title": "Tối ưu hồ sơ đi cùng tour ảo.",
-      "description": "Trải nghiệm 360° phát huy hiệu quả tốt hơn khi thông tin doanh nghiệp xung quanh chính xác, đầy đủ và được duy trì thường xuyên.",
-      "ownership": "Doanh nghiệp luôn giữ quyền sở hữu chính. RealView Media làm việc thông qua quyền quản lý chính thức và không yêu cầu chia sẻ mật khẩu.",
-      "items": {
-        "audit": {
-          "title": "Kiểm tra hồ sơ",
-          "description": "Rà soát quyền sở hữu, trạng thái xác minh, hồ sơ trùng lặp, mức độ đầy đủ và thông tin chưa nhất quán."
+      "title": "Chọn mức hỗ trợ phù hợp.",
+      "description": "Tối ưu một lần hoặc duy trì hồ sơ thường xuyên.",
+      "ownership": "Doanh nghiệp luôn giữ quyền sở hữu chính. RealView chỉ sử dụng quyền quản lý chính thức và không yêu cầu mật khẩu.",
+      "options": {
+        "setup": {
+          "title": "Thiết lập & tối ưu",
+          "items": {
+            "0": "Kiểm tra quyền sở hữu và độ chính xác",
+            "1": "Tối ưu danh mục, giờ, dịch vụ và liên kết",
+            "2": "Sắp xếp ảnh và đăng nội dung 360° đã duyệt"
+          }
         },
-        "foundation": {
-          "title": "Thông tin cốt lõi",
-          "description": "Tối ưu danh mục, giờ hoạt động, liên hệ, dịch vụ, mô tả và các đường dẫn doanh nghiệp phù hợp."
-        },
-        "media": {
-          "title": "Tài nguyên hình ảnh",
-          "description": "Sắp xếp logo, ảnh bìa, ảnh doanh nghiệp và hình ảnh 360° đã duyệt để tạo hình ảnh nhất quán."
-        },
-        "publishing": {
-          "title": "Xuất bản trên Maps",
-          "description": "Đăng nội dung 360° tương thích và kết nối khách hàng với trải nghiệm hoàn chỉnh."
-        },
-        "monitoring": {
-          "title": "Theo dõi hồ sơ",
-          "description": "Rà soát các chỉnh sửa do Google đề xuất và duy trì thông tin quan trọng theo thời gian."
-        },
-        "ongoing": {
+        "management": {
           "title": "Quản lý định kỳ",
-          "description": "Bài đăng, cập nhật hình ảnh và hỗ trợ phản hồi đánh giá có thể được triển khai như dịch vụ riêng."
+          "items": {
+            "0": "Theo dõi thay đổi quan trọng",
+            "1": "Cập nhật bài đăng và hình ảnh",
+            "2": "Hỗ trợ phản hồi đánh giá"
+          }
         }
       }
     },
     "TourExample": {
-      "eyebrow": "Sản phẩm hoàn chỉnh",
-      "title": "Trải nghiệm kết quả bàn giao.",
-      "description": "Khám phá tour Mai House Saigon để xem cách các ảnh toàn cảnh riêng lẻ được kết nối thành một hành trình tương tác liền mạch.",
+      "eyebrow": "Xem kết quả",
+      "title": "Khám phá tour hoàn chỉnh.",
+      "description": "Mai House Saigon — được ghi hình, kết nối và sẵn sàng trải nghiệm.",
       "iframeTitle": "Tour ảo 360° tương tác của Mai House Saigon",
       "openTour": "Mở toàn bộ tour"
     },
     "FAQ": {
-      "eyebrow": "Câu hỏi thường gặp",
-      "title": "Trước ngày chụp.",
+      "eyebrow": "Thông tin cần biết",
+      "title": "Ba câu trả lời nhanh.",
       "items": {
         "preparation": {
-          "question": "Cần chuẩn bị gì trước khi chụp?",
-          "answer": "Không gian nên được vệ sinh, sắp xếp hoàn chỉnh và loại bỏ vật dụng tạm thời. Chúng tôi cung cấp danh sách chuẩn bị và xác nhận các giới hạn tiếp cận trước ngày chụp."
-        },
-        "shootDuration": {
-          "question": "Buổi chụp kéo dài bao lâu?",
-          "answer": "Thời gian phụ thuộc vào diện tích, số lượng góc chụp và điều kiện hoạt động. Chúng tôi ước tính thời gian tại địa điểm sau khi rà soát phạm vi."
-        },
-        "revisions": {
-          "question": "Phần duyệt bao gồm những gì?",
-          "answer": "Phạm vi sản xuất đã thống nhất bao gồm duyệt điều hướng, nhãn và các điều chỉnh trình bày hợp lý. Chụp lại hoặc bổ sung khu vực mới sẽ được báo riêng."
+          "question": "Cần chuẩn bị không gian thế nào?",
+          "answer": "Vệ sinh và sắp xếp các khu vực trước khi chụp. Chúng tôi cung cấp danh sách chuẩn bị ngắn gọn."
         },
         "ownership": {
           "question": "Ai sở hữu Google Business Profile?",
-          "answer": "Khách hàng luôn giữ quyền sở hữu chính. RealView Media chỉ được mời với vai trò quản lý khi có dịch vụ hồ sơ, vì vậy quyền truy cập có thể được kiểm tra hoặc thu hồi bất cứ lúc nào."
-        },
-        "embedding": {
-          "question": "Tour có thể dùng ngoài Google Maps không?",
-          "answer": "Có. Tùy sản phẩm đã chọn, tour có thể bao gồm đường dẫn chia sẻ và hỗ trợ nhúng trên website."
+          "answer": "Doanh nghiệp sở hữu. RealView chỉ nhận quyền quản lý khi có dịch vụ hồ sơ."
         },
         "timeline": {
-          "question": "Điều gì có thể ảnh hưởng tiến độ 10 ngày làm việc?",
-          "answer": "Chậm tiếp cận địa điểm, thiếu thông tin doanh nghiệp, phản hồi duyệt trễ, chụp lại hoặc bổ sung ngoài phạm vi có thể thay đổi tiến độ. Mọi ngoại lệ sẽ được thông báo rõ ràng."
+          "question": "Điều gì có thể thay đổi tiến độ 10 ngày?",
+          "answer": "Tiếp cận trễ, phản hồi chậm, chụp lại hoặc thêm khu vực. Chúng tôi sẽ xác nhận trước mọi thay đổi."
         }
       }
     },
     "CTA": {
-      "title": "Sẵn sàng lập kế hoạch cho không gian?",
-      "description": "Hãy cho chúng tôi biết địa điểm, số lượng khu vực và nơi bạn muốn tour hoàn chỉnh xuất hiện.",
-      "button": "Bắt đầu dự án"
+      "title": "Sẵn sàng giới thiệu không gian?",
+      "description": "Cho chúng tôi biết địa điểm và số khu vực cần chụp.",
+      "button": "Bắt đầu"
     }
   },
   "PortfolioPage": {
