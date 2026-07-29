@@ -18,17 +18,34 @@ export default function Navbar() {
   const t = useTranslations('Navigation');
 
   useEffect(() => {
+    let scrollFrame: number | null = null;
+    let wasScrolled = false;
+
     const updateScrolled = () => {
-      setScrolled(window.scrollY > 50);
+      scrollFrame = null;
+      const isScrolled = window.scrollY > 50;
+
+      if (isScrolled !== wasScrolled) {
+        wasScrolled = isScrolled;
+        setScrolled(isScrolled);
+      }
     };
 
-    const initialFrame = window.requestAnimationFrame(updateScrolled);
+    const scheduleScrolledUpdate = () => {
+      if (scrollFrame === null) {
+        scrollFrame = window.requestAnimationFrame(updateScrolled);
+      }
+    };
 
-    window.addEventListener('scroll', updateScrolled, { passive: true });
+    scheduleScrolledUpdate();
+
+    window.addEventListener('scroll', scheduleScrolledUpdate, { passive: true });
 
     return () => {
-      window.cancelAnimationFrame(initialFrame);
-      window.removeEventListener('scroll', updateScrolled);
+      if (scrollFrame !== null) {
+        window.cancelAnimationFrame(scrollFrame);
+      }
+      window.removeEventListener('scroll', scheduleScrolledUpdate);
     };
   }, []);
 

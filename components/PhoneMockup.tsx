@@ -44,7 +44,7 @@ export default function PhoneMockup() {
               src="/images/mai.jpg"
               alt={t('imageAlt')}
               fill
-              sizes="1280px"
+              sizes="(min-width: 1024px) 320px, (min-width: 640px) 262px, 230px"
               quality={90}
               loader={highQualityImageLoader}
               className="object-cover"

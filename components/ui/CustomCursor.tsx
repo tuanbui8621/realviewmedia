@@ -28,11 +28,25 @@ export default function CustomCursor() {
   const ringY = useSpring(ringTargetY, RING_TRANSITION);
 
   useEffect(() => {
+    let pointerFrame: number | null = null;
+    let pointerX = 0;
+    let pointerY = 0;
+
+    const renderPointerPosition = () => {
+      pointerFrame = null;
+      animate(dotX, pointerX - 4, DOT_TRANSITION);
+      animate(dotY, pointerY - 4, DOT_TRANSITION);
+      ringTargetX.set(pointerX - 20);
+      ringTargetY.set(pointerY - 20);
+    };
+
     const updateMousePosition = (e: MouseEvent) => {
-      animate(dotX, e.clientX - 4, DOT_TRANSITION);
-      animate(dotY, e.clientY - 4, DOT_TRANSITION);
-      ringTargetX.set(e.clientX - 20);
-      ringTargetY.set(e.clientY - 20);
+      pointerX = e.clientX;
+      pointerY = e.clientY;
+
+      if (pointerFrame === null) {
+        pointerFrame = window.requestAnimationFrame(renderPointerPosition);
+      }
     };
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -62,6 +76,10 @@ export default function CustomCursor() {
 
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
+      if (pointerFrame !== null) {
+        window.cancelAnimationFrame(pointerFrame);
+        pointerFrame = null;
+      }
       listenersAttached = false;
     };
 

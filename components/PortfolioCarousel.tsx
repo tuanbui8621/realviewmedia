@@ -306,7 +306,7 @@ export default function PortfolioCarousel() {
                     src={project.image}
                     alt={copy.alt}
                     fill
-                    sizes="960px"
+                    sizes="(min-width: 1280px) 384px, (min-width: 1024px) 30vw, (min-width: 768px) 40vw, (min-width: 640px) 58vw, 76vw"
                     quality={90}
                     loader={highQualityImageLoader}
                     loading="lazy"

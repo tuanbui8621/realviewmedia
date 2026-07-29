@@ -3,6 +3,7 @@
 import { ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import DeferredIframe from './DeferredIframe';
 
 const OAKWOOD_TOUR_URL = 'https://www.rvmedia.vn/OakwoodResidence/';
 
@@ -39,7 +40,7 @@ export default function Experience360() {
           viewport={{ once: true, amount: 0.2 }}
           className="group relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#080808] shadow-2xl md:aspect-[2/1]"
         >
-          <iframe
+          <DeferredIframe
             src={OAKWOOD_TOUR_URL}
             title={t('iframeTitle')}
             loading="lazy"

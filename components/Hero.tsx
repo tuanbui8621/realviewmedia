@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import {
   motion,
@@ -44,6 +44,35 @@ export default function Hero() {
       setOrbitActivated(true);
     }
   });
+
+  useEffect(() => {
+    const hero = heroRef.current;
+
+    if (!hero || !orbitActivated || reduceMotion) return;
+
+    const orbitSvgs = Array.from(
+      hero.querySelectorAll<SVGSVGElement>('[data-orbit-animation]'),
+    );
+    const setOrbitPaused = (isPaused: boolean) => {
+      orbitSvgs.forEach((svg) => {
+        if (isPaused) {
+          svg.pauseAnimations();
+        } else {
+          svg.unpauseAnimations();
+        }
+      });
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      setOrbitPaused(!entry.isIntersecting);
+    });
+
+    observer.observe(hero);
+
+    return () => {
+      observer.disconnect();
+      setOrbitPaused(false);
+    };
+  }, [orbitActivated, reduceMotion]);
 
   const textOpacity = useTransform(smoothProgress, [0, 0.1, 0.23], [1, 1, 0]);
   const textY = useTransform(smoothProgress, [0, 0.23], [0, -48]);
@@ -228,6 +257,7 @@ export default function Hero() {
               <div className="pointer-events-none absolute left-1/2 top-[91%] z-0 h-[160px] w-[430px] -translate-x-1/2 -translate-y-1/2 sm:top-[88%] sm:h-[210px] sm:w-[580px] lg:top-[86%] lg:h-[260px] lg:w-[720px]">
                 <motion.svg
                   aria-hidden="true"
+                  data-orbit-animation
                   viewBox="0 0 800 300"
                   fill="none"
                   style={{
@@ -320,6 +350,7 @@ export default function Hero() {
               <div className="pointer-events-none absolute left-1/2 top-[91%] z-30 h-[160px] w-[430px] -translate-x-1/2 -translate-y-1/2 sm:top-[88%] sm:h-[210px] sm:w-[580px] lg:top-[86%] lg:h-[260px] lg:w-[720px]">
                 <motion.svg
                   aria-hidden="true"
+                  data-orbit-animation
                   viewBox="0 0 800 300"
                   fill="none"
                   style={{

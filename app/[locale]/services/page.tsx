@@ -12,6 +12,7 @@ import { useTranslations } from 'next-intl';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import DeferredIframe from '@/components/DeferredIframe';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { Link } from '@/navigation';
 
@@ -235,7 +236,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8 }}
               className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/15 bg-black shadow-2xl md:aspect-[2/1]"
             >
-              <iframe
+              <DeferredIframe
                 src={TOUR_URL}
                 title={t('TourExample.iframeTitle')}
                 loading="lazy"
