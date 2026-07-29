@@ -5,7 +5,7 @@
         "title": "Dịch vụ chụp ảnh 360° & tour ảo TP.HCM | RealView Media",
         "description": "RealView Media cung cấp dịch vụ chụp ảnh 360° và tour ảo Google Maps, giúp doanh nghiệp tại TP.HCM và Việt Nam giới thiệu không gian, xây dựng niềm tin."
       },
-      "experience": {
+      "services": {
         "title": "Sản xuất tour ảo 360° & Google Business Profile | RealView Media",
         "description": "Dịch vụ chụp ảnh 360°, sản xuất tour ảo và hỗ trợ Google Business Profile, bàn giao trong vòng 10 ngày làm việc kể từ ngày chụp."
       },
@@ -38,7 +38,6 @@
   "Navigation": {
     "home": "Trang chủ",
     "services": "Dịch vụ",
-    "experience": "Trải nghiệm",
     "portfolio": "Dự án & hiệu quả",
     "about": "Về chúng tôi",
     "contact": "Liên hệ",
@@ -99,7 +98,7 @@
       }
     }
   },
-  "ExperiencePage": {
+  "ServicesPage": {
     "Hero": {
       "eyebrow": "Sản xuất tour ảo 360°",
       "title": "Tour ảo 360°.",
@@ -287,7 +286,7 @@
     "CTA": {
       "h2": "Sẵn sàng tạo tour ảo 360°?",
       "p1": "Trao đổi với RealView Media về không gian và nhu cầu của bạn.",
-      "p2": "Xem <experience>quy trình chụp 360°</experience> hoặc <contact>liên hệ RealView Media</contact>."
+      "p2": "Xem <services>quy trình chụp 360°</services> hoặc <contact>liên hệ RealView Media</contact>."
     }
   },
   "ContactPage": {
@@ -507,7 +506,7 @@
     },
     "nav": {
       "home": "Trang chủ",
-      "experience": "Trải nghiệm",
+      "services": "Dịch vụ 360°",
       "portfolio": "Dự án & hiệu quả",
       "about": "Về chúng tôi",
       "googleAdsSearch": "Google Ads Search"

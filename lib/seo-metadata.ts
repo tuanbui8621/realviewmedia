@@ -17,7 +17,7 @@ const LOGO_URL = `${SITE_URL}/images/favicon.png`;
 
 export const pagePaths = {
   home: "",
-  experience: "/experience",
+  services: "/services",
   portfolio: "/portfolio",
   about: "/about",
   contact: "/contact",

@@ -11,7 +11,7 @@ const sitemapPages: ReadonlyArray<{
   page: SeoPage;
 }> = [
   { locale: "en", page: "home" },
-  { locale: "en", page: "experience" },
+  { locale: "en", page: "services" },
   { locale: "en", page: "portfolio" },
   { locale: "en", page: "about" },
   { locale: "en", page: "contact" },
@@ -19,7 +19,7 @@ const sitemapPages: ReadonlyArray<{
   { locale: "en", page: "terms" },
   { locale: "en", page: "googleAdsSearch" },
   { locale: "vi", page: "home" },
-  { locale: "vi", page: "experience" },
+  { locale: "vi", page: "services" },
   { locale: "vi", page: "portfolio" },
   { locale: "vi", page: "about" },
   { locale: "vi", page: "contact" },

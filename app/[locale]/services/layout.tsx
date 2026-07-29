@@ -8,10 +8,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return buildPageMetadata(locale, "experience");
+  return buildPageMetadata(locale, "services");
 }
 
-export default function ExperienceLayout({
+export default function ServicesLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return children;

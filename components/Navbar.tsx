@@ -77,7 +77,7 @@ export default function Navbar() {
     { key: 'contact', href: '/contact' },
   ];
   const servicesActive =
-    pathname === '/experience' || pathname === '/google-ads-search';
+    pathname === '/services' || pathname === '/google-ads-search';
 
   return (
     <>
@@ -165,7 +165,7 @@ export default function Navbar() {
               >
                 <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#08090c]/98 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.45)] backdrop-blur-xl">
                   <Link
-                    href="/experience"
+                    href="/services"
                     className="block rounded-xl px-4 py-4 transition-colors hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-rv-white"
                   >
                     <span className="block text-sm font-bold text-white">
@@ -264,10 +264,10 @@ export default function Navbar() {
                 </p>
                 <div className="flex flex-col">
                   <Link
-                    href="/experience"
+                    href="/services"
                     onClick={() => setMenuOpen(false)}
                     className={`rounded-xl px-3 py-3 text-base transition-colors ${
-                      pathname === '/experience'
+                      pathname === '/services'
                         ? 'bg-white/[0.06] text-white'
                         : 'text-white/65 hover:bg-white/[0.04] hover:text-white'
                     }`}

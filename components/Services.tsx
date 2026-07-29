@@ -130,7 +130,7 @@ export default function Services() {
               <h3 className="mt-4 text-3xl font-black tracking-[-0.035em]">{t('journey.decision.title')}</h3>
               <p className="mt-5 text-sm leading-relaxed text-white/55">{t('journey.decision.description')}</p>
               <Link
-                href="/experience"
+                href="/services"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-bold text-[#050608] transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#65a0ff] focus-visible:ring-offset-4 focus-visible:ring-offset-[#080c14]"
               >
                 {t('journey.decision.cta')} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

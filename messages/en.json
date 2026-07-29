@@ -5,7 +5,7 @@
         "title": "360° Photography & Virtual Tours in Vietnam | RealView Media",
         "description": "RealView Media creates 360° photography and Google Maps virtual tours that help businesses in Ho Chi Minh City and Vietnam showcase spaces and build trust."
       },
-      "experience": {
+      "services": {
         "title": "360° Virtual Tour Production & Google Business Profile | RealView Media",
         "description": "Professional 360° photography, virtual tour production and Google Business Profile support, delivered within 10 business days from the shoot."
       },
@@ -38,7 +38,6 @@
   "Navigation": {
     "home": "Home",
     "services": "Services",
-    "experience": "Experience",
     "portfolio": "Work & Impact",
     "about": "About Us",
     "contact": "Contact",
@@ -99,7 +98,7 @@
       }
     }
   },
-  "ExperiencePage": {
+  "ServicesPage": {
     "Hero": {
       "eyebrow": "360° virtual tour production",
       "title": "360° Virtual Tours.",
@@ -287,7 +286,7 @@
     "CTA": {
       "h2": "Ready to create a 360° virtual tour?",
       "p1": "Talk with RealView Media about your space and project needs.",
-      "p2": "Explore our <experience>360° photography process</experience> or <contact>contact RealView Media</contact>."
+      "p2": "Explore our <services>360° photography process</services> or <contact>contact RealView Media</contact>."
     }
   },
   "ContactPage": {
@@ -507,7 +506,7 @@
     },
     "nav": {
       "home": "Home",
-      "experience": "Experience",
+      "services": "360° Services",
       "portfolio": "Work & Impact",
       "about": "About Us",
       "googleAdsSearch": "Google Ads Search"

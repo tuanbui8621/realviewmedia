@@ -306,8 +306,8 @@ export default function PortfolioPage() {
             </p>
             <p className="text-white/60 text-lg">
               {t.rich('CTA.p2', {
-                experience: (chunks) => (
-                  <Link href="/experience" className="underline decoration-white/30 underline-offset-4 hover:text-white transition-colors">
+                services: (chunks) => (
+                  <Link href="/services" className="underline decoration-white/30 underline-offset-4 hover:text-white transition-colors">
                     {chunks}
                   </Link>
                 ),

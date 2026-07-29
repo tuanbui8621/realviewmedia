@@ -36,6 +36,21 @@ const nextConfig: NextConfig = {
 
     return [
       {
+        source: '/experience',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/en/experience',
+        destination: '/en/services',
+        permanent: true,
+      },
+      {
+        source: '/vi/experience',
+        destination: '/services',
+        permanent: true,
+      },
+      {
         source: '/vi',
         destination: '/',
         permanent: true,

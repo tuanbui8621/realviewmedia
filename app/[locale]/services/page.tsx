@@ -29,8 +29,8 @@ const fadeUp: Variants = {
   },
 };
 
-export default function ExperiencePage() {
-  const t = useTranslations('ExperiencePage');
+export default function ServicesPage() {
+  const t = useTranslations('ServicesPage');
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#050505] text-white selection:bg-blue-600 selection:text-white">
