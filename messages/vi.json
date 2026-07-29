@@ -102,58 +102,45 @@
   "ExperiencePage": {
     "Hero": {
       "eyebrow": "Sản xuất tour ảo 360°",
-      "title": "Tour ảo 360° hoàn chỉnh.",
-      "titleHighlight": "Sẵn sàng trong 10 ngày làm việc.",
-      "description": "Chúng tôi chụp không gian, xây dựng tour và chuẩn bị để đăng trên website hoặc Google Maps.",
-      "cta": "Trao đổi dự án"
+      "title": "Tour ảo 360°.",
+      "titleHighlight": "Bàn giao trong 10 ngày.",
+      "description": "Một buổi chụp ngắn. Một tour hoàn chỉnh. Sẵn sàng cho website hoặc Google Maps.",
+      "cta": "Lên lịch chụp"
     },
-    "Deliverables": {
-      "eyebrow": "Sản phẩm bàn giao",
-      "title": "Ba sản phẩm rõ ràng.",
-      "items": {
-        "capture": {
-          "title": "Chụp ảnh 360°",
-          "description": "Ghi hình chuyên nghiệp tất cả khu vực đã thống nhất."
-        },
-        "tour": {
-          "title": "Tour ảo tương tác",
-          "description": "Trải nghiệm mượt mà trên điện thoại, máy tính bảng và máy tính."
-        },
-        "publish": {
-          "title": "Sẵn sàng xuất bản",
-          "description": "Đường dẫn chia sẻ, mã nhúng website hoặc hỗ trợ Google Maps."
-        }
-      }
-    },
-    "Process": {
-      "eyebrow": "Quy trình thực hiện",
-      "title": "Bốn bước. Một tiến độ rõ ràng.",
-      "commitment": "Hoàn thành trước ngày làm việc thứ 10",
+    "Workflow": {
+      "eyebrow": "Quy trình & sản phẩm",
+      "title": "Từ buổi chụp đến bàn giao.",
+      "shootMetric": "giờ tại địa điểm",
+      "deliveryMetric": "ngày làm việc",
+      "columns": {
+        "when": "Thời điểm",
+        "work": "Chúng tôi thực hiện",
+        "result": "Bạn nhận được"
+      },
       "steps": {
         "plan": {
-          "timing": "Trước ngày chụp",
-          "title": "Lên kế hoạch",
-          "description": "Chốt khu vực, quyền tiếp cận và thời gian chụp."
+          "when": "Trước ngày chụp",
+          "work": "Chốt khu vực và lịch chụp",
+          "result": "Kế hoạch rõ ràng"
         },
         "shoot": {
-          "timing": "Ngày chụp",
-          "title": "Ghi hình",
-          "description": "Chụp các góc đã thống nhất trong 1–2 giờ."
+          "when": "Ngày chụp · 1–2 giờ",
+          "work": "Chụp từng khu vực đã thống nhất",
+          "result": "Đầy đủ hình ảnh 360°"
         },
         "build": {
-          "timing": "Ngày 1–9",
-          "title": "Xây dựng",
-          "description": "Xử lý hình ảnh và kết nối thành tour."
+          "when": "Ngày làm việc 1–9",
+          "work": "Hậu kỳ, kết nối và kiểm tra",
+          "result": "Tour tương tác hoàn chỉnh"
         },
         "deliver": {
-          "timing": "Trước ngày 10",
-          "title": "Bàn giao",
-          "description": "Duyệt, hoàn thiện và xuất bản tour."
+          "when": "Trước ngày làm việc thứ 10",
+          "work": "Duyệt và xuất bản",
+          "result": "Link, mã nhúng hoặc hỗ trợ Maps"
         }
       },
-      "shootNoteTitle": "Chỉ 1–2 giờ tại địa điểm",
-      "shootNote": "Hầu hết buổi chụp hoàn thành trong 1–2 giờ. Chúng tôi phối hợp theo giờ hoạt động và thực hiện từng khu vực để hạn chế tối đa ảnh hưởng đến việc kinh doanh.",
-      "condition": "Tiến độ tính từ ngày chụp và áp dụng khi quyền tiếp cận, thông tin và phản hồi được cung cấp đúng hạn. Khu vực bổ sung hoặc chụp lại sẽ được sắp xếp riêng."
+      "shootNote": "Chúng tôi thực hiện từng khu vực và phối hợp theo giờ hoạt động để hạn chế tối đa ảnh hưởng đến việc kinh doanh.",
+      "condition": "Tiến độ tính từ ngày chụp và áp dụng khi quyền tiếp cận, thông tin và phản hồi được cung cấp đúng hạn. Khu vực mới hoặc chụp lại sẽ được sắp xếp riêng."
     },
     "BusinessProfile": {
       "eyebrow": "Google Business Profile",
@@ -162,6 +149,7 @@
       "ownership": "Doanh nghiệp luôn giữ quyền sở hữu chính. RealView chỉ sử dụng quyền quản lý chính thức và không yêu cầu mật khẩu.",
       "options": {
         "setup": {
+          "label": "Một lần",
           "title": "Thiết lập & tối ưu",
           "items": {
             "0": "Kiểm tra quyền sở hữu và độ chính xác",
@@ -170,6 +158,7 @@
           }
         },
         "management": {
+          "label": "Định kỳ",
           "title": "Quản lý định kỳ",
           "items": {
             "0": "Theo dõi thay đổi quan trọng",
@@ -180,23 +169,35 @@
       }
     },
     "TourExample": {
-      "eyebrow": "Xem kết quả",
-      "title": "Khám phá tour hoàn chỉnh.",
-      "description": "Mai House Saigon — được ghi hình, kết nối và sẵn sàng trải nghiệm.",
+      "eyebrow": "Sản phẩm hoàn chỉnh",
+      "title": "Trải nghiệm kết quả.",
       "iframeTitle": "Tour ảo 360° tương tác của Mai House Saigon",
       "openTour": "Mở toàn bộ tour"
     },
     "FAQ": {
-      "eyebrow": "Thông tin cần biết",
-      "title": "Ba câu trả lời nhanh.",
+      "eyebrow": "Câu hỏi thường gặp",
+      "title": "Thông tin cần biết.",
+      "description": "Những câu hỏi thực tế khách hàng thường đặt ra trước khi chụp.",
       "items": {
         "preparation": {
           "question": "Cần chuẩn bị không gian thế nào?",
-          "answer": "Vệ sinh và sắp xếp các khu vực trước khi chụp. Chúng tôi cung cấp danh sách chuẩn bị ngắn gọn."
+          "answer": "Vệ sinh và sắp xếp các khu vực trước khi chụp. Chúng tôi cung cấp một danh sách chuẩn bị ngắn gọn."
+        },
+        "shootDuration": {
+          "question": "Buổi chụp kéo dài bao lâu?",
+          "answer": "Hầu hết buổi chụp hoàn thành trong 1–2 giờ. Địa điểm lớn hoặc phức tạp sẽ được ước tính trước khi đặt lịch."
+        },
+        "revisions": {
+          "question": "Có thể điều chỉnh gì sau buổi chụp?",
+          "answer": "Phần duyệt bao gồm điều hướng, nhãn và các chỉnh sửa trình bày hợp lý. Khu vực mới hoặc chụp lại sẽ được báo riêng."
         },
         "ownership": {
           "question": "Ai sở hữu Google Business Profile?",
           "answer": "Doanh nghiệp sở hữu. RealView chỉ nhận quyền quản lý khi có dịch vụ hồ sơ."
+        },
+        "embedding": {
+          "question": "Có thể nhúng tour lên website không?",
+          "answer": "Có. Gói dịch vụ có thể bao gồm đường dẫn chia sẻ và hỗ trợ nhúng trên website."
         },
         "timeline": {
           "question": "Điều gì có thể thay đổi tiến độ 10 ngày?",

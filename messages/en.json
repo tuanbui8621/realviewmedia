@@ -102,58 +102,45 @@
   "ExperiencePage": {
     "Hero": {
       "eyebrow": "360° virtual tour production",
-      "title": "A complete 360° tour.",
-      "titleHighlight": "Ready within 10 business days.",
-      "description": "We photograph your space, build the tour and prepare it for your website or Google Maps.",
-      "cta": "Discuss your project"
+      "title": "360° Virtual Tours.",
+      "titleHighlight": "Ready in 10 Days.",
+      "description": "One short shoot. One finished tour. Ready for your website or Google Maps.",
+      "cta": "Plan your shoot"
     },
-    "Deliverables": {
-      "eyebrow": "What you receive",
-      "title": "Three clear deliverables.",
-      "items": {
-        "capture": {
-          "title": "360° photography",
-          "description": "Professional capture of every agreed area."
-        },
-        "tour": {
-          "title": "Interactive virtual tour",
-          "description": "A smooth experience for phone, tablet and desktop."
-        },
-        "publish": {
-          "title": "Ready to publish",
-          "description": "A shareable link, website embed or Google Maps support."
-        }
-      }
-    },
-    "Process": {
-      "eyebrow": "How it works",
-      "title": "Four steps. One clear timeline.",
-      "commitment": "Ready by business day 10",
+    "Workflow": {
+      "eyebrow": "Process & delivery",
+      "title": "From shoot to handover.",
+      "shootMetric": "hours on site",
+      "deliveryMetric": "business days",
+      "columns": {
+        "when": "When",
+        "work": "What we do",
+        "result": "What you receive"
+      },
       "steps": {
         "plan": {
-          "timing": "Before shoot",
-          "title": "Plan",
-          "description": "Confirm the areas, access and shoot time."
+          "when": "Before the shoot",
+          "work": "Confirm the areas and schedule",
+          "result": "A simple shoot plan"
         },
         "shoot": {
-          "timing": "Shoot day",
-          "title": "Photograph",
-          "description": "Capture the agreed viewpoints in 1–2 hours."
+          "when": "Shoot day · 1–2 hours",
+          "work": "Photograph each agreed area",
+          "result": "Complete 360° coverage"
         },
         "build": {
-          "timing": "Days 1–9",
-          "title": "Build",
-          "description": "Process the images and connect the tour."
+          "when": "Business days 1–9",
+          "work": "Edit, connect and test the tour",
+          "result": "A responsive interactive tour"
         },
         "deliver": {
-          "timing": "By day 10",
-          "title": "Deliver",
-          "description": "Review, approve and publish the final tour."
+          "when": "By business day 10",
+          "work": "Review and publish",
+          "result": "A link, website embed or Maps support"
         }
       },
-      "shootNoteTitle": "Only 1–2 hours on site",
-      "shootNote": "Most shoots are completed in 1–2 hours. We coordinate around your operating hours and work area by area to minimize disruption.",
-      "condition": "The timeline starts on shoot day and assumes timely access, information and review feedback. Additional areas or reshoots are scheduled separately."
+      "shootNote": "We work area by area and coordinate around operating hours to minimize disruption.",
+      "condition": "The timeline starts on shoot day and assumes timely access, information and feedback. New areas or reshoots are scheduled separately."
     },
     "BusinessProfile": {
       "eyebrow": "Google Business Profile",
@@ -162,6 +149,7 @@
       "ownership": "You remain the primary owner. RealView works through official manager access—no password sharing.",
       "options": {
         "setup": {
+          "label": "One time",
           "title": "Setup & optimize",
           "items": {
             "0": "Check ownership and profile accuracy",
@@ -170,6 +158,7 @@
           }
         },
         "management": {
+          "label": "Ongoing",
           "title": "Ongoing management",
           "items": {
             "0": "Monitor important profile changes",
@@ -180,23 +169,35 @@
       }
     },
     "TourExample": {
-      "eyebrow": "See the result",
-      "title": "Explore a finished tour.",
-      "description": "Mai House Saigon—captured, connected and ready to explore.",
+      "eyebrow": "Finished work",
+      "title": "Explore the result.",
       "iframeTitle": "Interactive 360° virtual tour of Mai House Saigon",
       "openTour": "Open full tour"
     },
     "FAQ": {
-      "eyebrow": "Good to know",
-      "title": "Three quick answers.",
+      "eyebrow": "FAQ",
+      "title": "Questions, answered.",
+      "description": "The practical details clients usually ask before booking.",
       "items": {
         "preparation": {
           "question": "How should the space be prepared?",
-          "answer": "Clean and stage the agreed areas before arrival. We provide a simple checklist."
+          "answer": "Clean and stage the agreed areas before arrival. We provide a short preparation checklist."
+        },
+        "shootDuration": {
+          "question": "How long will the shoot take?",
+          "answer": "Most shoots take 1–2 hours. Larger or more complex locations are estimated before booking."
+        },
+        "revisions": {
+          "question": "What can be adjusted after the shoot?",
+          "answer": "The review covers navigation, labels and reasonable presentation changes. New areas or reshoots are quoted separately."
         },
         "ownership": {
           "question": "Who owns the Google Business Profile?",
           "answer": "You do. RealView only receives manager access when profile work is included."
+        },
+        "embedding": {
+          "question": "Can the tour be added to our website?",
+          "answer": "Yes. Your package can include a shareable link and website embed support."
         },
         "timeline": {
           "question": "What can change the 10-day timeline?",
