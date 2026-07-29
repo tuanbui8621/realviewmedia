@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight, RotateCcw, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -8,6 +8,18 @@ import Image from 'next/image';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import { highQualityImageLoader } from '@/lib/image-loaders';
+
+const industries = [
+  'all',
+  'hotels',
+  'residential',
+  'restaurants',
+  'retailEducation',
+  'creativeSpaces',
+  'wellnessSpa',
+] as const;
+
+type Industry = Exclude<(typeof industries)[number], 'all'>;
 
 // Featured Virtual Tours Data
 const projects = [
@@ -17,6 +29,7 @@ const projects = [
     image: '/images/mai.jpg',
     link: 'https://www.rvmedia.vn/MaiHouseSaigon/',
     standaloneTour: true,
+    industry: 'hotels' as Industry,
   },
   {
     id: 2,
@@ -24,6 +37,7 @@ const projects = [
     image: '/images/oakwood.png',
     link: 'https://www.rvmedia.vn/OakwoodResidence/',
     standaloneTour: true,
+    industry: 'residential' as Industry,
   },
   {
     id: 3,
@@ -31,6 +45,7 @@ const projects = [
     image: '/images/Richlane.png',
     link: 'https://www.rvmedia.vn/Richlane/',
     standaloneTour: true,
+    industry: 'residential' as Industry,
   },
   {
     id: 4,
@@ -38,36 +53,45 @@ const projects = [
     image: '/images/hong.jpg',
     link: 'https://www.rvmedia.vn/HongHome/',
     standaloneTour: true,
+    industry: 'residential' as Industry,
   },
   {
     id: 5,
     key: 'artistic' as const,
     image: '/images/art.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1783909643646!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRGJ0cXk4Umc.!2m2!1d10.80392931471131!2d106.7330403859467!3f244.87!4f-2.3900000000000006!5f0.4000000000000002',
+    industry: 'creativeSpaces' as Industry,
   },
   {
     id: 6,
     key: 'lamboKids' as const,
     image: '/images/lambo.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1783909687492!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzNsc1M2RlE.!2m2!1d10.76827922724603!2d106.6965455166198!3f270.39!4f0.6899999999999977!5f0.4000000000000002',
+    industry: 'retailEducation' as Industry,
   },
   {
     id: 7,
     key: 'laVilla' as const,
     image: '/images/lavilla.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1783909705812!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRGoydHE1eFFF!2m2!1d10.80353445089009!2d106.7325190036474!3f115.59!4f-7.069999999999993!5f0.4000000000000002',
+    industry: 'restaurants' as Industry,
   },
   {
     id: 8,
     key: 'aquaClinic' as const,
     image: '/images/aqua.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1783909721105!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2otNlRoRkE.!2m2!1d10.80254648297075!2d106.7151091939389!3f174.87!4f-0.12999999999999545!5f0.4000000000000002',
+    industry: 'wellnessSpa' as Industry,
   },
 ];
 
 export default function PortfolioCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
   const t = useTranslations('PortfolioCarousel');
+  const [activeIndustry, setActiveIndustry] = useState<(typeof industries)[number]>('all');
+  const filteredProjects = activeIndustry === 'all'
+    ? projects
+    : projects.filter((project) => project.industry === activeIndustry);
   const projectCopy = {
     maiHouse: {
       client: t('projects.maiHouse.client'),
@@ -127,6 +151,13 @@ export default function PortfolioCarousel() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    emblaApi.reInit();
+    emblaApi.scrollTo(0, true);
+  }, [activeIndustry, emblaApi]);
+
   const subscribeToCarousel = useCallback((onStoreChange: () => void) => {
     if (!emblaApi) return () => undefined;
 
@@ -158,9 +189,9 @@ export default function PortfolioCarousel() {
   const canScrollNext = Boolean(carouselSnapshot & 1);
 
   return (
-    <section className="py-32 bg-[#050505] overflow-hidden relative">
-      <div className="container mx-auto px-6 md:px-12 mb-12">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-8">
+    <section className="relative overflow-hidden bg-[#050505] px-6 py-24 text-white md:py-32">
+      <div className="container mx-auto mb-10 max-w-7xl">
+        <div className="border-b border-white/10 pb-8">
           <div>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-4">
               {t('title')}
@@ -169,33 +200,40 @@ export default function PortfolioCarousel() {
               {t('subtitle')}
             </p>
           </div>
-          
-          {/* Custom Navigation Buttons */}
-          <div className="flex gap-4">
-            <button 
-              onClick={scrollPrev}
-              disabled={!canScrollPrev}
-              aria-label={t('previousProject')}
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-white"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <button 
-              onClick={scrollNext}
-              disabled={!canScrollNext}
-              aria-label={t('nextProject')}
-              className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors disabled:opacity-30"
-            >
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
+        </div>
+
+        <div
+          className="mt-6 flex gap-2 overflow-x-auto pb-2"
+          role="group"
+          aria-label={t('filterLabel')}
+        >
+          {industries.map((industry) => {
+            const isActive = activeIndustry === industry;
+
+            return (
+              <button
+                key={industry}
+                type="button"
+                onClick={() => setActiveIndustry(industry)}
+                aria-pressed={isActive}
+                className={`shrink-0 rounded-full border px-4 py-2 text-xs font-bold transition-colors ${
+                  isActive
+                    ? 'border-[#65a0ff] bg-[#1468ff] text-white'
+                    : 'border-white/10 text-white/55 hover:border-[#65a0ff]/60 hover:text-white'
+                }`}
+              >
+                {t(`industries.${industry}`)}
+              </button>
+            );
+          })}
         </div>
       </div>
 
       {/* The Carousel */}
-      <div className="pl-6 md:pl-12 lg:pl-[calc(50vw-40rem)]" ref={emblaRef}>
-        <div className="flex gap-6 cursor-grab active:cursor-grabbing">
-          {projects.map((project, index) => {
+      <div className="container relative mx-auto max-w-7xl">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-6 cursor-grab active:cursor-grabbing">
+          {filteredProjects.map((project, index) => {
             const copy = projectCopy[project.key];
             const ProjectLink = project.standaloneTour ? 'a' : Link;
 
@@ -206,7 +244,7 @@ export default function PortfolioCarousel() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_35%] min-w-0"
+              className="flex-[0_0_76%] min-w-0 sm:flex-[0_0_58%] md:flex-[0_0_40%] lg:flex-[0_0_30%]"
             >
               <ProjectLink
                 href={project.link} 
@@ -264,7 +302,27 @@ export default function PortfolioCarousel() {
               </motion.div>
             );
           })}
+          </div>
         </div>
+
+        <button
+          type="button"
+          onClick={scrollPrev}
+          disabled={!canScrollPrev}
+          aria-label={t('previousProject')}
+          className="absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/75 text-white shadow-xl backdrop-blur-md transition-colors hover:bg-white hover:text-black disabled:opacity-30 disabled:hover:bg-black/75 disabled:hover:text-white md:-left-6 md:h-14 md:w-14"
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </button>
+        <button
+          type="button"
+          onClick={scrollNext}
+          disabled={!canScrollNext}
+          aria-label={t('nextProject')}
+          className="absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/75 text-white shadow-xl backdrop-blur-md transition-colors hover:bg-white hover:text-black disabled:opacity-30 disabled:hover:bg-black/75 disabled:hover:text-white md:-right-6 md:h-14 md:w-14"
+        >
+          <ArrowRight className="h-5 w-5" />
+        </button>
       </div>
     </section>
   );

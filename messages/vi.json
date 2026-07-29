@@ -513,6 +513,16 @@
     "launchTour": "Mở tour ảo 360°",
     "previousProject": "Dự án trước",
     "nextProject": "Dự án tiếp theo",
+    "filterLabel": "Lọc dự án nổi bật theo ngành",
+    "industries": {
+      "all": "Tất cả",
+      "hotels": "Khách sạn & lưu trú",
+      "residential": "Nhà ở",
+      "restaurants": "Nhà hàng",
+      "retailEducation": "Bán lẻ & giáo dục",
+      "creativeSpaces": "Không gian sáng tạo",
+      "wellnessSpa": "Chăm sóc sức khỏe & spa"
+    },
     "openProject": "Mở tour ảo 360° của {client} trong tab mới",
     "projects": {
       "maiHouse": {

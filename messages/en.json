@@ -513,6 +513,16 @@
     "launchTour": "Launch Virtual Tour",
     "previousProject": "Previous project",
     "nextProject": "Next project",
+    "filterLabel": "Filter featured work by industry",
+    "industries": {
+      "all": "All",
+      "hotels": "Hotels & Hospitality",
+      "residential": "Residential",
+      "restaurants": "Restaurants",
+      "retailEducation": "Retail & Education",
+      "creativeSpaces": "Creative Spaces",
+      "wellnessSpa": "Wellness & Spa"
+    },
     "openProject": "Open the 360° virtual tour of {client} in a new tab",
     "projects": {
       "maiHouse": {
