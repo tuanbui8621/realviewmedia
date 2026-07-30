@@ -13,7 +13,6 @@ const industries = [
   'hotels',
   'residential',
   'restaurants',
-  'retailEducation',
   'creativeSpaces',
   'wellnessSpa',
 ] as const;
@@ -56,7 +55,7 @@ const projects = [
   },
   {
     id: 5,
-    key: 'artistic' as const,
+    key: 'arteastiq' as const,
     image: '/images/art.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1783909705812!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRGoydHE1eFFF!2m2!1d10.80353445089009!2d106.7325190036474!3f115.59!4f-7.069999999999993!5f0.4000000000000002',
     industry: 'creativeSpaces' as Industry,
@@ -66,7 +65,7 @@ const projects = [
     key: 'lamboKids' as const,
     image: '/images/lambo.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1783909721105!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ2otNlRoRkE.!2m2!1d10.80254648297075!2d106.7151091939389!3f174.87!4f-0.12999999999999545!5f0.4000000000000002',
-    industry: 'retailEducation' as Industry,
+    industry: 'wellnessSpa' as Industry,
   },
   {
     id: 7,
@@ -88,6 +87,20 @@ const projects = [
     image: '/images/aex.jpg',
     link: 'https://www.google.com/maps/embed?pb=!4v1785311853734!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ0gyN3I3c0FF!2m2!1d10.79564985337983!2d106.6772050381407!3f15.448997352102774!4f-0.023060566962769258!5f0.4000000000000002',
     industry: 'restaurants' as Industry,
+  },
+  {
+    id: 10,
+    key: 'aoDaiMuseum' as const,
+    image: '/images/museum.png',
+    link: 'https://www.google.com/maps/embed?pb=!4v1785382161775!6m8!1m7!1sCAoSHENJQUJJaEFHYndOUXZCam9zV2dGMGJVQURDNHc.!2m2!1d10.80858512788071!2d106.8530453048302!3f31.450977972735178!4f-1.3863798565031829!5f0.4000000000000002',
+    industry: 'creativeSpaces' as Industry,
+  },
+  {
+    id: 11,
+    key: 'aNewDayClamping' as const,
+    image: '/images/clamping.png',
+    link: 'https://www.google.com/maps/embed?pb=!4v1785382488800!6m8!1m7!1sCAoSHENJQUJJaEFJTjB1R3pTYnZFMmY5M3FBQUNTVzc.!2m2!1d10.82743001987532!2d106.8638521734977!3f305.0308076154402!4f-2.7489101054089673!5f0.4000000000000002',
+    industry: 'hotels' as Industry,
   },
 ];
 
@@ -130,11 +143,11 @@ export default function PortfolioCarousel() {
       type: t('projects.hongHome.type'),
       alt: t('projects.hongHome.alt'),
     },
-    artistic: {
-      client: t('projects.artistic.client'),
-      category: t('projects.artistic.category'),
-      type: t('projects.artistic.type'),
-      alt: t('projects.artistic.alt'),
+    arteastiq: {
+      client: t('projects.arteastiq.client'),
+      category: t('projects.arteastiq.category'),
+      type: t('projects.arteastiq.type'),
+      alt: t('projects.arteastiq.alt'),
     },
     lamboKids: {
       client: t('projects.lamboKids.client'),
@@ -159,6 +172,18 @@ export default function PortfolioCarousel() {
       category: t('projects.aex.category'),
       type: t('projects.aex.type'),
       alt: t('projects.aex.alt'),
+    },
+    aoDaiMuseum: {
+      client: t('projects.aoDaiMuseum.client'),
+      category: t('projects.aoDaiMuseum.category'),
+      type: t('projects.aoDaiMuseum.type'),
+      alt: t('projects.aoDaiMuseum.alt'),
+    },
+    aNewDayClamping: {
+      client: t('projects.aNewDayClamping.client'),
+      category: t('projects.aNewDayClamping.category'),
+      type: t('projects.aNewDayClamping.type'),
+      alt: t('projects.aNewDayClamping.alt'),
     },
   };
   const activeCopy = activeProject ? projectCopy[activeProject.key] : null;

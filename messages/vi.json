@@ -610,17 +610,16 @@
     "industries": {
       "all": "Tất cả",
       "hotels": "Khách sạn & lưu trú",
-      "residential": "Nhà ở",
-      "restaurants": "Nhà hàng",
-      "retailEducation": "Bán lẻ & giáo dục",
-      "creativeSpaces": "Không gian sáng tạo",
-      "wellnessSpa": "Chăm sóc sức khỏe & spa"
+      "residential": "Nhà ở & căn hộ",
+      "restaurants": "Ẩm thực & đồ uống",
+      "creativeSpaces": "Nghệ thuật & văn hóa",
+      "wellnessSpa": "Sức khỏe & làm đẹp"
     },
     "openProject": "Mở tour ảo 360° của {client} trong tab mới",
     "projects": {
       "maiHouse": {
         "client": "Mai House Saigon",
-        "category": "Khách sạn",
+        "category": "Khách sạn cao cấp",
         "type": "Tour ảo 360°",
         "alt": "Phòng khách trong phòng suite tại Mai House Saigon"
       },
@@ -632,25 +631,25 @@
       },
       "richlane": {
         "client": "Richlane Residence",
-        "category": "Căn hộ",
+        "category": "Căn hộ dịch vụ",
         "type": "Tour ảo 360°",
         "alt": "Hồ bơi trên cao nhìn ra thành phố tại Richlane Residence"
       },
       "hongHome": {
         "client": "Hong Home",
-        "category": "Nhà ở",
+        "category": "Nhà ở tư nhân",
         "type": "Tour ảo 360°",
         "alt": "Phòng ngủ tại Hong Home"
       },
-      "artistic": {
-        "client": "Artistic",
-        "category": "Không gian sáng tạo",
+      "arteastiq": {
+        "client": "Arteastiq",
+        "category": "Café nghệ thuật",
         "type": "Google Street View",
-        "alt": "Sân thượng nhìn ra thành phố tại Artistic"
+        "alt": "Sân thượng nhìn ra thành phố tại Arteastiq"
       },
       "lamboKids": {
         "client": "Lambo Kids",
-        "category": "Bán lẻ & giáo dục",
+        "category": "Café & spa trẻ em",
         "type": "Google Street View",
         "alt": "Không gian lễ tân và cầu thang tại Lambo Kids"
       },
@@ -662,7 +661,7 @@
       },
       "aquaClinic": {
         "client": "Aqua Clinic",
-        "category": "Spa & sức khỏe",
+        "category": "Phòng khám thẩm mỹ",
         "type": "Google Street View",
         "alt": "Khu vực lễ tân tại Aqua Clinic"
       },
@@ -671,6 +670,18 @@
         "category": "Cocktail Bar",
         "type": "Google Street View",
         "alt": "Không gian lấy cảm hứng từ hang động tại AEX Cocktail Bar"
+      },
+      "aoDaiMuseum": {
+        "client": "Bảo tàng Áo Dài",
+        "category": "Bảo tàng",
+        "type": "Google Street View",
+        "alt": "Không gian văn hóa tại Bảo tàng Áo Dài"
+      },
+      "aNewDayClamping": {
+        "client": "A New Day Clamping",
+        "category": "Khu nghỉ dưỡng glamping",
+        "type": "Google Street View",
+        "alt": "Không gian lưu trú ngoài trời tại A New Day Clamping"
       }
     }
   },

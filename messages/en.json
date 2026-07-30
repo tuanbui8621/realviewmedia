@@ -609,60 +609,59 @@
     "filterLabel": "Filter featured work by industry",
     "industries": {
       "all": "All",
-      "hotels": "Hotels & Hospitality",
-      "residential": "Residential",
-      "restaurants": "Restaurants",
-      "retailEducation": "Retail & Education",
-      "creativeSpaces": "Creative Spaces",
-      "wellnessSpa": "Wellness & Spa"
+      "hotels": "Hotels & Stays",
+      "residential": "Homes & Residences",
+      "restaurants": "Food & Drink",
+      "creativeSpaces": "Arts & Culture",
+      "wellnessSpa": "Wellness & Beauty"
     },
     "openProject": "Open the 360° virtual tour of {client} in a new tab",
     "projects": {
       "maiHouse": {
         "client": "Mai House Saigon",
-        "category": "Hospitality",
+        "category": "Luxury Hotel",
         "type": "Hosted 360° Tour",
         "alt": "Living room in a suite at Mai House Saigon"
       },
       "oakwood": {
         "client": "Oakwood Residence",
-        "category": "Luxury Real Estate",
+        "category": "Serviced Residence",
         "type": "Hosted 360° Tour",
         "alt": "Outdoor pool at Oakwood Residence"
       },
       "richlane": {
         "client": "Richlane Residence",
-        "category": "Real Estate",
+        "category": "Serviced Residence",
         "type": "Hosted 360° Tour",
         "alt": "Rooftop pool overlooking the city at Richlane Residence"
       },
       "hongHome": {
         "client": "Hong Home",
-        "category": "Residential",
+        "category": "Private Residence",
         "type": "Hosted 360° Tour",
         "alt": "Bedroom at Hong Home"
       },
-      "artistic": {
-        "client": "Artistic",
-        "category": "Creative Space",
+      "arteastiq": {
+        "client": "Arteastiq",
+        "category": "Art Café",
         "type": "Google Street View",
-        "alt": "Rooftop terrace overlooking the city at Artistic"
+        "alt": "Rooftop terrace overlooking the city at Arteastiq"
       },
       "lamboKids": {
         "client": "Lambo Kids",
-        "category": "Retail & Education",
+        "category": "Kids Café & Spa",
         "type": "Google Street View",
         "alt": "Reception and stairway at Lambo Kids"
       },
       "laVilla": {
         "client": "La Villa",
-        "category": "Hospitality & F&B",
+        "category": "Restaurant",
         "type": "Google Street View",
         "alt": "Garden dining area at La Villa"
       },
       "aquaClinic": {
         "client": "Aqua Clinic",
-        "category": "Healthcare & Spa",
+        "category": "Aesthetic Clinic",
         "type": "Google Street View",
         "alt": "Reception area at Aqua Clinic"
       },
@@ -671,6 +670,18 @@
         "category": "Cocktail Bar",
         "type": "Google Street View",
         "alt": "Cave-inspired interior of AEX Cocktail Bar"
+      },
+      "aoDaiMuseum": {
+        "client": "Áo Dài Museum",
+        "category": "Museum",
+        "type": "Google Street View",
+        "alt": "Áo Dài Museum cultural space"
+      },
+      "aNewDayClamping": {
+        "client": "A New Day Clamping",
+        "category": "Glamping Retreat",
+        "type": "Google Street View",
+        "alt": "Outdoor hospitality space at A New Day Clamping"
       }
     }
   },
