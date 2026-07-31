@@ -29,6 +29,15 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [
+      {
+        url: "/images/favicon.png?v=2",
+        type: "image/png",
+        sizes: "48x48",
+      },
+    ],
+  },
 };
 
 export function generateStaticParams() {
